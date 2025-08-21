@@ -3,9 +3,6 @@ import * as React from 'react';
 import '../../styles/path.css'
 
 import NavBar from '../common/NavBar';
-import { Card } from '@mui/material';
-import ProjectCardSlider from './ProjectCardSlider';
-import { companyProject } from '../../data/projects';
 
 import { gsap } from 'gsap';
 import MotionPathPlugin from "gsap/MotionPathPlugin";
@@ -80,7 +77,6 @@ const HeroSection: React.FC = () => {
                             </g>
                         </svg>
                     </div>
-
 
                     {/* bottom data */}
                     <div
