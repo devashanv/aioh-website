@@ -29,7 +29,7 @@ const SuccessHistory: React.FC = () => {
                     <div
                         className='flex gap-5 h-full'>
                         <div
-                            className='bg-gradient-to-t from-[#010A12] to-[#01213A] w-3/12 rounded-xl flex flex-col items-center justify-center gap-6'>
+                            className='bg-gradient-to-t from-[#010A12] to-[#002D5A] w-3/12 rounded-xl flex flex-col items-center justify-center gap-6'>
                             <div>
                                 <p className='text-[96px] font-bold text-white'>156<span className='text-primary text-[70px] ml-3 font-medium'>%</span></p>
                                 <div
@@ -55,9 +55,9 @@ const SuccessHistory: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* escription sec */}
+                        {/* description sec */}
                         <div
-                            className='bg-gradient-to-t text-white from-[#010A12] to-[#01213A] w-9/12 rounded-xl p-10'>
+                            className='bg-gradient-to-t text-white from-[#010A12] to-[#002D5A] w-9/12 rounded-xl p-10'>
 
                             {/* intro */}
                             <div
