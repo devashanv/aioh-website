@@ -16,7 +16,7 @@ const Merketing: React.FC = () => {
 
   return (
     <>
-      <div className="m-3.5 text-text font-['Roboto']">
+      <div className="m-3.5 text-text">
         {/* Header */}
         <div className="mx-auto mb-3.5">
           <Header currentPath="/Marketing" />
