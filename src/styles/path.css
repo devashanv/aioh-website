@@ -1,0 +1,11 @@
+circle {
+  fill: transparent;
+}
+
+svg {
+  overflow: visible;
+  height: 100%;
+
+  width: 100%;
+}
+

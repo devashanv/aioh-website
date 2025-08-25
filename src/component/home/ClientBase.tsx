@@ -11,18 +11,32 @@ const ClientBase: React.FC = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const settings = {
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "40px",
-        slidesToShow: 3,
-        speed: 2000,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots:true,
-    };
+   const settings = {
+    infinite: true,
+    slidesToShow: 5,            // desktop (unchanged)
+    slidesToScroll: 1,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    // IMPORTANT: no centerMode, no centerPadding, no className: "center"
+    responsive: [
+      {
+        breakpoint: 1024,       // ≤ 1024px → tablet
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640,        // ≤ 640px → mobile
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
 
     return (
@@ -31,7 +45,7 @@ const ClientBase: React.FC = () => {
                 className='bg-gradient-to-b text-white from-[#010A12] to-[#002D5A] rounded-xl h-full'>
                 <section
                     className='h-2/10 pt-5'>
-                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium ">
+                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3">
                         Partners in Digital Success
                     </h1>
                     <p className="text-[18px] font-light mb-6">
