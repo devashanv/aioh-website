@@ -9,16 +9,16 @@ const Categories: React.FC = () => {
         <>
             <section className='w-11/12 mx-auto h-full'>
                 <section
-                    className='h-1/4'>
-                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3 text-left w-1/2">
+                    className='h-auto lg:h-1/4 lg:mb-0 mb-10'>
+                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium lg:mb-3 text-left lg:w-1/2">
                         Crafted Expertise Across Every Discipline
                     </h1>
                 </section>
 
                 <section
-                    className='w-full h-3/4 flex gap-8'>
+                    className='w-full h-3/4 flex lg:flex-row flex-col gap-8'>
                     <section
-                        className='w-1/3 h-full flex flex-col gap-8'>
+                        className='w-full lg:w-1/3 h-full flex flex-col gap-8'>
                         <section
                             className='bg-white h-4/12 rounded-xl p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Marketing</h2>
@@ -41,7 +41,7 @@ const Categories: React.FC = () => {
                     </section>
 
                     <section
-                        className='w-1/3 h-full flex flex-col gap-8'>
+                        className='w-full lg:w-1/3 h-full flex flex-col-reverse lg:flex-col gap-8'>
                         <section
                             className='relative h-8/12 rounded-xl w-full rounded-xl'>
                             {/* gradient */}
@@ -63,7 +63,7 @@ const Categories: React.FC = () => {
                     </section>
 
                     <section
-                        className='w-1/3 h-full flex flex-col gap-8'>
+                        className='w-full lg:w-1/3 h-full flex flex-col gap-8'>
                         <section
                             className='bg-white h-4/12 rounded-xl p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Design</h2>
