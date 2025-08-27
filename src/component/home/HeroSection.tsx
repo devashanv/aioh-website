@@ -72,16 +72,11 @@ const HeroSection: React.FC = () => {
                                 id="path"
                                 transform="scale(0.7 , 0.6)"
                                 d="M0.56706 127.506C456.87 -40.0537 678.07 -39.4942 1089.57 122.506" />
-                            <g id="one" >
-                                <rect width="85" height="30" fill="dodgerblue" className='z-10 hidden lg:block bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg -rotate-x-13 -rotate-y-18 px-3 pt-8 pb-3'>
-                                    <img src={TestProject} alt="" className='w-full h-full object-fit rounded-xl' />
-                                </rect>
+                            <g id="rect" >
+                                <rect width="85" height="30" fill="dodgerblue" />
                                 
                             </g>
 
-                            <div id="one" className='z-10 hidden lg:block bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg -rotate-x-13 -rotate-y-18 px-3 pt-8 pb-3'>
-                                        
-                                </div>
                         </svg>
                     </div>
 
