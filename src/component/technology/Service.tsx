@@ -130,7 +130,7 @@ const Service: React.FC = () => {
             {/* explore button -desktop/tab */}
             <div className="group-hover:hidden hidden lg:block">
               <button className="absolute bottom-5 right-5 md:bottom-7 md:right-7 bg-primary text-secondary w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full z-10 group-hover:scale-110 transition cursor-pointer">
-                <GoArrowUpRight className="text-base md:text-lg" />
+                <GoArrowUpRight style={{ width: "20px", height: "20px" }} />
               </button>
             </div>
 
@@ -171,7 +171,7 @@ const Service: React.FC = () => {
                   onClick={() => navigate(service.path)}
                   className="md:hidden bg-primary text-secondary w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full group-hover:scale-110 transition cursor-pointer"
                 >
-                  <GoArrowUpRight className="text-base md:text-lg" />
+                  <GoArrowUpRight style={{ width: "20px", height: "20px" }} />
                 </button>
               </motion.div>
             </div>
