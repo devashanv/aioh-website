@@ -35,7 +35,8 @@ html, body, #root {
   100% { background-position: 0% center; }
 }
 
-home client base slider styles
+
+/* home client base slider styles */
 .slick-slide {
   padding: 0 10px; 
 }
@@ -48,9 +49,19 @@ home client base slider styles
   padding: 10px 20px;
 }
 
-/* .slick-track{
-  margin-bottom: 20px;
-} */
+/* scroll ribbon */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move half of the tape */
+  }
+}
 
-
+.ribbon-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 60s linear infinite;
+}
 
