@@ -24,14 +24,14 @@ const ClientBase: React.FC = () => {
       {
         breakpoint: 1024,       // ≤ 1024px → tablet
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 640,        // ≤ 640px → mobile
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },

@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @import "./theme.css";
+<<<<<<< HEAD
 
 *{
     font-family: "Roboto", sans-serif;
 }
+=======
+>>>>>>> 6255250b65a99cac65cd80e9cb9ffa68aa724b10
 
 html, body, #root {
   height: 100%;
@@ -39,7 +42,8 @@ html, body, #root {
   100% { background-position: 0% center; }
 }
 
-home client base slider styles
+
+/* home client base slider styles */
 .slick-slide {
   padding: 0 10px; 
 }
@@ -52,9 +56,19 @@ home client base slider styles
   padding: 10px 20px;
 }
 
-/* .slick-track{
-  margin-bottom: 20px;
-} */
+/* scroll ribbon */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move half of the tape */
+  }
+}
 
-
+.ribbon-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 60s linear infinite;
+}
 
