@@ -6,6 +6,7 @@ import Categories from "../component/home/Categories";
 import ClientBase from "../component/home/ClientBase";
 import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
+import LoadingScreen from "../component/home/LoadingScreen";
 
 import { GrEmptyCircle } from "react-icons/gr";
 import LogoCCL from '../assets/img/icons/ccl.svg'
@@ -24,12 +25,13 @@ function Homepage() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-center overflow-x-hidden">
+      <LoadingScreen />
       {/* Header */}
       <div className="mx-auto mb-3.5 p-3.5">
         <HeroSection />
 
         <div 
-          className="bg-white h-25 rounded-xl my-5 flex px-5">
+          className="bg-white h-25 rounded-xl my-5 flex items-center justify-center">
             <ServiceRibbon />
         </div>
 
