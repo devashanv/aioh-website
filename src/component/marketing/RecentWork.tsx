@@ -548,14 +548,10 @@ const RecentWork: React.FC = () => {
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.solutions.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-<<<<<<< HEAD
-                            <LiaHandPointRightSolid style={{ width: '10px', height: '10px' }} className="text-white mt-1.5 shrink-0" />
-=======
                             <LiaHandPointRightSolid
                               style={{ width: "18px", height: "18px" }}
                               className="text-white mt-1.5 shrink-0"
                             />
->>>>>>> 6255250b65a99cac65cd80e9cb9ffa68aa724b10
                             <span>{item}</span>
                           </li> 
                         ))}
