@@ -4,6 +4,8 @@ import CoreServices from "../component/home/CoreServices";
 import SuccessHistory from "../component/home/SuccessHistory";
 import Categories from "../component/home/Categories";
 import ClientBase from "../component/home/ClientBase";
+import ServiceRibbon from "../component/home/ServiceRibbon";
+import SplineRobo from "../component/home/SplineRobo";
 
 import { GrEmptyCircle } from "react-icons/gr";
 import LogoCCL from '../assets/img/icons/ccl.svg'
@@ -27,36 +29,17 @@ function Homepage() {
         <HeroSection />
 
         <div 
-          className="bg-white rounded-xl my-5 flex pl-5">
-          <ul 
-            className="flex py-10 text-xl bg-red-400 font-medium w-full justify-between">
-            <li>Digital Marketing</li>
-            <li><GrEmptyCircle className="w-20"/></li>
-
-            <li>Software Development</li>
-            <li><GrEmptyCircle /></li>
-
-            <li>Video Creation</li>
-            <li><GrEmptyCircle /></li>
-
-            <li>Creative Design</li>
-            <li><GrEmptyCircle /></li>
-
-            <li>Web Development</li>
-            <li><GrEmptyCircle /></li>
-
-            <li>SEO Optimization</li>
-            <li><GrEmptyCircle /></li>
-
-            <li>Graphic Designing</li>
-            <li><GrEmptyCircle /></li>    
-          </ul>
+          className="bg-white h-25 rounded-xl my-5 flex px-5">
+            <ServiceRibbon />
         </div>
+
+        <SplineRobo />
       </div>
 
       {/* tech stack */}
       <section 
-        className="mx-auto mb-3.5 p-3.5 w-full rounded-xl lg:mt-30 mt-20">
+        className="mx-auto mb-3.5 p-3.5 w-full rounded-xl lg:mt-30 mt-20"
+        id="techstack">
           <video width="640" controls 
           className="w-full rounded-xl h-100">
             <source src="video.mp4" type="video/mp4" />
@@ -65,7 +48,8 @@ function Homepage() {
 
       {/* core services */}
       <section
-        className="mb-3.5 p-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20">
+        className="mb-3.5 p-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+        id="services">
         <div 
           className="bg-white lg:p-3.5 rounded-xl bg-blue-300 flex h-full">
           <div
@@ -77,24 +61,28 @@ function Homepage() {
 
       {/* success history */}
       <section
-        className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20">
+        className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+        id="success">
         <SuccessHistory />
       </section>
 
       {/* categories sec*/}
       <section
-        className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20">
+        className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+        id="catego">
         <Categories />
       </section>
 
       {/* clients sec*/}
       <section
-        className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20">
+        className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+        id="client">
           <ClientBase />
       </section>
     
       {/* Footer */}
-      <section className="lg:mt-80">
+      <section className="lg:mt-80"
+      id="footer">
         <Footer />
 
       </section>
