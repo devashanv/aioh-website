@@ -8,7 +8,7 @@ const slides = ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"];
 
 const ProjectCardSlider: React.FC = () => {
   useEffect(() => {
-    // Set initial position off-screen to avoid unwanted appearance
+    // Set initial position
     slides.forEach((_, i) => {
       gsap.set(`#slide-${i}`, {
         x: -999,
@@ -49,7 +49,7 @@ const ProjectCardSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-[800px] h-[400px] mx-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg">
+    <div className="relative w-[800px] h-[400px] mx-auto overflow-hidden rounded-lg shadow-lg">
       {/* SVG Path */}
       <svg viewBox="0 0 800 400" className="absolute w-full h-full pointer-events-none">
         <path id="archPath" d="M 100 300 Q 400 100 700 300" fill="none" stroke="transparent" />
@@ -60,7 +60,7 @@ const ProjectCardSlider: React.FC = () => {
         <div
           key={i}
           id={`slide-${i}`}
-          className="absolute w-24 h-24 bg-blue-500 text-white flex items-center justify-center rounded-full shadow-md"
+          className="absolute w-24 h-24 text-white flex items-center justify-center rounded-full shadow-md"
         >
           {text}
         </div>
