@@ -44,9 +44,9 @@ const HeroSection: React.FC = () => {
                     className='flex flex-col items-center justify-center lg:-mt-20 w-full'>
                     {/* title */}
                     <div
-                        className=''>
+                        className='h-auto'>
                         <h1
-                            className="gradient-text text-4xl lg:text-[90px] font-semibold">
+                            className="gradient-text text-4xl lg:text-[90px] font-semibold mb-5">
                             Live. Love. Laugh.
                         </h1>
                         <p
