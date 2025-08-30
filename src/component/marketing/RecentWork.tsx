@@ -553,7 +553,7 @@ const RecentWork: React.FC = () => {
                               className="text-white mt-1.5 shrink-0"
                             />
                             <span>{item}</span>
-                          </li>
+                          </li> 
                         ))}
                       </ul>
                     </>

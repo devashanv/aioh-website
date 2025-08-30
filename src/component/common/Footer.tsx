@@ -50,10 +50,10 @@ const Footer = () => {
                 type="email"
                 required
                 placeholder="Enter your email"
-                className="px-4 py-2 w-4/5 rounded-full border border-[#595959] text-black placeholder-[#595959] focus:outline-none"
+                className="px-4 py-2 w-4/5 rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
               />
               <button
-                className="ml-2 w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center pointer-cursor hover:bg-[#02EC97]/90 transition-colors duration-300"
+                className="ml-2 w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
                 aria-label="Subscribe"
               >
                 <img src={SendIcon} alt="Send" className="w-[18px] h-[18px]" />
