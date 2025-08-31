@@ -35,7 +35,7 @@ const HeroProjectSlider: React.FC = () => {
       >
         <path
           id="archPath"
-          d="M 0 90 Q 50 10 100 90"  // 👈 starts at left edge (0), ends at right edge (100)
+          d="M 0 90 Q 50 10 100 90"  
           fill="none"
         />
       </svg>
