@@ -3,6 +3,34 @@ import { NavLink } from "react-router-dom";
 
 import logo from "../../assets/about/AIOH.png";
 import arrowIcon from "../../assets/img/logo/arrowright.svg";
+import arrowDown from "../../assets/img/logo/arrowdown.svg";
+import {
+  HiOutlineMagnifyingGlass,
+  HiOutlinePencil,
+  HiOutlineCurrencyDollar,
+  HiOutlineDevicePhoneMobile,
+  HiOutlineEnvelope,
+  HiOutlineUser,
+  HiOutlineShoppingCart,
+  HiOutlineBuildingOffice,
+  HiOutlinePaintBrush,
+  HiOutlineNewspaper,
+  HiOutlineAcademicCap,
+  HiOutlineKey,
+  HiOutlineTicket,
+  HiOutlineFolderOpen,
+  HiOutlineDocumentText,
+  HiOutlineCalendar,
+  HiOutlineCog,
+  HiOutlineBuildingLibrary,
+  HiOutlineTruck,
+  HiOutlinePaperAirplane,
+  HiOutlineChartBar,
+  HiOutlineLink,
+  HiOutlinePhoto,
+  HiOutlineBookOpen,
+  HiOutlineMapPin,
+} from "react-icons/hi2";
 
 type SubmenuCategory = {
   label: string;
@@ -10,7 +38,7 @@ type SubmenuCategory = {
   items: {
     title: string;
     description: string;
-    icon: string;
+    icon: React.ReactNode;
     to: string;
   }[];
 };
@@ -18,6 +46,7 @@ type SubmenuCategory = {
 type NavItem = {
   label: string;
   to: string;
+  customLink?: string;
   submenu?: SubmenuCategory[];
   intro?: {
     title: string;
@@ -33,9 +62,10 @@ const navItems: NavItem[] = [
   {
     label: "Marketing",
     to: "/Marketing",
+    customLink: "/Marketing",
     intro: {
       title: "Grow your audience",
-      description: "Unlock SEO, social, and PPC strategies to scale faster. ",
+      description: "Unlock SEO, social, and PPC strategies to scale faster.",
     },
     submenu: [
       {
@@ -44,37 +74,19 @@ const navItems: NavItem[] = [
           {
             title: "SEO",
             description: "Optimize search rankings.",
-            icon: "🔍",
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
             to: "/marketing/seo",
           },
           {
             title: "Content",
             description: "Create valuable content.",
-            icon: "✍️",
+            icon: <HiOutlinePencil className="text-black" />,
             to: "/marketing/content",
           },
           {
             title: "PPC",
             description: "Boost leads with paid ads.",
-            icon: "💰",
-            to: "/marketing/ppc",
-          },
-          {
-            title: "SEO",
-            description: "Optimize search rankings.",
-            icon: "🔍",
-            to: "/marketing/seo",
-          },
-          {
-            title: "Content",
-            description: "Create valuable content.",
-            icon: "✍️",
-            to: "/marketing/content",
-          },
-          {
-            title: "PPC",
-            description: "Boost leads with paid ads.",
-            icon: "💰",
+            icon: <HiOutlineCurrencyDollar className="text-black" />,
             to: "/marketing/ppc",
           },
         ],
@@ -85,19 +97,19 @@ const navItems: NavItem[] = [
           {
             title: "Social Media",
             description: "Engage with audiences.",
-            icon: "📱",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
             to: "/marketing/social",
           },
           {
             title: "Email",
             description: "Convert with campaigns.",
-            icon: "📧",
+            icon: <HiOutlineEnvelope className="text-black" />,
             to: "/marketing/email",
           },
           {
             title: "Influencer",
             description: "Partner with creators.",
-            icon: "🤝",
+            icon: <HiOutlineUser className="text-black" />,
             to: "/marketing/influencer",
           },
         ],
@@ -106,10 +118,11 @@ const navItems: NavItem[] = [
   },
   {
     label: "Technology",
-    to: "/Technology",
+    to: "/technology",
+    customLink: "/technology/WebService",
     intro: {
       title: "Build smarter products",
-      description: "From web apps to AI, accelerate your innovation pipeline. ",
+      description: "From web apps to AI, accelerate your innovation pipeline.",
     },
     submenu: [
       {
@@ -118,74 +131,74 @@ const navItems: NavItem[] = [
           {
             title: "E-commerce Websites & Solutions",
             description: "Online stores & payment gateways.",
-            icon: "🛒",
-            to: "/web/ecommerce",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Showcase / Business Websites",
             description: "Professional business presence.",
-            icon: "🏢",
-            to: "/web/business",
+            icon: <HiOutlineBuildingOffice className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Portfolio Websites",
             description: "Showcase your work beautifully.",
-            icon: "🎨",
-            to: "/web/portfolio",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Blog & News Websites",
             description: "Publish articles & updates.",
-            icon: "📰",
-            to: "/web/blog-news",
+            icon: <HiOutlineNewspaper className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Educational Websites & e-Learning Portals",
             description: "Interactive learning platforms.",
-            icon: "📚",
-            to: "/web/education",
+            icon: <HiOutlineAcademicCap className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Membership & Subscription-Based Websites",
             description: "Recurring memberships & access.",
-            icon: "🔑",
-            to: "/web/membership",
+            icon: <HiOutlineKey className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Event Management Websites",
             description: "Plan, manage & promote events.",
-            icon: "🎟️",
-            to: "/web/event",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Nonprofit & Charity Websites",
             description: "Support social causes online.",
-            icon: "🤝",
-            to: "/web/nonprofit",
+            icon: <HiOutlineFolderOpen className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Job Board Websites",
             description: "List jobs & find candidates.",
-            icon: "💼",
-            to: "/web/jobs",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Directory & Listing Websites",
             description: "Organized searchable listings.",
-            icon: "📖",
-            to: "/web/directory",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Booking & Reservation Websites",
             description: "Book hotels, tables & services.",
-            icon: "📅",
-            to: "/web/booking",
+            icon: <HiOutlineCalendar className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Custom Web Applications",
             description: "Tailor-made business solutions.",
-            icon: "⚙️",
-            to: "/web/custom-apps",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/technology/WebService",
           },
         ],
       },
@@ -195,50 +208,50 @@ const navItems: NavItem[] = [
           {
             title: "Management Web Applications (HRM, CRM, etc.)",
             description: "Streamline internal processes.",
-            icon: "🗂️",
-            to: "/system/management",
+            icon: <HiOutlineFolderOpen className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Learning Management Systems (LMS)",
             description: "Online education platforms.",
-            icon: "🎓",
-            to: "/system/lms",
+            icon: <HiOutlineAcademicCap className="text-black" />,
+            to: "/technology/WebService",
           },
           {
-            title: "Enterprise Resource Planning (ERP) Systems",
+            title: "ERP Systems",
             description: "Integrate business operations.",
-            icon: "🏭",
-            to: "/system/erp",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/technology/WebService",
           },
           {
-            title: "Point of Sale (POS) Systems",
+            title: "POS Systems",
             description: "Retail & sales solutions.",
-            icon: "🛍️",
-            to: "/system/pos",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Inventory & Warehouse Management Systems",
             description: "Track & manage inventory.",
-            icon: "📦",
-            to: "/system/inventory",
+            icon: <HiOutlineFolderOpen className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Hospital & Clinic Management Systems",
             description: "Healthcare management tools.",
-            icon: "🏥",
-            to: "/system/hospital",
+            icon: <HiOutlineBuildingLibrary className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "School / University Management Systems",
             description: "Organize academic operations.",
-            icon: "🏫",
-            to: "/system/school",
+            icon: <HiOutlineBuildingLibrary className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Custom Business Automation Solutions",
             description: "Automate workflows & tasks.",
-            icon: "⚡",
-            to: "/system/automation",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/technology/WebService",
           },
         ],
       },
@@ -248,56 +261,56 @@ const navItems: NavItem[] = [
           {
             title: "Android & iOS Native Apps",
             description: "Optimized mobile experiences.",
-            icon: "📱",
-            to: "/mobile/native",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Cross-Platform Mobile Apps",
             description: "Flutter & React Native builds.",
-            icon: "🔄",
-            to: "/mobile/cross-platform",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "E-commerce Mobile Apps",
             description: "Mobile shopping apps.",
-            icon: "🛒",
-            to: "/mobile/ecommerce",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Educational & LMS Mobile Apps",
             description: "Learning on-the-go.",
-            icon: "🎓",
-            to: "/mobile/education",
+            icon: <HiOutlineAcademicCap className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Event & Ticketing Apps",
             description: "Manage & sell tickets easily.",
-            icon: "🎟️",
-            to: "/mobile/event",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Delivery & Logistics Apps",
             description: "Track & manage deliveries.",
-            icon: "🚚",
-            to: "/mobile/delivery",
+            icon: <HiOutlineTruck className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Travel & Tourism Apps",
             description: "Guides, bookings & more.",
-            icon: "✈️",
-            to: "/mobile/travel",
+            icon: <HiOutlinePaperAirplane className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Financial & Fintech Apps",
             description: "Banking & payment solutions.",
-            icon: "💳",
-            to: "/mobile/fintech",
+            icon: <HiOutlineCurrencyDollar className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Social Networking & Community Apps",
             description: "Connect & engage users.",
-            icon: "🌐",
-            to: "/mobile/social",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/technology/WebService",
           },
         ],
       },
@@ -307,56 +320,56 @@ const navItems: NavItem[] = [
           {
             title: "On-Page SEO",
             description: "Optimize page structure & tags.",
-            icon: "📝",
-            to: "/seo/on-page",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Off-Page SEO",
             description: "Backlinks & domain authority.",
-            icon: "🔗",
-            to: "/seo/off-page",
+            icon: <HiOutlineLink className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Technical SEO",
             description: "Improve crawlability & speed.",
-            icon: "⚙️",
-            to: "/seo/technical",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Local SEO",
             description: "Reach customers nearby.",
-            icon: "📍",
-            to: "/seo/local",
+            icon: <HiOutlineMapPin className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "E-commerce SEO",
             description: "Boost online store visibility.",
-            icon: "🛒",
-            to: "/seo/ecommerce",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Content SEO & Optimization",
             description: "Rank better with optimized content.",
-            icon: "✍️",
-            to: "/seo/content",
+            icon: <HiOutlinePencil className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Mobile SEO",
             description: "Optimize for smartphones & tablets.",
-            icon: "📱",
-            to: "/seo/mobile",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "SEO Audits & Reporting",
             description: "Comprehensive SEO checks.",
-            icon: "📊",
-            to: "/seo/audit",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/technology/WebService",
           },
           {
             title: "Keyword Research & Strategy",
             description: "Find the right keywords.",
-            icon: "🔍",
-            to: "/seo/keywords",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/technology/WebService",
           },
         ],
       },
@@ -365,10 +378,11 @@ const navItems: NavItem[] = [
   {
     label: "Design",
     to: "/Design",
+    customLink: "/Marketing",
     intro: {
       title: "Design that inspires",
       description:
-        "Craft user experiences and brand identities that stand out. Design intuitive interfaces, memorable visuals, and cohesive branding that leave a lasting impression on your audience.",
+        "Craft user experiences and brand identities that stand out.",
     },
     submenu: [
       {
@@ -377,38 +391,20 @@ const navItems: NavItem[] = [
           {
             title: "UX Research",
             description: "User-focused design.",
-            icon: "🔎",
+            icon: <HiOutlineUser className="text-black" />,
             to: "/design/ux",
           },
           {
             title: "UI Design",
             description: "Modern interfaces.",
-            icon: "🎨",
+            icon: <HiOutlinePaintBrush className="text-black" />,
             to: "/design/ui",
           },
           {
             title: "Prototyping",
             description: "Clickable mockups.",
-            icon: "📐",
+            icon: <HiOutlinePhoto className="text-black" />,
             to: "/design/prototype",
-          },
-          {
-            title: "SEO",
-            description: "Optimize search rankings.",
-            icon: "🔍",
-            to: "/marketing/seo",
-          },
-          {
-            title: "Content",
-            description: "Create valuable content.",
-            icon: "✍️",
-            to: "/marketing/content",
-          },
-          {
-            title: "PPC",
-            description: "Boost leads with paid ads.",
-            icon: "💰",
-            to: "/marketing/ppc",
           },
         ],
       },
@@ -418,19 +414,19 @@ const navItems: NavItem[] = [
           {
             title: "Logos",
             description: "Unique brand marks.",
-            icon: "🖌️",
+            icon: <HiOutlinePaintBrush className="text-black" />,
             to: "/design/logo",
           },
           {
             title: "Style Guides",
             description: "Consistent branding.",
-            icon: "📘",
+            icon: <HiOutlineBookOpen className="text-black" />,
             to: "/design/guide",
           },
           {
             title: "Illustrations",
             description: "Custom visuals.",
-            icon: "🖼️",
+            icon: <HiOutlinePhoto className="text-black" />,
             to: "/design/illustration",
           },
         ],
@@ -450,19 +446,20 @@ const Header = ({ currentPath }: { currentPath: string }) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLUListElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const justClickedRef = useRef(false);
 
   const gradient = "linear-gradient(90deg, #0B385A, #02EC97, #05BBB7)";
 
   const toggleDropdown = (label: string) => {
     setDropdownOpen(dropdownOpen === label ? null : label);
-    setSelectedSubItem(null); // reset when reopening
+    setSelectedSubItem(null);
   };
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setDropdownOpen(label);
 
-    // auto select first submenu when opening
+    // auto select first submenu
     const firstSub = navItems.find((i) => i.label === label)?.submenu?.[0];
     if (firstSub) {
       setSelectedSubItem({ ...firstSub, parent: label });
@@ -473,6 +470,12 @@ const Header = ({ currentPath }: { currentPath: string }) => {
     timeoutRef.current = setTimeout(() => {
       if (!dropdownRef.current?.matches(":hover")) setDropdownOpen(null);
     }, 200);
+  };
+
+  const closeDropdown = () => {
+    setDropdownOpen(null);
+    setSelectedSubItem(null);
+    justClickedRef.current = false; // immediately allow hover to reopen
   };
 
   // Close dropdown when clicking outside
@@ -508,9 +511,10 @@ const Header = ({ currentPath }: { currentPath: string }) => {
             onMouseLeave={handleMouseLeave}
           >
             {/* Sidebar */}
-            <aside className="w-64 pr-10 border-r flex flex-col justify-items-start h-full ">
+            <aside className="w-64 pr-10 border-r flex flex-col justify-start h-full space-y-6">
+              {/* Header */}
               <div>
-                <h2 className="text-xl font-semibold text-black mb-4">
+                <h2 className="text-xl font-semibold text-black mb-4 ">
                   {navItems.find((i) => i.label === dropdownOpen)?.intro?.title}
                 </h2>
                 <p className="text-xs mb-6 text-left font-light">
@@ -519,33 +523,45 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                       ?.description
                   }
                 </p>
-                <ul className="space-y-3">
+
+                {/* Menu Items */}
+                <ul className="space-y-2">
                   {navItems
                     .find((i) => i.label === dropdownOpen)
-                    ?.submenu?.map((cat) => (
-                      <li
-                        key={cat.label}
-                        onClick={() =>
-                          setSelectedSubItem({ ...cat, parent: dropdownOpen })
-                        }
-                        className={`cursor-pointer hover:text-black/60 transition ${
-                          selectedSubItem?.label === cat.label
-                            ? "font-semibold text-black"
-                            : "text-black"
-                        }`}
-                      >
-                        {cat.label}
-                      </li>
-                    ))}
+                    ?.submenu?.map((cat) => {
+                      const isActive = selectedSubItem?.label === cat.label;
+
+                      return (
+                        <li key={cat.label}>
+                          <button
+                            onClick={() =>
+                              setSelectedSubItem({
+                                ...cat,
+                                parent: dropdownOpen,
+                              })
+                            }
+                            className={`w-full text-left px-4 py-2 rounded-lg transition cursor-pointer 
+                  ${
+                    isActive
+                      ? "bg-black/10 text-black font-semibold"
+                      : "text-black/80 hover:bg-black/10 hover:text-black"
+                  }
+                  focus:outline-none`}
+                          >
+                            {cat.label}
+                          </button>
+                        </li>
+                      );
+                    })}
                 </ul>
               </div>
 
               {/* Bottom Consultation */}
-              <div className="mt-20 text-center flex flex-col">
-                <p className="text-[16px] text-black mb-2 font-medium">
+              <div className="mt-auto text-center flex flex-col">
+                <p className="text-[16px] text-black mb-0 font-medium">
                   Need a consultation?
                 </p>
-                <button className="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-black/80 transition cursor-pointer w-auto">
+                <button className="mt-3 bg-[#02EC97] text-[#191818] text-[18px] font-medium rounded-full py-[10px] hover:bg-[#02EC97]/80 hover:text-[#191818]/80 transition cursor-pointer">
                   Contact Us
                 </button>
               </div>
@@ -554,9 +570,17 @@ const Header = ({ currentPath }: { currentPath: string }) => {
             {/* Right Content */}
             <main className="flex-1 pl-10">
               <div className="flex items-center justify-between mb-6">
-                <h1 className="text-2xl font-semibold text-black">
+                <NavLink
+                  to={
+                    navItems.find((i) => i.label === dropdownOpen)
+                      ?.customLink ||
+                    navItems.find((i) => i.label === dropdownOpen)?.to ||
+                    "/"
+                  }
+                  className="text-2xl font-semibold text-black flex items-center hover:text-[#02EC97] transition"
+                >
                   {dropdownOpen} <span className="ml-5">→</span>
-                </h1>
+                </NavLink>
               </div>
 
               <p className="text-black mb-6 mt-[-20px]">
@@ -564,26 +588,30 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 capabilities.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-0 gap-y-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4">
                 {(selectedSubItem
                   ? selectedSubItem.items
                   : navItems
                       .find((i) => i.label === dropdownOpen)
                       ?.submenu?.flatMap((c) => c.items)
                 )?.map((item, idx) => (
-                  <div
+                  <NavLink
                     key={idx}
-                    className="flex flex-col items-start space-y-1 p-3 transition"
+                    to={item.to}
+                    className="flex items-start space-x-3 p-3 hover:bg-black/5 rounded transition"
                   >
-                    <div className="text-2xl">{item.icon}</div>
-                    <NavLink
-                      to={item.to}
-                      className="text-base font-semibold hover:underline"
-                    >
-                      {item.title}
-                    </NavLink>
-                    <p className="text-xs leading-snug">{item.description}</p>
-                  </div>
+                    <div className="text-2xl flex-shrink-0 mt-1">
+                      {item.icon}
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-base font-semibold hover:underline">
+                        {item.title}
+                      </span>
+                      <p className="text-xs leading-snug text-black/80">
+                        {item.description}
+                      </p>
+                    </div>
+                  </NavLink>
                 ))}
               </div>
             </main>
@@ -614,21 +642,29 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 >
                   <NavLink
                     to={to}
+                    onClick={closeDropdown}
                     className={`flex items-center hover:text-[#02EC97] transition ${
                       active ? "text-[#02EC97]" : "text-white/80"
                     }`}
                   >
                     {label}
                     {submenu && (
-                      <img
-                        src={arrowIcon}
-                        alt="Arrow"
-                        className={`ml-1 w-2 transition-transform hover:text-[#02EC97] ${
-                          dropdownOpen === label ? "rotate-90" : ""
-                        }`}
-                      />
+                      <span className="relative flex items-center group">
+                        <img
+                          src={
+                            active || dropdownOpen === label
+                              ? arrowDown
+                              : arrowIcon
+                          }
+                          alt="Arrow"
+                          className={`ml-1 w-2 transition-transform duration-300 ${
+                            dropdownOpen === label ? "rotate-90" : "rotate-0"
+                          } group-hover:rotate-90`}
+                        />
+                      </span>
                     )}
                   </NavLink>
+
                   <span
                     className={`absolute bottom-[-6px] left-1/2 h-[2px] bg-[#02EC97] transition-all transform -translate-x-1/2 ${
                       active ? "w-4" : "w-0"
@@ -667,55 +703,100 @@ const Header = ({ currentPath }: { currentPath: string }) => {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="fixed inset-0 bg-[#01213A] text-[18px] z-[900] pt-20 px-6">
-            <ul className="flex flex-col space-y-6 items-center">
-              {navItems.map(({ label, to, submenu }) => (
-                <li key={label} className="w-full flex flex-col items-center">
-                  <div className="w-full flex justify-center py-2">
-                    {submenu ? (
-                      <div className="flex items-center gap-2 text-white">
-                        <span
-                          onClick={() => toggleDropdown(label)}
-                          className="cursor-pointer flex items-center"
-                        >
-                          {label}
-                          <img
-                            src={arrowIcon}
-                            alt="Arrow"
-                            className={`w-4 h-4 transition-transform ${
-                              dropdownOpen === label ? "rotate-90" : ""
-                            } ml-1`}
-                          />
-                        </span>
-                      </div>
-                    ) : (
+          <div className="fixed inset-0 bg-[#01213A] text-[18px] z-[900] pt-20 px-6 overflow-y-auto">
+            <ul className="flex flex-col space-y-4">
+              {navItems.map(({ label, to, submenu }) => {
+                const isParentActive =
+                  currentPath === to ||
+                  submenu?.some((cat) =>
+                    cat.items.some((item) => currentPath.startsWith(item.to))
+                  );
+
+                const isOpen = dropdownOpen === label;
+
+                return (
+                  <li key={label} className="w-full">
+                    <div className="flex items-center justify-between">
+                      {/* Parent link */}
                       <NavLink
                         to={to}
                         onClick={() => setMobileOpen(false)}
-                        className={`${
-                          currentPath === to ? "text-[#02EC97]" : "text-white"
+                        className={`py-2 font-medium transition ${
+                          isParentActive ? "text-[#02EC97]" : "text-white"
                         }`}
                       >
                         {label}
                       </NavLink>
+
+                      {/* Toggle submenu */}
+                      {submenu && (
+                        <button
+                          onClick={() => toggleDropdown(label)}
+                          className="p-2 ml-2 flex items-center justify-center rounded-md hover:bg-white/10"
+                        >
+                          <img
+                            src={
+                              isOpen || isParentActive ? arrowDown : arrowIcon
+                            }
+                            alt="Expand"
+                            className={`w-4 h-4 transition-transform duration-300 ${
+                              isOpen ? "rotate-90" : "rotate-0"
+                            }`}
+                          />
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Submenu */}
+                    {submenu && (
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ${
+                          isOpen ? "max-h-[1000px] mt-2" : "max-h-0"
+                        }`}
+                      >
+                        <ul className="pl-4 space-y-2">
+                          {submenu.map((cat) => {
+                            const isCatActive = cat.items.some((item) =>
+                              currentPath.startsWith(item.to)
+                            );
+
+                            return (
+                              <li key={cat.label} className="text-white/80">
+                                <span
+                                  className={`font-semibold block ${
+                                    isCatActive ? "text-[#02EC97]" : ""
+                                  }`}
+                                >
+                                  {cat.label}
+                                </span>
+                                <ul className="pl-4 space-y-1 mt-1">
+                                  {cat.items.map((item) => (
+                                    <li key={item.to}>
+                                      <NavLink
+                                        to={item.to}
+                                        onClick={() => setMobileOpen(false)}
+                                        className={`block py-1 text-sm transition hover:text-[#02EC97] ${
+                                          currentPath === item.to
+                                            ? "text-[#02EC97] font-medium"
+                                            : ""
+                                        }`}
+                                      >
+                                        {item.title}
+                                      </NavLink>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
                     )}
-                  </div>
+                  </li>
+                );
+              })}
 
-                  {/* Dropdown for submenu (just category labels, no nested items) */}
-                  {submenu && dropdownOpen === label && (
-                    <ul className="mt-2 space-y-2 w-full flex flex-col items-center">
-                      {submenu.map((cat) => (
-                        <li key={cat.label} className="w-full text-center">
-                          <span className="block px-4 py-2 text-white">
-                            {cat.label}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-
+              {/* CTA */}
               <li className="w-full flex justify-center">
                 <NavLink
                   to="/contact"
