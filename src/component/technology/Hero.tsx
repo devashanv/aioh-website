@@ -62,8 +62,8 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary">Technology</span> That Powers
-            Possibility
+            <span className="text-primary">Marketing</span> That Moves Brands
+            Forward
           </motion.h1>
 
           <motion.div

@@ -391,10 +391,7 @@ const RecentWork: React.FC = () => {
                     {project.title}
                   </h3>
                   <button className="bg-primary text-secondary w-8 h-8 md:w-9 md:h-9 ml-2 md:ml-1 flex items-center justify-center rounded-full group-hover:scale-110 transition cursor-pointer">
-                    <GoArrowUpRight
-                      style={{ width: "18px", height: "18px" }}
-                      className="text-sm md:text-lg"
-                    />
+                    <GoArrowUpRight className="text-sm md:text-lg" />
                   </button>
                 </div>
                 <p className="text-xs md:text-sm font-light md:leading-5 my-2 md:my-1">
@@ -495,10 +492,7 @@ const RecentWork: React.FC = () => {
                     // className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute flex items-center justify-center bottom-0 left-0 w-full p-2 md:p-4 bg-white/20 backdrop-blur-md rounded-b-[20px] z-0">
-                    <button
-                      onClick={() => window.open(popupData.link, "_blank")}
-                      className="text-secondary flex items-center justify-center gap-1 w-fit px-6 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-pointer"
-                    >
+                    <button className="text-secondary flex items-center justify-center gap-1 w-fit px-6 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-pointer">
                       <span className="text-sm md:text-base font-medium">
                         Explore
                       </span>
@@ -529,10 +523,7 @@ const RecentWork: React.FC = () => {
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.challenges.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <ImCheckmark2
-                              style={{ width: "18px", height: "18px" }}
-                              className="text-white mt-1 shrink-0"
-                            />
+                            <ImCheckmark2 className="text-white mt-1 shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -548,12 +539,9 @@ const RecentWork: React.FC = () => {
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.solutions.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <LiaHandPointRightSolid
-                              style={{ width: "18px", height: "18px" }}
-                              className="text-white mt-1.5 shrink-0"
-                            />
+                            <LiaHandPointRightSolid className="text-white mt-1.5 shrink-0" />
                             <span>{item}</span>
-                          </li> 
+                          </li>
                         ))}
                       </ul>
                     </>
@@ -561,15 +549,9 @@ const RecentWork: React.FC = () => {
                 </div>
 
                 <div className="mt-6 text-secondary">
-                  <button
-                    onClick={() => window.open(popupData.link, "_blank")}
-                    className="w-fit my-4 px-6 py-4 rounded-full font-medium bg-primary hover:bg-primary/80 flex items-center justify-center gap-2 transition cursor-pointer"
-                  >
+                  <button className="w-fit my-4 px-6 py-4 rounded-full font-medium bg-primary hover:bg-primary/80 flex items-center justify-center gap-2 transition cursor-pointer">
                     <span className="leading-none lg:mb-0.5">View Project</span>
-                    <LuCircleChevronRight
-                      style={{ width: "18px", height: "18px" }}
-                      className="text-base leading-none"
-                    />
+                    <LuCircleChevronRight className="text-base leading-none" />
                   </button>
                 </div>
               </div>
