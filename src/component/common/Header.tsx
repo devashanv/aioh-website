@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import logo from "../../assets/about/AIOH.png";
-import arrowIcon from "../../assets/img/logo/arrowright.svg";
-import arrowDown from "../../assets/img/logo/arrowdown.svg";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 import {
   HiOutlineMagnifyingGlass,
   HiOutlinePencil,
@@ -506,7 +506,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
         navItems.find((item) => item.label === dropdownOpen)?.submenu && (
           <div
             ref={dropdownRef}
-            className="hidden lg:flex absolute top-20 left-0 w-full h-[550px] bg-white text-black px-12 py-10 shadow-2xl z-[999] transition-opacity duration-200 rounded-b-[20px] overflow-hidden"
+            className="hidden lg:flex absolute top-20 left-0 w-full h-[550px] bg-white text-black px-12 py-10 shadow-2xl z-[999] transition-opacity duration-200 rounded-[20px] overflow-hidden"
             onMouseEnter={() => handleMouseEnter(dropdownOpen)}
             onMouseLeave={handleMouseLeave}
           >
@@ -626,11 +626,22 @@ const Header = ({ currentPath }: { currentPath: string }) => {
         {/* Desktop Nav */}
         <nav className="hidden lg:block text-[18px] font-light w-full">
           <ul ref={navRef} className="flex justify-center space-x-8">
-            {navItems.map(({ label, to, submenu }) => {
+            {navItems.map(({ label, to, submenu, customLink }) => {
+              const basePath =
+                (customLink || to).replace(/\/+$/, "").toLowerCase() || "/";
+              const pathNow =
+                (currentPath || "/").replace(/\/+$/, "").toLowerCase() || "/";
+
               const active =
-                currentPath === to ||
+                pathNow === basePath ||
+                pathNow.startsWith(basePath + "/") ||
                 submenu?.some((cat) =>
-                  cat.items.some((item) => currentPath.startsWith(item.to))
+                  cat.items.some((item) => {
+                    const itemPath = item.to.replace(/\/+$/, "").toLowerCase();
+                    return (
+                      pathNow === itemPath || pathNow.startsWith(itemPath + "/")
+                    );
+                  })
                 );
 
               return (
@@ -641,7 +652,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <NavLink
-                    to={to}
+                    to={customLink || to}
                     onClick={closeDropdown}
                     className={`flex items-center hover:text-[#02EC97] transition ${
                       active ? "text-[#02EC97]" : "text-white/80"
@@ -650,16 +661,14 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                     {label}
                     {submenu && (
                       <span className="relative flex items-center group">
-                        <img
-                          src={
-                            active || dropdownOpen === label
-                              ? arrowDown
-                              : arrowIcon
-                          }
-                          alt="Arrow"
-                          className={`ml-1 w-2 transition-transform duration-300 ${
-                            dropdownOpen === label ? "rotate-90" : "rotate-0"
-                          } group-hover:rotate-90`}
+                        <MdKeyboardArrowRight
+                          className={`ml-1 text-[16px] transition-transform duration-300 
+                  ${dropdownOpen === label ? "rotate-90" : "rotate-0"} 
+                  ${
+                    active
+                      ? "text-[#02EC97]"
+                      : "text-white/80 group-hover:text-[#02EC97]"
+                  }`}
                         />
                       </span>
                     )}
@@ -705,12 +714,27 @@ const Header = ({ currentPath }: { currentPath: string }) => {
         {mobileOpen && (
           <div className="fixed inset-0 bg-[#01213A] text-[18px] z-[900] pt-20 px-6 overflow-y-auto">
             <ul className="flex flex-col space-y-4">
-              {navItems.map(({ label, to, submenu }) => {
+              {navItems.map(({ label, to, submenu, customLink }) => {
+                const basePath = (customLink || to).replace(/\/+$/, "") || "/";
+                const pathNow = (currentPath || "/").replace(/\/+$/, "") || "/";
+
                 const isParentActive =
-                  currentPath === to ||
-                  submenu?.some((cat) =>
-                    cat.items.some((item) => currentPath.startsWith(item.to))
-                  );
+                  pathNow === basePath ||
+                  pathNow.startsWith(basePath + "/") ||
+                  pathNow.startsWith(basePath + "?") ||
+                  pathNow.startsWith(basePath + "#") ||
+                  (submenu &&
+                    submenu.some((cat) =>
+                      cat.items.some((item) => {
+                        const itemPath = item.to.replace(/\/+$/, "");
+                        return (
+                          pathNow === itemPath ||
+                          pathNow.startsWith(itemPath + "/") ||
+                          pathNow.startsWith(itemPath + "?") ||
+                          pathNow.startsWith(itemPath + "#")
+                        );
+                      })
+                    ));
 
                 const isOpen = dropdownOpen === label;
 
@@ -719,8 +743,10 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                     <div className="flex items-center justify-between">
                       {/* Parent link */}
                       <NavLink
-                        to={to}
-                        onClick={() => setMobileOpen(false)}
+                        to={customLink || to}
+                        onClick={() => {
+                          if (!submenu) setMobileOpen(false);
+                        }}
                         className={`py-2 font-medium transition ${
                           isParentActive ? "text-[#02EC97]" : "text-white"
                         }`}
@@ -732,16 +758,14 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                       {submenu && (
                         <button
                           onClick={() => toggleDropdown(label)}
-                          className="p-2 ml-2 flex items-center justify-center rounded-md hover:bg-white/10"
+                          className="p-2 ml-2 flex items-center justify-center rounded-md hover:bg-white/10 transition-colors"
                         >
-                          <img
-                            src={
-                              isOpen || isParentActive ? arrowDown : arrowIcon
-                            }
-                            alt="Expand"
-                            className={`w-4 h-4 transition-transform duration-300 ${
-                              isOpen ? "rotate-90" : "rotate-0"
-                            }`}
+                          <MdKeyboardArrowRight
+                            className={`w-5 h-5 transition-transform duration-300 
+                              ${isOpen ? "rotate-90" : "rotate-0"} 
+                              ${
+                                isParentActive ? "text-[#02EC97]" : "text-white"
+                              }`}
                           />
                         </button>
                       )}
@@ -751,14 +775,20 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                     {submenu && (
                       <div
                         className={`overflow-hidden transition-all duration-300 ${
-                          isOpen ? "max-h-[1000px] mt-2" : "max-h-0"
+                          isOpen ? "max-h-[2000px] mt-2" : "max-h-0"
                         }`}
                       >
-                        <ul className="pl-4 space-y-2">
+                        <ul className="pl-4 space-y-3">
                           {submenu.map((cat) => {
-                            const isCatActive = cat.items.some((item) =>
-                              currentPath.startsWith(item.to)
-                            );
+                            const isCatActive = cat.items.some((item) => {
+                              const itemPath = item.to.replace(/\/+$/, "");
+                              return (
+                                pathNow === itemPath ||
+                                pathNow.startsWith(itemPath + "/") ||
+                                pathNow.startsWith(itemPath + "?") ||
+                                pathNow.startsWith(itemPath + "#")
+                              );
+                            });
 
                             return (
                               <li key={cat.label} className="text-white/80">
@@ -769,22 +799,34 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                                 >
                                   {cat.label}
                                 </span>
-                                <ul className="pl-4 space-y-1 mt-1">
-                                  {cat.items.map((item) => (
-                                    <li key={item.to}>
-                                      <NavLink
-                                        to={item.to}
-                                        onClick={() => setMobileOpen(false)}
-                                        className={`block py-1 text-sm transition hover:text-[#02EC97] ${
-                                          currentPath === item.to
-                                            ? "text-[#02EC97] font-medium"
-                                            : ""
-                                        }`}
-                                      >
-                                        {item.title}
-                                      </NavLink>
-                                    </li>
-                                  ))}
+                                <ul className="pl-4 space-y-2 mt-1">
+                                  {cat.items.map((item) => {
+                                    const itemPath = item.to.replace(
+                                      /\/+$/,
+                                      ""
+                                    );
+                                    const isItemActive =
+                                      pathNow === itemPath ||
+                                      pathNow.startsWith(itemPath + "/") ||
+                                      pathNow.startsWith(itemPath + "?") ||
+                                      pathNow.startsWith(itemPath + "#");
+
+                                    return (
+                                      <li key={item.to}>
+                                        <NavLink
+                                          to={item.to}
+                                          onClick={() => setMobileOpen(false)}
+                                          className={`block py-1.5 text-sm transition hover:text-[#02EC97] ${
+                                            isItemActive
+                                              ? "text-[#02EC97] font-medium"
+                                              : ""
+                                          }`}
+                                        >
+                                          {item.title}
+                                        </NavLink>
+                                      </li>
+                                    );
+                                  })}
                                 </ul>
                               </li>
                             );
@@ -797,11 +839,11 @@ const Header = ({ currentPath }: { currentPath: string }) => {
               })}
 
               {/* CTA */}
-              <li className="w-full flex justify-center">
+              <li className="w-full flex justify-center mt-6">
                 <NavLink
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block mt-8 px-6 py-3 rounded-[30px] text-white text-center"
+                  className="block px-6 py-3 rounded-[30px] text-white text-center"
                   style={{ background: gradient }}
                 >
                   Connect with us
