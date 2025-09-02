@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @import "./theme.css";
-<<<<<<< HEAD
 
 *{
     font-family: "Roboto", sans-serif;
 }
-=======
->>>>>>> 6255250b65a99cac65cd80e9cb9ffa68aa724b10
 
 html, body, #root {
   height: 100%;
@@ -17,6 +14,14 @@ html, body, #root {
   padding: 0;
 }
 
+/* .calendly-overlay .calendly-close-overlay {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+} */
 
 /* Hide scrollbar cross-browser */
 .scroll-hide::-webkit-scrollbar {
@@ -24,6 +29,8 @@ html, body, #root {
 }
 .scroll-hide {
   -ms-overflow-style: none; /* IE/Edge */
+
+
   scrollbar-width: none; /* Firefox */
 }
 
@@ -71,4 +78,3 @@ html, body, #root {
   width: max-content;
   animation: scroll 60s linear infinite;
 }
-

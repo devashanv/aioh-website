@@ -6,6 +6,7 @@ import WebService from "./pages/WebService";
 import AboutUs from "./pages/AboutUs";
 import Technology from "./pages/Technology";
 import Design from "./pages/Design";
+import ConsultationBooking from "./pages/ConsultationBooking";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Technology" element={<Technology />} />
         <Route path="/Design" element={<Design />} />
         <Route path="/Aboutus" element={<AboutUs />} />
+        <Route path="/consultation" element={<ConsultationBooking />} />
 
         {/* Marketing Service Details Pages */}
         <Route path="/marketing/brand-strategy" element={<WebService />} />
@@ -31,7 +33,7 @@ function App() {
         />
         <Route
           path="/marketing/social-media-advertising"
-          element={<WebService />} 
+          element={<WebService />}
         />
         <Route
           path="/marketing/brand-strategy-sample"

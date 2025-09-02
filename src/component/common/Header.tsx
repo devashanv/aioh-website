@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import logo from "../../assets/about/AIOH.png";
 import arrowIcon from "../../assets/img/logo/arrowright.svg";
@@ -496,6 +496,8 @@ const Header = ({ currentPath }: { currentPath: string }) => {
     };
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <header className="bg-[#01213A] rounded-[20px] font-['Roboto'] text-white select-none relative z-[9999]">
       {/* Dropdown */}
@@ -545,7 +547,13 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 <p className="text-[16px] text-black mb-2 font-medium">
                   Need a consultation?
                 </p>
-                <button className="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-black/80 transition cursor-pointer w-auto">
+                <button
+                  onClick={() => {
+                    navigate("/consultation", { replace: true });
+                    window.location.reload();
+                  }}
+                  className="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-black/80 transition cursor-pointer w-auto"
+                >
                   Contact Us
                 </button>
               </div>
