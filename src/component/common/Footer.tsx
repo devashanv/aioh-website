@@ -29,14 +29,14 @@ const Footer = () => {
 
       {/* ✅ Main content */}
       <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
-        <div className="grid md:grid-cols-4 gap-6 lg:gap-0 md:gap-10 text-left text-[16px] font-light leading-relaxed">
-          {/* Column 1 → center only on mobile */}
-          <div className="lg:w-[500px] text-center md:text-left flex flex-col items-center md:items-start">
+        <div className="grid md:grid-cols-4 gap-8 text-left text-[16px] font-light leading-relaxed">
+          {/* Column 1 */}
+          <div>
             <div className="mb-3">
               <img
                 src={AIOHLogo}
                 alt="All in One Holdings Logo"
-                className="w-[250px] h-auto"
+                className="w-[200px] h-auto"
               />
             </div>
             <p className="mb-2 text-[#F5F5F5]">
@@ -45,15 +45,15 @@ const Footer = () => {
               into digital succes
             </p>
             {/* Newsletter */}
-            <div className="mt-4 flex items-center justify-center md:justify-start w-full">
+            <div className="mt-4 flex items-center">
               <input
                 type="email"
                 required
                 placeholder="Enter your email"
-                className="px-4 py-2 w-4/5 rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
+                className="px-4 py-2 w-4/5 rounded-full border border-[#595959] text-black placeholder-[#595959] focus:outline-none"
               />
               <button
-                className="ml-2 w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
+                className="ml-2 w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center pointer-cursor hover:bg-[#02EC97]/90 transition-colors duration-300"
                 aria-label="Subscribe"
               >
                 <img src={SendIcon} alt="Send" className="w-[18px] h-[18px]" />
@@ -61,132 +61,123 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* 👉 Columns 2 + 3 grouped → 2 cols on mobile, normal on desktop */}
-          <div className="grid grid-cols-2 gap-6 md:contents">
-            {/* Column 2 */}
-            <div className="lg:ml-50 lg:w-full">
-              <h3 className="text-[18px] font-medium mb-3">What We Do Best</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Brand strategy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Social media management
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Digital marketing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Social media advertising
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    SEO audit and setup
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 3 */}
-            <div className="lg:ml-40 lg:w-full">
-              <h3 className="text-[18px] font-medium mb-3">
-                Standout Services
-              </h3>
-              <ul className="space-y-2 text-[#F5F5F5]">
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Web development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Software development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Cloud solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Artificial Intelligence
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    UI/UX designs
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          {/* Column 2 */}
+          <div className="lg:ml-20">
+            <h3 className="text-[18px] font-medium mb-3">What We Do Best</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Brand strategy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Social media management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Digital marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Social media advertising
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  SEO audit and setup
+                </Link>
+              </li>
+            </ul>
           </div>
 
-{/* Column 4 → center on mobile, full width on tablet */}
-<div className="lg:ml-28 lg:w-fit w-full text-center md:text-left flex flex-col items-center md:items-start">
-  <h3 className="text-[18px] font-medium mb-3">Contact</h3>
+          {/* Column 3 */}
+          <div className="lg:ml-23">
+            <h3 className="text-[18px] font-medium mb-3">Standout Services</h3>
+            <ul className="space-y-2 text-[#F5F5F5]">
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Web development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Software development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Cloud solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  Artificial Intelligence
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97] transition-colors duration-200"
+                >
+                  UI/UX designs
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-  <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
-    <img src={PhoneIcon} alt="Phone" className="w-5 h-5 mt-1" />
-    <p>+94 81 2121 051</p>
-  </div>
+          {/* Column 4 */}
+          <div className="lg:ml-20 ">
+            <h3 className="text-[18px] font-medium mb-3">Contact</h3>
 
-  <div className="flex items-start gap-2 mb-2 text-[#F5F5F5] flex-wrap">
-    <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
-    <div>
-      <p>3rd Floor, All in one Holdings,</p>
-      <p>349/17 Katugastota Rd,</p>
-      <p>Kandy, Sri Lanka.</p>
-    </div>
-  </div>
+            <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
+              <img src={PhoneIcon} alt="Phone" className="w-5 h-5 mt-1" />
+              <p>+94 81 2121 051</p>
+            </div>
 
-  <div className="flex items-start gap-2 mt-1 text-[#F5F5F5] flex-wrap">
-    <img src={EmailIcon} alt="Email" className="w-5 h-5 mt-1" />
-    <p className="break-words w-full sm:w-auto text-center md:text-left">
-      info@allinoneholdings.com
-    </p>
-  </div>
-</div>
+            <div className="flex items-start gap-2 mb-2">
+              <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
+              <div>
+                <p>3rd Floor, All in one Holdings,</p>
+                <p>349/17 Katugastota Rd,</p>
+                <p>Kandy, Sri Lanka.</p>
+              </div>
+            </div>
 
-
+            <div className="flex items-start gap-2 mt-1">
+              <img src={EmailIcon} alt="Email" className="w-5 h-5 mt-1" />
+              <p>info@allinoneholdings.com</p>
+            </div>
+          </div>
         </div>
       </div>
 

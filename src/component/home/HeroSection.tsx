@@ -5,8 +5,7 @@ import '../../styles/path.css'
 import NavBar from '../common/NavBar';
 import { gsap } from 'gsap';
 import MotionPathPlugin from "gsap/MotionPathPlugin";
-import ProjectCardSlider from './ProjectCardSlider';
-import HeroCardSlider from './HeroCardSlider';
+import TestProject from '../../assets/img/sample.webp'
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -41,7 +40,7 @@ const HeroSection: React.FC = () => {
 
                 {/* content */}
                 <div
-                    className='flex flex-col items-center justify-center lg:-mt-20 w-full'>
+                    className='flex flex-col items-center justify-center lg:-mt-20'>
                     {/* title */}
                     <div
                         className=''>
@@ -64,8 +63,21 @@ const HeroSection: React.FC = () => {
                     </div> */}
 
                     <div
-                        className='h-80 w-full'>
-                        <HeroCardSlider />
+                        className='bg-red-300 h-80 w-full py-5'>
+                        <svg className='bg-red-400 h-1/2 pt-10 flex items-center justify-center' id="svg">
+                            <path
+                                className='bg-red-800'
+                                fill="none"
+                                stroke="white" 
+                                id="path"
+                                transform="scale(0.7 , 0.6)"
+                                d="M0.56706 127.506C456.87 -40.0537 678.07 -39.4942 1089.57 122.506" />
+                            <g id="rect" >
+                                <rect width="85" height="30" fill="dodgerblue" />
+                                
+                            </g>
+
+                        </svg>
                     </div>
 
                     {/* bottom data */}
