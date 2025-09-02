@@ -12,7 +12,7 @@ const FooterTop: React.FC = () => {
       </div>
       <div className="relative flex flex-col items-center">
         <button
-          className="hidden lg:inline-block px-5 py-3 rounded-[30px] text-white whitespace-nowrap cursor-pointer mt-4 z-10"
+          className="lg:inline-block px-5 py-3 rounded-[30px] text-white whitespace-nowrap cursor-pointer mt-4 z-10"
           style={{ background: gradient }}
           onClick={() => (window.location.href = "/contact")}
         >
@@ -23,7 +23,7 @@ const FooterTop: React.FC = () => {
         <img
           src={FooterLine}
           alt="line"
-          className="absolute top-[-6px] left-1/2 transform translate-x-5"
+          className="hidden md:block absolute top-[-6px] left-1/2 transform translate-x-5"
         />
       </div>
     </>
