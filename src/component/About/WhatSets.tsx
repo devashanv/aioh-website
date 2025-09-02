@@ -1,45 +1,45 @@
 import React, { useRef, useEffect, useState } from "react";
-import {
-  FaHandshake,
-  FaLightbulb,
-  FaUsers,
-  FaBullseye,
-  FaAward,
-} from "react-icons/fa";
-
 import { motion } from "framer-motion";
 
 import AIOHLogo from "../../assets/about/AIOH.png";
+import Integrity from "../../assets/about/Integrity.svg";
+import Collaboration from "../../assets/about/Collaboration.svg";
+import Innovation from "../../assets/about/Innovation.svg";
+import ClientFirst from "../../assets/about/Client-First.svg";
+import Excellence from "../../assets/about/Excellence.svg";
 
 const cards = [
   {
     title: "Integrity",
     description:
       "Honest, transparent actions that build lasting trust and accountability.",
-    icon: <FaHandshake size={20} />,
+    img: Integrity,
   },
   {
     title: "Collaboration",
     description:
       "Stronger results through teamwork, communication, and shared goals.",
-    icon: <FaUsers size={20} />,
+    img: Collaboration,
   },
   {
     title: "Innovation",
     description:
       "Creative solutions driven by change, technology, and fresh thinking.",
-    icon: <FaLightbulb size={20} />,
+    img: Innovation,
+    alt: "Innovation",
   },
   {
     title: "Client-First",
     description:
       "We listen, adapt, and deliver solutions fully aligned with your goals and long-term success.",
-    icon: <FaBullseye size={20} />,
+    img: ClientFirst,
+    alt: "Client-First",
   },
   {
     title: "Excellence",
     description: "Committed to quality, precision, and outstanding results.",
-    icon: <FaAward size={20} />,
+    img: Excellence,
+    alt: "Excellence",
   },
 ];
 
@@ -131,7 +131,8 @@ const WhatSets: React.FC = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-      className="lg:hidden bg-gradient-to-b from-black to-[#00376E] rounded-[20px] px-4 pt-8 pb-14 relative overflow-hidden">
+        className="lg:hidden bg-gradient-to-b from-black to-[#00376E] rounded-[20px] px-4 pt-8 pb-14 relative overflow-hidden"
+      >
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <img src={AIOHLogo} alt="AIOH Logo" className="w-36 object-contain" />
@@ -148,8 +149,8 @@ const WhatSets: React.FC = () => {
               className="snap-start shrink-0 w-[270px] bg-white/10 backdrop-blur-md rounded-[20px] p-6 text-white"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-[#02EC97] w-10 h-10 flex items-center justify-center rounded-md text-black">
-                  {card.icon}
+                <div className="bg-[#02EC97] w-12 h-12 flex items-center justify-center rounded-xl text-black">
+                  <img src={card.img} alt={card.alt} className="w-9 h-9" />
                 </div>
                 <h3 className="text-lg font-medium">{card.title}</h3>
               </div>
@@ -185,8 +186,8 @@ const WhatSets: React.FC = () => {
           {/* Top Row */}
           <div className="bg-white/20 rounded-[20px] p-6 flex flex-col gap-2 text-white font-roboto">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-[#02EC97] w-10 h-10 flex items-center justify-center rounded-md text-black">
-                <FaHandshake size={20} />
+              <div className="bg-[#02EC97] w-12 h-12 flex items-center justify-center rounded-xl text-black">
+                <img src={Integrity} alt="Integrity" className="w-9 h-9" />
               </div>
               <h3 className="text-xl font-medium">Integrity</h3>
             </div>
@@ -206,8 +207,12 @@ const WhatSets: React.FC = () => {
 
           <div className="bg-white/20 rounded-[20px] p-6 flex flex-col gap-2 text-white font-roboto">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-[#02EC97] w-10 h-10 flex items-center justify-center rounded-md text-black">
-                <FaUsers size={20} />
+              <div className="bg-[#02EC97] w-12 h-12 flex items-center justify-center rounded-xl text-black">
+                <img
+                  src={Collaboration}
+                  alt="Collaboration"
+                  className="w-9 h-9"
+                />
               </div>
               <h3 className="text-xl font-medium">Collaboration</h3>
             </div>
@@ -223,19 +228,22 @@ const WhatSets: React.FC = () => {
               title: "Innovation",
               description:
                 "Creative solutions driven by change, technology, and fresh thinking.",
-              icon: <FaLightbulb size={20} />,
+              img: Innovation,
+              alt: "Innovation",
             },
             {
               title: "Client-First",
               description:
                 "We listen, adapt, and deliver solutions fully aligned with your goals and long-term success.",
-              icon: <FaBullseye size={20} />,
+              img: ClientFirst,
+              alt: "Client-First",
             },
             {
               title: "Excellence",
               description:
                 "Committed to quality, precision, and outstanding results.",
-              icon: <FaAward size={20} />,
+              img: Excellence,
+              alt: "Excellence",
             },
           ].map((card, index) => (
             <div
@@ -243,8 +251,8 @@ const WhatSets: React.FC = () => {
               className="bg-white/20 rounded-[20px] p-6 flex flex-col gap-2 text-white font-roboto"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-[#02EC97] w-10 h-10 flex items-center justify-center rounded-md text-black">
-                  {card.icon}
+                <div className="bg-[#02EC97] w-12 h-12 flex items-center justify-center rounded-xl text-black">
+                  <img src={card.img} alt={card.alt} className="w-9 h-9" />
                 </div>
                 <h3 className="text-xl font-medium">{card.title}</h3>
               </div>

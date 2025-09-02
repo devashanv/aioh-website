@@ -37,7 +37,7 @@ const WhoAre: React.FC = () => {
           <p className="text-[18px] font-light mb-6">
             Creative Thinkers. Technical Experts. Strategic Partners.
           </p>
-          <p className="text-[18px] font-light max-w-xl mx-auto leading-[30px] mb-4">
+          <p className="text-[18px] font-light max-w-xl mx-auto leading-[30px] mb-8 text-justify">
             We are a multidisciplinary team dedicated to solving complex
             challenges with smart, creative solutions. With a strong foundation
             built on collaboration and continuous learning, we help businesses
@@ -70,7 +70,7 @@ const WhoAre: React.FC = () => {
           <p className="text-[18px] font-light mb-6">
             End-to-End Digital Solutions for Every Stage of Growth
           </p>
-          <p className="text-[18px] font-light max-w-xl mx-auto leading-[30px] mb-10">
+          <p className="text-[18px] font-light max-w-xl mx-auto leading-[30px] mb-10 text-justify">
             From digital marketing strategies and custom software development to
             visually engaging design experiences, our services are designed to
             meet diverse client needs. Whether launching a new idea or scaling
@@ -78,7 +78,7 @@ const WhoAre: React.FC = () => {
             happen.
           </p>
 
-          <div className="flex justify-center gap-6 font-medium text-[16px] ">
+          <div className="flex justify-center gap-6 font-medium text-[16px] py-2">
             <a
               href="/Marketing"
               className="text-black/45 underline decoration-black/45 hover:text-black/70"

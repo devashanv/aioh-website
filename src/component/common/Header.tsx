@@ -570,7 +570,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                   }}
                   className="mt-3 bg-[#02EC97] text-[#191818] text-[18px] font-medium rounded-full py-[10px] hover:bg-[#02EC97]/80 hover:text-[#191818]/80 transition cursor-pointer"
                 >
-                  Contact Us
+                  Book Now
                 </button>
               </div>
             </aside>

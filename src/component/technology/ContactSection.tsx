@@ -342,7 +342,7 @@ const ContactSection: React.FC = () => {
                   ),
                 }}
               >
-                {countries.map((country: any) => (
+                {countries.map((country) => (
                   <MenuItem
                     key={country.cca2}
                     value={
