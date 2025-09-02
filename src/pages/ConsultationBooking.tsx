@@ -15,14 +15,19 @@ const ConsultationBooking: React.FC = () => {
   return (
     <>
       <div className="m-3.5">
-        <div className="mx-auto mb-3.5 w-full">
+        <div className="mx-auto mb-10 w-full">
           <Header currentPath={location.pathname} />
         </div>
-        <section className="bg-white rounded-[20px]">
-          <div className="flex flex-col md:flex-row justify-center items-start gap-20 w-11/12 mx-auto">
+        <section className="bg-white rounded-[20px] mb-30">
+          <div className="flex lg:hidden items-center justify-center mx-auto py-6 mb-2">
+            <h1 className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold">
+              Book a <span className="text-primary"> Consultation </span>
+            </h1>
+          </div>
+          <div className="lg:flex flex-col md:flex-row justify-center items-start gap-20 w-11/12 mx-auto">
             <div className="flex-1 flex justify-center">
               <div
-                className="calendly-inline-widget min-w-[320px] w-full max-w-2xl h-[85dvh]"
+                className="calendly-inline-widget min-w-[320px] w-full max-w-2xl h-screen lg:h-[85dvh]"
                 data-url="https://calendly.com/pmbandara408/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=191818&primary_color=01213a"
               ></div>
               <script
@@ -31,7 +36,7 @@ const ConsultationBooking: React.FC = () => {
                 async
               ></script>
             </div>
-            <div className="md:w-1/2 flex flex-col justify-center py-6">
+            <div className="md:w-1/2 hidden lg:flex flex-col justify-center py-6">
               <h1 className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold">
                 Book a <span className="text-primary"> Consultation </span>
               </h1>
@@ -42,7 +47,7 @@ const ConsultationBooking: React.FC = () => {
                 value!
               </p>
 
-              <div className="mt-6 hidden lg:block">
+              <div className="mt-6">
                 <h2 className="text-lg font-semibold mb-2">
                   How to Book a Meeting
                 </h2>

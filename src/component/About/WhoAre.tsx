@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
 import ArrowIcon from "../../assets/about/arrow.svg";
 
 const WhoAre: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col lg:flex-row gap-6 p-0 lg:p-0">
       {/* Left Box */}
@@ -35,22 +37,32 @@ const WhoAre: React.FC = () => {
           <p className="text-[18px] font-light mb-6">
             Creative Thinkers. Technical Experts. Strategic Partners.
           </p>
-          <p className="text-[18px] font-light max-w-xl mx-auto leading-[30px]">
+          <p className="text-[18px] font-light max-w-xl mx-auto leading-[30px] mb-4">
             We are a multidisciplinary team dedicated to solving complex
             challenges with smart, creative solutions. With a strong foundation
             built on collaboration and continuous learning, we help businesses
             of all sizes navigate the digital landscape with clarity and impact.
           </p>
+          <button
+            onClick={() => {
+              navigate("/consultation", { replace: true });
+              window.location.reload();
+            }}
+            className="px-6 py-3 bg-primary text-secondary font-semibold rounded-full hover:bg-primary/80 transition cursor-pointer w-auto"
+          >
+            Take a Consultation
+          </button>
         </div>
       </motion.div>
 
       {/* Right Box */}
-      <motion.div 
-                initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-      className="flex-1 rounded-[20px] bg-white p-8 flex flex-col justify-center items-center text-center min-h-[500px]">
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="flex-1 rounded-[20px] bg-white p-8 flex flex-col justify-center items-center text-center min-h-[500px]"
+      >
         <div className="text-black ">
           <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3">
             What We Do
