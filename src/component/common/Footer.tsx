@@ -29,7 +29,7 @@ const Footer = () => {
 
       {/* ✅ Main content */}
       <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
-        <div className="grid md:grid-cols-4 gap-6 lg:gap-0 md:gap-10 text-left text-[16px] font-light leading-relaxed">
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-0 md:gap-0.5 text-left text-[16px] font-light leading-relaxed">
           {/* Column 1 → center only on mobile */}
           <div className="lg:w-[500px] text-center md:text-left flex flex-col items-center md:items-start">
             <div className="mb-3">
@@ -61,132 +61,125 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* 👉 Columns 2 + 3 grouped → 2 cols on mobile, normal on desktop */}
-          <div className="grid grid-cols-2 gap-6 md:contents">
-            {/* Column 2 */}
-            <div className="lg:ml-50 lg:w-full">
-              <h3 className="text-[18px] font-medium mb-3">What We Do Best</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Brand strategy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Social media management
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Digital marketing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Social media advertising
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    SEO audit and setup
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 3 */}
-            <div className="lg:ml-40 lg:w-full">
-              <h3 className="text-[18px] font-medium mb-3">
-                Standout Services
-              </h3>
-              <ul className="space-y-2 text-[#F5F5F5]">
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Web development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Software development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Cloud solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    Artificial Intelligence
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/technology/WebService"
-                    className="hover:text-[#02EC97]"
-                  >
-                    UI/UX designs
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          {/* Column 2 */}
+          <div className="lg:ml-50 md:ml-2 lg:w-full">
+            <h3 className="text-[18px] font-medium mb-3">What We Do Best</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Brand strategy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Social media management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Digital marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Social media advertising
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  SEO audit and setup
+                </Link>
+              </li>
+            </ul>
           </div>
 
-{/* Column 4 → center on mobile, full width on tablet */}
-<div className="lg:ml-28 lg:w-fit w-full text-center md:text-left flex flex-col items-center md:items-start">
-  <h3 className="text-[18px] font-medium mb-3">Contact</h3>
+          {/* Column 3 */}
+          <div className="lg:ml-40 lg:w-full">
+            <h3 className="text-[18px] font-medium mb-3">Standout Services</h3>
+            <ul className="space-y-2 text-[#F5F5F5]">
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Web development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Software development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Cloud solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Artificial Intelligence
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  UI/UX designs
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-  <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
-    <img src={PhoneIcon} alt="Phone" className="w-5 h-5 mt-1" />
-    <p>+94 81 2121 051</p>
-  </div>
+          {/* Column 4 → center on mobile, full width on tablet */}
+          <div className="lg:ml-28 lg:w-fit w-full text-left md:text-left flex flex-col items-start md:items-start ml-0">
+            <h3 className="text-[18px] font-medium mb-3">Contact</h3>
 
-  <div className="flex items-start gap-2 mb-2 text-[#F5F5F5] flex-wrap">
-    <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
-    <div>
-      <p>3rd Floor, All in one Holdings,</p>
-      <p>349/17 Katugastota Rd,</p>
-      <p>Kandy, Sri Lanka.</p>
-    </div>
-  </div>
+            <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
+              <img src={PhoneIcon} alt="Phone" className="w-5 h-5 mt-1" />
+              <p>+94 81 2121 051</p>
+            </div>
 
-  <div className="flex items-start gap-2 mt-1 text-[#F5F5F5] flex-wrap">
-    <img src={EmailIcon} alt="Email" className="w-5 h-5 mt-1" />
-    <p className="break-words w-full sm:w-auto text-center md:text-left">
-      info@allinoneholdings.com
-    </p>
-  </div>
-</div>
+            <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
+              <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
+              <div>
+                <p>3rd Floor, All in one Holdings,</p>
+                <p>349/17 Katugastota Rd,</p>
+                <p>Kandy, Sri Lanka.</p>
+              </div>
+            </div>
 
-
+            <div className="flex items-start gap-2 mt-1 text-[#F5F5F5]">
+              <img src={EmailIcon} alt="Email" className="w-5 h-5 mt-1" />
+              <p className="w-full sm:w-auto text-center md:text-left">
+                info@allinoneholdings.com
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

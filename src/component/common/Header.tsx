@@ -61,8 +61,8 @@ const navItems: NavItem[] = [
   { label: "About", to: "/Aboutus" },
   {
     label: "Marketing",
-    to: "/Marketing",
-    customLink: "/Marketing",
+    to: "/marketing",
+    customLink: "/marketing",
     intro: {
       title: "Grow your audience",
       description: "Unlock SEO, social, and PPC strategies to scale faster.",
@@ -119,7 +119,7 @@ const navItems: NavItem[] = [
   {
     label: "Technology",
     to: "/technology",
-    customLink: "/technology/WebService",
+    customLink: "/technology",
     intro: {
       title: "Build smarter products",
       description: "From web apps to AI, accelerate your innovation pipeline.",
@@ -377,8 +377,8 @@ const navItems: NavItem[] = [
   },
   {
     label: "Design",
-    to: "/Design",
-    customLink: "/Marketing",
+    to: "/design",
+    customLink: "/design",
     intro: {
       title: "Design that inspires",
       description:
@@ -577,15 +577,15 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                     navItems.find((i) => i.label === dropdownOpen)?.to ||
                     "/"
                   }
-                  className="text-2xl font-semibold text-black flex items-center hover:text-[#02EC97] transition"
+                  className="text-2xl font-semibold text-black flex items-center hover:text-primary transition"
                 >
                   {dropdownOpen} <span className="ml-5">→</span>
                 </NavLink>
               </div>
 
-              <p className="text-black mb-6 mt-[-20px]">
-                Explore our {dropdownOpen.toLowerCase()} solutions and
-                capabilities.
+              <p className="text-black/80 mb-6 mt-[-20px]">
+                Click here to explore our {dropdownOpen.toLowerCase()} solutions
+                and capabilities.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4">
