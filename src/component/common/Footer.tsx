@@ -29,14 +29,14 @@ const Footer = () => {
 
       {/* ✅ Main content */}
       <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
-        <div className="grid md:grid-cols-4 gap-8 text-left text-[16px] font-light leading-relaxed">
-          {/* Column 1 */}
-          <div>
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-0 md:gap-0.5 text-left text-[16px] font-light leading-relaxed">
+          {/* Column 1 → center only on mobile */}
+          <div className="lg:w-[500px] text-center md:text-left flex flex-col items-center md:items-start">
             <div className="mb-3">
               <img
                 src={AIOHLogo}
                 alt="All in One Holdings Logo"
-                className="w-[200px] h-auto"
+                className="w-[250px] h-auto"
               />
             </div>
             <p className="mb-2 text-[#F5F5F5]">
@@ -45,7 +45,7 @@ const Footer = () => {
               into digital succes
             </p>
             {/* Newsletter */}
-            <div className="mt-4 flex items-center">
+            <div className="mt-4 flex items-center justify-center md:justify-start w-full">
               <input
                 type="email"
                 required
@@ -62,13 +62,13 @@ const Footer = () => {
           </div>
 
           {/* Column 2 */}
-          <div className="lg:ml-20">
+          <div className="lg:ml-50 md:ml-2 lg:w-full">
             <h3 className="text-[18px] font-medium mb-3">What We Do Best</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Brand strategy
                 </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Social media management
                 </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Digital marketing
                 </Link>
@@ -92,7 +92,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Social media advertising
                 </Link>
@@ -100,7 +100,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   SEO audit and setup
                 </Link>
@@ -109,13 +109,13 @@ const Footer = () => {
           </div>
 
           {/* Column 3 */}
-          <div className="lg:ml-23">
+          <div className="lg:ml-40 lg:w-full">
             <h3 className="text-[18px] font-medium mb-3">Standout Services</h3>
             <ul className="space-y-2 text-[#F5F5F5]">
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Web development
                 </Link>
@@ -123,7 +123,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Software development
                 </Link>
@@ -131,7 +131,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Cloud solutions
                 </Link>
@@ -139,7 +139,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   Artificial Intelligence
                 </Link>
@@ -147,7 +147,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/technology/WebService"
-                  className="hover:text-[#02EC97] transition-colors duration-200"
+                  className="hover:text-[#02EC97]"
                 >
                   UI/UX designs
                 </Link>
@@ -155,8 +155,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4 */}
-          <div className="lg:ml-20 ">
+          {/* Column 4 → center on mobile, full width on tablet */}
+          <div className="lg:ml-28 lg:w-fit w-full text-left md:text-left flex flex-col items-start md:items-start ml-0">
             <h3 className="text-[18px] font-medium mb-3">Contact</h3>
 
             <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
@@ -164,7 +164,7 @@ const Footer = () => {
               <p>+94 81 2121 051</p>
             </div>
 
-            <div className="flex items-start gap-2 mb-2">
+            <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
               <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
               <div>
                 <p>3rd Floor, All in one Holdings,</p>
@@ -173,9 +173,11 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-2 mt-1">
+            <div className="flex items-start gap-2 mt-1 text-[#F5F5F5]">
               <img src={EmailIcon} alt="Email" className="w-5 h-5 mt-1" />
-              <p>info@allinoneholdings.com</p>
+              <p className="w-full sm:w-auto text-center md:text-left">
+                info@allinoneholdings.com
+              </p>
             </div>
           </div>
         </div>
