@@ -5,7 +5,6 @@ import '../../styles/path.css'
 import NavBar from '../common/NavBar';
 import { gsap } from 'gsap';
 import MotionPathPlugin from "gsap/MotionPathPlugin";
-import ProjectCardSlider from './ProjectCardSlider';
 import HeroCardSlider from './HeroCardSlider';
 
 gsap.registerPlugin(MotionPathPlugin);
