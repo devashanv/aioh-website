@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
 
                 {/* nav */}
                 <div
-                    className='absolute w-full top-0 pt-1'>
+                    className='absolute w-full top-0 pt-0'>
                     <NavBar currentPath="/" />
                 </div>
 

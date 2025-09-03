@@ -3,7 +3,7 @@ import React from "react";
 import Image1 from "../../assets/contact/image1.png";
 import Image2 from "../../assets/contact/image2.png";
 import Image3 from "../../assets/contact/image3.png";
-import Mesh from "../../assets/contact/mesh.png";
+// import Mesh from "../../assets/contact/mesh.png";
 import WhatsappIcon from "../../assets/contact/whatsapp.svg";
 import TelephoneIcon from "../../assets/contact/telephone.svg";
 import EmailIcon from "../../assets/contact/mail.svg";
@@ -123,13 +123,13 @@ const ContactHero: React.FC = () => {
             />
           </div>
           {/* Mesh Overlay */}
-          <div className="absolute inset-0 pointer-events-none z-20 right-0">
+          {/* <div className="absolute inset-0 pointer-events-none z-20 right-0">
             <img
               src={Mesh}
               alt="Mesh Overlay"
               className="w-full h-full object-cover"
             />
-          </div>
+          </div> */}
         </div>
       </motion.div>
 
