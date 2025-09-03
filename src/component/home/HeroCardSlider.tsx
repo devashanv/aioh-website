@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 import TestProject from '../../assets/img/test-project.webp'
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -46,9 +47,16 @@ const HeroProjectSlider: React.FC = () => {
           key={n}
           className="slide w-50 h-28 text-white flex items-center justify-center rounded-xl shadow-lg text-lg font-bold absolute"
         >
-          <div className='z-10 hidden lg:block bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg -rotate-x-13 -rotate-y-18 px-3 pt-8 pb-3'>
+          <div className='z-10 hidden lg:block bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg -rotate-x-13 -rotate-y-18 px-3 pt-3 hover:cursor-pointer'>
             <img src={TestProject} alt="" className='w-full h-full object-fit rounded-xl' />
+
+            <button 
+            className="">
+              <MdOutlineArrowOutward style={{width: "25px", height: "25px"}} className="w-10 h-10"/>
+            </button>
+            
           </div>
+          
         </div>
       ))}
     </section>
