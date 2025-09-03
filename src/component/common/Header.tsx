@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import logo from "../../assets/about/AIOH.png";
-import arrowIcon from "../../assets/img/logo/arrowright.svg";
-import arrowDown from "../../assets/img/logo/arrowdown.svg";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 import {
   HiOutlineMagnifyingGlass,
   HiOutlinePencil,
@@ -450,10 +450,10 @@ const Header = ({ currentPath }: { currentPath: string }) => {
 
   const gradient = "linear-gradient(90deg, #0B385A, #02EC97, #05BBB7)";
 
-  const toggleDropdown = (label: string) => {
-    setDropdownOpen(dropdownOpen === label ? null : label);
-    setSelectedSubItem(null);
-  };
+  // const toggleDropdown = (label: string) => {
+  //   setDropdownOpen(dropdownOpen === label ? null : label);
+  //   setSelectedSubItem(null);
+  // };
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -475,7 +475,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
   const closeDropdown = () => {
     setDropdownOpen(null);
     setSelectedSubItem(null);
-    justClickedRef.current = false; // immediately allow hover to reopen
+    justClickedRef.current = false;
   };
 
   // Close dropdown when clicking outside
@@ -502,13 +502,13 @@ const Header = ({ currentPath }: { currentPath: string }) => {
   const navigate = useNavigate();
 
   return (
-    <header className="bg-[#01213A] rounded-[20px] font-['Roboto'] text-white select-none relative z-[9999]">
+    <header className="bg-[#01213A] rounded-[20px] lg:h-20 font-['Roboto'] text-white select-none relative z-[9999] flex justify-center items-center">
       {/* Dropdown */}
       {dropdownOpen &&
         navItems.find((item) => item.label === dropdownOpen)?.submenu && (
           <div
             ref={dropdownRef}
-            className="hidden lg:flex absolute top-20 left-0 w-full h-[550px] bg-white text-black px-12 py-10 shadow-2xl z-[999] transition-opacity duration-200 rounded-b-[20px] overflow-hidden"
+            className="hidden lg:flex absolute top-22 left-0 w-full h-[550px] bg-white text-black px-12 py-10 shadow-2xl z-[999] transition-opacity duration-200 rounded-[20px] overflow-hidden"
             onMouseEnter={() => handleMouseEnter(dropdownOpen)}
             onMouseLeave={handleMouseLeave}
           >
@@ -629,16 +629,27 @@ const Header = ({ currentPath }: { currentPath: string }) => {
       {/* Header main content */}
       <div className="w-11/12 mx-auto flex items-center justify-between h-16 relative">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-10 w-auto" draggable={false} />
+        <img src={logo} alt="Logo" className="h-12 w-auto" draggable={false} />
 
         {/* Desktop Nav */}
         <nav className="hidden lg:block text-[18px] font-light w-full">
           <ul ref={navRef} className="flex justify-center space-x-8">
-            {navItems.map(({ label, to, submenu }) => {
+            {navItems.map(({ label, to, submenu, customLink }) => {
+              const basePath =
+                (customLink || to).replace(/\/+$/, "").toLowerCase() || "/";
+              const pathNow =
+                (currentPath || "/").replace(/\/+$/, "").toLowerCase() || "/";
+
               const active =
-                currentPath === to ||
+                pathNow === basePath ||
+                pathNow.startsWith(basePath + "/") ||
                 submenu?.some((cat) =>
-                  cat.items.some((item) => currentPath.startsWith(item.to))
+                  cat.items.some((item) => {
+                    const itemPath = item.to.replace(/\/+$/, "").toLowerCase();
+                    return (
+                      pathNow === itemPath || pathNow.startsWith(itemPath + "/")
+                    );
+                  })
                 );
 
               return (
@@ -649,7 +660,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <NavLink
-                    to={to}
+                    to={customLink || to}
                     onClick={closeDropdown}
                     className={`flex items-center hover:text-[#02EC97] transition ${
                       active ? "text-[#02EC97]" : "text-white/80"
@@ -658,16 +669,14 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                     {label}
                     {submenu && (
                       <span className="relative flex items-center group">
-                        <img
-                          src={
-                            active || dropdownOpen === label
-                              ? arrowDown
-                              : arrowIcon
-                          }
-                          alt="Arrow"
-                          className={`ml-1 w-2 transition-transform duration-300 ${
-                            dropdownOpen === label ? "rotate-90" : "rotate-0"
-                          } group-hover:rotate-90`}
+                        <MdKeyboardArrowRight
+                          className={`ml-1 text-[16px] transition-transform duration-300 
+                  ${dropdownOpen === label ? "rotate-90" : "rotate-0"} 
+                  ${
+                    active
+                      ? "text-[#02EC97]"
+                      : "text-white/80 group-hover:text-[#02EC97]"
+                  }`}
                         />
                       </span>
                     )}
@@ -687,7 +696,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
         {/* Desktop CTA */}
         <NavLink
           to="/contact"
-          className="hidden lg:inline-block px-5 py-1.5 rounded-[30px] text-white whitespace-nowrap"
+          className="hidden lg:inline-block px-5 py-3 rounded-[30px] text-white whitespace-nowrap"
           style={{ background: gradient }}
         >
           Connect with us
@@ -710,112 +719,147 @@ const Header = ({ currentPath }: { currentPath: string }) => {
         </button>
 
         {/* Mobile Menu */}
+        {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="fixed inset-0 bg-[#01213A] text-[18px] z-[900] pt-20 px-6 overflow-y-auto">
-            <ul className="flex flex-col space-y-4">
-              {navItems.map(({ label, to, submenu }) => {
-                const isParentActive =
-                  currentPath === to ||
-                  submenu?.some((cat) =>
-                    cat.items.some((item) => currentPath.startsWith(item.to))
-                  );
+          <div className="fixed inset-0 bg-[#01213A] z-[9998] lg:hidden pt-20 px-6 overflow-y-auto">
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-white text-3xl z-[9999]"
+              onClick={() => setMobileOpen(false)}
+            >
+              ×
+            </button>
 
-                const isOpen = dropdownOpen === label;
+            {/* Mobile Navigation */}
+            <nav className="mt-8">
+              <ul className="space-y-6">
+                {navItems.map(({ label, to, customLink, submenu }) => {
+                  const basePath =
+                    (customLink || to).replace(/\/+$/, "").toLowerCase() || "/";
+                  const pathNow =
+                    (currentPath || "/").replace(/\/+$/, "").toLowerCase() ||
+                    "/";
 
-                return (
-                  <li key={label} className="w-full">
-                    <div className="flex items-center justify-between">
-                      {/* Parent link */}
-                      <NavLink
-                        to={to}
-                        onClick={() => setMobileOpen(false)}
-                        className={`py-2 font-medium transition ${
-                          isParentActive ? "text-[#02EC97]" : "text-white"
-                        }`}
-                      >
-                        {label}
-                      </NavLink>
+                  const active =
+                    pathNow === basePath ||
+                    pathNow.startsWith(basePath + "/") ||
+                    submenu?.some((cat) =>
+                      cat.items.some((item) => {
+                        const itemPath = item.to
+                          .replace(/\/+$/, "")
+                          .toLowerCase();
+                        return (
+                          pathNow === itemPath ||
+                          pathNow.startsWith(itemPath + "/")
+                        );
+                      })
+                    );
 
-                      {/* Toggle submenu */}
-                      {submenu && (
-                        <button
-                          onClick={() => toggleDropdown(label)}
-                          className="p-2 ml-2 flex items-center justify-center rounded-md hover:bg-white/10"
+                  return (
+                    <li key={label} className="border-b border-white/10 pb-4">
+                      {/* Main Nav Item */}
+                      <div className="flex flex-col">
+                        <NavLink
+                          to={customLink || to}
+                          onClick={() => {
+                            if (!submenu) setMobileOpen(false);
+                          }}
+                          className={`text-lg font-medium flex items-center justify-between ${
+                            active ? "text-[#02EC97]" : "text-white"
+                          }`}
                         >
-                          <img
-                            src={
-                              isOpen || isParentActive ? arrowDown : arrowIcon
-                            }
-                            alt="Expand"
-                            className={`w-4 h-4 transition-transform duration-300 ${
-                              isOpen ? "rotate-90" : "rotate-0"
-                            }`}
-                          />
-                        </button>
-                      )}
-                    </div>
+                          {label}
+                          {submenu && (
+                            <button
+                              onClick={() =>
+                                setSelectedSubItem(
+                                  selectedSubItem?.parent === label
+                                    ? null
+                                    : { ...submenu[0], parent: label }
+                                )
+                              }
+                              className="p-2"
+                            >
+                              <MdKeyboardArrowRight
+                                className={`text-xl transition-transform ${
+                                  selectedSubItem?.parent === label
+                                    ? "rotate-90"
+                                    : "rotate-0"
+                                }`}
+                              />
+                            </button>
+                          )}
+                        </NavLink>
 
-                    {/* Submenu */}
-                    {submenu && (
-                      <div
-                        className={`overflow-hidden transition-all duration-300 ${
-                          isOpen ? "max-h-[1000px] mt-2" : "max-h-0"
-                        }`}
-                      >
-                        <ul className="pl-4 space-y-2">
-                          {submenu.map((cat) => {
-                            const isCatActive = cat.items.some((item) =>
-                              currentPath.startsWith(item.to)
-                            );
+                        {/* Submenu Items */}
+                        {submenu && selectedSubItem?.parent === label && (
+                          <div className="mt-4 pl-4 space-y-4">
+                            {submenu.map((category) => (
+                              <div
+                                key={category.label}
+                                className="border-l border-white/20 pl-4"
+                              >
+                                <h3 className="text-white/80 font-medium mb-2">
+                                  {category.label}
+                                </h3>
+                                <ul className="space-y-3">
+                                  {category.items.map((item) => {
+                                    const itemPath = item.to
+                                      .replace(/\/+$/, "")
+                                      .toLowerCase();
+                                    const itemActive =
+                                      pathNow === itemPath ||
+                                      pathNow.startsWith(itemPath + "/");
 
-                            return (
-                              <li key={cat.label} className="text-white/80">
-                                <span
-                                  className={`font-semibold block ${
-                                    isCatActive ? "text-[#02EC97]" : ""
-                                  }`}
-                                >
-                                  {cat.label}
-                                </span>
-                                <ul className="pl-4 space-y-1 mt-1">
-                                  {cat.items.map((item) => (
-                                    <li key={item.to}>
-                                      <NavLink
-                                        to={item.to}
-                                        onClick={() => setMobileOpen(false)}
-                                        className={`block py-1 text-sm transition hover:text-[#02EC97] ${
-                                          currentPath === item.to
-                                            ? "text-[#02EC97] font-medium"
-                                            : ""
-                                        }`}
-                                      >
-                                        {item.title}
-                                      </NavLink>
-                                    </li>
-                                  ))}
+                                    return (
+                                      <li key={item.title}>
+                                        <NavLink
+                                          to={item.to}
+                                          onClick={() => setMobileOpen(false)}
+                                          className={`flex items-start space-x-2 ${
+                                            itemActive
+                                              ? "text-[#02EC97]"
+                                              : "text-white/70"
+                                          }`}
+                                        >
+                                          <span className="mt-1">
+                                            {item.icon}
+                                          </span>
+                                          <div>
+                                            <p className="text-sm">
+                                              {item.title}
+                                            </p>
+                                            <p className="text-xs text-white/50">
+                                              {item.description}
+                                            </p>
+                                          </div>
+                                        </NavLink>
+                                      </li>
+                                    );
+                                  })}
                                 </ul>
-                              </li>
-                            );
-                          })}
-                        </ul>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </li>
-                );
-              })}
+                    </li>
+                  );
+                })}
+              </ul>
 
-              {/* CTA */}
-              <li className="w-full flex justify-center">
+              {/* Mobile CTA Button */}
+              <div className="mt-10 pt-6 border-t border-white/20">
                 <NavLink
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block mt-8 px-6 py-3 rounded-[30px] text-white text-center"
+                  className="block text-center px-5 py-3 rounded-[30px] text-white font-medium"
                   style={{ background: gradient }}
                 >
                   Connect with us
                 </NavLink>
-              </li>
-            </ul>
+              </div>
+            </nav>
           </div>
         )}
       </div>
