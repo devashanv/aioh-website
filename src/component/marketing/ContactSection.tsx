@@ -342,7 +342,7 @@ const ContactSection: React.FC = () => {
                   ),
                 }}
               >
-                {countries.map((country: any) => (
+                {countries.map((country) => (
                   <MenuItem
                     key={country.cca2}
                     value={
@@ -555,14 +555,12 @@ const ContactSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-
           className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full"
         >
           {/* Address Card */}
           <div className="bg-gradient-to-b from-[#01213A] from-0% to-[#035BA0] to-100% rounded-[20px] p-6 pr-2">
             <p className="text-lg font-normal mb-1 text-white ">Address :</p>
             <p className="text-base text-white leading-6 font-light">
-
               3rd Floor, All in one Holdings, <br />
               349/2/1 Katugastota Rd, <br />
               Kandy, Sri Lanka.

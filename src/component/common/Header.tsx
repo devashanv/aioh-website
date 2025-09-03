@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import logo from "../../assets/about/AIOH.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -499,6 +499,8 @@ const Header = ({ currentPath }: { currentPath: string }) => {
     };
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <header className="bg-[#01213A] rounded-[20px] lg:h-20 font-['Roboto'] text-white select-none relative z-[9999] flex justify-center items-center">
       {/* Dropdown */}
@@ -561,8 +563,14 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 <p className="text-[16px] text-black mb-0 font-medium">
                   Need a consultation?
                 </p>
-                <button className="mt-3 bg-[#02EC97] text-[#191818] text-[18px] font-medium rounded-full py-[10px] hover:bg-[#02EC97]/80 hover:text-[#191818]/80 transition cursor-pointer">
-                  Contact Us
+                <button
+                  onClick={() => {
+                    navigate("/consultation", { replace: true });
+                    window.location.reload();
+                  }}
+                  className="mt-3 bg-[#02EC97] text-[#191818] text-[18px] font-medium rounded-full py-[10px] hover:bg-[#02EC97]/80 hover:text-[#191818]/80 transition cursor-pointer"
+                >
+                  Book Now
                 </button>
               </div>
             </aside>
