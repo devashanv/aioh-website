@@ -415,7 +415,9 @@ const ContactForm: React.FC = () => {
           >
             <p className="text-[18px] font-normal mb-1">E-mail :</p>
             <p className="text-[16px] text-[#191818] leading-[24px] font-light">
-              info@allinoneholdings.com
+              <a href="mailto:info@allinoneholdings.com">
+                info@allinoneholdings.com
+              </a>
             </p>
           </MotionSection>
 

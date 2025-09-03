@@ -29,15 +29,15 @@ const Contact = () => {
         </section>
       </div>
 
-      {/* Before Footer */}
-      <div>
-        <FooterTop />
-      </div>
+          {/* Before Footer */}
+          <section className="lg:mt-30">
+            <FooterTop />
+          </section>
 
-      {/* Footer */}
-      <section className="lg:mt-50">
-        <Footer />
-      </section>
+          {/* Footer */}
+          <section className="lg:mt-50" id="footer">
+            <Footer />
+          </section>
 
       <ChatWithUsButton />
     </div>
