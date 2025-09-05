@@ -15,6 +15,7 @@ import LogoCCL from "../assets/img/icons/ccl.svg";
 import LogoFly from "../assets/img/icons/fly.svg";
 import LogoHari from "../assets/img/icons/hari.svg";
 import LogoLTT from "../assets/img/icons/ltt.svg";
+import FooterTop from "../component/common/FooterTop";
 
 function Homepage() {
   const clientLogo = [LogoCCL, LogoFly, LogoHari, LogoLTT];
@@ -112,9 +113,13 @@ function Homepage() {
           >
             <ClientBase />
           </section>
+          {/* Before Footer */}
+          <section className="lg:mt-30">
+            <FooterTop />
+          </section>
 
           {/* Footer */}
-          <section className="lg:mt-80" id="footer">
+          <section className="lg:mt-50" id="footer">
             <Footer />
           </section>
         </motion.div>

@@ -4,10 +4,10 @@ import Process from "../component/design/Process";
 import RecentWork from "../component/design/RecentWork";
 import Contact from "../component/design/ContactSection";
 
-import footer from "../assets/img/Footer.png";
-
 import { useEffect } from "react";
 import Header from "../component/common/Header";
+import FooterTop from "../component/common/FooterTop";
+import Footer from "../component/common/Footer";
 
 const Merketing: React.FC = () => {
   useEffect(() => {
@@ -17,10 +17,10 @@ const Merketing: React.FC = () => {
   return (
     <>
       <div className="m-3.5 text-text font-['Roboto']">
-            {/* Header */}
-      <div className="mx-auto mb-3.5">
-        <Header currentPath="/Design" />
-      </div>
+        {/* Header */}
+        <div className="mx-auto mb-3.5">
+          <Header currentPath="/Design" />
+        </div>
 
         {/* Hero*/}
         <section className="w-full lg:pt-14 rounded-[20px]">
@@ -50,9 +50,15 @@ const Merketing: React.FC = () => {
           <Contact />
         </section>
       </div>
-      <footer className="mt-20 lg:mt-30">
-        <img src={footer} />
-      </footer>
+      {/* Before Footer */}
+      <section className="lg:mt-30">
+        <FooterTop />
+      </section>
+
+      {/* Footer */}
+      <section className="lg:mt-50" id="footer">
+        <Footer />
+      </section>
     </>
   );
 };

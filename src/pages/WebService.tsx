@@ -7,6 +7,8 @@ import Breadcrumb from "../component/common/Breadcrumb";
 import WebFramework from "../component/WebDetails/WebFramework";
 import WebContact from "../component/WebDetails/WebContact";
 import WebRecentWork from "../component/WebDetails/WebRecentWork";
+import FooterTop from "../component/common/FooterTop";
+import Footer from "../component/common/Footer";
 
 function WebService() {
   useEffect(() => {
@@ -65,6 +67,16 @@ function WebService() {
         <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 ">
           <WebContact />
         </div>
+      </section>
+
+      {/* Before Footer */}
+      <section className="lg:mt-30">
+        <FooterTop />
+      </section>
+
+      {/* Footer */}
+      <section className="lg:mt-50" id="footer">
+        <Footer />
       </section>
     </div>
   );

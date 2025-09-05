@@ -93,68 +93,80 @@ const SuccessHistory: React.FC = () => {
       <section className="h-auto lg:h-8/10">
         <div className="flex lg:flex-row flex-col-reverse gap-5 gap-red-300 h-full">
           {/* percentage panel - now dynamic with animation */}
-          <div className="bg-gradient-to-t from-[#010A12] to-[#002D5A] w-full lg:w-3/12 rounded-xl flex flex-col items-center justify-center gap-6 p-5 pl-10">
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={`growth-${current}`}
-                initial={{ y: direction === "right" ? 50 : -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: direction === "right" ? -50 : 50, opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                className="w-full"
-              >
-                <p className="lg:text-[96px] text-6xl font-bold text-white text-center lg:text-left">
-                  {slide.stats.growth.value}
-                  <span className="text-primary text-3xl lg:text-[70px] ml-3 font-medium">
-                    %
-                  </span>
-                </p>
-                <div className="w-full lg:w-2/3 flex text-white items-center justify-between mx-auto mt-2">
-                  <p className="text-left lg:text-xl">
-                    {slide.stats.growth.label.split(" ")[0]} <br />
-                    <span className="text-primary">
-                      {slide.stats.growth.label.split(" ").slice(1).join(" ")}
+          <div className="flex justify-center lg:w-3/12 w-full">
+            <div
+              className="bg-gradient-to-t from-[#010A12] to-[#002D5A] 
+      w-full rounded-xl flex flex-col items-center justify-center gap-10 p-5 lg:pl-18"
+            >
+              {/* growth AnimatePresence */}
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={`growth-${current}`}
+                  initial={{ y: direction === "right" ? 50 : -50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: direction === "right" ? -50 : 50, opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full flex flex-col items-center lg:items-start"
+                >
+                  <p className="text-5xl sm:text-6xl lg:text-[96px] font-bold text-white text-center lg:text-left leading-tight">
+                    {slide.stats.growth.value}
+                    <span className="text-primary text-2xl sm:text-3xl lg:text-[70px] ml-2 sm:ml-3 font-medium">
+                      %
                     </span>
                   </p>
-                  <img
-                    src={GrowthIcon}
-                    alt="Growth icon"
-                    className="w-10 h-10"
-                  />
-                </div>
-              </motion.div>
-            </AnimatePresence>
 
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={`revenue-${current}`}
-                initial={{ y: direction === "right" ? 50 : -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: direction === "right" ? -50 : 50, opacity: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="w-full"
-              >
-                <p className="lg:text-[96px] text-6xl font-bold text-white text-center lg:text-left">
-                  {slide.stats.revenue.value}
-                  <span className="text-primary text-3xl lg:text-[70px] ml-3 font-medium">
-                    %
-                  </span>
-                </p>
-                <div className="w-full lg:w-2/3 flex text-white items-center justify-between mx-auto mt-2">
-                  <p className="text-left lg:text-xl">
-                    {slide.stats.revenue.label.split(" ")[0]} <br />
-                    <span className="text-primary">
-                      {slide.stats.revenue.label.split(" ").slice(1).join(" ")}
+                  <div className="flex flex-col sm:flex-row items-center lg:items-start text-center lg:text-left text-white justify-center lg:justify-start gap-2 sm:gap-3 mt-2">
+                    <p className="text-base sm:text-lg lg:text-xl leading-snug">
+                      {slide.stats.growth.label.split(" ")[0]} <br />
+                      <span className="text-primary">
+                        {slide.stats.growth.label.split(" ").slice(1).join(" ")}
+                      </span>
+                    </p>
+                    <img
+                      src={GrowthIcon}
+                      alt="Growth icon"
+                      className="w-8 h-8 sm:w-10 sm:h-10"
+                    />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* revenue AnimatePresence */}
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={`revenue-${current}`}
+                  initial={{ y: direction === "right" ? 50 : -50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: direction === "right" ? -50 : 50, opacity: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                  className="w-full flex flex-col items-center lg:items-start"
+                >
+                  <p className="text-5xl sm:text-6xl lg:text-[96px] font-bold text-white text-center lg:text-left leading-tight">
+                    {slide.stats.revenue.value}
+                    <span className="text-primary text-2xl sm:text-3xl lg:text-[70px] ml-2 sm:ml-3 font-medium">
+                      %
                     </span>
                   </p>
-                  <img
-                    src={RevenueIcon}
-                    alt="Revenue icon"
-                    className="w-10 h-10"
-                  />
-                </div>
-              </motion.div>
-            </AnimatePresence>
+
+                  <div className="flex flex-col sm:flex-row items-center lg:items-start text-center lg:text-left text-white justify-center lg:justify-start gap-2 sm:gap-3 mt-2">
+                    <p className="text-base sm:text-lg lg:text-xl leading-snug">
+                      {slide.stats.revenue.label.split(" ")[0]} <br />
+                      <span className="text-primary">
+                        {slide.stats.revenue.label
+                          .split(" ")
+                          .slice(1)
+                          .join(" ")}
+                      </span>
+                    </p>
+                    <img
+                      src={RevenueIcon}
+                      alt="Revenue icon"
+                      className="w-8 h-8 sm:w-10 sm:h-10"
+                    />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* description section - static background */}
