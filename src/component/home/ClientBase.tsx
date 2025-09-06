@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 import LogoCCL from '../../assets/img/icons/ccl.svg'
