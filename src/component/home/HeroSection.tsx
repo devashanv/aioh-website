@@ -6,6 +6,7 @@ import NavBar from '../common/NavBar';
 import { gsap } from 'gsap';
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import HeroCardSlider from './HeroCardSlider';
+import MobileSlider from './MobileSlider';
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -63,8 +64,12 @@ const HeroSection: React.FC = () => {
                     </div> */}
 
                     <div
-                        className='h-80 w-full'>
+                        className='h-80 w-full lg:block hidden'>
                         <HeroCardSlider />
+                    </div>
+                    <div
+                        className='h-80 w-full lg:hidden block flex items-center justify-center'>
+                        <MobileSlider />
                     </div>
 
                     {/* bottom data */}

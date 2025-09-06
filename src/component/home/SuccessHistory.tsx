@@ -93,7 +93,7 @@ const SuccessHistory: React.FC = () => {
       <section className="h-auto lg:h-8/10">
         <div className="flex lg:flex-row flex-col-reverse gap-5 gap-red-300 h-full">
           {/* percentage panel - now dynamic with animation */}
-          <div className="flex justify-center lg:w-3/12 w-full">
+          <div className="lg:flex justify-center lg:w-3/12 w-full hidden">
             <div
               className="bg-gradient-to-t from-[#010A12] to-[#002D5A] 
       w-full rounded-xl flex flex-col items-center justify-center gap-10 p-5 lg:pl-18"
@@ -172,7 +172,7 @@ const SuccessHistory: React.FC = () => {
           {/* description section - static background */}
           <div className="bg-gradient-to-t text-white from-[#010A12] to-[#002D5A] w-full lg:w-9/12 rounded-xl p-5 lg:p-10 relative overflow-hidden">
             {/* Navigation Buttons */}
-            <div className="absolute md:bottom-10 right-16 bottom-8 flex gap-2 z-10 p-2">
+            <div className="absolute md:bottom-10 right-1 lg:right-16 bottom-0 lg:bottom-8 flex gap-2 z-10 p-2">
               <button
                 onClick={handlePrev}
                 className="w-10 h-10 bg-[#01213A] text-white rounded-full flex items-center justify-center shadow-md hover:opacity-90 transition cursor-pointer"

@@ -8,6 +8,7 @@ import Categories from "../component/home/Categories";
 import ClientBase from "../component/home/ClientBase";
 import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
+import MobileSlider from "../component/home/MobileSlider";
 
 import FooterTop from "../component/common/FooterTop";
 
@@ -46,7 +47,7 @@ function Homepage() {
           {/* Header */}
           <section 
             id="hero"
-            className="mx-auto mb-3.5 p-3.5">
+            className="mx-auto mb-3.5 p-1 lg:p-3.5">
             <HeroSection />
             <div className="bg-white h-25 rounded-xl my-5 flex items-center justify-center">
               <ServiceRibbon />
@@ -55,7 +56,7 @@ function Homepage() {
 
           {/* Tech Stack */}
           <section
-            className="mx-auto mb-3.5 px-3.5 w-full rounded-xl lg:mt-30 mt-20"
+            className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full rounded-xl lg:mt-30 mt-15"
             id="techstack">
             <video width="640" controls className="w-full rounded-xl h-100">
               <source src="video.mp4" type="video/mp4" />
@@ -64,7 +65,7 @@ function Homepage() {
 
           {/* Core Services */}
           <section
-            className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+            className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
             id="services">
             <div className="bg-white lg:p-3.5 rounded-xl flex h-full">
               <div className="w-full lg:w-11/12 mx-auto flex">
@@ -75,21 +76,21 @@ function Homepage() {
 
           {/* Testimonials */}
           <section
-            className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+            className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
             id="success">
             <SuccessHistory />
           </section>
 
           {/* Categories */}
           <section
-            className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+            className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
             id="catego">
             <Categories />
           </section>
 
           {/* Client Base */}
           <section
-            className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-40 mt-20"
+            className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-40 mt-20"
             id="client">
             <ClientBase />
           </section>
@@ -97,12 +98,12 @@ function Homepage() {
           {/* Before Footer */}
           <section 
             id="footer"
-            className="lg:mt-30">
+            className="lg:mt-30 mt-20">
             <FooterTop />
           </section>
 
           {/* Footer */}
-          <section className="lg:mt-50">
+          <section className="lg:mt-40 mt-10">
             <Footer />
           </section>
         </motion.div>

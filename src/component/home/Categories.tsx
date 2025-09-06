@@ -10,7 +10,7 @@ const Categories: React.FC = () => {
             <section className='w-11/12 mx-auto h-full'>
                 <section
                     className='h-auto lg:h-1/4 lg:mb-0 mb-10'>
-                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium lg:mb-3 text-left lg:w-1/2">
+                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium lg:mb-3 text-center lg:text-left lg:w-1/2">
                         Crafted Expertise Across Every Discipline
                     </h1>
                 </section>
