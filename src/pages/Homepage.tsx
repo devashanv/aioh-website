@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import Footer from "../component/common/Footer";
@@ -19,14 +19,14 @@ import FooterTop from "../component/common/FooterTop";
 
 function Homepage() {
   const clientLogo = [LogoCCL, LogoFly, LogoHari, LogoLTT];
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 6800); // 8 seconds
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 6800); // 8 seconds
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <>
@@ -70,9 +70,8 @@ function Homepage() {
 
           {/* Tech Stack */}
           <section
-            className="mx-auto mb-3.5 p-3.5 w-full rounded-xl lg:mt-30 mt-20"
-            id="techstack"
-          >
+            className="mx-auto mb-3.5 px-3.5 w-full rounded-xl lg:mt-30 mt-20"
+            id="techstack">
             <video width="640" controls className="w-full rounded-xl h-100">
               <source src="video.mp4" type="video/mp4" />
             </video>
@@ -80,9 +79,8 @@ function Homepage() {
 
           {/* Core Services */}
           <section
-            className="mb-3.5 p-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
-            id="services"
-          >
+            className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+            id="services">
             <div className="bg-white lg:p-3.5 rounded-xl flex h-full">
               <div className="w-full lg:w-11/12 mx-auto flex">
                 <CoreServices />
@@ -93,33 +91,33 @@ function Homepage() {
           {/* Testimonials */}
           <section
             className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
-            id="success"
-          >
+            id="success">
             <SuccessHistory />
           </section>
 
           {/* Categories */}
           <section
             className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
-            id="catego"
-          >
+            id="catego">
             <Categories />
           </section>
 
           {/* Client Base */}
           <section
-            className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
-            id="client"
-          >
+            className="mb-3.5 px-3.5 h-auto lg:h-[100dvh] lg:mt-40 mt-20"
+            id="client">
             <ClientBase />
           </section>
+
           {/* Before Footer */}
-          <section className="lg:mt-30">
+          <section 
+            id="footer"
+            className="lg:mt-30">
             <FooterTop />
           </section>
 
           {/* Footer */}
-          <section className="lg:mt-50" id="footer">
+          <section className="lg:mt-50">
             <Footer />
           </section>
         </motion.div>
