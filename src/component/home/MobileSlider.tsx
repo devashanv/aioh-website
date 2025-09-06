@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import TestProject from '../../assets/img/test-project.webp';
 
 const rawProjects = [

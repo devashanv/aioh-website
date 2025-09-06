@@ -20,7 +20,7 @@ const FooterTop: React.FC = () => {
 
           {/* robo */}
           <div
-            className="z-40 absolute -top-10 right-0 pointer-events-none"
+            className="z-40 absolute -top-10 right-0 pointer-events-none lg:block hidden"
             style={{
               width: "clamp(200px, 15vw, 300px)",
               height: "clamp(200px, 15vw, 300px)",

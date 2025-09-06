@@ -8,7 +8,6 @@ import Categories from "../component/home/Categories";
 import ClientBase from "../component/home/ClientBase";
 import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
-import MobileSlider from "../component/home/MobileSlider";
 
 import FooterTop from "../component/common/FooterTop";
 
