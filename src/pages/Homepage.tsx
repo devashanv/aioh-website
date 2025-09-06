@@ -30,7 +30,7 @@ function Homepage() {
           className="relative min-h-screen bg-gray-50 text-center overflow-x-hidden"
         >
           {/* Invisible SVG path for GSAP MotionPath */}
-          <svg width="0" height="0">
+          {/* <svg width="0" height="0">
             <path
               id="robotPath"
               d="M100,100 C300,300 600,400 900,600"
@@ -38,7 +38,7 @@ function Homepage() {
               stroke="red"
               strokeWidth="2"
             />
-          </svg>
+          </svg> */}
 
           {/* Floating Robot */}
           <SplineRobo />
