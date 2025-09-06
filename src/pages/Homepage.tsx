@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import Footer from "../component/common/Footer";
@@ -10,15 +10,10 @@ import ClientBase from "../component/home/ClientBase";
 import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
 
-import LogoCCL from "../assets/img/icons/ccl.svg";
-import LogoFly from "../assets/img/icons/fly.svg";
-import LogoHari from "../assets/img/icons/hari.svg";
-import LogoLTT from "../assets/img/icons/ltt.svg";
 import FooterTop from "../component/common/FooterTop";
 import LoadingScreen from "../component/home/LoadingScreen";
 
 function Homepage() {
-  const clientLogo = [LogoCCL, LogoFly, LogoHari, LogoLTT];
   const [isLoading, setIsLoading] = useState(false);
 
   // useEffect(() => {
@@ -27,6 +22,7 @@ function Homepage() {
   //   }, 6800); // 8 seconds
   //   return () => clearTimeout(timer);
   // }, []);
+   setIsLoading(false)
 
   return (
     <>

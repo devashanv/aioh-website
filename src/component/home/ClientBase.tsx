@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 import LogoCCL from '../../assets/img/icons/ccl.svg'
@@ -9,11 +9,9 @@ import LogoHari from '../../assets/img/icons/hari.svg'
 
 const ClientBase: React.FC = () => {
 
-    const [activeIndex, setActiveIndex] = useState(0);
-
    const settings = {
     infinite: true,
-    slidesToShow: 5,            // desktop (unchanged)
+    slidesToShow: 5, 
     slidesToScroll: 1,
     speed: 2000,
     autoplay: true,
