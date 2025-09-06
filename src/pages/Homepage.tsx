@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 import Footer from "../component/common/Footer";
@@ -11,7 +10,6 @@ import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
 
 import FooterTop from "../component/common/FooterTop";
-import LoadingScreen from "../component/home/LoadingScreen";
 
 function Homepage() {
 
