@@ -14,23 +14,14 @@ import FooterTop from "../component/common/FooterTop";
 import LoadingScreen from "../component/home/LoadingScreen";
 
 function Homepage() {
-  const [isLoading, setIsLoading] = useState(false);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 6800); // 8 seconds
-  //   return () => clearTimeout(timer);
-  // }, []);
-   setIsLoading(false)
 
   return (
     <>
       {/* Loading Screen */}
-      {isLoading && <LoadingScreen />}
+      {/* {isLoading && <LoadingScreen />} */}
 
       {/* Home Page Content */}
-      {!isLoading && (
+      {/* {!isLoading && ( */}
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,7 +108,7 @@ function Homepage() {
             <Footer />
           </section>
         </motion.div>
-      )}
+      {/* )} */}
     </>
   );
 }
