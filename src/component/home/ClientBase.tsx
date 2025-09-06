@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 import LogoCCL from '../../assets/img/icons/ccl.svg'
@@ -8,35 +8,77 @@ import LogoHari from '../../assets/img/icons/hari.svg'
 
 
 const ClientBase: React.FC = () => {
-
-    const [activeIndex, setActiveIndex] = useState(0);
-
-   const settings = {
-    infinite: true,
-    slidesToShow: 5,            // desktop (unchanged)
-    slidesToScroll: 1,
-    speed: 2000,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: true,
-    // IMPORTANT: no centerMode, no centerPadding, no className: "center"
-    responsive: [
-      {
-        breakpoint: 1024,       // ≤ 1024px → tablet
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640,        // ≤ 640px → mobile
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+    const settings = {
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    speed: 2000,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 789,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    speed: 2000,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    speed: 2000,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ],
+    };
 
 
     return (
@@ -45,7 +87,7 @@ const ClientBase: React.FC = () => {
                 className='bg-gradient-to-b text-white from-[#010A12] to-[#002D5A] rounded-xl h-full'>
                 <section
                     className='h-2/10 pt-5'>
-                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3">
+                    <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3 px-5 lg:px-0">
                         Partners in Digital Success
                     </h1>
                     <p className="text-[18px] font-light mb-6">
@@ -73,7 +115,7 @@ const ClientBase: React.FC = () => {
                     <Slider {...settings}
                         className="h-full flex">
                         <div className="h-full flex flex-col gap-10">
-                            <div 
+                            <div
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoCCL} alt="" className="filter grayscale" />
                             </div>
@@ -89,10 +131,10 @@ const ClientBase: React.FC = () => {
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoLtt} alt="" className="filter grayscale" />
                             </div>
-                        </div> 
+                        </div>
 
-                         <div className="h-full flex flex-col gap-10">
-                            <div 
+                        <div className="h-full flex flex-col gap-10">
+                            <div
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoCCL} alt="" className="filter grayscale" />
                             </div>
@@ -108,10 +150,10 @@ const ClientBase: React.FC = () => {
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoLtt} alt="" className="filter grayscale" />
                             </div>
-                        </div> 
+                        </div>
 
-                         <div className="h-full flex flex-col gap-10">
-                            <div 
+                        <div className="h-full flex flex-col gap-10">
+                            <div
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoCCL} alt="" className="filter grayscale" />
                             </div>
@@ -127,10 +169,10 @@ const ClientBase: React.FC = () => {
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoLtt} alt="" className="filter grayscale" />
                             </div>
-                        </div> 
+                        </div>
 
-                         <div className="h-full flex flex-col gap-10">
-                            <div 
+                        <div className="h-full flex flex-col gap-10">
+                            <div
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoCCL} alt="" className="filter grayscale" />
                             </div>
@@ -146,10 +188,10 @@ const ClientBase: React.FC = () => {
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoLtt} alt="" className="filter grayscale" />
                             </div>
-                        </div> 
+                        </div>
 
-                         <div className="h-full flex flex-col gap-10">
-                            <div 
+                        <div className="h-full flex flex-col gap-10">
+                            <div
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoCCL} alt="" className="filter grayscale" />
                             </div>
@@ -165,10 +207,10 @@ const ClientBase: React.FC = () => {
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoLtt} alt="" className="filter grayscale" />
                             </div>
-                        </div> 
+                        </div>
 
-                         <div className="h-full flex flex-col gap-10">
-                            <div 
+                        <div className="h-full flex flex-col gap-10">
+                            <div
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoCCL} alt="" className="filter grayscale" />
                             </div>
@@ -184,7 +226,7 @@ const ClientBase: React.FC = () => {
                                 className="bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl my-5 flex items-center justify-center">
                                 <img src={LogoLtt} alt="" className="filter grayscale" />
                             </div>
-                        </div>               
+                        </div>
                     </Slider>
                 </div>
             </section>

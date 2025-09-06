@@ -629,7 +629,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
       {/* Header main content */}
       <div className="w-11/12 mx-auto flex items-center justify-between h-16 relative">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-12 w-auto" draggable={false} />
+        <img src={logo} alt="Logo" className="h-8 lg:h-12 w-auto" draggable={false} />
 
         {/* Desktop Nav */}
         <nav className="hidden lg:block text-[18px] font-light w-full">

@@ -6,6 +6,7 @@ import NavBar from '../common/NavBar';
 import { gsap } from 'gsap';
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import HeroCardSlider from './HeroCardSlider';
+import MobileSlider from './MobileSlider';
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -30,7 +31,7 @@ const HeroSection: React.FC = () => {
         <>
             {/* header*/}
             <section
-                className='relative flex flex-col items-center justify-center lg:pt-45 w-full h-[80dvh] lg:h-[100dvh] bg-[linear-gradient(125deg,_#011524_0%,_#002D5A_50%,_#010A12_100%)] rounded-xl'>
+                className='relative flex flex-col items-center justify-center lg:pt-45 w-full h-[100dvh] lg:h-[100dvh] bg-[linear-gradient(125deg,_#011524_0%,_#002D5A_50%,_#010A12_100%)] rounded-xl'>
 
                 {/* nav */}
                 <div
@@ -40,7 +41,7 @@ const HeroSection: React.FC = () => {
 
                 {/* content */}
                 <div
-                    className='flex flex-col items-center justify-center lg:-mt-20 w-full'>
+                    className='flex flex-col items-center justify-center mt-0 h-2/3 lg:-mt-20 w-full'>
                     {/* title */}
                     <div
                         className='h-auto'>
@@ -63,8 +64,12 @@ const HeroSection: React.FC = () => {
                     </div> */}
 
                     <div
-                        className='h-80 w-full'>
+                        className='h-80 w-full lg:block hidden'>
                         <HeroCardSlider />
+                    </div>
+                    <div
+                        className='h-80 w-full lg:hidden block flex items-center justify-center'>
+                        <MobileSlider />
                     </div>
 
                     {/* bottom data */}

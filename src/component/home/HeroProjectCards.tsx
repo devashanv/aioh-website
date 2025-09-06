@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export type Project = {
     id: number,
@@ -15,3 +15,5 @@ const HeroProjectCards = () => {
     </>
   )
 }
+
+export default HeroProjectCards;

@@ -6,12 +6,12 @@ const FooterTop: React.FC = () => {
   return (
     <>
       <div className="relative p-3">
-        <div className="relative text-center text-[48px] font-semibold">
-          <p>Need A Boost For Your Business?</p>
+        <div className="relative text-center text-2xl lg:text-[48px] font-semibold">
+          <p className="">Need A Boost For Your Business?</p>
           <p className="text-center text-[18px] text-[#191818] font-light mt-1"> Lets Connect With Us</p>
 
           <button
-            className="lg:inline-block px-5 py-3 text-lg font-normal py-0 rounded-[30px] text-white whitespace-nowrap cursor-pointer mt-4 z-40"
+            className="lg:inline-block px-5 py-2 lg:py-3 text-lg font-normal py-0 rounded-[30px] text-white whitespace-nowrap cursor-pointer mt-4 z-40"
             style={{ background: gradient }}
             onClick={() => (window.location.href = "/contact")}
           >
@@ -20,7 +20,7 @@ const FooterTop: React.FC = () => {
 
           {/* robo */}
           <div
-            className="z-40 absolute -top-10 right-0 pointer-events-none"
+            className="z-40 absolute -top-10 right-0 pointer-events-none lg:block hidden"
             style={{
               width: "clamp(200px, 15vw, 300px)",
               height: "clamp(200px, 15vw, 300px)",
