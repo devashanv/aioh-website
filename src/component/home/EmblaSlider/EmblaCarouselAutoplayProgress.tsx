@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { EmblaCarouselType } from 'embla-carousel'
-import type { AutoplayType } from 'embla-carousel-autoplay'
 
 type UseAutoplayProgressType = {
   showAutoplayProgress: boolean
