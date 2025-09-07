@@ -25,6 +25,8 @@
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.10.53",
     "@tailwindcss/vite": "^4.1.11",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "gl-matrix": "^3.4.4",
     "gsap": "^3.13.0",
     "keen-slider": "^6.8.6",

@@ -1,76 +1,287 @@
-import { useEffect, useState } from 'react';
-import TestProject from '../../assets/img/test-project.webp';
+// import React, { useCallback, useEffect, useRef } from 'react'
 
-const rawProjects = [
-  { title: 'Project One', description: 'Description for project one' },
-  { title: 'Project Two', description: 'Description for project two' },
-  { title: 'Project Three', description: 'Description for project three' },
-  { title: 'Project Four', description: 'Description for project four' },
-  { title: 'Project Five', description: 'Description for project five' },
-];
+// import '../../styles/mobileslider.css'
+// import testImage from '../../assets/img/sample.webp'
+// import { MdOutlineArrowOutward } from "react-icons/md";
 
-// Clone first and last items for infinite loop
-const projects = [
-  rawProjects[rawProjects.length - 1],
-  ...rawProjects,
-  rawProjects[0],
-];
+// import type {
+//   EmblaCarouselType,
+//   EmblaEventType,
+//   EmblaOptionsType
+// } from 'embla-carousel'
+// import useEmblaCarousel from 'embla-carousel-react'
 
-export default function MobileSlider() {
-  const [index, setIndex] = useState(1); // Start at first real slide
-  const [isTransitioning, setIsTransitioning] = useState(true);
+// const TWEEN_FACTOR_BASE = 0.52
+
+// const numberWithinRange = (number: number, min: number, max: number): number =>
+//   Math.min(Math.max(number, min), max)
+
+// type PropType = {
+//   options?: EmblaOptionsType
+// }
+
+// const EmblaCarousel: React.FC<PropType> = (props) => {
+//   const { options } = props
+//   const [emblaRef, emblaApi] = useEmblaCarousel(options)
+//   const tweenFactor = useRef(0)
+//   const tweenNodes = useRef<HTMLElement[]>([])
+
+//    const SLIDES = [
+//         {image:testImage},
+//         {image:testImage},
+//         {image:testImage},
+//         {image:testImage},
+//         {image:testImage},
+//         {image:testImage},
+//     ]
+
+//   // const {
+//   //   prevBtnDisabled,
+//   //   nextBtnDisabled,
+//   //   onPrevButtonClick,
+//   //   onNextButtonClick
+//   // } = usePrevNextButtons(emblaApi)
+
+//   const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
+//     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
+//       return slideNode.querySelector('.embla__slide__number') as HTMLElement
+//     })
+//   }, [])
+
+//   const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
+//     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
+//   }, [])
+
+//   const tweenScale = useCallback(
+//     (emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
+//       const engine = emblaApi.internalEngine()
+//       const scrollProgress = emblaApi.scrollProgress()
+//       const slidesInView = emblaApi.slidesInView()
+//       const isScrollEvent = eventName === 'scroll'
+
+//       emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+//         let diffToTarget = scrollSnap - scrollProgress
+//         const slidesInSnap = engine.slideRegistry[snapIndex]
+
+//         slidesInSnap.forEach((slideIndex) => {
+//           if (isScrollEvent && !slidesInView.includes(slideIndex)) return
+
+//           if (engine.options.loop) {
+//             engine.slideLooper.loopPoints.forEach((loopItem) => {
+//               const target = loopItem.target()
+
+//               if (slideIndex === loopItem.index && target !== 0) {
+//                 const sign = Math.sign(target)
+
+//                 if (sign === -1) {
+//                   diffToTarget = scrollSnap - (1 + scrollProgress)
+//                 }
+//                 if (sign === 1) {
+//                   diffToTarget = scrollSnap + (1 - scrollProgress)
+//                 }
+//               }
+//             })
+//           }
+
+//           const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
+//           const scale = numberWithinRange(tweenValue, 0, 1).toString()
+//           const tweenNode = tweenNodes.current[slideIndex]
+//           tweenNode.style.transform = `scale(${scale})`
+//         })
+//       })
+//     },
+//     []
+//   )
+
+//   useEffect(() => {
+//     if (!emblaApi) return
+
+//     setTweenNodes(emblaApi)
+//     setTweenFactor(emblaApi)
+//     tweenScale(emblaApi)
+
+//     emblaApi
+//       .on('reInit', setTweenNodes)
+//       .on('reInit', setTweenFactor)
+//       .on('reInit', tweenScale)
+//       .on('scroll', tweenScale)
+//       .on('slideFocus', tweenScale)
+//   }, [emblaApi, tweenScale])
+
+//   return (
+//     <div className="embla h-full">
+//       <div className="embla__viewport h-full" ref={emblaRef}>
+//         <div className="embla__container h-full">
+//           {SLIDES.map((pro, index) => (
+//             <div className="embla__slide flex items-center justify-center" key={index}>
+//               <div className="embla__slide__number bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg flex flex-col">
+//                 <div className='bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg'>
+//                   <img src={pro.image} alt="" className='h-40 object-cover rounded-2xl'/>
+                  
+//                 </div>
+
+//                 <MdOutlineArrowOutward style={{width: "25px", height: "25px"}} className="text-white bg-white/10 backdrop-blur-lg rounded-full p-1 mt-2 w-10 h-10"/>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* <div className="embla__controls">
+//         <div className="embla__buttons">
+//           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+//           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+//         </div> 
+
+//          <div className="embla__dots">
+//           {scrollSnaps.map((_: any, index: any) => (
+//             <DotButton
+//               key={index}
+//               onClick={() => onDotButtonClick(index)}
+//               className={'embla__dot'.concat(
+//                 index === selectedIndex ? ' embla__dot--selected' : ''
+//               )}
+//             />
+//           ))}
+//         </div>
+//       </div> */}
+//     </div>
+//   )
+// }
+
+// export default EmblaCarousel
+
+
+import React, { useCallback, useEffect, useRef } from 'react'
+
+import '../../styles/mobileslider.css'
+import testImage from '../../assets/img/sample.webp'
+import { MdOutlineArrowOutward } from "react-icons/md";
+
+import type {
+  EmblaCarouselType,
+  EmblaEventType,
+  EmblaOptionsType
+} from 'embla-carousel'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'   // ✅ Import plugin
+
+const TWEEN_FACTOR_BASE = 0.52
+
+const numberWithinRange = (number: number, min: number, max: number): number =>
+  Math.min(Math.max(number, min), max)
+
+type PropType = {
+  options?: EmblaOptionsType
+}
+
+const MobileSlider: React.FC<PropType> = (props) => {
+  // ✅ Add loop: true for infinity
+  const { options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, ...options }, 
+    [Autoplay({ delay: 5000, stopOnInteraction: false })] // autoplay every 3s
+  )
+
+  const tweenFactor = useRef(0)
+  const tweenNodes = useRef<HTMLElement[]>([])
+
+  const SLIDES = [
+    { image: testImage },
+    { image: testImage },
+    { image: testImage },
+    { image: testImage },
+    { image: testImage },
+    { image: testImage },
+  ]
+
+  const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
+    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
+      return slideNode.querySelector('.embla__slide__number') as HTMLElement
+    })
+  }, [])
+
+  const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
+    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
+  }, [])
+
+  const tweenScale = useCallback(
+    (emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
+      const engine = emblaApi.internalEngine()
+      const scrollProgress = emblaApi.scrollProgress()
+      const slidesInView = emblaApi.slidesInView()
+      const isScrollEvent = eventName === 'scroll'
+
+      emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+        let diffToTarget = scrollSnap - scrollProgress
+        const slidesInSnap = engine.slideRegistry[snapIndex]
+
+        slidesInSnap.forEach((slideIndex) => {
+          if (isScrollEvent && !slidesInView.includes(slideIndex)) return
+
+          if (engine.options.loop) {
+            engine.slideLooper.loopPoints.forEach((loopItem) => {
+              const target = loopItem.target()
+
+              if (slideIndex === loopItem.index && target !== 0) {
+                const sign = Math.sign(target)
+
+                if (sign === -1) {
+                  diffToTarget = scrollSnap - (1 + scrollProgress)
+                }
+                if (sign === 1) {
+                  diffToTarget = scrollSnap + (1 - scrollProgress)
+                }
+              }
+            })
+          }
+
+          const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
+          const scale = numberWithinRange(tweenValue, 0, 1).toString()
+          const tweenNode = tweenNodes.current[slideIndex]
+          tweenNode.style.transform = `scale(${scale})`
+        })
+      })
+    },
+    []
+  )
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => prev + 1);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    if (!emblaApi) return
 
-  useEffect(() => {
-    if (index === projects.length - 1) {
-      // Reached clone of first slide
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setIndex(1); // Jump to real first slide
-      }, 700);
-    } else if (index === 0) {
-      // Reached clone of last slide
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setIndex(projects.length - 2); // Jump to real last slide
-      }, 700);
-    } else {
-      setIsTransitioning(true);
-    }
-  }, [index]);
+    setTweenNodes(emblaApi)
+    setTweenFactor(emblaApi)
+    tweenScale(emblaApi)
 
-  const getTransform = () => {
-    return `translateX(-${(index - 1) * 33.3333}%)`; // Center active slide
-  };
+    emblaApi
+      .on('reInit', setTweenNodes)
+      .on('reInit', setTweenFactor)
+      .on('reInit', tweenScale)
+      .on('scroll', tweenScale)
+      .on('slideFocus', tweenScale)
+  }, [emblaApi, tweenScale])
 
   return (
-    <div className="relative w-full mx-auto overflow-hidden">
-      <div
-        className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
-        style={{ transform: getTransform() }}
-      >
-        {projects.map((project, i) => {
-          const isActive = i === index;
-          return (
-            <div
-              key={i}
-              className={`w-1/3 flex-shrink-0 px-2 transition-all duration-700 ease-in-out
-                ${isActive ? 'scale-115 opacity-100 z-10' : 'scale-95 opacity-60 z-0'}
-              `}
-            >
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg h-full flex flex-col justify-center items-center text-center">
-                <img src={TestProject} alt={project.title} className="w-full h-full object-cover rounded-xl" />
+    <div className="embla h-full">
+      <div className="embla__viewport h-full" ref={emblaRef}>
+        <div className="embla__container h-full">
+          {SLIDES.map((pro, index) => (
+            <div className="embla__slide flex items-center justify-center" key={index}>
+              <div className="embla__slide__number flex flex-col">
+                <div className='bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg p-2'>
+                  <img src={pro.image} alt="" className='h-40 object-cover rounded-2xl'/>
+                </div>
+                <MdOutlineArrowOutward
+                  style={{ width: "25px", height: "25px" }}
+                  className="text-white bg-white/10 backdrop-blur-lg rounded-full p-1 mt-2 w-10 h-10"
+                />
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </div>
-  );
+  )
 }
+
+export default MobileSlider

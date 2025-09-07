@@ -7,12 +7,13 @@ import { gsap } from 'gsap';
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import HeroCardSlider from './HeroCardSlider';
 import MobileSlider from './MobileSlider';
+import type { EmblaOptionsType } from 'embla-carousel'
 
 gsap.registerPlugin(MotionPathPlugin);
 
 const HeroSection: React.FC = () => {
-
-
+    const OPTIONS: EmblaOptionsType = { loop: true }
+ 
     React.useEffect(() => {
         gsap.to("#rect", {
             motionPath: {
@@ -69,7 +70,7 @@ const HeroSection: React.FC = () => {
                     </div>
                     <div
                         className='h-80 w-full lg:hidden block flex items-center justify-center'>
-                        <MobileSlider />
+                        <MobileSlider options={OPTIONS}/>
                     </div>
 
                     {/* bottom data */}
