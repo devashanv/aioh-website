@@ -108,7 +108,7 @@ const CoreServices = () => {
                 </p>
               </div>
               <div className="h-2/5">
-                <p className="font-thin text-xs lg:text-lg">
+                <p className="font-light text-[#1a1a1a] text-xs lg:text-lg">
                   Empowering brands to flourish online with cutting-edge IT
                   solutions
                 </p>
@@ -125,7 +125,7 @@ const CoreServices = () => {
                 </p>
               </div>
               <div className="h-2/5">
-                <p className="font-thin text-xs lg:text-lg">
+                <p className="font-light text-[#1a1a1a] text-xs lg:text-lg">
                   Empowering Building digital marvels with tailored web
                   solutions
                 </p>
@@ -146,7 +146,7 @@ const CoreServices = () => {
                 </p>
               </div>
               <div className="h-2/5">
-                <p className="font-thin text-xs lg:text-lg">
+                <p className="font-light text-[#1a1a1a] text-xs lg:text-lg">
                   Empowering brands to flourish online with cutting-edge IT
                   solutions
                 </p>
@@ -163,7 +163,7 @@ const CoreServices = () => {
                 </p>
               </div>
               <div className="h-2/5">
-                <p className="font-thin text-xs lg:text-lg">
+                <p className="font-light text-[#1a1a1a] text-xs lg:text-lg">
                   Empowering brands to flourish online with cutting-edge IT
                   solutions
                 </p>
@@ -184,7 +184,7 @@ const CoreServices = () => {
                 </p>
               </div>
               <div className="h-2/5">
-                <p className="font-thin text-xs lg:text-lg">
+                <p className="font-light text-[#1a1a1a] text-xs lg:text-lg">
                   Empowering brands to flourish online with cutting-edge IT
                   solutions
                 </p>
@@ -201,7 +201,7 @@ const CoreServices = () => {
                 </p>
               </div>
               <div className="h-2/5">
-                <p className="font-thin text-xs lg:text-lg">
+                <p className="font-light text-[#1a1a1a] text-xs lg:text-lg">
                   Empowering brands to flourish online with cutting-edge IT
                   solutions
                 </p>
