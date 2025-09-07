@@ -22,7 +22,7 @@ const Categories: React.FC = () => {
                         <section
                             className='bg-white h-4/12 rounded-xl p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Marketing</h2>
-                            <p className='font-thin'>We build meaningful connections. Our data-driven strategies put your brand in front of the right people, at the right time, across the right channels.</p>
+                            <p className='font-light'>We build meaningful connections. Our data-driven strategies put your brand in front of the right people, at the right time, across the right channels.</p>
                         </section>
 
                         <section
@@ -58,7 +58,7 @@ const Categories: React.FC = () => {
                         <section
                             className='bg-white h-4/12 rounded-xl p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Technology</h2>
-                            <p className='font-thin'>We engineer solutions that turn your ideas into secure, high-performance digital experiences. Let technology become your biggest asset.</p>
+                            <p className='font-light'>We engineer solutions that turn your ideas into secure, high-performance digital experiences. Let technology become your biggest asset.</p>
                         </section>
                     </section>
 
@@ -67,7 +67,7 @@ const Categories: React.FC = () => {
                         <section
                             className='bg-white h-4/12 rounded-xl p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Design</h2>
-                            <p className='font-thin'>Great design is more than aesthetics it’s how you make your audience feel.  We craft intuitive, user focused visuals that elevate your brand.</p>
+                            <p className='font-light'>Great design is more than aesthetics it’s how you make your audience feel.  We craft intuitive, user focused visuals that elevate your brand.</p>
                         </section>
 
                         <section
