@@ -499,7 +499,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
     };
   }, []);
 
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <header className="bg-transparent rounded-[20px] lg:h-20 font-['Roboto'] text-white select-none relative z-[9999] flex justify-center items-center">
@@ -508,7 +508,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
         navItems.find((item) => item.label === dropdownOpen)?.submenu && (
           <div
             ref={dropdownRef}
-            className="hidden lg:flex absolute top-22 left-0 w-full h-[550px] bg-white text-black px-12 py-10 shadow-2xl z-[999] transition-opacity duration-200 rounded-[20px] overflow-hidden"
+            className="hidden lg:flex absolute top-22 left-0 w-full h-[550px] bg-white text-black px-12 py-10 z-[999] transition-opacity duration-200 rounded-[20px] overflow-hidden"
             onMouseEnter={() => handleMouseEnter(dropdownOpen)}
             onMouseLeave={handleMouseLeave}
           >
@@ -629,7 +629,12 @@ const Header = ({ currentPath }: { currentPath: string }) => {
       {/* Header main content */}
       <div className="w-11/12 mx-auto flex items-center justify-between h-16 relative">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-8 lg:h-12 w-auto" draggable={false} />
+        <img
+          src={logo}
+          alt="Logo"
+          className="h-8 lg:h-12 w-auto"
+          draggable={false}
+        />
 
         {/* Desktop Nav */}
         <nav className="hidden lg:block text-[18px] font-light w-full">
@@ -731,7 +736,9 @@ const Header = ({ currentPath }: { currentPath: string }) => {
 
             {/* Mobile Navigation */}
             <nav className="mt-8">
-              <ul className="space-y-6">
+              <ul className="space-y-6 text-left">
+                {" "}
+                {/* Add text-left */}
                 {navItems.map(({ label, to, customLink, submenu }) => {
                   const basePath =
                     (customLink || to).replace(/\/+$/, "").toLowerCase() || "/";
@@ -754,90 +761,60 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                       })
                     );
 
+                  const isOpen = selectedSubItem?.parent === label;
+
                   return (
                     <li key={label} className="border-b border-white/10 pb-4">
                       {/* Main Nav Item */}
                       <div className="flex flex-col">
-                        <NavLink
-                          to={customLink || to}
-                          onClick={() => {
-                            if (!submenu) setMobileOpen(false);
-                          }}
-                          className={`text-lg font-medium flex items-center justify-between ${
-                            active ? "text-[#02EC97]" : "text-white"
-                          }`}
-                        >
-                          {label}
+                        <div className="flex items-center justify-between w-full">
+                          {/* Clickable label */}
+                          <NavLink
+                            to={to || customLink || "#"}
+                            onClick={() => setMobileOpen(false)}
+                            className={`flex-1 text-lg font-medium ${
+                              active ? "text-[#02EC97]" : "text-white"
+                            }`}
+                          >
+                            {label}
+                          </NavLink>
+
+                          {/* Arrow toggle */}
                           {submenu && (
                             <button
                               onClick={() =>
                                 setSelectedSubItem(
-                                  selectedSubItem?.parent === label
-                                    ? null
-                                    : { ...submenu[0], parent: label }
+                                  isOpen ? null : ({ parent: label } as any)
                                 )
                               }
-                              className="p-2"
+                              className="ml-2 flex-shrink-0"
                             >
                               <MdKeyboardArrowRight
-                                className={`text-xl transition-transform ${
-                                  selectedSubItem?.parent === label
-                                    ? "rotate-90"
-                                    : "rotate-0"
-                                }`}
+                                className={`w-5 h-5 transition-transform ${
+                                  isOpen ? "rotate-90" : "rotate-0"
+                                } ${active ? "text-[#02EC97]" : "text-white"}`}
                               />
                             </button>
                           )}
-                        </NavLink>
+                        </div>
 
-                        {/* Submenu Items */}
-                        {submenu && selectedSubItem?.parent === label && (
-                          <div className="mt-4 pl-4 space-y-4">
+                        {/* Submenu labels */}
+                        {submenu && isOpen && (
+                          <div className="mt-3 pl-4 space-y-2 text-left">
                             {submenu.map((category) => (
-                              <div
+                              <button
                                 key={category.label}
-                                className="border-l border-white/20 pl-4"
+                                onClick={() => {
+                                  const target = category.items[0]?.to;
+                                  if (target) {
+                                    navigate(target);
+                                    setMobileOpen(false);
+                                  }
+                                }}
+                                className="block text-left text-white/70 hover:text-[#02EC97] text-sm w-full"
                               >
-                                <h3 className="text-white/80 font-medium mb-2">
-                                  {category.label}
-                                </h3>
-                                <ul className="space-y-3">
-                                  {category.items.map((item) => {
-                                    const itemPath = item.to
-                                      .replace(/\/+$/, "")
-                                      .toLowerCase();
-                                    const itemActive =
-                                      pathNow === itemPath ||
-                                      pathNow.startsWith(itemPath + "/");
-
-                                    return (
-                                      <li key={item.title}>
-                                        <NavLink
-                                          to={item.to}
-                                          onClick={() => setMobileOpen(false)}
-                                          className={`flex items-start space-x-2 ${
-                                            itemActive
-                                              ? "text-[#02EC97]"
-                                              : "text-white/70"
-                                          }`}
-                                        >
-                                          <span className="mt-1">
-                                            {item.icon}
-                                          </span>
-                                          <div>
-                                            <p className="text-sm">
-                                              {item.title}
-                                            </p>
-                                            <p className="text-xs text-white/50">
-                                              {item.description}
-                                            </p>
-                                          </div>
-                                        </NavLink>
-                                      </li>
-                                    );
-                                  })}
-                                </ul>
-                              </div>
+                                {category.label}
+                              </button>
                             ))}
                           </div>
                         )}
@@ -847,15 +824,24 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 })}
               </ul>
 
-              {/* Mobile CTA Button */}
-              <div className="mt-10 pt-6 border-t border-white/20">
+              {/* Mobile CTA Buttons */}
+              <div className="mt-10 flex justify-center gap-4">
                 <NavLink
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block text-center px-5 py-3 rounded-[30px] text-white font-medium"
+                  className="flex-1 text-center px-5 py-3 rounded-[30px] text-white font-medium bg-gradient-to-r from-green-500 to-teal-400"
                   style={{ background: gradient }}
                 >
-                  Connect with us
+                  Contact Us
+                </NavLink>
+
+                <NavLink
+                  to="/consultation"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex-1 text-center px-5 py-3 rounded-[30px] text-white font-medium bg-gradient-to-r from-green-500 to-teal-400"
+                  style={{ background: gradient }}
+                >
+                  Consultation
                 </NavLink>
               </div>
             </nav>
