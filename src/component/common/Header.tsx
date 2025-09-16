@@ -69,7 +69,7 @@ const navItems: NavItem[] = [
     },
     submenu: [
       {
-        label: "Digital Marketing",
+        label: "Digital Strategy",
         items: [
           {
             title: "SEO",
@@ -92,7 +92,76 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "Branding",
+        label: "Social Media Advertising",
+        items: [
+          {
+            title: "Social Media",
+            description: "Engage with audiences.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/social",
+          },
+          {
+            title: "Email",
+            description: "Convert with campaigns.",
+            icon: <HiOutlineEnvelope className="text-black" />,
+            to: "/marketing/email",
+          },
+          {
+            title: "Influencer",
+            description: "Partner with creators.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/influencer",
+          },
+        ],
+      },
+      {
+        label: "Social Media Management",
+        items: [
+          {
+            title: "SEO",
+            description: "Optimize search rankings.",
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            to: "/marketing/seo",
+          },
+          {
+            title: "Content",
+            description: "Create valuable content.",
+            icon: <HiOutlinePencil className="text-black" />,
+            to: "/marketing/content",
+          },
+          {
+            title: "PPC",
+            description: "Boost leads with paid ads.",
+            icon: <HiOutlineCurrencyDollar className="text-black" />,
+            to: "/marketing/ppc",
+          },
+        ],
+      },
+      {
+        label: "Conversion Rate Optimization",
+        items: [
+          {
+            title: "Social Media",
+            description: "Engage with audiences.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/social",
+          },
+          {
+            title: "Email",
+            description: "Convert with campaigns.",
+            icon: <HiOutlineEnvelope className="text-black" />,
+            to: "/marketing/email",
+          },
+          {
+            title: "Influencer",
+            description: "Partner with creators.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/influencer",
+          },
+        ],
+      },
+      {
+        label: "Content Marketing",
         items: [
           {
             title: "Social Media",
@@ -386,7 +455,7 @@ const navItems: NavItem[] = [
     },
     submenu: [
       {
-        label: "UI/UX",
+        label: "Brand Identity Development",
         items: [
           {
             title: "UX Research",
@@ -409,7 +478,7 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "Brand Identity",
+        label: "Packaging Design",
         items: [
           {
             title: "Logos",
@@ -428,6 +497,75 @@ const navItems: NavItem[] = [
             description: "Custom visuals.",
             icon: <HiOutlinePhoto className="text-black" />,
             to: "/design/illustration",
+          },
+        ],
+      },
+            {
+        label: "Promotional Material Design",
+        items: [
+          {
+            title: "UX Research",
+            description: "User-focused design.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/design/ux",
+          },
+          {
+            title: "UI Design",
+            description: "Modern interfaces.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/design/ui",
+          },
+          {
+            title: "Prototyping",
+            description: "Clickable mockups.",
+            icon: <HiOutlinePhoto className="text-black" />,
+            to: "/design/prototype",
+          },
+        ],
+      },
+      {
+        label: "Creative Content",
+        items: [
+          {
+            title: "Logos",
+            description: "Unique brand marks.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/design/logo",
+          },
+          {
+            title: "Style Guides",
+            description: "Consistent branding.",
+            icon: <HiOutlineBookOpen className="text-black" />,
+            to: "/design/guide",
+          },
+          {
+            title: "Illustrations",
+            description: "Custom visuals.",
+            icon: <HiOutlinePhoto className="text-black" />,
+            to: "/design/illustration",
+          },
+        ],
+      },
+            {
+        label: "Photography & Videography",
+        items: [
+          {
+            title: "UX Research",
+            description: "User-focused design.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/design/ux",
+          },
+          {
+            title: "UI Design",
+            description: "Modern interfaces.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/design/ui",
+          },
+          {
+            title: "Prototyping",
+            description: "Clickable mockups.",
+            icon: <HiOutlinePhoto className="text-black" />,
+            to: "/design/prototype",
           },
         ],
       },
@@ -836,8 +974,6 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 >
                   Consultation
                 </NavLink>
-
-                
               </div>
             </nav>
           </div>

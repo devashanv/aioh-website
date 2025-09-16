@@ -6,55 +6,49 @@ import sc2 from "../../assets/img/services/mkt-sc2.png";
 import sc3 from "../../assets/img/services/mkt-sc3.png";
 import sc4 from "../../assets/img/services/mkt-sc4.png";
 import sc5 from "../../assets/img/services/mkt-sc5.png";
-import sc6 from "../../assets/img/services/mkt-sc6.png";
+
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Brand Strategy",
+    title: "Digital Strategy",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc1,
-    path: "/marketing/brand-strategy",
-  },
-  {
-    title: "Social Media Management",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc2,
-    path: "/marketing/social-media-management",
-  },
-  {
-    title: "SEO Audit and Setup",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc3,
-    path: "/marketing/seo-audit-and-setup",
-  },
-  {
-    title: "Digital Marketing Consulting",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc4,
-    path: "/marketing/digital-marketing-consulting",
+    path: "/marketing/digital-strategy",
   },
   {
     title: "Social Media Advertising",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc5,
+    img: sc2,
     path: "/marketing/social-media-advertising",
   },
   {
-    title: "Brand Strategy Sample",
+    title: "Social Media Management",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc6,
-    path: "/marketing/brand-strategy-sample",
+    img: sc3,
+    path: "/marketing/social-media-management",
+  },
+  {
+    title: "Conversion Rate Optimization",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/marketing/conversion-rate-optimization",
+  },
+  {
+    title: "Content Marketing",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc5,
+    path: "/marketing/content-marketing",
   },
 ];
+
 
 const Service: React.FC = () => {
   const navigate = useNavigate();

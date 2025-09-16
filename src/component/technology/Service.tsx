@@ -17,42 +17,42 @@ const services = [
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc1,
-    path: "/marketing/brand-strategy",
+    path: "/technology/WebService",
   },
   {
     title: "Web system development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc2,
-    path: "/marketing/social-media-management",
+    path: "/technology/WebService",
   },
   {
     title: "Standalone system",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc3,
-    path: "/marketing/seo-audit-and-setup",
+    path: "/technology/WebService",
   },
   {
     title: "Cloud solutions",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc4,
-    path: "/marketing/digital-marketing-consulting",
+    path: "/technology/WebService",
   },
   {
     title: "AI solutions",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc5,
-    path: "/marketing/social-media-advertising",
+    path: "/technology/WebService",
   },
   {
     title: "UI/UX solutions",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc6,
-    path: "/marketing/brand-strategy-sample",
+    path: "/technology/WebService",
   },
 ];
 

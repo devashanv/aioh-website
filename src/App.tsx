@@ -7,6 +7,12 @@ import AboutUs from "./pages/AboutUs";
 import Technology from "./pages/Technology";
 import Design from "./pages/Design";
 import ConsultationBooking from "./pages/ConsultationBooking";
+import DigitalDetails from "./pages/marketing/DigitalDetails";
+import BrandDetails from "./pages/design/BrandDetails";
+import OptimizationDetails from "./pages/marketing/OptimizationDetails";
+import AdvertisingDetails from "./pages/marketing/AdvertisingDetails";
+import MarketingDetails from "./pages/marketing/MarketingDetails";
+import ManagementDetails from "./pages/marketing/ManagementDetails";
 
 function App() {
   return (
@@ -21,24 +27,43 @@ function App() {
         <Route path="/consultation" element={<ConsultationBooking />} />
 
         {/* Marketing Service Details Pages */}
-        <Route path="/marketing/brand-strategy" element={<WebService />} />
         <Route
-          path="/marketing/social-media-management"
-          element={<WebService />}
-        />
-        <Route path="/marketing/seo-audit-and-setup" element={<WebService />} />
-        <Route
-          path="/marketing/digital-marketing-consulting"
-          element={<WebService />}
+          path="/marketing/digital-strategy"
+          element={<DigitalDetails />}
         />
         <Route
           path="/marketing/social-media-advertising"
-          element={<WebService />}
+          element={<AdvertisingDetails />}
         />
         <Route
-          path="/marketing/brand-strategy-sample"
-          element={<WebService />}
+          path="/marketing/social-media-management"
+          element={<ManagementDetails />}
         />
+        <Route
+          path="/marketing/conversion-rate-optimization"
+          element={<OptimizationDetails />}
+        />
+        <Route
+          path="/marketing/content-marketing"
+          element={<MarketingDetails />}
+        />
+
+        {/* Design Service Details Pages */}
+        <Route
+          path="/design/brand-identity-development"
+          element={<BrandDetails />}
+        />
+        <Route path="/design/packaging-design" element={<BrandDetails />} />
+        <Route
+          path="/design/promotional-material-design"
+          element={<BrandDetails />}
+        />
+        <Route path="/design/creative-content" element={<BrandDetails />} />
+        <Route
+          path="/design/photography-and-videography"
+          element={<BrandDetails />}
+        />
+
         <Route path="/technology/WebService" element={<WebService />} />
       </Routes>
     </Router>

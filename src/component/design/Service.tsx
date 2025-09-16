@@ -6,55 +6,48 @@ import sc2 from "../../assets/img/services/des-sc2.png";
 import sc3 from "../../assets/img/services/des-sc3.png";
 import sc4 from "../../assets/img/services/des-sc4.png";
 import sc5 from "../../assets/img/services/des-sc5.png";
-import sc6 from "../../assets/img/services/des-sc6.png";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Video and advertising",
+    title: "Brand Identity Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc1,
-    path: "/marketing/brand-strategy",
+    path: "/design/brand-identity-development",
   },
   {
-    title: "Brand  identity development",
+    title: "Packaging Design",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc2,
-    path: "/marketing/social-media-management",
+    path: "/design/packaging-design",
   },
   {
-    title: "Package design",
+    title: "Promotional Material Design",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc3,
-    path: "/marketing/seo-audit-and-setup",
+    path: "/design/promotional-material-design",
   },
   {
-    title: "Creative content",
+    title: "Creative Content",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc4,
-    path: "/marketing/digital-marketing-consulting",
+    path: "/design/creative-content",
   },
   {
-    title: "Design solutions",
+    title: "Photography & Videography",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc5,
-    path: "/marketing/social-media-advertising",
-  },
-  {
-    title: "UI/UX solutions",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc6,
-    path: "/marketing/brand-strategy-sample",
+    path: "/design/photography-and-videography",
   },
 ];
+
 
 const Service: React.FC = () => {
   const navigate = useNavigate();
