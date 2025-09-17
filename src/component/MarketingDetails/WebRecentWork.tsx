@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
-import { LuCircleChevronRight } from "react-icons/lu";
 import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
@@ -496,7 +495,7 @@ const RecentWork: React.FC = () => {
                     className="w-full h-full object-fill object-top"
                     // className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute flex items-center justify-center bottom-0 left-0 w-full p-2 md:p-4 bg-white/20 backdrop-blur-md rounded-b-[20px] z-0">
+                  {/* <div className="absolute flex items-center justify-center bottom-0 left-0 w-full p-2 md:p-4 bg-white/20 backdrop-blur-md rounded-b-[20px] z-0">
                     <button
                       onClick={() => window.open(popupData.link, "_blank")}
                       className="text-secondary flex items-center justify-center gap-1 w-fit px-6 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-pointer"
@@ -509,7 +508,7 @@ const RecentWork: React.FC = () => {
                         className="text-sm md:text-base"
                       />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -671,7 +670,7 @@ const RecentWork: React.FC = () => {
                   )}
                 </div>
 
-                <div className="mt-6 text-secondary">
+                {/* <div className="mt-6 text-secondary">
                   <button
                     onClick={() => window.open(popupData.link, "_blank")}
                     className="w-fit my-4 px-6 py-4 rounded-full font-medium bg-primary hover:bg-primary/80 flex items-center justify-center gap-2 transition cursor-pointer"
@@ -682,7 +681,7 @@ const RecentWork: React.FC = () => {
                       className="text-base leading-none"
                     />
                   </button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </motion.div>

@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
         <div className="grid md:grid-cols-4 gap-6 lg:gap-0 md:gap-0.5 text-left text-[16px] font-light leading-relaxed">
           {/* Column 1 → center only on mobile */}
-          <div className="lg:w-[500px] text-center md:text-left flex flex-col items-center md:items-start">
+          <div className="lg:w-[430px] text-center md:text-left flex flex-col items-center md:items-start ">
             <div className="mb-3">
               <img
                 src={AIOHLogo}
@@ -39,21 +39,21 @@ const Footer = () => {
                 className="w-[250px] h-auto"
               />
             </div>
-            <p className="mb-2 text-[#F5F5F5]">
+            <p className="mb-2 text-[#F5F5F5] text-justify">
               Empowering startups and businesses with result-driven Digital
               Marketing and custom-built Software Solutions. Turn your ideas
               into digital succes
             </p>
             {/* Newsletter */}
-            <div className="mt-4 flex items-center justify-center md:justify-start w-full">
+            <div className="mt-4 flex items-center justify-center md:justify-start w-full ">
               <input
                 type="email"
                 required
                 placeholder="Enter your email"
-                className="px-4 py-2 w-4/5 rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
+                className="px-4 py-2 w-full rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
               />
               <button
-                className="ml-2 w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
+                className="ml-2 w-11 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
                 aria-label="Subscribe"
               >
                 <img src={SendIcon} alt="Send" className="w-[18px] h-[18px]" />
@@ -262,9 +262,22 @@ const Footer = () => {
             <p className="hover:text-[#02EC97] transition-colors duration-200">
               Copyrights © 2025 All in One IT Solutions. All Rights Reserved
             </p>
-            <p className="text-[10px] hover:text-[#02EC97] transition-colors duration-200 cursor-pointer">
-              User Terms & Conditions | Privacy Policy
-            </p>
+<p className="text-[10px] transition-colors duration-200">
+  <a
+    href="/terms"
+    className="hover:text-[#02EC97] cursor-pointer transition-colors duration-200"
+  >
+    User Terms & Conditions
+  </a>{" "}
+  |{" "}
+  <a
+    href="/privacy"
+    className="hover:text-[#02EC97] cursor-pointer transition-colors duration-200"
+  >
+    Privacy Policy
+  </a>
+</p>
+
           </div>
         </div>
         <div className="relative z-10 w-11/12 mx-auto">
