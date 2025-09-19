@@ -76,8 +76,8 @@ const locationCards: LocationCard[] = [
 ];
 
 // ✅ New image arrays per sub-location
-const kandyImages = [Image2, Image3, Image1];
-const colomboImages = [Image7, Image8];
+// const kandyImages = [Image2, Image3, Image1];
+// const colomboImages = [Image7, Image8];
 
 // ✅ ImageSlider
 const ImageSlider: React.FC<ImageSliderProps> = ({
@@ -150,101 +150,54 @@ const Locations: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="flex flex-col lg:flex-row justify-between items-stretch gap-8 "
       >
-        {/* Australia Card */}
+        {/* Sri Lanka Card (Now Large) */}
         <div className="w-full lg:w-[50%] h-[560px] relative shadow-md rounded-[20px] overflow-hidden">
-          <ImageSlider images={locationCards[0].images} startDelay={0} />
+          <ImageSlider images={locationCards[1].images} startDelay={0} />
           <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-20 text-center">
             <h3 className="text-[36px] font-bold mb-4">
-              {locationCards[0].title}
+              {locationCards[1].title}
             </h3>
-            <p className="mt-2 md:text-[16px] text-[14px] leading-relaxed mb-2">
-              {locationCards[0].description}
+            <p className="mt-2 text-[14px] leading-relaxed mb-2">
+              {locationCards[1].description}
             </p>
-            <p>{locationCards[0].address}</p>
-            <p className="font-bold">{locationCards[0].phone}</p>
-          </div>
-        </div>
-
-        {/* Sri Lanka - Mobile & Tablet ONLY */}
-        <div className="flex flex-col gap-6 lg:hidden w-full">
-          {/* Kandy Card */}
-          <div className="h-[264px] relative shadow-md rounded-[20px] overflow-hidden mb-2">
-            <ImageSlider images={kandyImages} startDelay={500} />
-            <div className="absolute inset-0 flex flex-col justify-end p-4 text-white z-20 text-center">
-              <h3 className="text-[28px] font-bold mb-1">
-                {locationCards[1].title}
-              </h3>
-              <p className="text-[14px] font-medium mb-2">
-                {locationCards[1].subLocations?.[0]?.label}{" "}
-                {locationCards[1].subLocations?.[0]?.address
-                  ?.toLowerCase()
-                  .includes("headquarters") && (
-                  <span className="text-[#02EC97]">(Headquarters)</span>
-                )}
-              </p>
-
-              <p className="text-[12px]">
-                {locationCards[1].subLocations?.[0]?.address}
-              </p>
-              <p className="text-[12px] font-bold mt-1">
-                {locationCards[1].subLocations?.[0]?.phone}
-              </p>
-            </div>
-          </div>
-
-          {/* Colombo Card */}
-          <div className="h-[264px] relative shadow-md rounded-[20px] overflow-hidden">
-            <ImageSlider images={colomboImages} startDelay={1500} />
-            <div className="absolute inset-0 flex flex-col justify-end p-4 text-white z-20 text-center">
-              <h3 className="text-[28px] font-bold mb-1">
-                {locationCards[1].title}
-              </h3>
-              <p className="text-[14px] font-medium mb-2">
-                {locationCards[1].subLocations?.[1]?.label}
-              </p>
-              <p className="text-[12px]">
-                {locationCards[1].subLocations?.[1]?.address}
-              </p>
-              <p className="text-[12px] font-bold mt-1">
-                {locationCards[1].subLocations?.[1]?.phone}
-              </p>
+            <div className="flex justify-between mt-2 text-[12px] md:px-6 px-2 items-start gap-2">
+              <div className="w-1/2 text-left">
+                <p className="font-semibold text-[14px] mb-2">
+                  {locationCards[1].subLocations?.[0]?.label}{" "}
+                  {locationCards[1].subLocations?.[0]?.address?.includes(
+                    "Headquarters"
+                  ) && <span className="text-[#02EC97]">(Headquarters)</span>}
+                </p>
+                <p>{locationCards[1].subLocations?.[0]?.address}</p>
+                <p className="font-bold">
+                  {locationCards[1].subLocations?.[0]?.phone}
+                </p>
+              </div>
+              <div className="w-1/2 text-right">
+                <p className="font-semibold text-[14px] mb-2">
+                  {locationCards[1].subLocations?.[1]?.label}
+                </p>
+                <p>{locationCards[1].subLocations?.[1]?.address}</p>
+                <p className="font-bold">
+                  {locationCards[1].subLocations?.[1]?.phone}
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Sri Lanka Desktop + USA */}
+        {/* Right Column: Australia + USA */}
         <div className="w-full lg:w-[48%] flex flex-col gap-8">
-          {/* Sri Lanka - Desktop Only */}
-          <div className="hidden lg:block h-[264px] relative shadow-md rounded-[20px] overflow-hidden">
-            <ImageSlider images={locationCards[1].images} startDelay={1800} />
+          {/* Australia - Desktop Only */}
+          <div className="h-[264px] relative shadow-md rounded-[20px] overflow-hidden">
+            <ImageSlider images={locationCards[0].images} startDelay={1800} />
             <div className="absolute inset-0 flex flex-col justify-end p-4 text-white z-20 text-center">
               <h3 className="text-[36px] font-bold mb-0">
-                {locationCards[1].title}
+                {locationCards[0].title}
               </h3>
-              <div className="flex justify-between mt-2 text-[12px] md:px-6 px-2 items-start gap-2">
-                <div className="w-1/2 text-left">
-                  <p className="font-semibold text-[14px] mb-2">
-                    {locationCards[1].subLocations?.[0]?.label}{" "}
-                    {locationCards[1].subLocations?.[0]?.address?.includes(
-                      "Headquarters"
-                    ) && <span className="text-[#02EC97]">(Headquarters)</span>}
-                  </p>
 
-                  <p>{locationCards[1].subLocations?.[0]?.address}</p>
-                  <p className="font-bold">
-                    {locationCards[1].subLocations?.[0]?.phone}
-                  </p>
-                </div>
-                <div className="w-1/2 text-right">
-                  <p className="font-semibold text-[14px] mb-2">
-                    {locationCards[1].subLocations?.[1]?.label}
-                  </p>
-                  <p>{locationCards[1].subLocations?.[1]?.address}</p>
-                  <p className="font-bold">
-                    {locationCards[1].subLocations?.[1]?.phone}
-                  </p>
-                </div>
-              </div>
+              <p className="mt-2 text-[12px]">{locationCards[0].address}</p>
+              <p className="font-bold text-[12px]">{locationCards[0].phone}</p>
             </div>
           </div>
 

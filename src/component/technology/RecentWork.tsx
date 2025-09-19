@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
-import { LuCircleChevronRight } from "react-icons/lu";
 import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
@@ -21,6 +20,7 @@ import tech_rw11 from "../../assets/img/recentWork/tech-rw11.png";
 import dumy from "../../assets/img/recentWork/dumy.jpg";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { LuCircleChevronRight } from "react-icons/lu";
 
 const projects = [
   // Recent works
@@ -529,7 +529,7 @@ const projects = [
     description:
       "A travel platform offering guided tours and easy booking across Sri Lanka.",
     image: dumy,
-    link: "",
+    link: "https://goaheadlankatours.com/",
     description2:
       "This website was built to elevate Go Ahead Lanka Tours, a Sri Lankan-based travel service offering guided tours across the island. The platform enables travelers to search, book, and  manage tour experiences with ease. Featuring responsive design, advanced filtering, and a  secure booking engine, the site was developed using PHP 8, HTML5, CSS3, JavaScript, and  MySQL for reliable performance and smooth user interaction.",
     challenges: [
@@ -546,6 +546,97 @@ const projects = [
       "Introduced a Group Coordinator feature to manage private and incentive-based bookings.",
       "Integrated SEO optimization and SSL encryption to enhance online visibility and user security.",
       "Delivered a user account system to track bookings, manage itineraries, and support reward tracking.",
+    ],
+  },
+  {
+    title: "Aluviharaya.lk Website",
+    description:
+      "A cultural and heritage platform showcasing the historic Aluviharaya Rock Cave Temple in Matale, Sri Lanka.",
+    image: dumy,
+    link: "https://www.aluviharaya.lk/",
+    description2:
+      "This website was developed to introduce Aluviharaya Rock Cave Temple, a historic Buddhist temple in Matale, Sri Lanka, known as the place where the Tripiṭaka was first written on ola leaves. The platform provides visitors and pilgrims with accurate cultural, historical, and travel-related information, while also promoting the temple as a national heritage site. With a clean, informative, and responsive design, the site ensures accessibility for both local and international audiences, helping them understand Aluviharaya’s religious and cultural significance.",
+    challenges: [
+      "Showcasing a centuries-old religious and cultural heritage site in a modern digital format.",
+      "Explaining historical, archaeological, and religious details in a clear and engaging manner.",
+      "Providing visitor guidance (location, visiting hours, dress code, tour details) effectively.",
+      "Ensuring mobile-friendly accessibility for tourists who rely on smartphones.",
+      "Building trust by presenting verified information and authentic visuals.",
+    ],
+    solutions: [
+      "Designed an informative homepage highlighting the temple’s history, cultural importance, and significance in Buddhist heritage.",
+      "Structured content into clear sections: History, Visitor Information, Image Gallery, and Contact Details.",
+      "Integrated a location map and travel guidance to help visitors plan their journey.",
+      "Employed real photographs and cultural imagery to build authenticity and connect with users emotionally.",
+      "Laid the foundation for future features such as virtual tours, multilingual support, and event updates.",
+    ],
+  },
+  {
+    title: "CCL Academy Website",
+    description:
+      "An educational platform for CCL Academy, showcasing academic and professional courses in Kandy, Sri Lanka.",
+    image: dumy,
+    link: "https://cclacademy.lk/",
+    description2:
+      "CCL Academy is a creative and professional education institution based in Kandy, Sri Lanka. It offers a variety of academic and industry-relevant courses through its faculties such as Design, Business, and other professional studies. The website serves as the primary portal for information about courses, admissions, contact details, and student engagement, ensuring accessibility and clarity for both local and international students.",
+    challenges: [
+      "Presenting a wide range of courses (design, business, etc.) in a clear, navigable way for prospective students.",
+      "Making admissions, contact, and faculty information easily accessible.",
+      "Reflecting both creativity (for design students) and professionalism (for business studies) in the website’s design.",
+      "Ensuring the site appeals to local and possibly international students, in how content is organized and conveyed.",
+    ],
+    solutions: [
+      "Designed a homepage that highlights the main faculties: School of Design, School of Business, etc., so students can immediately see what disciplines are on offer.",
+      "Provided contact information clearly to build trust and make inquiries easier.",
+      "Made content visually engaging and easy to read, suitable for both design‐focused and business‐focused students.",
+      "Ensured core information (courses, faculties, admissions) is upfront and minimal navigation is needed to reach them.",
+    ],
+  },
+  {
+    title: "Ehelepola Website",
+    description:
+      "The official website for the Ehelepola Walawwa Wax Museum in Kandy, Sri Lanka, showcasing cultural heritage and visitor information.",
+    image: dumy,
+    link: "https://ehelepolawalawwa.lk/",
+    description2:
+      "EhelepolaWalawwa is the official web presence for the Ehelepola Walawwa Wax Museum, a recently opened cultural heritage museum in Kandy, Sri Lanka, located in the historic Ehelepola Walawwa. The website promotes the museum, presents its exhibits, shares its historical significance, and provides clear information for visitors, both local and international. With a design focused on authenticity and accessibility, the platform highlights Kandyan history while introducing the unique wax museum experience to wider audiences.",
+    challenges: [
+      "Communicating the deep historical and cultural background of Ehelepola Walawwa in an engaging manner.",
+      "Introducing a new kind of museum (wax figures) to audiences more familiar with conventional heritage sites.",
+      "Presenting exhibit details and visitor logistics clearly (opening, location, tickets).",
+      "Ensuring the site reflects authority and authenticity, especially given the academic involvement for costume and fashion reconstructions.",
+      "Making the interface accessible and informative for both local and international visitors.",
+    ],
+    solutions: [
+      "Created a homepage that highlights the wax museum’s mission, the museum opening announcement, and the significance of Ehelepola Walawwa within Kandyan history.",
+      "Included detailed content about the exhibits, particularly the reconstructed royal garments and Kandyan era costumes.",
+      "Provided practical visitor information: map, location, opening date, what to expect, and photographs of the wax museum and its wax figures.",
+      "Showcased the academic and craft process behind the exhibits to build credibility.",
+      "Ensured visuals (photographs, galleries) and promotional content (news about opening) are prominently displayed.",
+    ],
+  },
+  {
+    title: "Regency Travel House Website",
+    description:
+      "A professional travel and tourism platform for Regency Travel House, offering holiday packages, tours, and travel services in Sri Lanka.",
+    image: dumy,
+    link: "https://regency.knowmo.me/",
+    description2:
+      "Regency Travel House is a professional travel and tourism service provider in Sri Lanka, offering a wide range of holiday packages, cultural tours, hotel bookings, transport services, and customized travel itineraries. The website serves as a digital platform for both local and international travelers to explore packages, make inquiries, and learn about Regency’s services in a modern and user-friendly format.",
+    challenges: [
+      "Presenting a diverse set of tour packages in a structured and easy-to-browse way.",
+      "Building brand trust by showcasing Regency as a professional and reliable travel partner in a competitive tourism market.",
+      "Providing transparent service information including package highlights, itineraries, and pricing upon request.",
+      "Ensuring a mobile-friendly experience for international tourists accessing the site from abroad.",
+      "Offering quick contact channels for customer inquiries and bookings.",
+    ],
+    solutions: [
+      "Developed a clean and visually engaging homepage highlighting Regency’s identity, featured packages, and core services.",
+      "Integrated detailed package descriptions with itineraries, inclusions, and high-quality destination images.",
+      "Designed a responsive layout for smooth access across desktops, tablets, and smartphones.",
+      "Added clear call-to-action (CTA) buttons like 'Send Inquiry' to simplify customer engagement.",
+      "Ensured fast loading speed and minimal clutter to enhance the overall browsing experience.",
+      "Laid groundwork for future features such as direct booking integration, multi-language support, and online payment gateways.",
     ],
   },
 ];

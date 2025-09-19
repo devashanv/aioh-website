@@ -1,26 +1,26 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-import Header from "../component/common/Header";
-import WebHero from "../component/WebDetails/WebHero";
-import Breadcrumb from "../component/common/Breadcrumb";
-import WebFramework from "../component/WebDetails/WebFramework";
-import WebContact from "../component/WebDetails/WebContact";
-import WebRecentWork from "../component/WebDetails/WebRecentWork";
-import FooterTop from "../component/common/FooterTop";
-import Footer from "../component/common/Footer";
+import Header from "../../component/common/Header";
+import FooterTop from "../../component/common/FooterTop";
+import Footer from "../../component/common/Footer";
+import Breadcrumb from "../../component/common/Breadcrumb";
+import WebHero from "../../component/DigitalDetails/WebHero";
+import WebFramework from "../../component/DigitalDetails/WebFramework";
+import WebContact from "../../component/DigitalDetails/WebContact";
+import WebRecentWork from "../../component/DigitalDetails/WebRecentWork";
 
-function WebService() {
+function DigitalService() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <div className="w-full font-['Roboto'] min-h-screen p-3.5 overflow-x-hidden">
+      <div className="w-full font-['Roboto'] min-h-screen p-3.5 overflow-x-hidden bg-amber-400">
         {/* Header */}
         <div className="mx-auto mb-3.5">
-          <Header currentPath="/Technology" />
+          <Header currentPath="/marketing" />
         </div>
 
         <section className="relative rounded-[20px] bg-gradient-to-r from-white via-[#078BD612] to-white sm:bg-top bg-cover bg-center lg:mb-30 mb-20">
@@ -34,7 +34,7 @@ function WebService() {
             <Breadcrumb
               levels={[
                 { label: "Home", path: "/" },
-                { label: "Technology", path: "/technology" },
+                { label: "Services", path: "/Technology" },
                 { label: "Web Development" },
               ]}
             />
@@ -70,7 +70,6 @@ function WebService() {
           </div>
         </section>
       </div>
-
       {/* Before Footer */}
       <section className="lg:mt-30">
         <FooterTop />
@@ -84,4 +83,4 @@ function WebService() {
   );
 }
 
-export default WebService;
+export default DigitalService;

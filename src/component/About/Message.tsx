@@ -17,13 +17,13 @@ const directorData = [
     id: 2,
     quote:
       "Together with our clients and team, we continue to challenge limits and redefine success. Our strategy is rooted in long-term vision and purposeful action.",
-    role: "CTO",
+    role: "COO",
   },
   {
     id: 3,
     quote:
       "Leadership is about inspiring change and pushing boundaries. We believe in collaboration, transparency, and making an impact that matters.",
-    role: "COO",
+    role: "CTO",
   },
 ];
 

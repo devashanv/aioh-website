@@ -339,7 +339,7 @@ const RecentWork: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto w-11/12">
+    <div className="mx-auto w-full ">
       {/* sec heading */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

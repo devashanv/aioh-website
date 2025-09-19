@@ -3,231 +3,89 @@ import { useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
-import { LuCircleChevronRight } from "react-icons/lu";
 import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
-import des_rw1 from "../../assets/img/recentWork/des-rw1.png";
-import des_rw2 from "../../assets/img/recentWork/des-rw2.png";
-import des_rw3 from "../../assets/img/recentWork/des-rw3.png";
-import des_rw4 from "../../assets/img/recentWork/des-rw4.png";
-import des_rw5 from "../../assets/img/recentWork/des-rw5.png";
-import des_rw6 from "../../assets/img/recentWork/des-rw6.png";
-import des_rw7 from "../../assets/img/recentWork/des-rw7.png";
-import des_rw8 from "../../assets/img/recentWork/des-rw8.png";
-
+import dumy from "../../assets/img/recentWork/dumy.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 
-const projects = [
-  // Recent works
-  {
-    title: "Aluvihare Website",
-    description:
-      "A Sacred Buddhist Temple located in Aluvihare. Matale, District.",
-    image: des_rw1,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "Regency Travel House",
-    description: "Custom travel packages designed to your accommodations.",
-    image: des_rw2,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "Winchester Global",
-    description:
-      "Winchester Global is a dental implant center that prioritizes patient satisfaction.",
-    image: des_rw3,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "Kandy Rent Cars",
-    description:
-      "Kandy Rent Cars is your trusted car rental service in Kandy and beyond.",
-    image: des_rw4,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "HARRISONS",
-    description:
-      "HARRISONS offers timeless elegance and style in their men’s collection.",
-    image: des_rw5,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "Kandy Rent Cars",
-    description:
-      "Kandy Rent Cars is your trusted car rental service in Kandy and beyond.",
-    image: des_rw6,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "Regency Travel House",
-    description: "Custom travel packages designed to your accommodations.",
-    image: des_rw7,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "HARRISONS",
-    description:
-      "HARRISONS offers timeless elegance and style in their men’s collection.",
-    image: des_rw8,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-  {
-    title: "Kandy Rent Cars",
-    description:
-      "Kandy Rent Cars is your trusted car rental service in Kandy and beyond.",
-    image: des_rw6,
-    link: "#",
-    description2:
-      "This website was crafted to help travelers explore and book unforgettable experiences through Travel Regency House, your trusted gateway to world-class journeys. Built using React.js, Vite, and Tailwind CSS, the platform offers a fast, responsive, and user-friendly interface across all devices.",
-    challenges: [
-      "Simplifying a complicated design process",
-      "Giving consumers a seamless digital experience when designing their car",
-      "Real time experience of designing your car",
-      "A comprehensive back-end platform that allowed real time updates",
-    ],
-    solutions: [
-      "Produced a consistent experience across customization of Volvo Cars.",
-      "A start to finish agile web application where you can build your Volvo Car from engine configuration, to colour, wheels, upholstery, and optional equipment.",
-      "Real time changes that reflected the latest updates while browsing.",
-      "Created a new experience of car configuration.",
-      "Bespoke backend solution that integrates with user experience.",
-    ],
-  },
-];
-
-// Project type definition
 type Project = {
   title: string;
   description: string;
   image: string;
   link: string;
   description2?: string;
+  challengesIntro?: string;
   challenges?: string[];
   solutions?: string[];
+  strategyIntro?: string;
+  strategy?: string[];
+  executionIntro?: string;
+  execution?: string[];
+  resultsIntro?: string;
+  results?: string[];
+  takeawayIntro?: string;
+  takeaway?: string[];
+  solutionsIntro?: string;
 };
+
+const projects: Project[] = [
+  {
+    title: "Muswenna Tea Factory",
+    description: "Rebranding a 25-Year Legacy into a Modern Premium Brand",
+    image: dumy,
+    link: "#",
+    description2:
+      "Muswenna Tea, a premium Sri Lankan tea brand with a proud 25-year legacy, approached us for a complete rebranding project. The scope included creating a new brand identity, product packaging, company profile, and website redesign. The challenge was to craft a brand that not only stood out in crowded retail shelves but also carried the heritage and authenticity of Sri Lankan tea while appealing to international markets.",
+    challenges: [
+      "No existing brand guidelines or voice to guide the creative process.",
+      "The 25-year history and heritage were not reflected in the existing branding.",
+      "Needed to balance local authenticity with global premium appeal.",
+      "Tight delivery timelines while ensuring creativity and quality.",
+    ],
+    strategyIntro: "Our Approach",
+    strategy: [
+      "Understanding the Brand – Immersed ourselves in Muswenna’s story, values, and market positioning. Identified opportunities to highlight authentic heritage and premium quality.",
+      "Concept Development – Developed design concepts that combined elegant modern aesthetics with Sri Lankan cultural roots. Ensured concepts were versatile enough for domestic and international audiences.",
+      "Visual Direction – Created mood boards and complete brand guidelines to establish a consistent identity. Defined a visual language balancing sophistication with approachability.",
+      "Design Execution – Crafted product labels with clean layouts, elegant typography, and rich visuals that represented Muswenna’s premium essence. Redesigned the company profile and website to align with the refreshed identity.",
+      "Collaboration & Finalization – Worked closely with the Muswenna team throughout the process for alignment. Delivered final designs that were shelf-ready and export-ready.",
+    ],
+    resultsIntro: "The Outcome",
+    results: [
+      "Won gold award in food exhibition in China.",
+      "Strengthened shelf visibility, making Muswenna Tea stand out in competitive retail spaces.",
+      "Established a modern, premium, and culturally rooted identity appealing to both local and international markets.",
+      "Delivered a full brand guideline that now serves as the foundation for all future marketing efforts.",
+    ],
+    takeawayIntro: "The Impact",
+    takeaway: [
+      "The Muswenna Tea rebrand transformed the brand from an underrepresented legacy into a modern premium identity that speaks to global consumers.",
+      "By blending heritage storytelling with contemporary design, Muswenna Tea is now well-positioned to expand its presence in both Sri Lankan and international markets.",
+    ],
+  },
+  {
+    title: "Hotel Suisse",
+    description:
+      "Blending Heritage with Modern Identity Through Rebranding campaign",
+    image: dumy,
+    link: "#",
+    description2:
+      "Hotel Suisse, one of Kandy’s most iconic heritage landmarks, wanted to reposition itself with a modern yet timeless brand identity. To achieve this, we developed a rebranding Campaign that followed the journey of a “Swiss lady” exploring Kandy’s cultural treasures before arriving at Hotel Suisse. Her journey symbolized the hotel’s unique essence - a seamless blend of heritage, elegance, and modern sophistication.",
+    strategyIntro: "Our Approach",
+    strategy: [
+      "Step 1 – Concept Development – Designed a narrative that connected Kandy’s rich cultural heritage with Hotel Suisse’s timeless charm. Created an emotional storyline resonating with both local audiences and international travelers.",
+      "Step 2 – Casting & Brand Protection – Carefully selected the lead actress to ensure credibility and cultural sensitivity. Maintained brand integrity by balancing sophistication with respect for heritage.",
+      "Step 3 – Production & AI Integration – Shot across Kandy’s scenic and cultural landmarks, showcasing heritage and luxury. Used AI-enhanced visuals to add modern flair while retaining authenticity.",
+      "Step 4 – Editing & Post-Production – Employed cinematic editing, color grading, and sound design for a polished finish. Built an emotionally engaging flow that culminated in the rebranded Hotel Suisse reveal.",
+    ],
+    takeawayIntro: "The Impact",
+    takeaway: [
+      "The rebranding video became more than a promotional asset — it redefined Hotel Suisse’s brand perception.",
+      "By intertwining cultural storytelling with modern digital enhancements, the hotel now stands as an elegant, renewed icon of Kandy that appeals to both heritage-seekers and contemporary travelers.",
+    ],
+  },
+];
 
 const RecentWork: React.FC = () => {
   // Ref to scroll to card section
@@ -494,7 +352,7 @@ const RecentWork: React.FC = () => {
                     className="w-full h-full object-fill object-top"
                     // className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute flex items-center justify-center bottom-0 left-0 w-full p-2 md:p-4 bg-white/20 backdrop-blur-md rounded-b-[20px] z-0">
+                  {/* <div className="absolute flex items-center justify-center bottom-0 left-0 w-full p-2 md:p-4 bg-white/20 backdrop-blur-md rounded-b-[20px] z-0">
                     <button
                       onClick={() => window.open(popupData.link, "_blank")}
                       className="text-secondary flex items-center justify-center gap-1 w-fit px-6 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-pointer"
@@ -507,7 +365,7 @@ const RecentWork: React.FC = () => {
                         className="text-sm md:text-base"
                       />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -517,20 +375,29 @@ const RecentWork: React.FC = () => {
                   <h2 className="text-2xl md:text-[32px] leading-[41px] font-semibold mb-4">
                     {popupData.title}
                   </h2>
-                  <p className="text-base md:text-lg font-light leading-6 md:leading-7 lg:leading-8 mb-4 text-justify">
-                    {popupData.description2}
-                  </p>
 
+                  {popupData.description2 && (
+                    <p className="text-base md:text-lg font-light leading-6 md:leading-7 lg:leading-8 mb-4 text-justify">
+                      {popupData.description2}
+                    </p>
+                  )}
+
+                  {/* Challenges */}
                   {popupData.challenges && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        Key Challenges We Solved
+                        The Challenge
                       </h3>
+                      {popupData.challengesIntro && (
+                        <p className="text-base md:text-lg font-light mb-2">
+                          {popupData.challengesIntro}
+                        </p>
+                      )}
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.challenges.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <ImCheckmark2
-                              style={{ width: "18px", height: "18px" }}
+                              style={{ width: "16px", height: "16px" }}
                               className="text-white mt-1 shrink-0"
                             />
                             <span>{item}</span>
@@ -540,16 +407,116 @@ const RecentWork: React.FC = () => {
                     </>
                   )}
 
+                  {/* Solutions */}
                   {popupData.solutions && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        Our Strategic Solutions & Achievements
+                        Solutions
                       </h3>
+                      {popupData.solutionsIntro && (
+                        <p className="text-base md:text-lg font-light mb-2">
+                          {popupData.solutionsIntro}
+                        </p>
+                      )}
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.solutions.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <LiaHandPointRightSolid
-                              style={{ width: "18px", height: "18px" }}
+                              style={{ width: "16px", height: "16px" }}
+                              className="text-white mt-1.5 shrink-0"
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {/* Strategy */}
+                  {popupData.strategy && (
+                    <>
+                      <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
+                        The Strategy
+                      </h3>
+                      {popupData.strategyIntro && (
+                        <p className="text-base md:text-lg font-light mb-2">
+                          {popupData.strategyIntro}
+                        </p>
+                      )}
+                      <ol className="text-base md:text-lg font-light space-y-2 list-decimal list-inside">
+                        {popupData.strategy.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ol>
+                    </>
+                  )}
+
+                  {/* Execution */}
+                  {popupData.execution && (
+                    <>
+                      <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
+                        The Execution
+                      </h3>
+                      {popupData.executionIntro && (
+                        <p className="text-base md:text-lg font-light mb-2">
+                          {popupData.executionIntro}
+                        </p>
+                      )}
+                      <ul className="text-base md:text-lg font-light space-y-2">
+                        {popupData.execution.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <LiaHandPointRightSolid
+                              style={{ width: "16px", height: "16px" }}
+                              className="text-white mt-1.5 shrink-0"
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {/* Results */}
+                  {popupData.results && (
+                    <>
+                      <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
+                        The Results
+                      </h3>
+                      {popupData.resultsIntro && (
+                        <p className="text-base md:text-lg font-light mb-2">
+                          {popupData.resultsIntro}
+                        </p>
+                      )}
+                      <ul className="text-base md:text-lg font-light space-y-2">
+                        {popupData.results.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <LiaHandPointRightSolid
+                              style={{ width: "16px", height: "16px" }}
+                              className="text-white mt-1.5 shrink-0"
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {/* Takeaway */}
+                  {popupData.takeaway && (
+                    <>
+                      <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
+                        The Takeaway
+                      </h3>
+                      {popupData.takeawayIntro && (
+                        <p className="text-base md:text-lg font-light mb-2">
+                          {popupData.takeawayIntro}
+                        </p>
+                      )}
+                      <ul className="text-base md:text-lg font-light space-y-2">
+                        {popupData.takeaway.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <LiaHandPointRightSolid
+                              style={{ width: "16px", height: "16px" }}
                               className="text-white mt-1.5 shrink-0"
                             />
                             <span>{item}</span>
@@ -560,7 +527,7 @@ const RecentWork: React.FC = () => {
                   )}
                 </div>
 
-                <div className="mt-6 text-secondary">
+                {/* <div className="mt-6 text-secondary">
                   <button
                     onClick={() => window.open(popupData.link, "_blank")}
                     className="w-fit my-4 px-6 py-4 rounded-full font-medium bg-primary hover:bg-primary/80 flex items-center justify-center gap-2 transition cursor-pointer"
@@ -571,7 +538,7 @@ const RecentWork: React.FC = () => {
                       className="text-base leading-none"
                     />
                   </button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </motion.div>

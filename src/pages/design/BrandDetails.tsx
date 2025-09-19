@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-import Header from "../component/common/Header";
-import WebHero from "../component/WebDetails/WebHero";
-import Breadcrumb from "../component/common/Breadcrumb";
-import WebFramework from "../component/WebDetails/WebFramework";
-import WebContact from "../component/WebDetails/WebContact";
-import WebRecentWork from "../component/WebDetails/WebRecentWork";
-import FooterTop from "../component/common/FooterTop";
-import Footer from "../component/common/Footer";
+import Header from "../../component/common/Header";
+import FooterTop from "../../component/common/FooterTop";
+import Footer from "../../component/common/Footer";
+import Breadcrumb from "../../component/common/Breadcrumb";
+import WebHero from "../../component/BrandDetails/WebHero";
+import WebFramework from "../../component/BrandDetails/WebFramework";
+import WebContact from "../../component/BrandDetails/WebContact";
+import WebRecentWork from "../../component/BrandDetails/WebRecentWork";
 
-function WebService() {
+function BrandService() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -34,7 +34,7 @@ function WebService() {
             <Breadcrumb
               levels={[
                 { label: "Home", path: "/" },
-                { label: "Technology", path: "/technology" },
+                { label: "Services", path: "/Technology" },
                 { label: "Web Development" },
               ]}
             />
@@ -70,7 +70,6 @@ function WebService() {
           </div>
         </section>
       </div>
-
       {/* Before Footer */}
       <section className="lg:mt-30">
         <FooterTop />
@@ -84,4 +83,4 @@ function WebService() {
   );
 }
 
-export default WebService;
+export default BrandService;

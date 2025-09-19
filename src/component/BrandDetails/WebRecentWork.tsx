@@ -31,201 +31,58 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Queens Hotel Kandy",
+    title: "Muswenna Tea Factory",
+    description: "Rebranding a 25-Year Legacy into a Modern Premium Brand",
+    image: dumy,
+    link: "#",
+    description2:
+      "Muswenna Tea, a premium Sri Lankan tea brand with a proud 25-year legacy, approached us for a complete rebranding project. The scope included creating a new brand identity, product packaging, company profile, and website redesign. The challenge was to craft a brand that not only stood out in crowded retail shelves but also carried the heritage and authenticity of Sri Lankan tea while appealing to international markets.",
+    challenges: [
+      "No existing brand guidelines or voice to guide the creative process.",
+      "The 25-year history and heritage were not reflected in the existing branding.",
+      "Needed to balance local authenticity with global premium appeal.",
+      "Tight delivery timelines while ensuring creativity and quality.",
+    ],
+    strategyIntro: "Our Approach",
+    strategy: [
+      "Understanding the Brand – Immersed ourselves in Muswenna’s story, values, and market positioning. Identified opportunities to highlight authentic heritage and premium quality.",
+      "Concept Development – Developed design concepts that combined elegant modern aesthetics with Sri Lankan cultural roots. Ensured concepts were versatile enough for domestic and international audiences.",
+      "Visual Direction – Created mood boards and complete brand guidelines to establish a consistent identity. Defined a visual language balancing sophistication with approachability.",
+      "Design Execution – Crafted product labels with clean layouts, elegant typography, and rich visuals that represented Muswenna’s premium essence. Redesigned the company profile and website to align with the refreshed identity.",
+      "Collaboration & Finalization – Worked closely with the Muswenna team throughout the process for alignment. Delivered final designs that were shelf-ready and export-ready.",
+    ],
+    resultsIntro: "The Outcome",
+    results: [
+      "Won gold award in food exhibition in China.",
+      "Strengthened shelf visibility, making Muswenna Tea stand out in competitive retail spaces.",
+      "Established a modern, premium, and culturally rooted identity appealing to both local and international markets.",
+      "Delivered a full brand guideline that now serves as the foundation for all future marketing efforts.",
+    ],
+    takeawayIntro: "The Impact",
+    takeaway: [
+      "The Muswenna Tea rebrand transformed the brand from an underrepresented legacy into a modern premium identity that speaks to global consumers.",
+      "By blending heritage storytelling with contemporary design, Muswenna Tea is now well-positioned to expand its presence in both Sri Lankan and international markets.",
+    ],
+  },
+  {
+    title: "Hotel Suisse",
     description:
-      "Heritage storytelling unlocks 964.3% surge in organic engagement",
+      "Blending Heritage with Modern Identity Through Rebranding campaign",
     image: dumy,
     link: "#",
     description2:
-      "When Queens Hotel Kandy recognized their digital presence wasn't reflecting their prestigious heritage status, our organic social media strategy transformed underperforming channels into a content powerhouse, delivering 615,910 unique reach and an extraordinary 964% increase in content interactions.",
-    challenges: [
-      "Minimal organic social media engagement despite premium brand heritage",
-      "Disconnected content strategy failing to leverage cultural positioning",
-      "Underutilized storytelling potential around property's historical significance",
-      "Low community interaction and brand affinity metrics",
-    ],
-    solutions: [
-      "Our content strategists conducted a comprehensive brand audit to understand Queens Hotel's authentic voice and audience expectations. We identified the intersection between heritage storytelling and modern hospitality experiences as the key differentiator.",
-      "Through data-driven content planning and audience behavior analysis, we developed a content ecosystem that balanced nostalgic storytelling with contemporary guest experiences. Our creative team produced scroll-stopping visuals that captured both the property's cultural essence and luxury positioning.",
-      "The organic first approach focused on community building rather than paid amplification, utilizing engagement psychology and platform algorithm optimization to maximize natural reach.",
-    ],
-    results: [
-      "Results demonstrated the power of authentic brand storytelling in the hospitality sector:",
-      "615,910 unique organic reach representing 706% growth",
-      "364,519 total organic video views with 1,400% increase",
-      "15.4M organic photo impressions from heritage and guest experience content",
-    ],
-  },
-  {
-    title: "Emirates Aviation Collectibles",
-    description: "Selling Out Emirates Aviation Collectibles with a 1043% ROI",
-    image: dumy,
-    link: "#",
-    description2:
-      "A structured full-funnel Meta strategy transformed niche awareness into 100% sales conversion",
-    challengesIntro:
-      "A Dubai-based brand specializing in upcycling airplane parts into luxury collectibles, launched an exclusive collection of Emirates A380 aircrafts. The task was simple in theory, sell the stock. But the reality was far more complex:",
-    challenges: [
-      "No prior audience data for Meta Ads",
-      "Highly niche target market: aviation enthusiasts, high-net-worth individuals, and luxury buyers",
-      "The need to avoid irrelevant inquiries",
-      "Requirement to build trust for a high-ticket purchase in a competitive luxury market",
-    ],
-    strategyIntro:
-      "We designed a three-stage full-funnel approach to identify the right buyers, build credibility, and convert interest into sales.",
+      "Hotel Suisse, one of Kandy’s most iconic heritage landmarks, wanted to reposition itself with a modern yet timeless brand identity. To achieve this, we developed a rebranding Campaign that followed the journey of a “Swiss lady” exploring Kandy’s cultural treasures before arriving at Hotel Suisse. Her journey symbolized the hotel’s unique essence - a seamless blend of heritage, elegance, and modern sophistication.",
+    strategyIntro: "Our Approach",
     strategy: [
-      "Awareness & Trust-Building – Cold campaigns tested multiple audience groups, supported by storytelling creatives that positioned the products as exclusive collectibles. Customer reviews, testimonial-style content, and emotional advertising built trust and credibility. Lead forms helped qualify interest by filtering serious buyers from casual browsers.",
-      "Audience Refinement – Continuous testing allowed us to identify engaged, high-intent users who interacted with ads, engaged with content, or expressed curiosity. These segments became our warm audience, the foundation for efficient retargeting.",
-      "Conversion & Retargeting – With a warmed audience, we shifted to urgency-driven campaigns optimized for WhatsApp conversions — the preferred communication channel in the UAE. Transparency on pricing, exclusivity messaging, and urgency-based creatives pushed high-intent leads to act quickly.",
+      "Step 1 – Concept Development – Designed a narrative that connected Kandy’s rich cultural heritage with Hotel Suisse’s timeless charm. Created an emotional storyline resonating with both local audiences and international travelers.",
+      "Step 2 – Casting & Brand Protection – Carefully selected the lead actress to ensure credibility and cultural sensitivity. Maintained brand integrity by balancing sophistication with respect for heritage.",
+      "Step 3 – Production & AI Integration – Shot across Kandy’s scenic and cultural landmarks, showcasing heritage and luxury. Used AI-enhanced visuals to add modern flair while retaining authenticity.",
+      "Step 4 – Editing & Post-Production – Employed cinematic editing, color grading, and sound design for a polished finish. Built an emotionally engaging flow that culminated in the rebranded Hotel Suisse reveal.",
     ],
-    executionIntro:
-      "Over the course of Two months, we tested 30+ creatives and optimized multiple ad sets. Each adjustment was guided by real-time performance data, ensuring that the funnel became sharper with every iteration. By tailoring the strategy to local behavior and leveraging WhatsApp for direct, personal follow-ups, we closed the gap between awareness and purchase.",
-    execution: [
-      "Continuous optimization of ad sets and creatives based on real-time data",
-      "Leveraging WhatsApp as the primary communication channel for high-intent leads",
-      "Personal follow-ups to bridge awareness and purchase",
-    ],
-    resultsIntro: "The campaign delivered results beyond expectations:",
-    results: [
-      "100% stock sold out within two months",
-      "1043% ROI in the second campaign phase",
-      "High-quality, qualified leads funneled directly via WhatsApp and calls",
-      "Stronger brand awareness in UAE luxury and aviation circles",
-      "Audience database established for future product launches",
-    ],
-    takeawayIntro:
-      "This campaign proved that no product is too niche to market successfully, if you design the right funnel.",
+    takeawayIntro: "The Impact",
     takeaway: [
-      "By starting broad, filtering for high intent, building trust, and retargeting with urgency-driven messaging, Wingscraft transformed a niche collectible into a sold-out success story.",
-    ],
-  },
-  {
-    title: "UK Education Consultancy",
-    description: "Cutting Cost per Lead by 78% with Smarter Targeting",
-    image: dumy,
-    link: "#",
-    description2:
-      "Data-driven testing and refined ad strategies reduced CPL from $19.90 to $4.38 while hitting the targets",
-    challengesIntro:
-      "This UK-based education consultancy firm supports student recruitment for two leading universities - the University of Bolton and Anglia Ruskin University. With over 70+ courses on offer and a highly niche audience within specific UK regions, the challenge was clear:",
-    challenges: [
-      "High cost per lead (CPL) of $25+",
-      "Difficulty connecting the right courses with the right audience",
-      "Eligibility is 25km radius within London",
-      "Strong competition from established industry players",
-      "Need to meet strict student registration targets",
-    ],
-    strategyIntro:
-      "To overcome these challenges, our digital team applied a three pronged approach designed to optimize efficiency across the funnel:",
-    strategy: [
-      "Course Selection Optimization – Analyzed past student data, intake records, Google Analytics, and Google Trends to identify top-demand programs. Narrowed 70+ options down to 7 high-potential courses for focused campaigns.",
-      "Audience Refinement – Implemented hyper-local targeting within a 16-mile radius of Manchester and London. Through continuous testing, we uncovered key insights - such as London-based audiences showing higher interest in health-related courses - enabling sharper segmentation.",
-      "Ad Angle Testing – To stand out in a competitive landscape, we tested 50+ creatives with different value propositions: career-building opportunities, industry demand, and financial incentives. Iterative testing allowed us to identify the most resonant messaging for each segment.",
-    ],
-    executionIntro:
-      "Over a three-month campaign cycle, we refined targeting and creative angles through continuous A/B testing. Multiple ad sets were adjusted in real time to optimize performance and scale winning combinations of course, audience, and ad angle.",
-    execution: [
-      "Refined targeting and creative angles continuously over three months",
-      "Adjusted ad sets in real time to scale winning combinations of course, audience, and ad angle",
-    ],
-    resultsIntro:
-      "The consultancy achieved a breakthrough in both cost-efficiency and lead quality:",
-    results: [
-      "78% Reduction in CPL (from $19.90 to $4.38)",
-      "Increased 15% Conversion Rate",
-      "Target Registrations Achieved",
-    ],
-    takeawayIntro:
-      "Success came not from a single campaign, but from continuous testing, audience refinement, and creative optimization.",
-    takeaway: [
-      "By aligning the right course, the right audience, and the right message, we turned a high-cost recruitment challenge into a scalable, cost-effective model.",
-    ],
-  },
-  {
-    title: "Ekho Ella",
-    description: "Driving Organic Growth in the Hills of Ella",
-    image: dumy,
-    link: "#",
-    description2:
-      "Scenic storytelling and organic strategy delivered a 193% lift in reach",
-    challengesIntro:
-      "Nestled in Sri Lanka’s scenic hill country, Ekho Ella offers travelers a boutique stays surrounded by natural beauty. However, its digital presence did not reflect this charm. Social media engagement was minimal, reach remained limited, and the property struggled to connect with the right audience.",
-    challenges: [
-      "Minimal social media engagement",
-      "Limited reach",
-      "Difficulty connecting with the right audience",
-    ],
-    strategyIntro:
-      "We crafted a content-first approach to highlight Ella’s breathtaking landscapes, hotel amenities, and unique guest experiences. This included:",
-    strategy: [
-      "A structured content calendar designed for consistency and discoverability",
-      "Visual storytelling that resonated with boutique travelers seeking scenic escapes",
-      "Short-form videos and high-quality imagery to strengthen authenticity and appeal",
-    ],
-    executionIntro:
-      "By pairing stunning visuals with interactive captions and community-driven engagement, we transformed Ekho Ella’s social channels into an organic growth engine. The focus remained entirely on building organic reach and engagement.",
-    execution: [
-      "Interactive captions to drive engagement",
-      "Stunning visuals showcasing hotel amenities and scenic landscapes",
-      "Community-driven content approach",
-    ],
-    resultsIntro:
-      "The impact of this organic-first strategy was immediate and measurable:",
-    results: [
-      "176,500 Organic Reach (+193%)",
-      "701,800 Organic Views (+103%)",
-      "118,000 3-Second Video Views (+1,000%)",
-      "8,700 Organic Interactions (+119%)",
-      "270,600 Total Reach (+78%)",
-    ],
-  },
-  {
-    title: "Ehelepola Walawwa",
-    description: "Shaping the Brand of Sri Lanka’s Largest Cultural Landmark",
-    image: dumy,
-    link: "#",
-    description2:
-      "AI-powered innovation and unified branding brought a historic destination to life",
-    challengesIntro:
-      "Ehelepola Walawwa, developed under the Temple of the Tooth Relic in Kandy, is one of Sri Lanka’s most ambitious cultural and commercial projects. The development includes:",
-    challenges: [
-      "Sri Lanka’s First Wax Museum – immortalizing 35 historic figures",
-      "Prison Arcade – a premium shopping destination with 40 outlets",
-      "King’s Court Restaurant – a fine-dining experience infused with heritage",
-      "Translated cultural heritage into modern brand storytelling",
-      "Appealed to both local and international audiences",
-      "Created a unified identity while giving each entity (museum, arcade, restaurant) its own distinct voice",
-      "Solved the unique creative challenge of designing AI-powered wax figures of personalities with no existing photographs",
-      "Register vendors for prison arcade",
-    ],
-    strategyIntro:
-      "We developed a comprehensive branding and digital roadmap designed to blend tradition with technology:",
-    strategy: [
-      "Brand & Digital Strategy – Positioned Ehelepola Walawwa as both a cultural icon and modern destination, with a digital roadmap focused on visibility, engagement, and tourism appeal.",
-      "Creative Design & Visual Identity – Designed logos for the Wax Museum, Prison Arcade, King’s Court, and the Walawwa itself, supported by a consistent visual language across platforms with brand guidelines.",
-      "AI-Driven Innovation – Leveraged advanced AI tools to conceptualize lifelike wax figures from limited historic records, pioneering first-of-its-kind innovation in Sri Lanka.",
-      "Create Vendor Proposals – Created unique and insightful vendor proposals to attract vendors for Prison Arcade",
-    ],
-    executionIntro:
-      "Our Creative and Brand teams worked hand-in-hand to ensure branding was seamlessly integrated across four diverse entities while maintaining individuality. Visual storytelling, heritage-driven design elements, and AI-powered creativity allowed us to bridge the gap between cultural authenticity and modern relevance.",
-    execution: [
-      "Integrated branding across four diverse entities while maintaining individuality",
-      "Applied visual storytelling and heritage-driven design elements",
-      "Implemented AI-powered creativity for wax figure conceptualization",
-    ],
-    resultsIntro: "The project delivered a transformative impact:",
-    results: [
-      "30+ Vendors (Well Established Brands) registered for prison arcade for stalls",
-      "First-of-its-kind innovation in Sri Lanka with AI-driven wax figure design",
-      "Seamless, cohesive branding across four distinct entities",
-      "Global positioning appealing to both local visitors and international tourists",
-      "A landmark brand identity that embodies heritage, innovation, and tourism appeal",
-    ],
-    takeawayIntro:
-      "Ehelepola Walawwa now stands not just as a destination, but as a living storytelling experience.",
-    takeaway: [
-      "By fusing tradition with technology, the project set a new benchmark for cultural branding in Sri Lanka.",
-      "For our team, being entrusted with this vision was more than a project, it was an honor to shape a brand that preserves history while inspiring the future.",
+      "The rebranding video became more than a promotional asset — it redefined Hotel Suisse’s brand perception.",
+      "By intertwining cultural storytelling with modern digital enhancements, the hotel now stands as an elegant, renewed icon of Kandy that appeals to both heritage-seekers and contemporary travelers.",
     ],
   },
 ];
@@ -339,7 +196,7 @@ const RecentWork: React.FC = () => {
   };
 
   return (
-    <div className="mx-auto w-11/12">
+    <div className="mx-auto">
       {/* sec heading */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
