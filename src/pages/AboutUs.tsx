@@ -8,9 +8,10 @@ import Map from "../component/About/Map";
 import WhatSets from "../component/About/WhatSets";
 import VoicesOfTrust from "../component/About/VoicesOfTrust";
 import Message from "../component/About/Message";
-import Locations from "../component/About/Locations";
+import Locations from "../component/About/Locations";  
 import Footer from "../component/common/Footer";
 import FooterTop from "../component/common/FooterTop";
+import ChatWithUsButton from "../component/common/ChatWithUsButton";
 
 function WebService() {
   useEffect(() => {
@@ -89,6 +90,7 @@ function WebService() {
       <section className="lg:mt-50">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import WebHero from "../../component/BrandDetails/WebHero";
 import WebFramework from "../../component/BrandDetails/WebFramework";
 import WebContact from "../../component/BrandDetails/WebContact";
 import WebRecentWork from "../../component/BrandDetails/WebRecentWork";
+import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function BrandService() {
   useEffect(() => {
@@ -20,7 +21,7 @@ function BrandService() {
       <div className="w-full font-['Roboto'] min-h-screen p-3.5 overflow-x-hidden">
         {/* Header */}
         <div className="mx-auto mb-3.5">
-          <Header currentPath="/Technology" />
+          <Header currentPath="/design" />
         </div>
 
         <section className="relative rounded-[20px] bg-gradient-to-r from-white via-[#078BD612] to-white sm:bg-top bg-cover bg-center lg:mb-30 mb-20">
@@ -34,8 +35,8 @@ function BrandService() {
             <Breadcrumb
               levels={[
                 { label: "Home", path: "/" },
-                { label: "Services", path: "/Technology" },
-                { label: "Web Development" },
+                { label: "Design", path: "/design" },
+                { label: "Brand Identity" },
               ]}
             />
           </motion.div>
@@ -79,6 +80,7 @@ function BrandService() {
       <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </>
   );
 }

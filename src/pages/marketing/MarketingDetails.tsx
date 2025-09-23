@@ -9,6 +9,7 @@ import WebHero from "../../component/MarketingDetails/WebHero";
 import WebFramework from "../../component/MarketingDetails/WebFramework";
 import WebContact from "../../component/MarketingDetails/WebContact";
 import WebRecentWork from "../../component/MarketingDetails/WebRecentWork";
+import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function MarketingService() {
   useEffect(() => {
@@ -34,8 +35,8 @@ function MarketingService() {
             <Breadcrumb
               levels={[
                 { label: "Home", path: "/" },
-                { label: "Services", path: "/Technology" },
-                { label: "Web Development" },
+                { label: "Marketing", path: "/marketing" },
+                { label: "Marketing Details" },
               ]}
             />
           </motion.div>
@@ -80,6 +81,7 @@ function MarketingService() {
       <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </>
   );
 }

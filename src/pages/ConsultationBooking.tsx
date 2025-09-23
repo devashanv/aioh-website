@@ -4,6 +4,7 @@ import Header from "../component/common/Header";
 import { useLocation } from "react-router-dom";
 import Footer from "../component/common/Footer";
 import FooterTop from "../component/common/FooterTop";
+import ChatWithUsButton from "../component/common/ChatWithUsButton";
 
 const ConsultationBooking: React.FC = () => {
   const location = useLocation();
@@ -89,6 +90,7 @@ const ConsultationBooking: React.FC = () => {
       <section className="lg:mt-50">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </>
   );
 };

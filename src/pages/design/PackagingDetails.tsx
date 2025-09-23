@@ -5,13 +5,13 @@ import Header from "../../component/common/Header";
 import FooterTop from "../../component/common/FooterTop";
 import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
-import WebHero from "../../component/ManagementDetails/WebHero";
-import WebFramework from "../../component/ManagementDetails/WebFramework";
-import WebContact from "../../component/ManagementDetails/WebContact";
-import WebRecentWork from "../../component/ManagementDetails/WebRecentWork";
+import WebHero from "../../component/PackageDesign/WebHero";
+import WebFramework from "../../component/PackageDesign/WebFramework";
+import WebContact from "../../component/PackageDesign/WebContact";
+import WebRecentWork from "../../component/PackageDesign/WebRecentWork";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
-function ManagementService() {
+function PackageService() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,7 +21,7 @@ function ManagementService() {
       <div className="w-full font-['Roboto'] min-h-screen p-3.5 overflow-x-hidden">
         {/* Header */}
         <div className="mx-auto mb-3.5">
-          <Header currentPath="/marketing" />
+          <Header currentPath="/design" />
         </div>
 
         <section className="relative rounded-[20px] bg-gradient-to-r from-white via-[#078BD612] to-white sm:bg-top bg-cover bg-center lg:mb-30 mb-20">
@@ -35,8 +35,8 @@ function ManagementService() {
             <Breadcrumb
               levels={[
                 { label: "Home", path: "/" },
-                { label: "Marketing", path: "/marketing" },
-                { label: "Social Media Management" },
+                { label: "Design", path: "/design" },
+                { label: "Packaging Design" },
               ]}
             />
           </motion.div>
@@ -85,4 +85,4 @@ function ManagementService() {
   );
 }
 
-export default ManagementService;
+export default PackageService;

@@ -9,6 +9,7 @@ import WebHero from "../../component/OptimizationDetails/WebHero";
 import WebFramework from "../../component/OptimizationDetails/WebFramework";
 import WebContact from "../../component/OptimizationDetails/WebContact";
 import WebRecentWork from "../../component/OptimizationDetails/WebRecentWork";
+import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function OptimizationService() {
   useEffect(() => {
@@ -79,6 +80,7 @@ function OptimizationService() {
       <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </>
   );
 }

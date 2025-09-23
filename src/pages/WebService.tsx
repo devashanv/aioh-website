@@ -9,6 +9,7 @@ import WebContact from "../component/WebDetails/WebContact";
 import WebRecentWork from "../component/WebDetails/WebRecentWork";
 import FooterTop from "../component/common/FooterTop";
 import Footer from "../component/common/Footer";
+import ChatWithUsButton from "../component/common/ChatWithUsButton";
 
 function WebService() {
   useEffect(() => {
@@ -80,7 +81,8 @@ function WebService() {
       <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
-    </>
+      <ChatWithUsButton />
+    </> 
   );
 }
 
