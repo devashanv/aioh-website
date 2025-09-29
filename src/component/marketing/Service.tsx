@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
 // bg images
-import sc1 from "../../assets/img/services/mkt-sc1.png";
-import sc2 from "../../assets/img/services/mkt-sc2.png";
-import sc3 from "../../assets/img/services/mkt-sc3.png";
-import sc4 from "../../assets/img/services/mkt-sc4.png";
-import sc5 from "../../assets/img/services/mkt-sc5.png";
+import sc1 from "../../assets/img/services/bsy.webp";
+import sc2 from "../../assets/img/services/sma.webp";
+import sc3 from "../../assets/img/services/smm.webp";
+import sc4 from "../../assets/img/services/cro.webp";
+import sc5 from "../../assets/img/services/ds.webp";
+import sc6 from "../../assets/img/services/SEO.webp";
 
 
 import { GoArrowUpRight } from "react-icons/go";
@@ -46,6 +47,13 @@ const services = [
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc5,
     path: "/marketing/content-marketing",
+  },
+    {
+    title: "Search Engine Optimization (SEO)",
+    description:
+      "We optimize your website and content to improve search engine rankings, increase organic traffic, and attract more potential customers.",
+    img: sc6,
+    path: "/marketing/search-engine-optimization",
   },
 ];
 

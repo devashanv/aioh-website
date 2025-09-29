@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 // bg images
-import sc1 from "../../assets/img/services/tech-sc1.png";
-import sc2 from "../../assets/img/services/tech-sc2.png";
+import sc1 from "../../assets/img/services/website.webp";
+import sc2 from "../../assets/img/services/websystem.webp";
 import sc3 from "../../assets/img/services/tech-sc3.png";
 import sc4 from "../../assets/img/services/tech-sc4.png";
 
@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web Development",
+    title: "Web Site Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc1,
