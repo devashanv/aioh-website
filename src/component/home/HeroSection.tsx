@@ -107,7 +107,7 @@ const HeroSection: React.FC = () => {
                             <p
                                 className='text-primary'>+</p>
                             <p
-                                className='text-white font-thin  ml-1'>Contries</p>
+                                className='text-white font-thin  ml-1'>Countries</p>
                         </div>
                     </div>
                 </div>

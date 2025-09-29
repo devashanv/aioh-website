@@ -1,8 +1,8 @@
 import React from "react";
 
-import Image1 from "../../assets/about/image1.png";
-import Image2 from "../../assets/about/image2.png";
-import Image3 from "../../assets/about/image3.png";
+import Image1 from "../../assets/about/image1.webp";
+import Image2 from "../../assets/about/image2.webp";
+import Image3 from "../../assets/about/image3.webp";
 import FacebookIcon from "../../assets/contact/facebook.svg";
 import InstagramIcon from "../../assets/contact/instagram.svg";
 import GoogleIcon from "../../assets/contact/google.svg";
@@ -103,7 +103,7 @@ const AboutHero: React.FC = () => {
         {/* Shifted Inner Wrapper */}
         <div className="relative w-full h-full ">
           {/* Image1 - Top Left */}
-          <div className="absolute top-0 left-0 w-[50%] rounded-lg overflow-hidden z-10">
+          <div className="absolute top-0 left-0 w-[50%] rounded-[20px] overflow-hidden z-10">
             <img
               src={Image1}
               alt="Collaboration"
@@ -111,7 +111,7 @@ const AboutHero: React.FC = () => {
             />
           </div>
           {/* Image2 - Bottom Left */}
-          <div className="absolute bottom-0 right-0 w-[93%] rounded-lg overflow-hidden z-10">
+          <div className="absolute bottom-0 right-0 w-[93%] rounded-[20px] overflow-hidden z-10">
             <img
               src={Image2}
               alt="Office"
@@ -119,7 +119,7 @@ const AboutHero: React.FC = () => {
             />
           </div>
           {/* Image3 - Right Middle */}
-          <div className="absolute top-[36%] right-[5%] w-[40%] rounded-lg overflow-hidden z-10 -translate-y-1/2">
+          <div className="absolute top-[36%] right-[5%] w-[40%] rounded-[20px] overflow-hidden z-10 -translate-y-1/2">
             <img
               src={Image3}
               alt="Tall Team"

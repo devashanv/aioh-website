@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 // bg images
-import sc1 from "../../assets/img/services/des-sc1.png";
-import sc2 from "../../assets/img/services/des-sc2.png";
-import sc3 from "../../assets/img/services/des-sc3.png";
-import sc4 from "../../assets/img/services/des-sc4.png";
-import sc5 from "../../assets/img/services/des-sc5.png";
+import sc1 from "../../assets/img/services/brandid.webp";
+import sc2 from "../../assets/img/services/design.webp";
+import sc3 from "../../assets/img/services/matirieal.webp";
+import sc4 from "../../assets/img/services/creativecon.webp";
+import sc5 from "../../assets/img/services/photography.webp";
+import sc6 from "../../assets/img/services/uiux.webp";
+
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -45,6 +47,13 @@ const services = [
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc5,
     path: "/design/photography-and-videography",
+  },
+    {
+    title: "UI/UX Design",
+    description:
+      "We create intuitive and visually appealing interfaces to enhance user experience, improve engagement, and drive conversions.",
+    img: sc6,
+    path: "/design/ui-ux-design",
   },
 ];
 

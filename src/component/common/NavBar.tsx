@@ -30,6 +30,9 @@ import {
   HiOutlinePhoto,
   HiOutlineBookOpen,
   HiOutlineMapPin,
+  HiOutlineCheckCircle,
+  HiOutlineSparkles,
+  HiOutlineViewColumns,
 } from "react-icons/hi2";
 
 type SubmenuCategory = {
@@ -183,6 +186,69 @@ const navItems: NavItem[] = [
           },
         ],
       },
+      {
+        label: "Search Engine Optimization (SEO)",
+        items: [
+          {
+            title: "On-Page SEO",
+            description:
+              "Optimize page structure, tags, and content for better rankings.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/marketing/seo/on-page",
+          },
+          {
+            title: "Off-Page SEO",
+            description: "Build backlinks and improve domain authority.",
+            icon: <HiOutlineLink className="text-black" />,
+            to: "/marketing/seo/off-page",
+          },
+          {
+            title: "Technical SEO",
+            description: "Enhance site speed, crawlability, and indexing.",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/marketing/seo/technical",
+          },
+          {
+            title: "Local SEO",
+            description: "Boost visibility in local search and Google Maps.",
+            icon: <HiOutlineMapPin className="text-black" />,
+            to: "/marketing/seo/local",
+          },
+          {
+            title: "E-commerce SEO",
+            description: "Increase traffic and sales for online stores.",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/marketing/seo/ecommerce",
+          },
+          {
+            title: "Content SEO & Optimization",
+            description: "Improve content relevance and keyword targeting.",
+            icon: <HiOutlinePencil className="text-black" />,
+            to: "/marketing/seo/content",
+          },
+          {
+            title: "Mobile SEO",
+            description:
+              "Optimize for smartphones and tablets for higher mobile rankings.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/seo/mobile",
+          },
+          {
+            title: "SEO Audits & Reporting",
+            description:
+              "Comprehensive analysis with actionable recommendations.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/seo/audits",
+          },
+          {
+            title: "Keyword Research & Strategy",
+            description:
+              "Identify high-value keywords to target the right audience.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/seo/keyword-research",
+          },
+        ],
+      },
     ],
   },
   {
@@ -198,127 +264,158 @@ const navItems: NavItem[] = [
         label: "Web Development",
         items: [
           {
-            title: "E-commerce Websites & Solutions",
-            description: "Online stores & payment gateways.",
-            icon: <HiOutlineShoppingCart className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
             title: "Showcase / Business Websites",
-            description: "Professional business presence.",
+            description:
+              "Professional websites to highlight your business and services.",
             icon: <HiOutlineBuildingOffice className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Portfolio Websites",
-            description: "Showcase your work beautifully.",
+            description:
+              "Creative platforms to display your work and achievements.",
             icon: <HiOutlinePaintBrush className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Blog & News Websites",
-            description: "Publish articles & updates.",
+            description:
+              "Dynamic platforms for sharing articles, updates, and stories.",
             icon: <HiOutlineNewspaper className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Educational Websites & e-Learning Portals",
-            description: "Interactive learning platforms.",
+            description:
+              "Interactive learning platforms with courses and quizzes.",
             icon: <HiOutlineAcademicCap className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Membership & Subscription-Based Websites",
-            description: "Recurring memberships & access.",
+            description:
+              "Secure platforms for recurring subscriptions and member access.",
             icon: <HiOutlineKey className="text-black" />,
             to: "/technology/WebService",
           },
           {
-            title: "Event Management Websites",
-            description: "Plan, manage & promote events.",
-            icon: <HiOutlineTicket className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
             title: "Nonprofit & Charity Websites",
-            description: "Support social causes online.",
+            description:
+              "Websites designed to raise awareness and accept donations.",
             icon: <HiOutlineFolderOpen className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Job Board Websites",
-            description: "List jobs & find candidates.",
+            description:
+              "Platforms to post job openings and connect candidates.",
             icon: <HiOutlineUser className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Directory & Listing Websites",
-            description: "Organized searchable listings.",
+            description:
+              "Organized directories for businesses, services, or events.",
             icon: <HiOutlineDocumentText className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "Booking & Reservation Websites",
-            description: "Book hotels, tables & services.",
-            icon: <HiOutlineCalendar className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "Custom Web Applications",
-            description: "Tailor-made business solutions.",
-            icon: <HiOutlineCog className="text-black" />,
             to: "/technology/WebService",
           },
         ],
       },
       {
-        label: "System Development",
+        label: "Web System Development",
         items: [
           {
             title: "Management Web Applications (HRM, CRM, etc.)",
-            description: "Streamline internal processes.",
+            description:
+              "Web-based tools to streamline and automate business operations.",
             icon: <HiOutlineFolderOpen className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Learning Management Systems (LMS)",
-            description: "Online education platforms.",
+            description:
+              "Platforms to create, manage, and track online courses.",
             icon: <HiOutlineAcademicCap className="text-black" />,
             to: "/technology/WebService",
           },
           {
-            title: "ERP Systems",
-            description: "Integrate business operations.",
+            title: "Booking & Reservation Websites",
+            description:
+              "Websites for scheduling appointments and managing bookings.",
+            icon: <HiOutlineCalendar className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Custom Web Applications",
+            description:
+              "Tailor-made solutions for unique business requirements.",
             icon: <HiOutlineCog className="text-black" />,
             to: "/technology/WebService",
           },
           {
-            title: "POS Systems",
-            description: "Retail & sales solutions.",
+            title: "Event Management Websites",
+            description:
+              "Online platforms to promote and manage events efficiently.",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "E-commerce Websites & Solutions",
+            description:
+              "Online stores with secure payments and product management.",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Health & Clinic Management Web Applications",
+            description:
+              "Web systems for patient records, appointments, and billing.",
+            icon: <HiOutlineBuildingLibrary className="text-black" />,
+            to: "/technology/WebService",
+          },
+        ],
+      },
+      {
+        label: "Standalone System Development",
+        items: [
+          {
+            title: "Enterprise Resource Planning (ERP) Systems",
+            description:
+              "Integrate finance, HR, and operations in one platform.",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Point of Sale (POS) Systems",
+            description:
+              "Retail solutions for billing, inventory, and sales tracking.",
             icon: <HiOutlineShoppingCart className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Inventory & Warehouse Management Systems",
-            description: "Track & manage inventory.",
+            description:
+              "Track stock levels and manage supply chains effectively.",
             icon: <HiOutlineFolderOpen className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Hospital & Clinic Management Systems",
-            description: "Healthcare management tools.",
+            description: "Comprehensive systems for healthcare administration.",
             icon: <HiOutlineBuildingLibrary className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "School / University Management Systems",
-            description: "Organize academic operations.",
+            description:
+              "Manage student data, classes, and academic operations.",
             icon: <HiOutlineBuildingLibrary className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Custom Business Automation Solutions",
-            description: "Automate workflows & tasks.",
+            description:
+              "Automate tasks to improve efficiency and productivity.",
             icon: <HiOutlineCog className="text-black" />,
             to: "/technology/WebService",
           },
@@ -329,115 +426,119 @@ const navItems: NavItem[] = [
         items: [
           {
             title: "Android & iOS Native Apps",
-            description: "Optimized mobile experiences.",
+            description:
+              "High-performance apps built for specific mobile platforms.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
             to: "/technology/WebService",
           },
           {
-            title: "Cross-Platform Mobile Apps",
-            description: "Flutter & React Native builds.",
+            title: "Cross-Platform Mobile Apps (Flutter, React Native)",
+            description:
+              "Apps running seamlessly on both Android and iOS devices.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "E-commerce Mobile Apps",
-            description: "Mobile shopping apps.",
+            description:
+              "Mobile shopping apps with secure payments and cart features.",
             icon: <HiOutlineShoppingCart className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Educational & LMS Mobile Apps",
-            description: "Learning on-the-go.",
+            description: "Apps for learning, quizzes, and course management.",
             icon: <HiOutlineAcademicCap className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Event & Ticketing Apps",
-            description: "Manage & sell tickets easily.",
+            description: "Mobile solutions for event booking and ticket sales.",
             icon: <HiOutlineTicket className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Delivery & Logistics Apps",
-            description: "Track & manage deliveries.",
+            description:
+              "Track orders, deliveries, and fleet operations easily.",
             icon: <HiOutlineTruck className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Travel & Tourism Apps",
-            description: "Guides, bookings & more.",
+            description: "Guides, booking tools, and travel planning features.",
             icon: <HiOutlinePaperAirplane className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Financial & Fintech Apps",
-            description: "Banking & payment solutions.",
+            description:
+              "Mobile banking, payment, and finance management apps.",
             icon: <HiOutlineCurrencyDollar className="text-black" />,
             to: "/technology/WebService",
           },
           {
             title: "Social Networking & Community Apps",
-            description: "Connect & engage users.",
+            description:
+              "Platforms for connecting and engaging with communities.",
             icon: <HiOutlineChartBar className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Custom Business Mobile Apps",
+            description:
+              "Mobile solutions tailored to your unique business needs.",
+            icon: <HiOutlineCog className="text-black" />,
             to: "/technology/WebService",
           },
         ],
       },
       {
-        label: "Search Engine Optimization (SEO)",
+        label: "AI Solutions",
         items: [
           {
-            title: "On-Page SEO",
-            description: "Optimize page structure & tags.",
+            title: "AI Chatbots and Virtual Assistants",
+            description:
+              "Intelligent bots for customer support and automation.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Custom AI Solutions",
+            description:
+              "AI-powered applications for data analysis and automation.",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/technology/WebService",
+          },
+        ],
+      },
+      {
+        label: "Test Automation Solutions",
+        items: [
+          {
+            title: "Automated Functional Testing",
+            description: "Automate repetitive test cases to improve accuracy.",
             icon: <HiOutlineDocumentText className="text-black" />,
             to: "/technology/WebService",
           },
           {
-            title: "Off-Page SEO",
-            description: "Backlinks & domain authority.",
-            icon: <HiOutlineLink className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "Technical SEO",
-            description: "Improve crawlability & speed.",
-            icon: <HiOutlineCog className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "Local SEO",
-            description: "Reach customers nearby.",
-            icon: <HiOutlineMapPin className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "E-commerce SEO",
-            description: "Boost online store visibility.",
-            icon: <HiOutlineShoppingCart className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "Content SEO & Optimization",
-            description: "Rank better with optimized content.",
-            icon: <HiOutlinePencil className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "Mobile SEO",
-            description: "Optimize for smartphones & tablets.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/technology/WebService",
-          },
-          {
-            title: "SEO Audits & Reporting",
-            description: "Comprehensive SEO checks.",
+            title: "Regression Testing",
+            description:
+              "Ensure new updates don’t break existing functionality.",
             icon: <HiOutlineChartBar className="text-black" />,
             to: "/technology/WebService",
           },
           {
-            title: "Keyword Research & Strategy",
-            description: "Find the right keywords.",
-            icon: <HiOutlineUser className="text-black" />,
+            title: "Performance Testing",
+            description: "Measure and improve system speed and responsiveness.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "CI/CD Support",
+            description:
+              "Integrate automated testing with your development pipeline.",
+            icon: <HiOutlineCog className="text-black" />,
             to: "/technology/WebService",
           },
         ],
@@ -569,6 +670,41 @@ const navItems: NavItem[] = [
           },
         ],
       },
+      {
+        label: "UI/UX Design",
+        items: [
+          {
+            title: "User Research & Analysis",
+            description: "Understand users’ needs.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/uiux/user-research",
+          },
+          {
+            title: "Brand Experience Integration",
+            description: "Blend brand into design.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/uiux/brand-experience",
+          },
+          {
+            title: "Wireframing & Prototyping",
+            description: "Create structure & flow.",
+            icon: <HiOutlineViewColumns className="text-black" />,
+            to: "/uiux/wireframe-prototype",
+          },
+          {
+            title: "Visual & Interaction Design",
+            description: "Craft appealing visuals.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/uiux/visual-interaction",
+          },
+          {
+            title: "Usability Testing & Optimization",
+            description: "Improve user experience.",
+            icon: <HiOutlineCheckCircle className="text-black" />,
+            to: "/uiux/usability-testing",
+          },
+        ],
+      },
     ],
   },
   { label: "Contact", to: "/contact" },
@@ -651,10 +787,10 @@ const Header = ({ currentPath }: { currentPath: string }) => {
             onMouseLeave={handleMouseLeave}
           >
             {/* Sidebar */}
-            <aside className="w-64 pr-10 border-r flex flex-col justify-start h-full space-y-6">
+            <aside className="w-64 pr-10 border-r flex flex-col justify-start h-full">
               {/* Header */}
               <div>
-                <h2 className="text-xl font-semibold text-black mb-4 ">
+                <h2 className="text-xl font-semibold text-black mb-4">
                   {navItems.find((i) => i.label === dropdownOpen)?.intro?.title}
                 </h2>
                 <p className="text-xs mb-6 text-left font-light">
@@ -664,8 +800,8 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                   }
                 </p>
 
-                {/* Menu Items */}
-                <ul className="space-y-2">
+                {/* Scrollable Menu Items */}
+                <ul className="space-y-2 max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
                   {navItems
                     .find((i) => i.label === dropdownOpen)
                     ?.submenu?.map((cat) => {
@@ -680,7 +816,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                                 parent: dropdownOpen,
                               })
                             }
-                            className={`w-full text-left px-4 py-2 rounded-lg transition cursor-pointer 
+                            className={`w-full text-left px-4 py-2 rounded-lg transition cursor-pointer
                   ${
                     isActive
                       ? "bg-black/10 text-black font-semibold"
