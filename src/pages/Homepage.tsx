@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 import Footer from "../component/common/Footer";
 import HeroSection from "../component/home/HeroSection";
-import CoreServices from "../component/home/CoreServices";
+// import CoreServices from "../component/home/CoreServices";
 import SuccessHistory from "../component/home/SuccessHistory";
 import Categories from "../component/home/Categories";
 import ClientBase from "../component/home/ClientBase";
 import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
-
 import FooterTop from "../component/common/FooterTop";
+import Team from "../component/home/team";
 
 function Homepage() {
 
@@ -53,6 +53,14 @@ function Homepage() {
             </div>
           </section>
 
+          {/* team */}
+          <section
+            className="mb-3.5 px-1 lg:px-3.5 h-auto bg-red-300 lg:h-[100dvh] lg:mt-30 mt-20"
+            id="">
+            <Team />
+          </section>
+          
+
           {/* Tech Stack */}
           <section
             className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full rounded-xl lg:mt-30 mt-15"
@@ -63,7 +71,7 @@ function Homepage() {
           </section>
 
           {/* Core Services */}
-          <section
+          {/* <section
             className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
             id="services">
             <div className="bg-white lg:p-3.5 rounded-xl flex h-full">
@@ -71,7 +79,7 @@ function Homepage() {
                 <CoreServices />
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* Testimonials */}
           <section
