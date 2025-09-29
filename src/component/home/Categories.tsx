@@ -26,7 +26,7 @@ const Categories: React.FC = () => {
                         </section>
 
                         <section
-                            className='relative bg-red-400 h-8/12 rounded-xl w-full rounded-xl'>
+                            className='relative h-8/12 rounded-xl w-full rounded-xl'>
                             {/* gradient */}
                             <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-xl"></div>
 
