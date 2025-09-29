@@ -10,6 +10,7 @@ import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
 import FooterTop from "../component/common/FooterTop";
 import Team from "../component/home/Team";
+import SuccessStoriesNew from "../component/home/SuccessStoriesNew";
 
 // import AnimationVideo from "../assets/video/animation.mp4";
 
@@ -81,11 +82,16 @@ function Homepage() {
           </section> */}
 
         {/* Testimonials */}
-        <section
+        {/* <section
           className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
-          id="success"
-        >
+          id="success">
           <SuccessHistory />
+        </section> */}
+
+        <section
+          className="mb-3.5 px-1 lg:p-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+          id="success">
+          <SuccessStoriesNew />
         </section>
 
         {/* Categories */}

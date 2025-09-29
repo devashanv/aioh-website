@@ -198,8 +198,7 @@ const SuccessHistory: React.FC = () => {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: direction === "right" ? -200 : 200, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="h-full flex flex-col justify-between"
-              >
+                className="h-full flex flex-col justify-between">
                 {/* intro */}
                 <div className="h-1/2 flex flex-col-reverse lg:flex-row">
                   <div className="w-full lg:w-2/3 text-left">
