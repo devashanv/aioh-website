@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 import Footer from "../component/common/Footer";
 import HeroSection from "../component/home/HeroSection";
-import CoreServices from "../component/home/CoreServices";
+// import CoreServices from "../component/home/CoreServices";
 import SuccessHistory from "../component/home/SuccessHistory";
 import Categories from "../component/home/Categories";
 import ClientBase from "../component/home/ClientBase";
 import ServiceRibbon from "../component/home/ServiceRibbon";
 import SplineRobo from "../component/home/SplineRobo";
-
 import FooterTop from "../component/common/FooterTop";
+import Team from "../component/home/team";
 
 import AnimationVideo from "../assets/video/animation.mp4";
 
@@ -51,33 +51,33 @@ function Homepage() {
             <ServiceRibbon />
           </div>
         </section>
+          {/* team */}
+          <section
+            className="mb-3.5 px-1 lg:px-3.5 h-auto bg-red-300 lg:h-[100dvh] lg:mt-30 mt-20"
+            id="">
+            <Team />
+          </section>
+          
 
-        {/* Tech Stack */}
-        <section
-          className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full rounded-xl lg:mt-30 mt-15"
-          id="techstack"
-        >
-          <video
-            src={AnimationVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full rounded-xl h-100 object-cover"
-          />
-        </section>
+          {/* Tech Stack */}
+          <section
+            className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full rounded-xl lg:mt-30 mt-15"
+            id="techstack">
+            <video width="640" controls className="w-full rounded-xl h-100">
+              <source src="video.mp4" type="video/mp4" />
+            </video>
+          </section>
 
-        {/* Core Services */}
-        <section
-          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
-          id="services"
-        >
-          <div className="bg-white lg:p-3.5 rounded-xl flex h-full">
-            <div className="w-full lg:w-11/12 mx-auto flex">
-              <CoreServices />
+          {/* Core Services */}
+          {/* <section
+            className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+            id="services">
+            <div className="bg-white lg:p-3.5 rounded-xl flex h-full">
+              <div className="w-full lg:w-11/12 mx-auto flex">
+                <CoreServices />
+              </div>
             </div>
-          </div>
-        </section>
+          </section> */}
 
         {/* Testimonials */}
         <section
