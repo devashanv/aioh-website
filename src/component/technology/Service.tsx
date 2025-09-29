@@ -5,55 +5,40 @@ import sc1 from "../../assets/img/services/tech-sc1.png";
 import sc2 from "../../assets/img/services/tech-sc2.png";
 import sc3 from "../../assets/img/services/tech-sc3.png";
 import sc4 from "../../assets/img/services/tech-sc4.png";
-import sc5 from "../../assets/img/services/tech-sc5.png";
-import sc6 from "../../assets/img/services/tech-sc6.png";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web site development",
+    title: "Web Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc1,
     path: "/technology/WebService",
   },
   {
-    title: "Web system development",
+    title: "System Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc2,
-    path: "/technology/WebService",
+    path: "/technology/SystemService",
   },
   {
-    title: "Standalone system",
+    title: "Mobile Application Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc3,
-    path: "/technology/WebService",
+    path: "/technology/MobileService",
   },
   {
-    title: "Cloud solutions",
+    title: "Search Engine Optimization (SEO)",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc4,
-    path: "/technology/WebService",
+    path: "/technology/SEOService",
   },
-  {
-    title: "AI solutions",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc5,
-    path: "/technology/WebService",
-  },
-  {
-    title: "UI/UX solutions",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc6,
-    path: "/technology/WebService",
-  },
+
 ];
 
 const Service: React.FC = () => {

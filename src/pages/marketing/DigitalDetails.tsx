@@ -9,6 +9,7 @@ import WebHero from "../../component/DigitalDetails/WebHero";
 import WebFramework from "../../component/DigitalDetails/WebFramework";
 import WebContact from "../../component/DigitalDetails/WebContact";
 import WebRecentWork from "../../component/DigitalDetails/WebRecentWork";
+import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function DigitalService() {
   useEffect(() => {
@@ -17,7 +18,7 @@ function DigitalService() {
 
   return (
     <>
-      <div className="w-full font-['Roboto'] min-h-screen p-3.5 overflow-x-hidden bg-amber-400">
+      <div className="w-full font-['Roboto'] min-h-screen p-3.5 overflow-x-hidden">
         {/* Header */}
         <div className="mx-auto mb-3.5">
           <Header currentPath="/marketing" />
@@ -34,8 +35,8 @@ function DigitalService() {
             <Breadcrumb
               levels={[
                 { label: "Home", path: "/" },
-                { label: "Services", path: "/Technology" },
-                { label: "Web Development" },
+                { label: "Marketing", path: "/marketing" },
+                { label: "Digital Details" },
               ]}
             />
           </motion.div>
@@ -79,6 +80,7 @@ function DigitalService() {
       <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </>
   );
 }

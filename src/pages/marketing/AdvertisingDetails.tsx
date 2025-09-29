@@ -9,6 +9,7 @@ import WebHero from "../../component/AdvertisingDetails/WebHero";
 import WebFramework from "../../component/AdvertisingDetails/WebFramework";
 import WebContact from "../../component/AdvertisingDetails/WebContact";
 import WebRecentWork from "../../component/AdvertisingDetails/WebRecentWork";
+import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function AdevertisingService() {
   useEffect(() => {
@@ -34,8 +35,8 @@ function AdevertisingService() {
             <Breadcrumb
               levels={[
                 { label: "Home", path: "/" },
-                { label: "Services", path: "/Technology" },
-                { label: "Web Development" },
+                { label: "Marketing", path: "/marketing" },
+                { label: "Advertising Details" },
               ]}
             />
           </motion.div>
@@ -79,6 +80,7 @@ function AdevertisingService() {
       <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </>
   );
 }

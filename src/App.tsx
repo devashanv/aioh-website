@@ -13,6 +13,13 @@ import OptimizationDetails from "./pages/marketing/OptimizationDetails";
 import AdvertisingDetails from "./pages/marketing/AdvertisingDetails";
 import MarketingDetails from "./pages/marketing/MarketingDetails";
 import ManagementDetails from "./pages/marketing/ManagementDetails";
+import PackagingDetails from "./pages/design/PackagingDetails";
+import CreativeDetails from "./pages/design/CreativeDetails";
+import PhotographyDetails from "./pages/design/PhotographyDetails";
+import PromotionalDetails from "./pages/design/PromotionalDetails";
+import SystemService from "./pages/technology/SystemService";
+import MobileService from "./pages/technology/MobileService";
+import SEOService from "./pages/technology/SEOService";
 
 function App() {
   return (
@@ -53,18 +60,22 @@ function App() {
           path="/design/brand-identity-development"
           element={<BrandDetails />}
         />
-        <Route path="/design/packaging-design" element={<BrandDetails />} />
+        <Route path="/design/packaging-design" element={<PackagingDetails />} />
         <Route
           path="/design/promotional-material-design"
-          element={<BrandDetails />}
+          element={<PromotionalDetails />}
         />
-        <Route path="/design/creative-content" element={<BrandDetails />} />
+        <Route path="/design/creative-content" element={<CreativeDetails />} />
         <Route
           path="/design/photography-and-videography"
-          element={<BrandDetails />}
+          element={<PhotographyDetails />}
         />
 
+        {/* Techonology Service Details Pages */}
         <Route path="/technology/WebService" element={<WebService />} />
+        <Route path="/technology/MobileService" element={<MobileService />} />
+        <Route path="/technology/SEOService" element={<SEOService />} />
+        <Route path="/technology/SystemService" element={<SystemService />} />
       </Routes>
     </Router>
   );

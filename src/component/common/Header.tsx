@@ -35,7 +35,7 @@ import {
 type SubmenuCategory = {
   label: string;
   to?: string;
-  items: {
+  items: {  
     title: string;
     description: string;
     icon: React.ReactNode;
