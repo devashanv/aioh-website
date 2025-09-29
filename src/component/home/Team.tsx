@@ -8,14 +8,14 @@ const Team = () => {
     return (
         <>
             <section
-                className="w-11/12 mx-auto h-full flex flex-col lg:flex gap-10">
+                className="w-11/12 mx-auto h-full flex flex-col lg:flex-row gap-10">
                 <section
                     className="w-full lg:w-1/2">
                     <img src={TeamSample} alt="" className='h-full w-full object-cover' />
                 </section>
 
                 <section
-                    className="w-full lg:w-1/2 text-left flex flex-col ">
+                    className="w-full lg:w-1/2 text-center lg:text-left flex flex-col ">
                     <p
                         className="text-black text-[32px] md:text-[48px] lg:text-[52px] font-medium lg:leading-15 leading-12">Whether you’re in Dubai, Brisbane, Texas, or Kandy.</p>
 
