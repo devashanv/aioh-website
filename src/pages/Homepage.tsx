@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Footer from "../component/common/Footer";
 import HeroSection from "../component/home/HeroSection";
 // import CoreServices from "../component/home/CoreServices";
-import SuccessHistory from "../component/home/SuccessHistory";
+// import SuccessHistory from "../component/home/SuccessHistory";
 import Categories from "../component/home/Categories";
 import ClientBase from "../component/home/ClientBase";
 import ServiceRibbon from "../component/home/ServiceRibbon";
@@ -12,7 +12,7 @@ import FooterTop from "../component/common/FooterTop";
 import Team from "../component/home/Team";
 import SuccessStoriesNew from "../component/home/SuccessStoriesNew";
 
-// import AnimationVideo from "../assets/video/animation.mp4";
+import AnimationVideo from "../assets/video/animation.mp4";
 
 function Homepage() {
   return (
@@ -65,9 +65,16 @@ function Homepage() {
         <section
           className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full rounded-xl lg:mt-30 mt-15"
           id="techstack">
-          <video width="640" controls className="w-full rounded-xl h-100">
-            <source src="video.mp4" type="video/mp4" />
+          <video
+            width="640"
+            autoPlay
+            loop
+            muted
+            className="w-full rounded-xl h-100"
+          >
+            <source src={AnimationVideo} type="video/mp4" />
           </video>
+
         </section>
 
         {/* Core Services */}
