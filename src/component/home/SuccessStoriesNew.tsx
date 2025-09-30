@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 import SLideImage from '../../assets/sample/ss-sample.webp'
+import EhelepolaSample from '../../assets/sample/ehelepola-cs.jpg'
 import ArrowIcon from "../../assets/img/icons/arrow.svg";
 
 
@@ -170,13 +172,14 @@ const SuccessStoriesNew = () => {
 
     return (
         <>
+            {/* desktop version */}
             <section
-                className='relative w-full mx-auto h-full'>
+                className='relative w-full mx-auto h-full hidden lg:block'>
                 {/* top content */}
                 <div
                     className="absolute w-1/4 text-black text-left top-5 left-5 transform flex flex-col gap-2 z-10 p-2">
                     <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3">
-                        Our Work, <br />Your Growth
+                        Some of, <br />our Works
                     </h1>
                     <p className="text-[18px] pr-10 font-light mb-6 ">
                         Showcasing impactful digital solutions that drive real business
@@ -220,7 +223,7 @@ const SuccessStoriesNew = () => {
 
 
                         {/* image */}
-                        <img src={SLideImage} alt="" className='h-full w-full object-cover rounded-2xl' />
+                        <img src={EhelepolaSample} alt="" className='h-full w-full object-cover rounded-2xl' />
 
                         {/* middle content */}
                         <div
@@ -233,7 +236,75 @@ const SuccessStoriesNew = () => {
                             <p className='text-left leading-8 mt-6'>
                                 {slide.description}
                             </p>
+
+                            <Link to="">
+                                <p className='text-sm text-white hover:text-white/80  text-left mt-10 underline '>Read the full Case study</p>
+                            </Link>
                         </div>
+
+                    </motion.div>
+                </AnimatePresence>
+            </section>
+
+            {/* mobile version */}
+            <section
+                className='relative lg:hidden block w-full mx-auto h-3/4'>
+                {/* Navigation Buttons */}
+                <div className="absolute md:bottom-10 left-5 lg:right-16 bottom-0 lg:bottom-8 flex gap-2 z-10 p-2">
+                    <button
+                        onClick={handlePrev}
+                        className="w-10 h-10 bg-[#01213A] text-white rounded-full flex items-center justify-center shadow-md hover:opacity-90 transition cursor-pointer"
+                    >
+                        <img src={ArrowIcon} alt="Previous" className="w-5 h-5" />
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-md hover:opacity-90 transition cursor-pointer"
+                    >
+                        <img
+                            src={ArrowIcon}
+                            alt="Next"
+                            className="w-5 h-5 transform scale-x-[-1]"
+                        />
+                    </button>
+                </div>
+
+                <AnimatePresence mode="sync" initial={false}>
+                    <motion.div
+                        key={current}
+                        initial={{ x: direction === "right" ? 300 : -300, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: direction === "right" ? -300 : 300, opacity: 0 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 80,
+                            damping: 35
+                        }}
+                        className="absolute top-0 left-0 w-full h-full flex flex-col justify-between"
+                    >
+
+
+                        {/* image */}
+                        <img src={EhelepolaSample} alt="" className='h-full w-full object-cover rounded-2xl' />
+
+                        {/* middle content */}
+                        <div
+                            className="absolute w-1/2 text-white top-1/3 -mt-10 right-5 lg:right-16 transform -translate-y-1/2 flex flex-col gap-2 z-10 p-2">
+                            <p
+                                className='text-[30px] md:text-[48px] lg:text-[52px] font-medium text-left leading-10'>
+                                {slide.title}
+                            </p>
+
+                            <p className='text-right text-white/50 text-xs mt-2'>
+                                {slide.client}
+                            </p>
+
+
+                        </div>
+
+                        <Link to="">
+                            <p className='text-sm text-white right-5 text-left bottom-5 underline absolute'>Read the full Case study</p>
+                        </Link>
 
                     </motion.div>
                 </AnimatePresence>
