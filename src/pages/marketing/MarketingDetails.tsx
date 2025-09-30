@@ -8,7 +8,6 @@ import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/MarketingDetails/WebHero";
 import WebFramework from "../../component/MarketingDetails/WebFramework";
 import WebContact from "../../component/MarketingDetails/WebContact";
-import WebRecentWork from "../../component/MarketingDetails/WebRecentWork";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function MarketingService() {
@@ -55,16 +54,6 @@ function MarketingService() {
         </section>
 
         {/* Section 3 */}
-        <section
-          id="WebRecentWork"
-          className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
-        >
-          <div className="w-11/12 mx-auto">
-            <WebRecentWork />
-          </div>
-        </section>
-
-        {/* Section 4 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
           <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 ">
             <WebContact />

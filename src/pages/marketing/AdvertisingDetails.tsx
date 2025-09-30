@@ -8,7 +8,6 @@ import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/AdvertisingDetails/WebHero";
 import WebFramework from "../../component/AdvertisingDetails/WebFramework";
 import WebContact from "../../component/AdvertisingDetails/WebContact";
-import WebRecentWork from "../../component/AdvertisingDetails/WebRecentWork";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function AdevertisingService() {
@@ -55,14 +54,14 @@ function AdevertisingService() {
         </section>
 
         {/* Section 3 */}
-        <section
+        {/* <section
           id="WebRecentWork"
           className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
         >
           <div className="w-11/12 mx-auto">
             <WebRecentWork />
           </div>
-        </section>
+        </section> */}
 
         {/* Section 4 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">

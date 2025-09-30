@@ -1,242 +1,89 @@
 import { useRef, useState } from "react";
-import countries from "world-countries";
+import { useLocation } from "react-router-dom";
+
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
-import { TextField, MenuItem, Box } from "@mui/material";
-import MotionSection from "../common/MotionSection";
+import { TextField, MenuItem, Box, FormHelperText } from "@mui/material";
+import countries from "world-countries";
+import { motion } from "framer-motion";
 
-// Import your icons
-import FacebookIcon from "../../assets/contact/facebook.svg";
-import InstagramIcon from "../../assets/contact/instagram.svg";
-import GoogleIcon from "../../assets/contact/google.svg";
-import LinkIcon from "../../assets/contact/linkedin.svg";
-import XIcon from "../../assets/contact/x.svg";
-import AIOHImage from "../../assets/contact/aiohlogo.png";
+import FacebookIcon from "../../assets/img/facebook.svg";
+import InstagramIcon from "../../assets/img/instagram.svg";
+import GoogleIcon from "../../assets/img/google.svg";
+import LinkIcon from "../../assets/img/linkedin.svg";
+import XIcon from "../../assets/img/x.svg";
+import AIOHImage from "../../assets/img/logo/aiohlogo.png";
 
-const commonTextFieldSx = {
-  "& .MuiOutlinedInput-root": {
-    borderRadius: "20px",
-    fontSize: "16px",
-    fontWeight: 300,
-    px: 2,
-    color: "rgba(0, 0, 0, 0.8)", // Lighter text color (80% opacity)
-  },
-  "& .MuiOutlinedInput-notchedOutline": {
-    borderColor: "rgba(0,0,0,0.45)",
-  },
-  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-    borderColor: "#000",
-  },
-  "& .MuiInputLabel-root": {
-    fontSize: "16px",
-    fontWeight: 300,
-    color: "rgba(0, 0, 0, 0.6)", // Lighter label color
-  },
-  "& .MuiInputLabel-root.Mui-focused": {
-    color: "#000",
-  },
-  "& .MuiInputBase-input::placeholder": {
-    color: "rgba(0, 0, 0, 0.6)", // Placeholder color
-    opacity: 1,
-  },
-};
-
-const WebContact: React.FC = () => {
+const ContactSection: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
-  const serviceOptions = ["WordPress", "E-commerce", "Custom", "Showcase"];
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
-  const [phone, setPhone] = useState({
-    countryCode: "94", // Default to Sri Lanka
-    number: "",
-  });
+
+  // Styles for the text fields
+  const textFieldStyles = {
+    "& .MuiOutlinedInput-root": {
+      borderRadius: "20px",
+      fontSize: "16px",
+      fontWeight: 400,
+      pl: 2,
+    },
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#19181899", // 60% opacity border
+    },
+    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#191818",
+    },
+    "& .MuiInputLabel-root": {
+      fontSize: "16px",
+      fontWeight: 300,
+      color: "#19181899",
+    },
+    "& .MuiInputLabel-root.Mui-focused": {
+      color: "#191818",
+      fontWeight: 400,
+    },
+    "& .MuiInputBase-input::placeholder": {
+      fontSize: "16px",
+      fontWeight: 300,
+      color: "#191818",
+    },
+    "& .MuiFormHelperText-root": {
+      color: "#19181866",
+      fontSize: "12px",
+    },
+  };
+
+  // errors state
   const [errors, setErrors] = useState({
     from_name: false,
     from_phone: false,
     from_email: false,
-    services: false,
+    main_service: false,
+    question: false,
   });
-
-  const isValidPhone = (phone: string) => {
-    return /^\+\d{8,15}$/.test(phone);
-  };
-
-  const isValidEmail = (email: string) =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-  const handleServiceSelect = (service: string) => {
-    setSelectedServices((prev) => {
-      const newSelected = prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service];
-
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        services: newSelected.length === 0,
-      }));
-
-      return newSelected;
-    });
-  };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
+    // show error only if empty
     setErrors((prevErrors) => ({
       ...prevErrors,
       [name]: value.trim() === "",
     }));
   };
 
-  const renderPhoneInput = () => (
-    <Box sx={{ width: "100%" }}>
-      <Box
-        sx={{
-          display: "flex",
-          gap: 1,
-          width: "100%",
-          "& > *:first-of-type": {
-            "& .MuiOutlinedInput-root": {
-              borderRadius: "20px 0 0 20px",
-              borderRight: "none",
-            },
-          },
-          "& > *:last-child": {
-            "& .MuiOutlinedInput-root": {
-              borderRadius: "0 20px 20px 0",
-            },
-          },
-        }}
-      >
-        {/* Country Code Selector */}
-        <TextField
-          select
-          name="country_code"
-          value={phone.countryCode}
-          onChange={(e) => {
-            setPhone((prev) => ({
-              ...prev,
-              countryCode: e.target.value,
-            }));
-            setErrors((prev) => ({
-              ...prev,
-              from_phone: !isValidPhone(`+${e.target.value}${phone.number}`),
-            }));
-          }}
-          sx={{
-            ...commonTextFieldSx,
-            minWidth: "120px",
-            "& .MuiSelect-select": {
-              display: "flex",
-              alignItems: "center",
-              color: "rgba(0, 0, 0, 0.9)",
-            },
-          }}
-          SelectProps={{
-            MenuProps: {
-              PaperProps: {
-                sx: {
-                  maxHeight: 300,
-                  marginTop: 0.5,
-                  width: "350px",
-                  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
-                  border: "1px solid #e0e0e0",
-                  borderRadius: "12px",
-                },
-              },
-            },
-            renderValue: (value: unknown) => (
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                {
-                  countries.find(
-                    (country) =>
-                      country.idd.root.replace("+", "") +
-                        (country.idd.suffixes[0] || "") ===
-                      value
-                  )?.flag
-                }
-                <Box sx={{ ml: 1 }}>+{value as string}</Box>
-              </Box>
-            ),
-          }}
-        >
-          {countries.map((country: any) => (
-            <MenuItem
-              key={country.cca2}
-              value={
-                country.idd.root.replace("+", "") +
-                (country.idd.suffixes[0] || "")
-              }
-            >
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                <Box sx={{ mr: 1 }}>{country.flag}</Box>
-                <Box sx={{ minWidth: "60px" }}>
-                  +
-                  {country.idd.root.replace("+", "") +
-                    (country.idd.suffixes[0] || "")}
-                </Box>
-                <Box sx={{ ml: 2, opacity: 0.7 }}>{country.name.common}</Box>
-              </Box>
-            </MenuItem>
-          ))}
-        </TextField>
+  const [phone, setPhone] = useState({
+    countryCode: "94",
+    number: "",
+  });
 
-        {/* Phone Number Input */}
-        <TextField
-          name="phone_number_display"
-          value={phone.number}
-          onChange={(e) => {
-            const cleanedValue = e.target.value.replace(/\D/g, "");
-            if (cleanedValue.length <= 12) {
-              setPhone((prev) => ({
-                ...prev,
-                number: cleanedValue,
-              }));
-              setErrors((prev) => ({
-                ...prev,
-                from_phone: !isValidPhone(
-                  `+${phone.countryCode}${cleanedValue}`
-                ),
-              }));
-            }
-          }}
-          placeholder="Phone number"
-          sx={{
-            ...commonTextFieldSx,
-            flex: 1,
-            "& .MuiOutlinedInput-root": {
-              paddingLeft: "14px",
-              "& .MuiOutlinedInput-input": {
-                color: "rgba(0, 0, 0, 0.7)",
-                fontSize: "16px",
-                fontWeight: 300,
-              },
-            },
-            "& .MuiInputBase-input::placeholder": {
-              color: "rgba(0, 0, 0, 0.6)",
-              opacity: 1,
-              fontSize: "16px",
-              fontWeight: 300,
-            },
-          }}
-        />
-      </Box>
+  const isValidPhone = (phone: string) => {
+    // Validate international phone number format
+    return /^\+\d{8,15}$/.test(phone);
+  };
 
-      {/* Move validation message here under full group */}
-      {errors.from_phone && (
-        <Box
-          sx={{
-            color: "#d32f2f",
-            fontSize: "0.75rem",
-            marginTop: "4px",
-            marginLeft: "14px",
-          }}
-        >
-          Please enter a valid phone number (8–12 digits)
-        </Box>
-      )}
-    </Box>
-  );
+  const isValidEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -245,63 +92,79 @@ const WebContact: React.FC = () => {
     const formData = new FormData(form.current);
     const name = formData.get("from_name")?.toString().trim();
     const email = formData.get("from_email")?.toString().trim();
+    const service = formData.get("main_service")?.toString().trim();
+    const Question = formData.get("question")?.toString().trim();
+
+    // Combine phone number with country code
     const fullPhoneNumber = `+${phone.countryCode}${phone.number}`;
 
     const newErrors = {
       from_name: !name,
       from_phone: !phone.number || !isValidPhone(fullPhoneNumber),
       from_email: !email || !isValidEmail(email),
-      services: selectedServices.length === 0,
+      main_service: !service,
+      question: !Question,
     };
 
     setErrors(newErrors);
     const hasError = Object.values(newErrors).some(Boolean);
     if (hasError) return;
 
+    // Remove any previous hidden phone input before adding a new one
+    const prevPhoneInput = form.current.querySelector(
+      'input[name="from_phone"]'
+    );
+    if (prevPhoneInput) {
+      form.current.removeChild(prevPhoneInput);
+    }
+    // Create a hidden input for the full phone number
     const phoneInput = document.createElement("input");
     phoneInput.type = "hidden";
     phoneInput.name = "from_phone";
     phoneInput.value = fullPhoneNumber;
     form.current.appendChild(phoneInput);
 
+    setIsSending(true);
+
     emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
+      .sendForm("service_yxj2rit", "template_d3x0uv7", form.current, {
+        publicKey: "vC8wukAc-UNdnr0Cu",
+      })
       .then(
-        () => {
+        (result) => {
+          console.log(result.text);
           Swal.fire({
             title: "Message Sent!",
-            html: "Thanks for contacting us.<br/>We'll get back to you soon.",
+            html: "Thanks for contacting us, We have received your message.<br/>We'll get back to you soon.",
             imageUrl: AIOHImage,
             imageWidth: 200,
             imageAlt: "Success",
             showConfirmButton: true,
             confirmButtonText: "OK",
             customClass: {
-              popup: "rounded-xl p-6",
+              popup: "!rounded-[20px] p-6",
               title: "text-[22px] font-semibold",
               image: "object-contain",
+              htmlContainer: "!text-[16px]",
               confirmButton:
-                "w-full mt-4 bg-[#02ec97] text-[#191818] text-[18px] font-medium rounded-full py-[12px] px-6 hover:bg-[#02ec97]/80 hover:text-[#191818]/80 transition cursor-pointer",
+                "w-full mt-4 bg-primary text-secondary text-lg font-medium rounded-full py-3 px-10 cursor-pointer",
             },
             buttonsStyling: false,
           });
-
           form.current?.reset();
-          setSelectedServices([]);
+          setSelectedQuestion("");
           setPhone({ countryCode: "94", number: "" });
           setErrors({
             from_name: false,
             from_phone: false,
             from_email: false,
-            services: false,
+            main_service: false,
+            question: false,
           });
+          setIsSending(false);
         },
-        () => {
+        (error) => {
+          console.log(error.text);
           Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -315,187 +178,451 @@ const WebContact: React.FC = () => {
             },
             buttonsStyling: false,
           });
+          setIsSending(false);
         }
       );
   };
 
+  // Get current path using useLocation hook
+  const location = useLocation();
+
+  // Extract last part of URL like "marketing", "design", etc.
+  const currentPath = location.pathname.split("/").filter(Boolean).pop() || "";
+
+  // Main services dropdown options
+  const services = [
+    { label: "Marketing", value: "Marketing" },
+    { label: "Technology", value: "Technology" },
+    { label: "Design", value: "Design" },
+  ];
+
+  // Questions for each main service
+  const Question: Record<string, { label: string; value: string }[]> = {
+    Marketing: [
+      {
+        label: "How can I increase my sales?",
+        value: "How can I increase my sales?",
+      },
+      {
+        label: "How do I improve my brand visibility online?",
+        value: "How do I improve my brand visibility online?",
+      },
+      {
+        label: "Can you help me with SEO?",
+        value: "Can you help me with SEO?",
+      },
+    ],
+    Technology: [
+      {
+        label: "Do you provide mobile app development?",
+        value: "Do you provide mobile app development?",
+      },
+      {
+        label: "How do you ensure website security?",
+        value: "How do you ensure website security?",
+      },
+      {
+        label: "Do you offer ongoing maintenance and support?",
+        value: "Do you offer ongoing maintenance and support?",
+      },
+    ],
+    Design: [
+      {
+        label: "Do you provide UX/UI design services?",
+        value: "Do you provide UX/UI design services?",
+      },
+      {
+        label: "How can I make my website look more modern?",
+        value: "How can I make my website look more modern?",
+      },
+      {
+        label: "Do you create mobile-friendly designs?",
+        value: "Do you create mobile-friendly designs?",
+      },
+    ],
+  };
+
+  // Default selected service based on current path
+  const capitalizeFirstLetter = (str: string) =>
+    str.charAt(0).toUpperCase() + str.slice(1);
+
+  const defaultService =
+    services.find((s) => s.value === capitalizeFirstLetter(currentPath))
+      ?.value || "";
+
+  // State to manage selected main service
+  const [selectedMainService, setSelectedMainService] =
+    useState(defaultService);
+
+  const [selectedQuestion, setSelectedQuestion] = useState("");
+
+  // State to manage sending state for the button
+  const [isSending, setIsSending] = useState(false);
+
   return (
-    <>
-      <MotionSection
-        delay={0.5}
-        direction="fade"
-        className="block lg:hidden mb-2 w-full text-center"
+    <div className="flex flex-col lg:flex-row items-start lg:gap-10 mx-auto gap-16 w-11/12 py-10">
+      {/* Left sec */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="w-full lg:w-1/2 space-y-10 lg:space-y-6 lg:pt-2 lg:pr-4"
       >
-        <h2 className="text-[24px] md:text-[30px] leading-[26px] font-bold text-[#191818]">
-          Reach Out, We're Listening
-        </h2>
-        <p className="text-[16px] leading-[26px] text-[#191818] mt-4 font-light">
-          We're ready to assist. Share the details below and we'll get back to
-          you soon.
-        </p>
-      </MotionSection>
-
-      <div className="w-full lg:w-1/2 pr-0 lg:pr-4 mb-0">
-        <MotionSection delay={0.5} direction="fadeUp">
-          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
-            <Box sx={{ width: "100%" }}>
-              <TextField
-                name="from_name"
-                label="Your Name"
-                variant="outlined"
-                fullWidth
-                error={errors.from_name}
-                helperText={errors.from_name ? "Name is required." : ""}
-                onChange={handleInputChange}
-                sx={commonTextFieldSx}
-              />
-            </Box>
-
-            {renderPhoneInput()}
-
-            <Box sx={{ width: "100%" }}>
-              <TextField
-                name="from_email"
-                label="Email Address"
-                variant="outlined"
-                fullWidth
-                error={errors.from_email}
-                helperText={
-                  errors.from_email ? "Please enter a valid email address." : ""
-                }
-                onChange={handleInputChange}
-                sx={commonTextFieldSx}
-              />
-            </Box>
-
-            <div className="flex flex-col gap-2">
-              <TextField
-                label="Selected services from below"
-                value={selectedServices.join(", ")}
-                fullWidth
-                error={errors.services}
-                helperText={
-                  errors.services ? "Select service is required." : ""
-                }
-                variant="outlined"
-                InputProps={{ readOnly: true }}
-                sx={commonTextFieldSx}
-              />
-
-              <div className="flex flex-wrap gap-2 mt-2">
-                {serviceOptions.map((service) => (
-                  <span
-                    key={service}
-                    onClick={() => handleServiceSelect(service)}
-                    className={`px-4 py-1 text-[12px] rounded-full border cursor-pointer transition ${
-                      selectedServices.includes(service)
-                        ? "bg-[#19181840] text-[#191818] border-[#19181830]"
-                        : "bg-gray-100 text-gray-600 border-gray-300"
-                    }`}
-                  >
-                    {service}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <Box sx={{ width: "100%" }}>
-              <TextField
-                name="message"
-                label="Your Message"
-                multiline
-                rows={6}
-                variant="outlined"
-                fullWidth
-                onChange={handleInputChange}
-                sx={commonTextFieldSx}
-              />
-            </Box>
-
-            <input
-              type="hidden"
-              name="services"
-              value={selectedServices.join(", ")}
-            />
-
-            <button
-              type="submit"
-              className="w-full lg:w-fit mt-4 bg-[#02ec97] text-[#191818] text-[18px] font-medium rounded-full py-[12px] px-6 hover:bg-[#02ec97]/80 hover:text-[#191818]/80 transition cursor-pointer"
-            >
-              Send Message
-            </button>
-          </form>
-        </MotionSection>
-      </div>
-
-      <MotionSection
-        delay={0.7}
-        direction="up"
-        className="w-full lg:w-1/2 flex flex-col"
-      >
-        <div className="hidden lg:block">
-          <h2 className="text-[26px] lg:text-[48px] md:text-[30px] leading-[40px] lg:leading-[62px] font-bold text-[#191818]">
-            Partner with us to build <br />
-            what's <span className="text-[#02ec97]">next</span>
-          </h2>
-          <p className="text-[16px] lg:text-[18px] leading-[26px] lg:leading-[28px] text-[#191818] mt-2 font-light mb-[-20px]">
-            Have an idea? Let's bring it to life. Whether it's a bold vision or
-            a simple spark, <br />
-            we're here to help turn your ideas into reality.
+        <div className="lg:hidden block text-center justify-center">
+          <h1 className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold">
+            Partner with us to build <br /> what’s{" "}
+            <span className="text-primary">next</span>
+          </h1>
+          <p className="lg:w-1/2 mt-4 text-sm lg:text-lg leading-6 md:leading-6 lg:leading-7 font-light text-center">
+            Have an idea? Let’s bring it to life. Whether it's a bold vision or
+            a simple spark, we're here to help turn your ideas into reality.
           </p>
         </div>
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
+          {/* Name */}
+          <Box sx={{ width: "100%" }}>
+            <TextField
+              name="from_name"
+              label="Your name"
+              fullWidth
+              error={errors.from_name}
+              helperText={errors.from_name ? "Name is required." : ""}
+              onChange={handleInputChange}
+              sx={textFieldStyles}
+            />
+          </Box>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:mt-10 lg:pt-4">
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="rounded-xl p-6 shadow-sm text-white bg-[linear-gradient(180deg,_#01213A_0%,_#035BA0_100%)]"
+          {/* Phone */}
+          <Box sx={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: 1,
+                width: "100%",
+                "& > *:first-of-type": {
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "20px 0 0 20px",
+                    borderRight: "none",
+                  },
+                },
+                "& > *:last-child": {
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "0 20px 20px 0",
+                  },
+                },
+              }}
+            >
+              {/* Country Code Selector */}
+              <TextField
+                select
+                name="country_code"
+                value={phone.countryCode}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  setPhone((prev) => ({
+                    ...prev,
+                    countryCode: e.target.value,
+                  }));
+                  setErrors((prev) => ({
+                    ...prev,
+                    from_phone: !isValidPhone(
+                      `+${e.target.value}${phone.number}`
+                    ),
+                  }));
+                }}
+                sx={textFieldStyles}
+                SelectProps={{
+                  MenuProps: {
+                    PaperProps: {
+                      sx: {
+                        maxHeight: 300, // Limit dropdown height
+                        marginTop: 0.5, // Small gap from the input field
+                        marginLeft: "3.75%", // Align with the input field
+                        width: "350px", // Fixed width for dropdown
+                        // Shadow and border styling
+                        boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
+                        border: "1px solid #e0e0e0",
+                        borderRadius: "12px",
+                        // Positioning
+                        transform: "translateY(8px) !important", // Ensure it appears right below
+                      },
+                    },
+                  },
+                  renderValue: (value: unknown) => (
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                      {
+                        countries.find(
+                          (country) =>
+                            country.idd.root.replace("+", "") +
+                              (country.idd.suffixes[0] || "") ===
+                            value
+                        )?.flag
+                      }
+                      <Box sx={{ ml: 1 }}>+{value as string}</Box>
+                    </Box>
+                  ),
+                }}
+              >
+                {countries.map((country) => (
+                  <MenuItem
+                    key={country.cca2}
+                    value={
+                      country.idd.root.replace("+", "") +
+                      (country.idd.suffixes[0] || "")
+                    }
+                    sx={{
+                      padding: "8px 16px", // Compact padding
+                      "&:hover": {
+                        backgroundColor: "#f5f5f5", // Hover effect
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        width: "100%",
+                      }}
+                    >
+                      <Box sx={{ mr: 1, minWidth: "24px" }}>{country.flag}</Box>
+                      <Box sx={{ minWidth: "60px" }}>
+                        +
+                        {country.idd.root.replace("+", "") +
+                          (country.idd.suffixes[0] || "")}
+                      </Box>
+                      <Box
+                        sx={{
+                          ml: 2,
+                          opacity: 0.7,
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          maxWidth: "200px",
+                        }}
+                      >
+                        {country.name.common}
+                      </Box>
+                    </Box>
+                  </MenuItem>
+                ))}
+              </TextField>
+
+              {/* Phone Number Input */}
+              <TextField
+                name="phone_number"
+                value={phone.number}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  // Remove any non-digit characters
+                  const cleanedValue = e.target.value.replace(/\D/g, "");
+                  setPhone((prev) => ({
+                    ...prev,
+                    number: cleanedValue,
+                  }));
+                  setErrors((prev) => ({
+                    ...prev,
+                    from_phone: !isValidPhone(
+                      `+${phone.countryCode}${cleanedValue}`
+                    ),
+                  }));
+                }}
+                error={errors.from_phone}
+                placeholder="Phone number"
+                sx={{
+                  ...textFieldStyles,
+                  flex: 1,
+                  "& .MuiOutlinedInput-root": {
+                    paddingLeft: "14px",
+                  },
+                }}
+              />
+            </Box>
+
+            {errors.from_phone && (
+              <FormHelperText
+                sx={{
+                  color: "#d32f2f",
+                  fontSize: "12px",
+                  ml: "14px",
+                  mt: "4px",
+                }}
+              >
+                Please enter a valid phone number (8-15 digits)
+              </FormHelperText>
+            )}
+          </Box>
+
+          {/* Email */}
+          <Box sx={{ width: "100%" }}>
+            <TextField
+              name="from_email"
+              label="E-mail"
+              fullWidth
+              error={errors.from_email}
+              helperText={
+                errors.from_email ? "Please enter a valid email address." : ""
+              }
+              onChange={handleInputChange}
+              sx={textFieldStyles}
+            />
+          </Box>
+          {/* Main service Dropdown */}
+          <Box sx={{ width: "100%" }}>
+            <TextField
+              name="main_service"
+              label="Main service"
+              select
+              fullWidth
+              defaultValue={defaultService}
+              error={errors.main_service}
+              helperText={
+                errors.main_service ? "Please select a main service." : ""
+              }
+              sx={textFieldStyles}
+              onChange={(e) => {
+                handleInputChange(e);
+                setSelectedMainService(e.target.value);
+              }}
+            >
+              {services.map((service) => (
+                <MenuItem key={service.value} value={service.value}>
+                  {service.label}
+                </MenuItem>
+              ))}
+            </TextField>
+          </Box>
+          {/* Questionss Dropdown */}
+          <Box sx={{ width: "100%" }}>
+            <TextField
+              name="question"
+              label="What do you want to ask?"
+              select
+              fullWidth
+              value={selectedQuestion}
+              onChange={(e) => setSelectedQuestion(e.target.value)}
+              error={errors.question && !selectedQuestion}
+              helperText={
+                !selectedQuestion && errors.question
+                  ? "Please select a question do you want to ask?."
+                  : ""
+              }
+              sx={textFieldStyles}
+            >
+              {Question[selectedMainService]?.map((sub) => (
+                <MenuItem key={sub.value} value={sub.value}>
+                  {sub.label}
+                </MenuItem>
+              ))}
+            </TextField>
+          </Box>
+          {/* Message */}
+          <Box sx={{ width: "100%" }}>
+            <TextField
+              name="message"
+              label="Enter your message"
+              multiline
+              rows={6}
+              fullWidth
+              onChange={handleInputChange}
+              sx={textFieldStyles}
+            />
+          </Box>
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={isSending}
+            className={`w-full lg:w-fit mt-4 text-[18px] font-medium rounded-full py-[12px] px-6  transition cursor-pointer ${
+              isSending
+                ? "bg-primary/60 text-[#19181899] cursor-not-allowed"
+                : "bg-primary text-[#191818] hover:bg-primary/80"
+            }`}
           >
-            <p className="text-[18px] font-normal mb-1">Address :</p>
-            <p className="text-[16px] text-white leading-[24px] font-light">
+            {isSending ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+      </motion.div>
+
+      {/* Right sec */}
+      <div className="w-full lg:w-1/2 space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="hidden lg:block"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold w-2/3 lg:w-full"
+          >
+            Partner with us to build <br /> what’s{" "}
+            <span className="text-primary">next</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="mt-4 text-sm lg:text-lg leading-6 md:leading-7 lg:leading-8 font-light text-justify"
+          >
+            Have an idea? Let’s bring it to life. Whether it's a bold vision or
+            a simple spark, we're here to help turn your ideas into reality.
+          </motion.p>
+        </motion.div>
+
+        {/* Cards Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full"
+        >
+          {/* Address Card */}
+          <div className="bg-gradient-to-b from-[#01213A] from-0% to-[#035BA0] to-100% rounded-[20px] p-6 pr-2">
+            <p className="text-lg font-normal mb-1 text-white ">Address :</p>
+            <p className="text-base text-white leading-6 font-light">
               3rd Floor, All in one Holdings, <br />
               349/2/1 Katugastota Rd, <br />
               Kandy, Sri Lanka.
             </p>
-          </MotionSection>
+          </div>
 
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="bg-transparent rounded-xl p-6"
-          >
-            <p className="text-[18px] font-normal mb-1 text-[#191818]">
-              Phone :
-            </p>
-            <p className="hidden sm:block text-[16px] text-[#191818] leading-[32px] font-light">
-              +94 81 2121 051 <br />
-              +94 77 6722 709
-            </p>
-            <p className="block sm:hidden text-[16px] text-[#191818] leading-[32px] font-light">
-              +94 81 2121 051 / +94 77 6722 709
-            </p>
-          </MotionSection>
+          <div className="flex flex-row sm:flex-col gap-2 sm:gap-0 px-4 py-6 sm:p-0">
+            {/* Phone - Card */}
+            <div className="flex-1 rounded-[20px] md:py-6 md:px-2 bg-white">
+              {/*shadow-sm lg:shadow-none*/}
+              <p className="text-lg font-normal text-start mb-1">Phone :</p>
+              <div className="flex flex-col text-sm md:text-base leading-6 font-light items-start">
+                <p>+94 81 2121 051</p>
+                {/* <p className="block sm:hidden text-lg font-serif">/</p> */}
+                <p>+94 76 8572 709</p>
+              </div>
+            </div>
+            {/* Email Card - mpbile */}
+            <div className="sm:hidden block flex-1 bg-white rounded-[20px] md:p-6">
+              <p className="text-lg font-normal mb-1">E-mail :</p>
+              <p className="text-sm md:text-base leading-6 font-light">
+                info@allinoneholdings.com
+              </p>
+            </div>
+          </div>
 
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="bg-transparent rounded-xl p-6 bottom-0"
-          >
-            <p className="text-[18px] font-normal mb-1">E-mail :</p>
-            <p className="text-[16px] text-[#191818] leading-[24px] font-light">
+          {/* Email Card - tab & desktop*/}
+          <div className="hidden sm:block flex-1 bg-white rounded-[20px] p-2 md:p-6 md:pr-2 text-center md:text-start">
+            <p className="text-lg font-normal mb-1">E-mail :</p>
+            <p className="text-base  leading-6 font-light">
               info@allinoneholdings.com
             </p>
-          </MotionSection>
+          </div>
 
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="rounded-xl p-6 flex flex-col items-center md:items-start justify-center gap-4"
-          >
+          {/* Card 4 - Social Icons */}
+          <div className="rounded-xl py-6 px-2 flex flex-col items-center md:items-start justify-center gap-2">
             <p className="text-[18px] font-normal mb-1 text-center lg:text-left">
               Follow Us:
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap  gap-4">
+              {/* Facebook */}
               <a
                 href="https://www.facebook.com/allinoneholdings"
                 target="_blank"
@@ -508,6 +635,8 @@ const WebContact: React.FC = () => {
                   className="w-[18px] h-[18px]"
                 />
               </a>
+
+              {/* Instagram */}
               <a
                 href="https://www.instagram.com/all_in_one_holdings"
                 target="_blank"
@@ -520,6 +649,8 @@ const WebContact: React.FC = () => {
                   className="w-[18px] h-[18px]"
                 />
               </a>
+
+              {/* Google */}
               <a
                 href="https://g.co/kgs/Cw4rrUZ"
                 target="_blank"
@@ -532,18 +663,17 @@ const WebContact: React.FC = () => {
                   className="w-[18px] h-[18px]"
                 />
               </a>
+
+              {/* Linkedin */}
               <a
                 href="https://lk.linkedin.com/company/all-in-one-holdings"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
               >
-                <img
-                  src={LinkIcon}
-                  alt="LinkedIn"
-                  className="w-[18px] h-[18px]"
-                />
+                <img src={LinkIcon} alt="X" className="w-[18px] h-[18px]" />
               </a>
+              {/* X com */}
               <a
                 href="https://x.com/allinoneholding"
                 target="_blank"
@@ -553,11 +683,11 @@ const WebContact: React.FC = () => {
                 <img src={XIcon} alt="X" className="w-[18px] h-[18px]" />
               </a>
             </div>
-          </MotionSection>
-        </div>
-      </MotionSection>
-    </>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
 };
 
-export default WebContact;
+export default ContactSection;
