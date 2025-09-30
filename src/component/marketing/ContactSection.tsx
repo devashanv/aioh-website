@@ -57,7 +57,7 @@ const ContactSection: React.FC = () => {
     from_phone: false,
     from_email: false,
     main_service: false,
-    sub_service: false,
+    question: false,
   });
 
   const handleInputChange = (
@@ -93,7 +93,7 @@ const ContactSection: React.FC = () => {
     const name = formData.get("from_name")?.toString().trim();
     const email = formData.get("from_email")?.toString().trim();
     const service = formData.get("main_service")?.toString().trim();
-    const subService = formData.get("sub_service")?.toString().trim();
+    const Question = formData.get("question")?.toString().trim();
 
     // Combine phone number with country code
     const fullPhoneNumber = `+${phone.countryCode}${phone.number}`;
@@ -103,13 +103,20 @@ const ContactSection: React.FC = () => {
       from_phone: !phone.number || !isValidPhone(fullPhoneNumber),
       from_email: !email || !isValidEmail(email),
       main_service: !service,
-      sub_service: !subService,
+      question: !Question,
     };
 
     setErrors(newErrors);
     const hasError = Object.values(newErrors).some(Boolean);
     if (hasError) return;
 
+    // Remove any previous hidden phone input before adding a new one
+    const prevPhoneInput = form.current.querySelector(
+      'input[name="from_phone"]'
+    );
+    if (prevPhoneInput) {
+      form.current.removeChild(prevPhoneInput);
+    }
     // Create a hidden input for the full phone number
     const phoneInput = document.createElement("input");
     phoneInput.type = "hidden";
@@ -145,14 +152,14 @@ const ContactSection: React.FC = () => {
             buttonsStyling: false,
           });
           form.current?.reset();
-          setSelectedSubService("");
+          setSelectedQuestion("");
           setPhone({ countryCode: "94", number: "" });
           setErrors({
             from_name: false,
             from_phone: false,
             from_email: false,
             main_service: false,
-            sub_service: false,
+            question: false,
           });
           setIsSending(false);
         },
@@ -189,35 +196,49 @@ const ContactSection: React.FC = () => {
     { label: "Design", value: "Design" },
   ];
 
-  // sub services for each main service
-  const subService: Record<string, { label: string; value: string }[]> = {
+  // Questions for each main service
+  const Question: Record<string, { label: string; value: string }[]> = {
     Marketing: [
-      { label: "Brand Strategy", value: "Brand Strategy" },
-      { label: "Social Media Management", value: "Social Media Management" },
-      { label: "SEO Audit and Setup", value: "SEO Audit and Setup" },
       {
-        label: "Digital Marketing Consulting",
-        value: "Digital Marketing Consulting",
+        label: "How can I increase my sales?",
+        value: "How can I increase my sales?",
       },
-      { label: "Social Media Advertising", value: "Social Media Advertising" },
-      { label: "Brand Strategy Sample", value: "Brand Strategy Sample" },
+      {
+        label: "How do I improve my brand visibility online?",
+        value: "How do I improve my brand visibility online?",
+      },
+      {
+        label: "Can you help me with SEO?",
+        value: "Can you help me with SEO?",
+      },
     ],
     Technology: [
-      { label: "Web site development", value: "Web site development" },
-      { label: "Web system development", value: "Web system development" },
-      { label: "Standalone system", value: "Standalone system" },
-      { label: "Cloud solution", value: "Cloud solution" },
-      { label: "AI solutions", value: "AI solutions" },
-      { label: "UI/UX solutions", value: "UI/UX solutions" },
+      {
+        label: "Do you provide mobile app development?",
+        value: "Do you provide mobile app development?",
+      },
+      {
+        label: "How do you ensure website security?",
+        value: "How do you ensure website security?",
+      },
+      {
+        label: "Do you offer ongoing maintenance and support?",
+        value: "Do you offer ongoing maintenance and support?",
+      },
     ],
     Design: [
-      { label: "Video and advertising", value: "Video and advertising" },
       {
-        label: "Brand identity development",
-        value: "Brand identity development",
+        label: "Do you provide UX/UI design services?",
+        value: "Do you provide UX/UI design services?",
       },
-      { label: "Package design", value: "Package design" },
-      { label: "Creative content", value: "Creative content" },
+      {
+        label: "How can I make my website look more modern?",
+        value: "How can I make my website look more modern?",
+      },
+      {
+        label: "Do you create mobile-friendly designs?",
+        value: "Do you create mobile-friendly designs?",
+      },
     ],
   };
 
@@ -233,7 +254,7 @@ const ContactSection: React.FC = () => {
   const [selectedMainService, setSelectedMainService] =
     useState(defaultService);
 
-  const [selectedSubService, setSelectedSubService] = useState("");
+  const [selectedQuestion, setSelectedQuestion] = useState("");
 
   // State to manage sending state for the button
   const [isSending, setIsSending] = useState(false);
@@ -246,7 +267,7 @@ const ContactSection: React.FC = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="w-full lg:w-1/2 space-y-10 lg:space-y-6 lg:pt-4"
+        className="w-full lg:w-1/2 space-y-10 lg:space-y-6 lg:pt-4 lg:pr-4"
       >
         <div className="lg:hidden block text-center justify-center">
           <h1 className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold">
@@ -469,24 +490,24 @@ const ContactSection: React.FC = () => {
               ))}
             </TextField>
           </Box>
-          {/* Sub services Dropdown */}
+          {/* Questionss Dropdown */}
           <Box sx={{ width: "100%" }}>
             <TextField
-              name="sub_service"
-              label="Select a sub service"
+              name="question"
+              label="What do you want to ask?"
               select
               fullWidth
-              value={selectedSubService}
-              onChange={(e) => setSelectedSubService(e.target.value)}
-              error={errors.sub_service && !selectedSubService}
+              value={selectedQuestion}
+              onChange={(e) => setSelectedQuestion(e.target.value)}
+              error={errors.question && !selectedQuestion}
               helperText={
-                !selectedSubService && errors.sub_service
-                  ? "Please select a sub service."
+                !selectedQuestion && errors.question
+                  ? "Please select a question do you want to ask?."
                   : ""
               }
               sx={textFieldStyles}
             >
-              {subService[selectedMainService]?.map((sub) => (
+              {Question[selectedMainService]?.map((sub) => (
                 <MenuItem key={sub.value} value={sub.value}>
                   {sub.label}
                 </MenuItem>
