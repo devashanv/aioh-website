@@ -2,9 +2,16 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
-import SLideImage from '../../assets/sample/ss-sample.webp'
-import EhelepolaSample from '../../assets/sample/ehelepola-cs.jpg'
+
+
 import ArrowIcon from "../../assets/img/icons/arrow.svg";
+
+import EhelepolaCS from '../../assets/caseStudies/ehelepola-cs.jpg'
+import QueensCS from '../../assets/caseStudies/queens-cs.webp'
+import RegencyCS from '../../assets/caseStudies/regency-cs.webp'
+import WinchesterCS from '../../assets/caseStudies/winchester-cs.webp'
+import WincraftCS from '../../assets/caseStudies/wincraft-cs.webp'
+import UnknownCS from '../../assets/caseStudies/04.webp'
 
 
 const SuccessStoriesNew = () => {
@@ -20,7 +27,7 @@ const SuccessStoriesNew = () => {
                 "Real time experience of designing your car",
                 "A comprehensive back-end platform that allowed real time updates",
             ],
-            image: SLideImage,
+            image: EhelepolaCS,
             // Left side content for this slide
             stats: {
                 growth: {
@@ -44,7 +51,7 @@ const SuccessStoriesNew = () => {
                 "Real-time order tracking",
                 "User-friendly app interface",
             ],
-            image: SLideImage,
+            image: QueensCS,
             // Different left side content for this slide
             stats: {
                 growth: {
@@ -68,7 +75,7 @@ const SuccessStoriesNew = () => {
                 "Real-time order tracking",
                 "User-friendly app interface",
             ],
-            image: SLideImage,
+            image: RegencyCS,
             // Different left side content for this slide
             stats: {
                 growth: {
@@ -92,7 +99,7 @@ const SuccessStoriesNew = () => {
                 "Real-time order tracking",
                 "User-friendly app interface",
             ],
-            image: SLideImage,
+            image: WinchesterCS,
             // Different left side content for this slide
             stats: {
                 growth: {
@@ -116,7 +123,7 @@ const SuccessStoriesNew = () => {
                 "Real-time order tracking",
                 "User-friendly app interface",
             ],
-            image: SLideImage,
+            image: WincraftCS,
             // Different left side content for this slide
             stats: {
                 growth: {
@@ -140,7 +147,7 @@ const SuccessStoriesNew = () => {
                 "Real-time order tracking",
                 "User-friendly app interface",
             ],
-            image: SLideImage,
+            image: UnknownCS,
             // Different left side content for this slide
             stats: {
                 growth: {
@@ -223,7 +230,7 @@ const SuccessStoriesNew = () => {
 
 
                         {/* image */}
-                        <img src={EhelepolaSample} alt="" className='h-full w-full object-cover rounded-2xl' />
+                        <img src={slide.image} alt="" className='h-full w-full object-cover rounded-2xl' />
 
                         {/* middle content */}
                         <div
@@ -285,7 +292,7 @@ const SuccessStoriesNew = () => {
 
 
                         {/* image */}
-                        <img src={EhelepolaSample} alt="" className='h-full w-full object-cover rounded-2xl' />
+                        <img src={slide.image} alt="" className='h-full w-full object-cover rounded-2xl' />
 
                         {/* middle content */}
                         <div
