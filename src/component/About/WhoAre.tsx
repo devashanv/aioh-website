@@ -86,7 +86,7 @@ const WhoAre: React.FC = () => {
               Marketing
             </a>
             <a
-              href="/Webservice"
+              href="/Technology"
               className="text-black/45 underline decoration-black/45 hover:text-black/70"
             >
               Technology

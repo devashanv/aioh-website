@@ -19,7 +19,7 @@ const SplineRobo = () => {
     { id: "#hero", position: "right", scale: 0.6 },
     { id: "#techstack", position: "center", scale: 0.7 },
     { id: "#services", position: "left", scale: 3.2, customLeft: "calc(100% - 350px)" },
-    { id: "#success", position: "right", scale: 0.9, customLeft: "calc(100% - 350px)" },
+    { id: "#success", position: "right", scale: 0.6, customLeft: "calc(100% - 145px)" },
     { id: "#catego", position: "right", scale: 1.0, customLeft: "calc(100% - 300px)" },
     // Skipping #client and #footer for robot animation
   ];

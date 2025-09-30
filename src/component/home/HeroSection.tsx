@@ -46,13 +46,20 @@ const HeroSection: React.FC = () => {
                     {/* title */}
                     <div
                         className='h-auto'>
-                        <h1
-                            className="gradient-text text-4xl lg:text-[90px] font-semibold mb-5">
-                            Live. Love. Laugh.
-                        </h1>
+                        <div>
+                            <h1
+                                className="gradient-text text-4xl lg:text-[65px] font-semibold mb-5">
+                                Bulding Profitable Business 
+                            </h1>
+                            <h1
+                                className="gradient-text text-xl lg:text-3xl mb-5">
+                                With Marketing, Data & Technology
+                            </h1>    
+                        </div>
+                        
                         <p
-                            className='text-white/80 text-lg px-5 lg:mt-0 mt-5 lg:px-0 lg:text-2xl font-thin'>
-                            Delivering <span className='text-primary'>Digital Solutions</span> with Proven Expertise.
+                            className='text-white/80 text-lg px-5 lg:mt-0 mt-5 lg:px-0 lg:text-base font-thin'>
+                            Helping Businesses to maximize their potential through marketing, data, and technology.
                         </p>
                     </div>
 
@@ -107,7 +114,7 @@ const HeroSection: React.FC = () => {
                             <p
                                 className='text-primary'>+</p>
                             <p
-                                className='text-white font-thin  ml-1'>Contries</p>
+                                className='text-white font-thin  ml-1'>Countries</p>
                         </div>
                     </div>
                 </div>

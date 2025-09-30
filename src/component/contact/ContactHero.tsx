@@ -1,8 +1,8 @@
 import React from "react";
 
-import Image1 from "../../assets/contact/image1.png";
-import Image2 from "../../assets/contact/image2.png";
-import Image3 from "../../assets/contact/image3.png";
+import Image1 from "../../assets/contact/image1.webp";
+import Image2 from "../../assets/contact/image2.webp";
+import Image3 from "../../assets/contact/image3.webp";
 // import Mesh from "../../assets/contact/mesh.png";
 import WhatsappIcon from "../../assets/contact/whatsapp.svg";
 import TelephoneIcon from "../../assets/contact/telephone.svg";
@@ -99,7 +99,7 @@ const ContactHero: React.FC = () => {
         {/* Shifted Inner Wrapper */}
         <div className="relative w-full h-full ">
           {/* Image1 - Top Left */}
-          <div className="absolute top-0 left-0 w-[50%] rounded-lg overflow-hidden z-10">
+          <div className="absolute top-0 left-0 w-[50%] rounded-[20px] overflow-hidden z-10">
             <img
               src={Image1}
               alt="Collaboration"
@@ -107,7 +107,7 @@ const ContactHero: React.FC = () => {
             />
           </div>
           {/* Image2 - Bottom Left */}
-          <div className="absolute bottom-0 left-[-5%] w-[55%] rounded-lg overflow-hidden z-10">
+          <div className="absolute bottom-0 left-[-5%] w-[55%] rounded-[20px] overflow-hidden z-10">
             <img
               src={Image2}
               alt="Office"
@@ -115,7 +115,7 @@ const ContactHero: React.FC = () => {
             />
           </div>
           {/* Image3 - Right Middle */}
-          <div className="absolute top-1/2 right-0 w-[45%] rounded-lg overflow-hidden z-10 -translate-y-1/2">
+          <div className="absolute top-1/2 right-0 w-[45%] rounded-[20px] overflow-hidden z-10 -translate-y-1/2">
             <img
               src={Image3}
               alt="Tall Team"

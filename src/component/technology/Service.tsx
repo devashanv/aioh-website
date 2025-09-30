@@ -1,59 +1,44 @@
 import { useNavigate } from "react-router-dom";
 
 // bg images
-import sc1 from "../../assets/img/services/tech-sc1.png";
-import sc2 from "../../assets/img/services/tech-sc2.png";
+import sc1 from "../../assets/img/services/website.webp";
+import sc2 from "../../assets/img/services/websystem.webp";
 import sc3 from "../../assets/img/services/tech-sc3.png";
 import sc4 from "../../assets/img/services/tech-sc4.png";
-import sc5 from "../../assets/img/services/tech-sc5.png";
-import sc6 from "../../assets/img/services/tech-sc6.png";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web site development",
+    title: "Web Site Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc1,
-    path: "/marketing/brand-strategy",
+    path: "/technology/WebService",
   },
   {
-    title: "Web system development",
+    title: "System Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc2,
-    path: "/marketing/social-media-management",
+    path: "/technology/SystemService",
   },
   {
-    title: "Standalone system",
+    title: "Mobile Application Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc3,
-    path: "/marketing/seo-audit-and-setup",
+    path: "/technology/MobileService",
   },
   {
-    title: "Cloud solutions",
+    title: "Search Engine Optimization (SEO)",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc4,
-    path: "/marketing/digital-marketing-consulting",
+    path: "/technology/SEOService",
   },
-  {
-    title: "AI solutions",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc5,
-    path: "/marketing/social-media-advertising",
-  },
-  {
-    title: "UI/UX solutions",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc6,
-    path: "/marketing/brand-strategy-sample",
-  },
+
 ];
 
 const Service: React.FC = () => {

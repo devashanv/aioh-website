@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Header from "../component/common/Header";
 import FooterTop from "../component/common/FooterTop";
 import Footer from "../component/common/Footer";
+import ChatWithUsButton from "../component/common/ChatWithUsButton";
 
 const Merketing: React.FC = () => {
   useEffect(() => {
@@ -50,6 +51,7 @@ const Merketing: React.FC = () => {
           <Contact />
         </section>
       </div>
+
       {/* Before Footer */}
       <section className="lg:mt-30">
         <FooterTop />
@@ -59,6 +61,7 @@ const Merketing: React.FC = () => {
       <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
+      <ChatWithUsButton />
     </>
   );
 };

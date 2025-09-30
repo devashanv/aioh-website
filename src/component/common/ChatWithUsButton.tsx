@@ -1,4 +1,5 @@
 import { useState } from "react";
+import chatsupport from "../../assets/img/logo/chatsupport.png";
 
 const ChatWithUsButton: React.FC = () => {
   const [show] = useState(true);
@@ -6,16 +7,25 @@ const ChatWithUsButton: React.FC = () => {
   return (
     show && (
       <div className="fixed bottom-8 right-8 z-50">
-        {/* Animated Ping Circles */}
+        {/* Animated Blue Ping Circles */}
         <div className="relative w-[70px] h-[70px] flex items-center justify-center">
           <div className="absolute w-full h-full rounded-full bg-blue-400 opacity-75 animate-ping" />
           <div className="absolute w-[50px] h-[50px] rounded-full bg-blue-400 opacity-75 animate-ping delay-200" />
           <div className="absolute w-[30px] h-[30px] rounded-full bg-blue-500 opacity-80 animate-ping delay-500" />
 
-          {/* Button */}
-          <button className="relative z-10 flex items-center gap-2 px-5 py-3 rounded-full bg-[#02ec97] text-[#191818] text-[16px] font-semibold shadow-lg transform animate-zoom hover:scale-105 transition duration-300 cursor-pointer">
-            <span className="text-[20px]">💬</span>
-          </button>
+          {/* Clickable Link Button */}
+          <a
+            href="https://wa.me/94768572709"
+            target="_blank"           // open in new tab (remove if not needed)
+            rel="noopener noreferrer" // security for external links
+            className="relative z-10 flex items-center justify-center p-3 rounded-full bg-blue-500 shadow-lg transform hover:scale-105 transition duration-300 cursor-pointer"
+          >
+            <img
+              src={chatsupport}
+              alt="Chat Support"
+              className="w-[28px] h-[28px] object-contain"
+            />
+          </a>
         </div>
       </div>
     )
