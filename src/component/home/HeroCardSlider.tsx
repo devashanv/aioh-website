@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
-import TestProject1 from "../../assets/img/herohome/test-project1.webp";
-import TestProject2 from "../../assets/img/herohome/test-project2.webp";
-import TestProject3 from "../../assets/img/herohome/test-project3.webp";
+import Regency from "../../assets/img/herohome/regency.webp";
+import Winchester from "../../assets/img/herohome/winchester.webp";
+import TestProject3 from "../../assets/img/herohome/test-project1.webp";
 import TestProject4 from "../../assets/img/herohome/test-project4.png";
-import TestProject5 from "../../assets/img/herohome/test-project5.webp";
+import TestProject5 from "../../assets/img/herohome/test-project2.webp";
 import TestProject6 from "../../assets/img/herohome/test-project3.webp";
+
+
 
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -15,8 +17,8 @@ gsap.registerPlugin(MotionPathPlugin);
 
 const HeroProjectSlider: React.FC = () => {
   const images = [
-    TestProject1,
-    TestProject2,
+    Regency,
+    Winchester,
     TestProject3,
     TestProject4,
     TestProject5,
