@@ -5,7 +5,7 @@ import Header from "../../component/common/Header";
 import WebHero from "../../component/WebDetails/WebHero";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebFramework from "../../component/WebDetails/WebFramework";
-import WebContact from "../../component/WebDetails/WebContact";
+import WebContact from "../../component/common/WebContact";
 import FooterTop from "../../component/common/FooterTop";
 import Footer from "../../component/common/Footer";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
@@ -55,9 +55,7 @@ function WebService() {
 
         {/* Section 3 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 ">
-            <WebContact />
-          </div>
+          <WebContact />
         </section>
       </div>
       {/* Before Footer */}

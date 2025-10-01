@@ -260,7 +260,7 @@ const ContactSection: React.FC = () => {
   const [isSending, setIsSending] = useState(false);
 
   return (
-    <div className="flex flex-col lg:flex-row items-start lg:gap-10 mx-auto gap-16 w-11/12 py-10">
+    <div className="flex flex-col lg:flex-row items-start lg:gap-10 mx-auto gap-16 w-11/12 py-4">
       {/* Left sec */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}

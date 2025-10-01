@@ -7,7 +7,7 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/DigitalDetails/WebHero";
 import WebFramework from "../../component/DigitalDetails/WebFramework";
-import WebContact from "../../component/DigitalDetails/WebContact";
+import WebContact from "../../component/common/WebContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function DigitalService() {

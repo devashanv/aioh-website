@@ -7,7 +7,7 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/BrandDetails/WebHero";
 import WebFramework from "../../component/BrandDetails/WebFramework";
-import WebContact from "../../component/BrandDetails/WebContact";
+import WebContact from "../../component/common/WebContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function BrandService() {
@@ -55,9 +55,7 @@ function BrandService() {
 
         {/* Section 3 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 ">
-            <WebContact />
-          </div>
+          <WebContact />
         </section>
       </div>
       {/* Before Footer */}
