@@ -155,7 +155,12 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 
 import '../../styles/mobileslider.css'
-import testImage from '../../assets/img/sample.webp'
+import Regency from "../../assets/img/herohome/regency.webp";
+import Winchester from "../../assets/img/herohome/winchester.webp";
+import TestProject3 from "../../assets/img/herohome/test-project1.webp";
+import TestProject4 from "../../assets/img/herohome/test-project4.png";
+import TestProject5 from "../../assets/img/herohome/test-project2.webp";
+import TestProject6 from "../../assets/img/herohome/test-project3.webp";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 import type {
@@ -187,12 +192,12 @@ const MobileSlider: React.FC<PropType> = (props) => {
   const tweenNodes = useRef<HTMLElement[]>([])
 
   const SLIDES = [
-    { image: testImage },
-    { image: testImage },
-    { image: testImage },
-    { image: testImage },
-    { image: testImage },
-    { image: testImage },
+    { image: Regency },
+    { image: Winchester },
+    { image: TestProject3 },
+    { image: TestProject4 },
+    { image: TestProject5 },
+    { image: TestProject6 },
   ]
 
   const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {

@@ -5,12 +5,13 @@ import Header from "../../component/common/Header";
 import FooterTop from "../../component/common/FooterTop";
 import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
-import WebHero from "../../component/PromotionalDetails/WebHero";
-import WebFramework from "../../component/PromotionalDetails/WebFramework";
-import WebContact from "../../component/common/WebContact";
+import WebHero from "../../component/UIUXDetails/WebHero";
+import WebFramework from "../../component/UIUXDetails/WebFramework";
+import WebContact from "../../component/UIUXDetails/WebContact";
+import WebRecentWork from "../../component/UIUXDetails/WebRecentWork";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
-function PromotionalService() {
+function UIUXDetails() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -35,7 +36,7 @@ function PromotionalService() {
               levels={[
                 { label: "Home", path: "/" },
                 { label: "Design", path: "/design" },
-                { label: "Promotional Material Design" },
+                { label: "UI UX Design" },
               ]}
             />
           </motion.div>
@@ -54,8 +55,20 @@ function PromotionalService() {
         </section>
 
         {/* Section 3 */}
+        <section
+          id="WebRecentWork"
+          className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
+        >
+          <div className="w-11/12 mx-auto">
+            <WebRecentWork />
+          </div>
+        </section>
+
+        {/* Section 4 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
-          <WebContact />
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 ">
+            <WebContact />
+          </div>
         </section>
       </div>
       {/* Before Footer */}
@@ -72,4 +85,4 @@ function PromotionalService() {
   );
 }
 
-export default PromotionalService;
+export default UIUXDetails;

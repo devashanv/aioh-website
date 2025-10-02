@@ -19,7 +19,8 @@ import PhotographyDetails from "./pages/design/PhotographyDetails";
 import PromotionalDetails from "./pages/design/PromotionalDetails";
 import SystemService from "./pages/technology/SystemService";
 import MobileService from "./pages/technology/MobileService";
-import SEOService from "./pages/technology/SEOService";
+import SEOService from "./pages/marketing/SEOService";
+import UIUXDetails from "./pages/design/UIUXDetails";
 
 function App() {
   return (
@@ -54,6 +55,10 @@ function App() {
           path="/marketing/content-marketing"
           element={<MarketingDetails />}
         />
+        <Route
+          path="/marketing/search-engine-optimization"
+          element={<SEOService />}
+        />
 
         {/* Design Service Details Pages */}
         <Route
@@ -70,6 +75,7 @@ function App() {
           path="/design/photography-and-videography"
           element={<PhotographyDetails />}
         />
+        <Route path="/design/ui-ux-design" element={<UIUXDetails />} />
 
         {/* Techonology Service Details Pages */}
         <Route path="/technology/WebService" element={<WebService />} />

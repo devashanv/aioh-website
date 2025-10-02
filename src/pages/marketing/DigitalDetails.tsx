@@ -7,8 +7,7 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/DigitalDetails/WebHero";
 import WebFramework from "../../component/DigitalDetails/WebFramework";
-import WebContact from "../../component/DigitalDetails/WebContact";
-import WebRecentWork from "../../component/DigitalDetails/WebRecentWork";
+import WebContact from "../../component/common/WebContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function DigitalService() {
@@ -55,20 +54,20 @@ function DigitalService() {
         </section>
 
         {/* Section 3 */}
-        <section
+        {/* <section
           id="WebRecentWork"
           className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
         >
           <div className="w-11/12 mx-auto">
             <WebRecentWork />
           </div>
-        </section>
+        </section> */}
 
         {/* Section 4 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 ">
-            <WebContact />
-          </div>
+          {/* <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 "> */}
+          <WebContact />
+          {/* </div> */}
         </section>
       </div>
       {/* Before Footer */}
