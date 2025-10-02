@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
         <>
             {/* header*/}
             <section
-                className='relative flex flex-col items-center justify-center lg:pt-45 w-full h-[100dvh] lg:h-[100dvh] bg-[linear-gradient(125deg,_#011524_0%,_#002D5A_50%,_#010A12_100%)] rounded-xl'>
+                className='relative flex flex-col items-center justify-center lg:pt-45 w-full h-[100dvh] md:h-[60dvh] lg:h-[100dvh] bg-[linear-gradient(125deg,_#011524_0%,_#002D5A_50%,_#010A12_100%)] rounded-xl'>
 
                 {/* nav */}
                 <div
@@ -48,11 +48,11 @@ const HeroSection: React.FC = () => {
                         className='h-auto'>
                         <div>
                             <h1
-                                className="gradient-text text-4xl lg:text-[65px] font-semibold mb-5">
+                                className="gradient-text text-4xl md:text-[65px] font-semibold mb-5">
                                 Bulding Profitable Business 
                             </h1>
                             <h1
-                                className="gradient-text text-xl lg:text-3xl mb-5">
+                                className="gradient-text text-xl md:text-3xl mb-5">
                                 With Marketing, Data & Technology
                             </h1>    
                         </div>
@@ -86,19 +86,19 @@ const HeroSection: React.FC = () => {
                         <div
                             className='flex items-end justify-center'>
                             <p
-                                className='text-xl lg:text-3xl text-white font-medium'>10</p>
+                                className='text-xl md:text-3xl text-white font-medium'>10</p>
                             <p
                                 className='text-primary'>+</p>
                             <p
                                 className='text-white font-thin ml-1'>Years</p>
                         </div>
 
-                        <p className='text-xl lg:text-3xl text-white font-thin'>|</p>
+                        <p className='text-xl md:text-3xl text-white font-thin'>|</p>
 
                         <div
                             className='flex items-end justify-center'>
                             <p
-                                className='text-xl lg:text-3xl text-white font-medium'>250</p>
+                                className='text-xl md:text-3xl text-white font-medium'>250</p>
                             <p
                                 className='text-primary'>+</p>
                             <p
@@ -110,7 +110,7 @@ const HeroSection: React.FC = () => {
                         <div
                             className='flex items-end justify-center'>
                             <p
-                                className='text-xl lg:text-3xl text-white font-medium'>07</p>
+                                className='text-xl md:text-3xl text-white font-medium'>07</p>
                             <p
                                 className='text-primary'>+</p>
                             <p
