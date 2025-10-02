@@ -17,10 +17,10 @@ import UnknownCS from '../../assets/caseStudies/04.webp'
 const SuccessStoriesNew = () => {
     const slides = [
         {
-            title: "Ehelepola Walawwa",
+            title: "Developed museum website showcasing Kandyan heritage, boosting visibility globally.",
             client: "- Sri Dalada Maligawa -",
             description:
-                "Developed the official website for Ehelepola Walawwa Wax Museum, creating a digital gateway to Kandyan heritage with authentic design, promoting exhibits, boosting cultural visibility, and attracting global visitors.",
+                "",
             challenges: [
                 "Simplifying a complicated design process",
                 "Giving consumers a seamless digital experience when designing their car",
@@ -65,10 +65,10 @@ const SuccessStoriesNew = () => {
             },
         },
         {
-            title: "Regency Travel House ",
+            title: "Built responsive website for Regency Travel House, boosting engagement and trust.",
             client: "- Regency Travel House  -",
             description:
-                "Designed and developed a responsive, user-friendly website for Regency Travel House, featuring holiday packages, customizable itineraries, and seamless booking options to boost customer engagement and strengthen brand presence.",
+                "",
             challenges: [
                 "Optimizing delivery routes",
                 "Integrating multiple payment options",
@@ -89,10 +89,10 @@ const SuccessStoriesNew = () => {
             },
         },
         {
-            title: "Winchester Global ",
+            title: "Designed corporate website for Winchester Global, enhancing accessibility and presence",
             client: "- Winchester Global  -",
             description:
-                "Designed and launched a responsive corporate website for Winchester Global, showcasing logistics, trade, and consultancy services with a clean design to enhance accessibility, client engagement, and global brand presence.",
+                "",
             challenges: [
                 "Optimizing delivery routes",
                 "Integrating multiple payment options",
@@ -236,7 +236,7 @@ const SuccessStoriesNew = () => {
                         <div
                             className="absolute w-1/3 text-white top-1/2 right-5 lg:right-16 transform -translate-y-1/2 flex flex-col gap-2 z-10 p-2">
                             <p
-                                className='text-[32px] md:text-[48px] lg:text-[52px] font-medium text-left leading-15'>
+                                className='text-[32px]  lg:text-[52px] font-medium text-left leading-15'>
                                 {slide.title}
                             </p>
 
@@ -298,7 +298,7 @@ const SuccessStoriesNew = () => {
                         <div
                             className="absolute w-2/3 text-white top-1/3 -mt-10 right-5 lg:right-16 transform -translate-y-1/2 flex flex-col gap-2 z-10 p-2">
                             <p
-                                className='text-[20px] md:text-[48px] lg:text-[52px] font-medium text-left leading-10'>
+                                className='text-[20px] md:text-[32px] lg:text-[52px] font-medium text-left leading-10'>
                                 {slide.title}
                             </p>
 
