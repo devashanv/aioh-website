@@ -8,7 +8,7 @@ const WebHero: React.FC = () => {
     <>
       {/* Left Side: Text */}
       <motion.div
-        className="w-full lg:w-1/2 pr-0 lg:mt-20 mt-16"
+        className="w-full lg:w-1/2 pr-0 lg:mt-20 my-16"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
@@ -33,7 +33,7 @@ const WebHero: React.FC = () => {
         </p>
 
         {/* Mobile/Tablet Image Only */}
-        <div className="block lg:hidden w-full my-6">
+        <div className="block lg:hidden w-full mt-6">
           <img
             src={Image1}
             alt="Responsive Showcase"
@@ -41,7 +41,7 @@ const WebHero: React.FC = () => {
           />
         </div>
 
-        <button
+        {/* <button
           className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
@@ -51,7 +51,7 @@ const WebHero: React.FC = () => {
           }}
         >
           Explore Our Portfolio
-        </button>
+        </button> */}
       </motion.div>
 
       {/* Right Side: Desktop Image */}
