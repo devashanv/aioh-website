@@ -63,7 +63,7 @@ function Homepage() {
 
         {/* Tech Stack */}
         <section
-          className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full rounded-xl lg:mt-30 mt-15"
+          className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full lg:mt-30 mt-15"
           id="techstack">
           <video
             width="640"
