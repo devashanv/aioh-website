@@ -55,7 +55,7 @@ function Homepage() {
 
         {/* team */}
         <section
-          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-20 mt-20"
+          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-0 mt-20"
           id="">
           <Team />
         </section>
@@ -63,14 +63,14 @@ function Homepage() {
 
         {/* Tech Stack */}
         <section
-          className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full rounded-xl lg:mt-30 mt-15"
+          className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full lg:mt-0 mt-15"
           id="techstack">
           <video
             width="640"
             autoPlay
             loop
             muted
-            className="w-full rounded-xl h-100"
+            className="w-full rounded-xl lg:h-100"
           >
             <source src={AnimationVideo} type="video/mp4" />
           </video>
@@ -114,7 +114,7 @@ function Homepage() {
 
         {/* Categories */}
         <section
-          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-0 mt-20"
           id="catego"
         >
           <Categories />
@@ -122,7 +122,7 @@ function Homepage() {
 
         {/* Client Base */}
         <section
-          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-40 mt-20"
+          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-0 mt-20"
           id="client"
         >
           <ClientBase />
@@ -134,7 +134,7 @@ function Homepage() {
         </section>
 
         {/* Footer */}
-        <section className="lg:mt-40 mt-10">
+        <section className="lg:mt-30 mt-10">
           <Footer />
         </section>
       </motion.div>
