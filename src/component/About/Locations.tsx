@@ -9,6 +9,12 @@ import Image5 from "../../assets/about/ausimage2.jpeg";
 import Image6 from "../../assets/about/ausimage3.jpeg";
 import Image7 from "../../assets/about/loccol1.jpeg";
 import Image8 from "../../assets/about/loccol2.jpeg";
+import Image9 from "../../assets/about/usa1.jpeg";
+import Image10 from "../../assets/about/usa2.jpeg";
+import Image11 from "../../assets/about/usa3.jpeg";
+import Image12 from "../../assets/about/usa4.jpeg";
+
+
 
 // Types
 type SubLocation = {
@@ -70,7 +76,7 @@ const locationCards: LocationCard[] = [
       "Our U.S. office is strategically located to serve clients nationwide with tailored solutions and tech leadership.",
     address: "456 Enterprise Lane, San Francisco, CA 94107",
     phone: "+1 415 123 4567",
-    images: [Image1, Image3, Image2],
+    images: [Image9, Image10, Image11, Image12],
     layout: "full",
   },
 ];

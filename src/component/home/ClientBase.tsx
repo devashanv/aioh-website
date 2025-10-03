@@ -3,35 +3,34 @@ import Slider from "react-slick";
 
 import Logo2 from "../../assets/img/logos/logo (2).webp";
 
-import Aluviharaya from '../../assets/clients/aluviharaya.webp'
-import EkhoElla from '../../assets/clients/EKHO_Ella.webp'
-import EkhoLake from '../../assets/clients/EKHO_LakeHouse.webp'
-import EkhoSafari from '../../assets/clients/EKHO_Safari.webp'
-import EkhoSigiriya from '../../assets/clients/EKHO_Sigiriya.webp'
-import EkhoSurf from '../../assets/clients/EKHO_Surf.webp'
-import GoAhead from '../../assets/clients/Go ahead lanka logo new.webp' 
-import Pussllawa from '../../assets/clients/Heritage Pussellawa.webp'
-import HotelSuisse from '../../assets/clients/Hotel-Suisse-color.webp'
-import HotelQueens from '../../assets/clients/Queens Hotel Logo .webp'
-import Arrogance from '../../assets/clients/arrogance.webp'
-import CCL from '../../assets/clients/ccl.webp'
-import Dinunda from '../../assets/clients/dinunda.webp'
-import DoctoDO from '../../assets/clients/doctodo.webp'
-import Ehelepola from '../../assets/clients/Ehelepola walauwwe logo black.png'
-import Eikone from '../../assets/clients/eikone.webp'
-import Limo from '../../assets/clients/limo copy.webp'
-import LTT from '../../assets/clients/ltt logo.webp'
-import Villa from '../../assets/clients/villa logo.webp'
-import MSS from '../../assets/clients/mss.webp'
-import NutriCrop from '../../assets/clients/nutri crop brown.webp'
-import PanAsiaBank from '../../assets/clients/panasiabank.webp'
-import QB from '../../assets/clients/qb.webp'
-import Regency from '../../assets/clients/Regency Travel House - Primary vertical.webp'
-import SeniorCargo from '../../assets/clients/senior-cargo.webp'
-import TKC from '../../assets/clients/tkc logo.webp'
-import Trillium from '../../assets/clients/trillium.webp'
-import Wingcraft from '../../assets/clients/wingscraft gold logo.webp'
-
+import Aluviharaya from "../../assets/clients/aluviharaya.webp";
+import EkhoElla from "../../assets/clients/EKHO_Ella.webp";
+import EkhoLake from "../../assets/clients/EKHO_LakeHouse.webp";
+import EkhoSafari from "../../assets/clients/EKHO_Safari.webp";
+import EkhoSigiriya from "../../assets/clients/EKHO_Sigiriya.webp";
+import EkhoSurf from "../../assets/clients/EKHO_Surf.webp";
+import GoAhead from "../../assets/clients/Go ahead lanka logo new.webp";
+import Pussllawa from "../../assets/clients/Heritage Pussellawa.webp";
+import HotelSuisse from "../../assets/clients/Hotel-Suisse-color.webp";
+import HotelQueens from "../../assets/clients/Queens Hotel Logo .webp";
+import Arrogance from "../../assets/clients/arrogance.webp";
+import CCL from "../../assets/clients/ccl.webp";
+import Dinunda from "../../assets/clients/dinunda.webp";
+import DoctoDO from "../../assets/clients/doctodo.webp";
+import Ehelepola from "../../assets/clients/Ehelepola walauwwe logo black.png";
+import Eikone from "../../assets/clients/eikone.webp";
+import Limo from "../../assets/clients/limo copy.webp";
+import LTT from "../../assets/clients/ltt logo.webp";
+import Villa from "../../assets/clients/villa logo.webp";
+import MSS from "../../assets/clients/mss.webp";
+import NutriCrop from "../../assets/clients/nutri crop brown.webp";
+import PanAsiaBank from "../../assets/clients/panasiabank.webp";
+import QB from "../../assets/clients/qb.webp";
+import Regency from "../../assets/clients/Regency Travel House - Primary vertical.webp";
+import SeniorCargo from "../../assets/clients/senior-cargo.webp";
+import TKC from "../../assets/clients/tkc logo.webp";
+import Trillium from "../../assets/clients/trillium.webp";
+import Wingcraft from "../../assets/clients/wingscraft gold logo.webp";
 
 const ClientBase: React.FC = () => {
   const logoWrapperClass =
@@ -111,7 +110,8 @@ const ClientBase: React.FC = () => {
 
   return (
     <>
-      <section className="bg-white text-white rounded-xl h-full">
+      {/* Desktop slideshow */}
+      <section className="bg-white text-white rounded-xl h-full hidden lg:block">
         <section className="h-2/10 pt-5">
           <h1 className="text-[32px] md:text-[48px] lg:text-[52px] text-black font-medium mb-3 px-5 lg:px-0">
             Partners in Digital Success
@@ -147,13 +147,6 @@ const ClientBase: React.FC = () => {
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
               />
             </div>
-            <div className={Eikone}>
-              <img
-                src={Logo2}
-                alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
-              />
-            </div>
             <div className={logoWrapperClass}>
               <img
                 src={EkhoElla}
@@ -163,7 +156,14 @@ const ClientBase: React.FC = () => {
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={EkhoLake}
+                src={Logo2}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+              />
+            </div>
+            <div className={logoWrapperClass}>
+              <img
+                src={HotelQueens}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
               />
@@ -174,6 +174,13 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
+                src={Dinunda}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+              />
+            </div>
+            <div className={logoWrapperClass}>
+              <img
                 src={EkhoSafari}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
@@ -181,14 +188,7 @@ const ClientBase: React.FC = () => {
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={EkhoSigiriya}
-                alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
-              />
-            </div>
-            <div className={logoWrapperClass}>
-              <img
-                src={EkhoSurf}
+                src={Limo}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
               />
@@ -213,7 +213,7 @@ const ClientBase: React.FC = () => {
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={HotelQueens}
+                src={EkhoLake}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
               />
@@ -245,7 +245,7 @@ const ClientBase: React.FC = () => {
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={Dinunda}
+                src={EkhoSigiriya}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
               />
@@ -277,11 +277,12 @@ const ClientBase: React.FC = () => {
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={Limo}
+                src={EkhoSurf}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
               />
             </div>
+
             <div className={logoWrapperClass}>
               <img
                 src={LTT}
@@ -371,8 +372,97 @@ const ClientBase: React.FC = () => {
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
               />
             </div>
-      
+            <div className={logoWrapperClass}>
+              <img
+                src={NutriCrop}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+              />
+            </div>
+            <div className={logoWrapperClass}>
+              <img
+                src={Arrogance}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+              />
+            </div>
+            <div className={logoWrapperClass}>
+              <img
+                src={QB}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+              />
+            </div>
           </div>
+        </Slider>
+      </section>
+
+      {/* Mobile slideshow */}
+      <section className="bg-white text-white rounded-xl h-full block lg:hidden">
+        <section className="h-2/10 pt-5">
+          <h1 className="text-[32px] md:text-[48px] lg:text-[52px] text-black font-medium mb-3 px-5 lg:px-0">
+            Partners in Digital Success
+          </h1>
+          <p className="text-[18px] font-light mb-6 text-black">
+            We’ve teamed up with 50+ amazing clients and counting!
+          </p>
+        </section>
+
+        <Slider
+          infinite={true}
+          slidesToShow={3}
+          slidesToScroll={1}
+          speed={1000}
+          autoplay={true}
+          autoplaySpeed={2500}
+          dots={true}
+          className="h-full w-full"
+          responsive={[
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+          ]}
+        >
+          {/* Each column is a slide, vertical logos, responsive */}
+          {[
+            [EkhoElla, Aluviharaya, Logo2, Villa],
+            [EkhoSafari, CCL, Eikone, GoAhead],
+            [EkhoLake, HotelQueens, HotelSuisse, PanAsiaBank],
+            [EkhoSigiriya, Dinunda, DoctoDO, Ehelepola],
+            [EkhoSurf, Limo, LTT, Pussllawa],
+            [MSS, NutriCrop, Arrogance, QB],
+            [Regency, SeniorCargo, TKC, Trillium],
+            [Wingcraft, NutriCrop, Arrogance, QB],
+          ].map((col, colIdx) => (
+            <div
+              key={colIdx}
+              className="flex flex-col gap-6 px-2 w-full min-w-0"
+            >
+              {col.map((logo, rowIdx) => (
+                <div
+                  key={rowIdx}
+                  className="w-full flex items-center justify-center"
+                >
+                  <img
+                    src={logo}
+                    alt={`logo-mobile-${colIdx}-${rowIdx}`}
+                    className="object-contain w-24 h-14 xs:w-28 xs:h-16 sm:w-32 sm:h-20 md:w-36 md:h-24 min-w-0 max-w-full max-h-full filter grayscale hover:grayscale-0 hover:cursor-pointer"
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
         </Slider>
       </section>
     </>

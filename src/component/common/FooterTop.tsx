@@ -16,7 +16,7 @@ const FooterTop: React.FC = () => {
           <button
             className="lg:inline-block px-5 py-2 lg:py-3 text-lg font-normal rounded-[30px] text-white whitespace-nowrap cursor-pointer mt-4"
             style={{ background: gradient }}
-            onClick={() => (window.location.href = "/contact")}
+            onClick={() => (window.location.href = "/consultation")}
           >
             Schedule a Call 
           </button>
