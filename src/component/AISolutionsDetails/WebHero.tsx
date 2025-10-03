@@ -19,9 +19,9 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Web System
+          AI
           <br />
-          <span className="text-[#02ec97]">development</span> Content
+          <span className="text-[#02ec97]">Solutions</span>
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
@@ -40,8 +40,8 @@ const WebHero: React.FC = () => {
             className="w-full md:w-10/12 mx-auto rounded-lg object-cover"
           />
         </div>
-
-        {/* <button
+        {/* 
+        <button
           className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
