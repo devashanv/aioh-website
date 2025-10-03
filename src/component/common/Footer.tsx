@@ -29,36 +29,74 @@ const Footer = () => {
 
       {/* ✅ Main content */}
       <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
-<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-0 text-left text-[16px] font-light leading-relaxed">
-  {/* Column 1 → full width on md */}
-  <div className="md:col-span-3 lg:col-span-1 lg:w-[430px] text-center md:text-left flex flex-col items-center md:items-start">
-    <div className="mb-3">
-      <img
-        src={AIOHLogo}
-        alt="All in One Holdings Logo"
-        className="w-[250px] h-auto"
-      />
-    </div>
-    <p className="mb-2 text-[#F5F5F5] text-justify">
-      Empowering startups and businesses with result-driven Digital Marketing
-      and custom-built Software Solutions. Turn your ideas into digital succes
-    </p>
-    {/* Newsletter */}
-    <div className="mt-4 flex items-center justify-center md:justify-start w-full ">
-      <input
-        type="email"
-        required
-        placeholder="Enter your email"
-        className="px-4 py-2 w-full rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
-      />
-      <button
-        className="ml-2 w-11 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
-        aria-label="Subscribe"
-      >
-        <img src={SendIcon} alt="Send" className="w-[18px] h-[18px]" />
-      </button>
-    </div>
-  </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-0 text-left text-[16px] font-light leading-relaxed">
+          {/* Column 1 → full width on md */}
+          <div className="md:col-span-3 lg:col-span-1 lg:w-[430px] text-center md:text-left flex flex-col items-center md:items-start">
+            {/* Logo */}
+            <div className="mb-3">
+              <img
+                src={AIOHLogo}
+                alt="All in One Holdings Logo"
+                className="w-[250px] h-auto"
+              />
+            </div>
+
+            {/* --- Mobile + Desktop layout (stacked) --- */}
+            <div className="block md:hidden lg:block w-full">
+              <p className="mb-2 text-[#F5F5F5] text-justify">
+                Empowering startups and businesses with result-driven Digital
+                Marketing and custom-built Software Solutions. Turn your ideas
+                into digital succes
+              </p>
+
+              <div className="mt-4 flex items-center justify-center lg:justify-start w-full">
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  className="px-4 py-2 w-full rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
+                />
+                <button
+                  className="ml-2 w-11 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
+                  aria-label="Subscribe"
+                >
+                  <img
+                    src={SendIcon}
+                    alt="Send"
+                    className="w-[18px] h-[18px]"
+                  />
+                </button>
+              </div>
+            </div>
+
+            {/* --- Tablet layout (side by side) --- */}
+            <div className="hidden md:flex lg:hidden w-full items-start gap-8">
+              <p className="text-[#F5F5F5] text-justify flex-1">
+                Empowering startups and businesses with result-driven Digital
+                Marketing and custom-built Software Solutions. Turn your ideas
+                into digital succes
+              </p>
+
+              <div className="flex items-center justify-start w-1/2">
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  className="px-4 py-2 w-full rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
+                />
+                <button
+                  className="ml-2 w-11 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
+                  aria-label="Subscribe"
+                >
+                  <img
+                    src={SendIcon}
+                    alt="Send"
+                    className="w-[18px] h-[18px]"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
 
           {/* Column 2 */}
           <div className="lg:ml-50 md:ml-0 lg:w-full">
@@ -166,8 +204,8 @@ const Footer = () => {
             <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
               <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
               <div>
-                <p>3rd Floor, All in one Holdings,</p>
-                <p>349/17 Katugastota Rd,</p>
+                {/* <p>3rd Floor, All in one Holdings,</p> */}
+                <p>349/17, Katugastota Rd,</p>
                 <p>Kandy, Sri Lanka.</p>
               </div>
             </div>
