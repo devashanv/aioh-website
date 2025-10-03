@@ -551,7 +551,7 @@ const projects = [
   {
     title: "Aluviharaya.lk Website",
     description:
-      "A cultural and heritage platform showcasing the historic Aluviharaya Rock Cave Temple in Matale, Sri Lanka.",
+      "A cultural and heritage platform showcasing the historic Aluviharaya Rock Cave Temple.",
     image: dumy,
     link: "https://www.aluviharaya.lk/",
     description2:
@@ -574,7 +574,7 @@ const projects = [
   {
     title: "CCL Academy Website",
     description:
-      "An educational platform for CCL Academy, showcasing academic and professional courses in Kandy, Sri Lanka.",
+      "An educational platform, showcasing academic and professional courses.",
     image: dumy,
     link: "https://cclacademy.lk/",
     description2:
@@ -595,7 +595,7 @@ const projects = [
   {
     title: "Ehelepola Website",
     description:
-      "The official website for the Ehelepola Walawwa Wax Museum in Kandy, Sri Lanka, showcasing cultural heritage and visitor information.",
+      "The official website for the Ehelepola Walawwa Wax Museum in Kandy, Sri Lanka.",
     image: dumy,
     link: "https://ehelepolawalawwa.lk/",
     description2:
@@ -618,7 +618,7 @@ const projects = [
   {
     title: "Regency Travel House Website",
     description:
-      "A professional travel and tourism platform for Regency Travel House, offering holiday packages, tours, and travel services in Sri Lanka.",
+      "A professional travel and tourism platform for Regency Travel House.",
     image: dumy,
     link: "https://regency.knowmo.me/",
     description2:

@@ -24,7 +24,7 @@ const ContactHero: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-[28px] md:text-[32px] lg:text-[52px] lg:leading-[80px] font-bold text-[#191818] text-center lg:text-left"
+          className="text-[32px] md:text-[48px] lg:text-[52px] lg:leading-[80px] font-bold text-[#191818] text-center lg:text-left"
         >
           We’re Here to Collaborate
           <br />
@@ -142,7 +142,7 @@ const ContactHero: React.FC = () => {
       >
         {/* Images Row */}
         <div className="w-full flex justify-between gap-4">
-          <div className="w-[50%] rounded-lg overflow-hidden">
+          <div className="w-[50%] rounded-[20px] overflow-hidden">
             <img
               src={Image1}
               alt="Collaboration"

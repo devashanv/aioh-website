@@ -16,7 +16,7 @@ const Contact = () => {
 
         {/* Section 1 */}
         <section className="bg-transparent">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-0 lg:pt-14">
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-0 lg:pt-14 pt-8">
             <ContactHero />
           </div>
         </section>

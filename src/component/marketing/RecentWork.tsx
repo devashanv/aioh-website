@@ -18,6 +18,7 @@ type Project = {
   challengesIntro?: string;
   challenges?: string[];
   solutions?: string[];
+  solutionsList?: string[];
   strategyIntro?: string;
   strategy?: string[];
   executionIntro?: string;
@@ -27,6 +28,7 @@ type Project = {
   takeawayIntro?: string;
   takeaway?: string[];
   solutionsIntro?: string;
+  resultsParagraph?: string;
 };
 
 const projects: Project[] = [
@@ -44,13 +46,14 @@ const projects: Project[] = [
       "Underutilized storytelling potential around property's historical significance",
       "Low community interaction and brand affinity metrics",
     ],
+    solutionsIntro:
+      "Results demonstrated the power of authentic brand storytelling in the hospitality sector:",
     solutions: [
       "Our content strategists conducted a comprehensive brand audit to understand Queens Hotel's authentic voice and audience expectations. We identified the intersection between heritage storytelling and modern hospitality experiences as the key differentiator.",
       "Through data-driven content planning and audience behavior analysis, we developed a content ecosystem that balanced nostalgic storytelling with contemporary guest experiences. Our creative team produced scroll-stopping visuals that captured both the property's cultural essence and luxury positioning.",
       "The organic first approach focused on community building rather than paid amplification, utilizing engagement psychology and platform algorithm optimization to maximize natural reach.",
     ],
-    results: [
-      "Results demonstrated the power of authentic brand storytelling in the hospitality sector:",
+    solutionsList: [
       "615,910 unique organic reach representing 706% growth",
       "364,519 total organic video views with 1,400% increase",
       "15.4M organic photo impressions from heritage and guest experience content",
@@ -94,9 +97,9 @@ const projects: Project[] = [
       "Audience database established for future product launches",
     ],
     takeawayIntro:
-      "This campaign proved that no product is too niche to market successfully, if you design the right funnel.",
+      "This campaign proved that no product is too niche to market successfully, if you design the right funnel.By starting broad, filtering for high intent, building trust, and retargeting with urgency-driven messaging, Wingscraft transformed a niche collectible into a sold-out success story.",
     takeaway: [
-      "By starting broad, filtering for high intent, building trust, and retargeting with urgency-driven messaging, Wingscraft transformed a niche collectible into a sold-out success story.",
+      "No product is too niche to market successfully, if you design the right funnel.",
     ],
   },
   {
@@ -135,11 +138,11 @@ const projects: Project[] = [
       "Increased 15% Conversion Rate",
       "Target Registrations Achieved",
     ],
-    takeawayIntro:
-      "Success came not from a single campaign, but from continuous testing, audience refinement, and creative optimization.",
     takeaway: [
-      "By aligning the right course, the right audience, and the right message, we turned a high-cost recruitment challenge into a scalable, cost-effective model.",
+      "No product is too niche to market successfully, if you design the right funnel.",
     ],
+    takeawayIntro:
+      "Success came not from a single campaign, but from continuous testing, audience refinement, and creative optimization. By aligning the right course, the right audience, and the right message, we turned a high-cost recruitment challenge into a scalable, cost-effective model.",
   },
   {
     title: "Ekho Ella",
@@ -171,6 +174,8 @@ const projects: Project[] = [
     ],
     resultsIntro:
       "The impact of this organic-first strategy was immediate and measurable:",
+    resultsParagraph:
+      "Through authentic storytelling and strategic execution, Ekho Ella was able to amplify its brand presence, attract a wider audience, and position itself as a must-stay boutique destination in Ella.",
     results: [
       "176,500 Organic Reach (+193%)",
       "701,800 Organic Views (+103%)",
@@ -221,12 +226,11 @@ const projects: Project[] = [
       "Global positioning appealing to both local visitors and international tourists",
       "A landmark brand identity that embodies heritage, innovation, and tourism appeal",
     ],
-    takeawayIntro:
-      "Ehelepola Walawwa now stands not just as a destination, but as a living storytelling experience.",
     takeaway: [
-      "By fusing tradition with technology, the project set a new benchmark for cultural branding in Sri Lanka.",
-      "For our team, being entrusted with this vision was more than a project, it was an honor to shape a brand that preserves history while inspiring the future.",
+      "No product is too niche to market successfully, if you design the right funnel.",
     ],
+    takeawayIntro:
+      "Ehelepola Walawwa now stands not just as a destination, but as a living storytelling experience. By fusing tradition with technology, the project set a new benchmark for cultural branding in Sri Lanka. For our team, being entrusted with this vision was more than a project, it was an honor to shape a brand that preserves history while inspiring the future.",
   },
 ];
 
@@ -529,7 +533,7 @@ const RecentWork: React.FC = () => {
                   {popupData.challenges && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        The Challenge
+                        The Challenges
                       </h3>
                       {popupData.challengesIntro && (
                         <p className="text-base md:text-lg font-light mb-2">
@@ -554,13 +558,9 @@ const RecentWork: React.FC = () => {
                   {popupData.solutions && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        Solutions
+                        Solutions and Results
                       </h3>
-                      {popupData.solutionsIntro && (
-                        <p className="text-base md:text-lg font-light mb-2">
-                          {popupData.solutionsIntro}
-                        </p>
-                      )}
+
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.solutions.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
@@ -572,6 +572,24 @@ const RecentWork: React.FC = () => {
                           </li>
                         ))}
                       </ul>
+                      {popupData.solutionsIntro && (
+                        <p className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
+                          {popupData.solutionsIntro}
+                        </p>
+                      )}
+                      {popupData.solutionsList && (
+                        <ul className="text-base md:text-lg font-light space-y-2">
+                          {popupData.solutionsList.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <LiaHandPointRightSolid
+                                style={{ width: "16px", height: "16px" }}
+                                className="text-white mt-1.5 shrink-0"
+                              />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </>
                   )}
 
@@ -579,7 +597,7 @@ const RecentWork: React.FC = () => {
                   {popupData.strategy && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        The Strategy
+                        The Strategies
                       </h3>
                       {popupData.strategyIntro && (
                         <p className="text-base md:text-lg font-light mb-2">
@@ -605,7 +623,7 @@ const RecentWork: React.FC = () => {
                           {popupData.executionIntro}
                         </p>
                       )}
-                      <ul className="text-base md:text-lg font-light space-y-2">
+                      {/* <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.execution.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <LiaHandPointRightSolid
@@ -615,7 +633,7 @@ const RecentWork: React.FC = () => {
                             <span>{item}</span>
                           </li>
                         ))}
-                      </ul>
+                      </ul> */}
                     </>
                   )}
 
@@ -641,6 +659,11 @@ const RecentWork: React.FC = () => {
                           </li>
                         ))}
                       </ul>
+                      {popupData.resultsParagraph && (
+                        <p className="text-base md:text-lg font-light mt-4">
+                          {popupData.resultsParagraph}
+                        </p>
+                      )}
                     </>
                   )}
 
@@ -655,7 +678,7 @@ const RecentWork: React.FC = () => {
                           {popupData.takeawayIntro}
                         </p>
                       )}
-                      <ul className="text-base md:text-lg font-light space-y-2">
+                      {/* <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.takeaway.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <LiaHandPointRightSolid
@@ -665,7 +688,7 @@ const RecentWork: React.FC = () => {
                             <span>{item}</span>
                           </li>
                         ))}
-                      </ul>
+                      </ul> */}
                     </>
                   )}
                 </div>

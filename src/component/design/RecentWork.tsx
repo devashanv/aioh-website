@@ -37,6 +37,7 @@ const projects: Project[] = [
     link: "#",
     description2:
       "Muswenna Tea, a premium Sri Lankan tea brand with a proud 25-year legacy, approached us for a complete rebranding project. The scope included creating a new brand identity, product packaging, company profile, and website redesign. The challenge was to craft a brand that not only stood out in crowded retail shelves but also carried the heritage and authenticity of Sri Lankan tea while appealing to international markets.",
+    challengesIntro: "Muswenna Tea faced several branding challenges:",
     challenges: [
       "No existing brand guidelines or voice to guide the creative process.",
       "The 25-year history and heritage were not reflected in the existing branding.",
@@ -45,13 +46,14 @@ const projects: Project[] = [
     ],
     strategyIntro: "Our Approach",
     strategy: [
-      "Understanding the Brand – Immersed ourselves in Muswenna’s story, values, and market positioning. Identified opportunities to highlight authentic heritage and premium quality.",
-      "Concept Development – Developed design concepts that combined elegant modern aesthetics with Sri Lankan cultural roots. Ensured concepts were versatile enough for domestic and international audiences.",
-      "Visual Direction – Created mood boards and complete brand guidelines to establish a consistent identity. Defined a visual language balancing sophistication with approachability.",
-      "Design Execution – Crafted product labels with clean layouts, elegant typography, and rich visuals that represented Muswenna’s premium essence. Redesigned the company profile and website to align with the refreshed identity.",
-      "Collaboration & Finalization – Worked closely with the Muswenna team throughout the process for alignment. Delivered final designs that were shelf-ready and export-ready.",
+      "Step 1 - Understanding the Brand – Immersed ourselves in Muswenna’s story, values, and market positioning. Identified opportunities to highlight authentic heritage and premium quality.",
+      "Step 2 - Concept Development – Developed design concepts that combined elegant modern aesthetics with Sri Lankan cultural roots. Ensured concepts were versatile enough for domestic and international audiences.",
+      "Step 3 - Visual Direction – Created mood boards and complete brand guidelines to establish a consistent identity. Defined a visual language balancing sophistication with approachability.",
+      "Step 4 - Design Execution – Crafted product labels with clean layouts, elegant typography, and rich visuals that represented Muswenna’s premium essence. Redesigned the company profile and website to align with the refreshed identity.",
+      "Step 5 - Collaboration & Finalization – Worked closely with the Muswenna team throughout the process for alignment. Delivered final designs that were shelf-ready and export-ready.",
     ],
-    resultsIntro: "The Outcome",
+    resultsIntro:
+      "Despite the tight schedule, the rebranding project was a major success:",
     results: [
       "Won gold award in food exhibition in China.",
       "Strengthened shelf visibility, making Muswenna Tea stand out in competitive retail spaces.",
@@ -60,8 +62,7 @@ const projects: Project[] = [
     ],
     takeawayIntro: "The Impact",
     takeaway: [
-      "The Muswenna Tea rebrand transformed the brand from an underrepresented legacy into a modern premium identity that speaks to global consumers.",
-      "By blending heritage storytelling with contemporary design, Muswenna Tea is now well-positioned to expand its presence in both Sri Lankan and international markets.",
+      "The Muswenna Tea rebrand transformed the brand from an underrepresented legacy into a modern premium identity that speaks to global consumers.By blending heritage storytelling with contemporary design, Muswenna Tea is now well-positioned to expand its presence in both Sri Lankan and international markets.",
     ],
   },
   {
@@ -81,8 +82,7 @@ const projects: Project[] = [
     ],
     takeawayIntro: "The Impact",
     takeaway: [
-      "The rebranding video became more than a promotional asset — it redefined Hotel Suisse’s brand perception.",
-      "By intertwining cultural storytelling with modern digital enhancements, the hotel now stands as an elegant, renewed icon of Kandy that appeals to both heritage-seekers and contemporary travelers.",
+      "The rebranding video became more than a promotional asset — it redefined Hotel Suisse’s brand perception.By intertwining cultural storytelling with modern digital enhancements, the hotel now stands as an elegant, renewed icon of Kandy that appeals to both heritage-seekers and contemporary travelers.",
     ],
   },
 ];
@@ -386,7 +386,7 @@ const RecentWork: React.FC = () => {
                   {popupData.challenges && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        The Challenge
+                        The Challenges
                       </h3>
                       {popupData.challengesIntro && (
                         <p className="text-base md:text-lg font-light mb-2">
@@ -407,11 +407,11 @@ const RecentWork: React.FC = () => {
                     </>
                   )}
 
-                  {/* Solutions */}
+                  {/* Our Approach */}
                   {popupData.solutions && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        Solutions
+                        Our Approaches
                       </h3>
                       {popupData.solutionsIntro && (
                         <p className="text-base md:text-lg font-light mb-2">
@@ -435,15 +435,15 @@ const RecentWork: React.FC = () => {
                   {/* Strategy */}
                   {popupData.strategy && (
                     <>
-                      <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        The Strategy
+                      <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4 ">
+                        Our Approaches
                       </h3>
-                      {popupData.strategyIntro && (
+                      {/* {popupData.strategyIntro && (
                         <p className="text-base md:text-lg font-light mb-2">
                           {popupData.strategyIntro}
                         </p>
-                      )}
-                      <ol className="text-base md:text-lg font-light space-y-2 list-decimal list-inside">
+                      )} */}
+                      <ol className="text-base md:text-lg font-light space-y-2 list-none list-inside text-justify">
                         {popupData.strategy.map((item, idx) => (
                           <li key={idx}>{item}</li>
                         ))}
@@ -480,7 +480,7 @@ const RecentWork: React.FC = () => {
                   {popupData.results && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        The Results
+                        The Outcomes
                       </h3>
                       {popupData.resultsIntro && (
                         <p className="text-base md:text-lg font-light mb-2">
@@ -505,20 +505,20 @@ const RecentWork: React.FC = () => {
                   {popupData.takeaway && (
                     <>
                       <h3 className="text-lg md:text-2xl leading-6 md:leading-7 lg:leading-8 font-semibold mt-10 mb-4">
-                        The Takeaway
+                        The Impacts
                       </h3>
-                      {popupData.takeawayIntro && (
+                      {/* {popupData.takeawayIntro && (
                         <p className="text-base md:text-lg font-light mb-2">
                           {popupData.takeawayIntro}
                         </p>
-                      )}
+                      )} */}
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.takeaway.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <LiaHandPointRightSolid
+                          <li key={idx} className="flex items-start gap-2 text-justify">
+                            {/* <LiaHandPointRightSolid
                               style={{ width: "16px", height: "16px" }}
                               className="text-white mt-1.5 shrink-0"
-                            />
+                            /> */}
                             <span>{item}</span>
                           </li>
                         ))}

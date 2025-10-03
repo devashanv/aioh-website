@@ -29,87 +29,86 @@ const Footer = () => {
 
       {/* ✅ Main content */}
       <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
-        <div className="grid md:grid-cols-4 gap-6 lg:gap-0 md:gap-0.5 text-left text-[16px] font-light leading-relaxed">
-          {/* Column 1 → center only on mobile */}
-          <div className="lg:w-[430px] text-center md:text-left flex flex-col items-center md:items-start ">
-            <div className="mb-3">
-              <img
-                src={AIOHLogo}
-                alt="All in One Holdings Logo"
-                className="w-[250px] h-auto"
-              />
-            </div>
-            <p className="mb-2 text-[#F5F5F5] text-justify">
-              Empowering startups and businesses with result-driven Digital
-              Marketing and custom-built Software Solutions. Turn your ideas
-              into digital succes
-            </p>
-            {/* Newsletter */}
-            <div className="mt-4 flex items-center justify-center md:justify-start w-full ">
-              <input
-                type="email"
-                required
-                placeholder="Enter your email"
-                className="px-4 py-2 w-full rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
-              />
-              <button
-                className="ml-2 w-11 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
-                aria-label="Subscribe"
-              >
-                <img src={SendIcon} alt="Send" className="w-[18px] h-[18px]" />
-              </button>
-            </div>
-          </div>
+<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-0 text-left text-[16px] font-light leading-relaxed">
+  {/* Column 1 → full width on md */}
+  <div className="md:col-span-3 lg:col-span-1 lg:w-[430px] text-center md:text-left flex flex-col items-center md:items-start">
+    <div className="mb-3">
+      <img
+        src={AIOHLogo}
+        alt="All in One Holdings Logo"
+        className="w-[250px] h-auto"
+      />
+    </div>
+    <p className="mb-2 text-[#F5F5F5] text-justify">
+      Empowering startups and businesses with result-driven Digital Marketing
+      and custom-built Software Solutions. Turn your ideas into digital succes
+    </p>
+    {/* Newsletter */}
+    <div className="mt-4 flex items-center justify-center md:justify-start w-full ">
+      <input
+        type="email"
+        required
+        placeholder="Enter your email"
+        className="px-4 py-2 w-full rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
+      />
+      <button
+        className="ml-2 w-11 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
+        aria-label="Subscribe"
+      >
+        <img src={SendIcon} alt="Send" className="w-[18px] h-[18px]" />
+      </button>
+    </div>
+  </div>
 
           {/* Column 2 */}
-          <div className="lg:ml-50 md:ml-2 lg:w-full">
+          <div className="lg:ml-50 md:ml-0 lg:w-full">
             <h3 className="text-[18px] font-medium mb-3">What We Do Best</h3>
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/marketing/digital-strategy"
                   className="hover:text-[#02EC97]"
                 >
-                  Brand strategy
+                  Digital Strategy
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/marketing/social-media-advertising"
                   className="hover:text-[#02EC97]"
                 >
-                  Social media management
+                  Social Media Advertising
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/marketing/content-marketing"
                   className="hover:text-[#02EC97]"
                 >
-                  Digital marketing
+                  Content Marketing
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/design/packaging-design"
                   className="hover:text-[#02EC97]"
                 >
-                  Social media advertising
+                  Packaging Design
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/marketing/search-engine-optimization"
                   className="hover:text-[#02EC97]"
                 >
-                  SEO audit and setup
+                  Search Engine Optimization
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Column 3 */}
-          <div className="lg:ml-40 lg:w-full">
+          <div className="lg:ml-40 lg:w-full md:ml-0">
             <h3 className="text-[18px] font-medium mb-3">Standout Services</h3>
             <ul className="space-y-2 text-[#F5F5F5]">
               <li>
@@ -117,7 +116,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Web development
+                  Web Development
                 </Link>
               </li>
               <li>
@@ -125,7 +124,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Software development
+                  Web System Development
                 </Link>
               </li>
               <li>
@@ -133,7 +132,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Cloud solutions
+                  Mobile App Development
                 </Link>
               </li>
               <li>
@@ -141,7 +140,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Artificial Intelligence
+                  AI Solutions
                 </Link>
               </li>
               <li>
@@ -149,14 +148,14 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  UI/UX designs
+                  Test Automation Solutions
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4 → center on mobile, full width on tablet */}
-          <div className="lg:ml-28 lg:w-fit w-full text-left md:text-left flex flex-col items-start md:items-start ml-0">
+          {/* Column 4 */}
+          <div className="lg:ml-28 lg:w-fit w-full text-left flex flex-col items-start ml-0">
             <h3 className="text-[18px] font-medium mb-3">Contact</h3>
 
             <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
@@ -262,22 +261,21 @@ const Footer = () => {
             <p className="hover:text-[#02EC97] transition-colors duration-200">
               Copyrights © 2025 All in One IT Solutions. All Rights Reserved
             </p>
-<p className="text-[10px] transition-colors duration-200">
-  <a
-    href="/terms"
-    className="hover:text-[#02EC97] cursor-pointer transition-colors duration-200"
-  >
-    User Terms & Conditions
-  </a>{" "}
-  |{" "}
-  <a
-    href="/privacy"
-    className="hover:text-[#02EC97] cursor-pointer transition-colors duration-200"
-  >
-    Privacy Policy
-  </a>
-</p>
-
+            <p className="text-[10px] transition-colors duration-200">
+              <a
+                href="/terms"
+                className="hover:text-[#02EC97] cursor-pointer transition-colors duration-200"
+              >
+                User Terms & Conditions
+              </a>{" "}
+              |{" "}
+              <a
+                href="/privacy"
+                className="hover:text-[#02EC97] cursor-pointer transition-colors duration-200"
+              >
+                Privacy Policy
+              </a>
+            </p>
           </div>
         </div>
         <div className="relative z-10 w-11/12 mx-auto">
