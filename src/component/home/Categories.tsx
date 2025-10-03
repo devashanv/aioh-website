@@ -13,7 +13,8 @@ const Categories: React.FC = () => {
                 <section
                     className='h-auto lg:h-1/4 lg:mb-0 mb-10'>
                     <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium lg:mb-3 text-center lg:text-left lg:w-1/2">
-                        Crafted Expertise Across Every Discipline
+                        Our Core Capabilities and Service Expertise
+
                     </h1>
                 </section>
 
@@ -24,13 +25,32 @@ const Categories: React.FC = () => {
                         <section
                             className='bg-white h-4/12 rounded-[20px] p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Marketing</h2>
-                            <p className='font-light'>We build meaningful connections. Our data-driven strategies put your brand in front of the right people, at the right time, across the right channels.</p>
+                            <p className='font-light lg:text-sm'>Stop wasting money on marketing that doesn't work. We build new generation custom marketing strategies for your industry - we handle all your marketing so you can focus on running your business. Get more visibility, attract the right customers, and watch your revenue grow.</p>
                         </section>
 
                         <section
                             className='relative h-8/12 rounded-xl w-full rounded-xl'>
                             {/* gradient */}
                             <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
+
+                            {/* chips */}
+                            <div 
+                            className='w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5'>
+                               <p
+                               className='py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full'>SEO</p>
+                               <p
+                               className='py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full'>growth strategies</p>
+                               <p
+                               className='py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full'>Paid ads</p>
+                               <p
+                               className='py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full'>SM Management</p>
+                               <p
+                               className='py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full'>Email Marketing</p>
+                               <p
+                               className='py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full'>Digital strategy</p>
+                               <p
+                               className='py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full'>Consultation</p>
+                            </div>
 
                             <img src={MarketingImg} alt="" className='w-full h-full object-cover rounded-[20px]' />
                             <Link to='/Marketing'>
@@ -60,7 +80,7 @@ const Categories: React.FC = () => {
                         <section
                             className='bg-white h-4/12 rounded-[20px] p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Technology</h2>
-                            <p className='font-light'>We engineer solutions that turn your ideas into secure, high-performance digital experiences. Let technology become your biggest asset.</p>
+                            <p className='font-light text-sm'>From Web development to custom software and mobile apps to system integrations and automation - we build technology that solves real business problems. Perfect for companies ready to streamline operations, improve efficiency, and scale smarter.</p>
                         </section>
                     </section>
 
@@ -69,7 +89,7 @@ const Categories: React.FC = () => {
                         <section
                             className='bg-white h-4/12 rounded-[20px] p-5 text-left flex flex-col gap-3'>
                             <h2 className='font-medium text-2xl'>Design</h2>
-                            <p className='font-light'>Great design is more than aesthetics it’s how you make your audience feel.  We craft intuitive, user focused visuals that elevate your brand.</p>
+                            <p className='font-light lg:text-sm'>Great design isn't just about looking good - it's about connecting with your customers. We create visual branding and marketing materials that speak to your audience and help build trust, whether you're B2B or B2C.</p>
                         </section>
 
                         <section
