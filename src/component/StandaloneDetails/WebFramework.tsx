@@ -5,41 +5,42 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Foundation Setup",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "Define architecture and initial requirements with stakeholders.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "User Story Mapping",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Break down ERP, POS, or management system features for sprints.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Incremental Development",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Build, test, and validate modules in prioritized cycles.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Stakeholder Reviews",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Present progress regularly and refine the backlog.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Pilot Deployments",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Release usable software increments and collect feedback.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Continuous Improvement",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Use retrospectives to enhance system performance and features.",
   },
 ];
+
 
 /* -------------------------------- desktop row -------------------------------- */
 type Step = { number: string; title: string; description: string };

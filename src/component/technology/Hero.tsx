@@ -28,11 +28,11 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            We craft growth-driven marketing strategies that thoughtfully
-            connect ambitious brands with the audiences that matter most
-            seamlessly blending strategic insight, creative storytelling, and
-            performance-focused execution across every digital touch-point to
-            drive real, measurable business impact.
+Behind every successful business is a story of transformation Technology has been at the heart of
+our partnership with clients as we turn visions into digital realities. By creating engaging websites
+powerful web and mobile applications and smart AI solutions we help businesses connect with
+their customers and open doors to new opportunities. Our approach blends innovation with
+insight to boost visibility grow sales and simplify operations.
           </motion.p>
 
           <button

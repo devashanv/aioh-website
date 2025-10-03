@@ -5,39 +5,39 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Test Prioritization",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "Identify high-value test cases and rank them to maximize impact.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Script Creation",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Develop reliable automation scripts that evolve with product functionality.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Pipeline Integration",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Connect automated tests with the development workflow for real-time validation.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Execution & Reporting",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Run tests continuously and provide clear defect reports for quick resolution.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Feedback Loops",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Use results to drive product quality and reduce risks proactively.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Sustained Maintenance",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Regularly update test scripts to ensure ongoing product coverage.",
   },
 ];
 
