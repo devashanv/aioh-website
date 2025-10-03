@@ -25,11 +25,9 @@ const WebHero: React.FC = () => {
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          Crafting stunning and purposeful websites that serve as powerful
+          digital storefronts and platforms whether showcasing a business,
+          building a portfolio, sharing news, or enabling online learning.
         </p>
 
         {/* Mobile/Tablet Image Only */}

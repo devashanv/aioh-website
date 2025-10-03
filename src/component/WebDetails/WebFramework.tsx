@@ -5,39 +5,39 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Discovery & Planning",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "Collaborate with stakeholders to uncover business goals, define requirements, and establish a clear roadmap.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Concept & Validation",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Transform ideas into wireframes and interactive prototypes, validating functionality and design with real users.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Progressive Development",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Deliver functional website features in manageable cycles, ensuring consistent progress and early usability.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Quality Assurance",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Apply continuous testing for performance, compatibility, and accessibility to guarantee a seamless experience.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Stakeholder Checkpoints",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Share progress at regular intervals to gather feedback, refine priorities, and maintain alignment.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Launch & Evolve",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Deploy the site with confidence and enhance it through structured updates and long-term improvements.",
   },
 ];
 
