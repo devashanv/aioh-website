@@ -19,9 +19,9 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          SEO
+          Enhance Online Presence
           <br />
-          <span className="text-[#02ec97]">Content</span> Details
+          <span className="text-[#02ec97]">Through</span> SEO
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">

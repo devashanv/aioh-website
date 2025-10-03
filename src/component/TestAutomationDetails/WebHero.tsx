@@ -19,9 +19,9 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Test
+          Automate Precise, Reliable
           <br />
-          <span className="text-[#02ec97]">Automation </span>Solutions
+          <span className="text-[#02ec97]">Testing</span> Solutions
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
