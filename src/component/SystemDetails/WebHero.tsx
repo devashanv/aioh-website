@@ -19,7 +19,7 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          System
+          Web System
           <br />
           <span className="text-[#02ec97]">development</span> Content
         </motion.h1>
