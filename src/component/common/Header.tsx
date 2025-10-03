@@ -801,7 +801,7 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 </p>
 
                 {/* Scrollable Menu Items */}
-                <ul className="space-y-2 max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+                <ul className="space-y-2 max-h-60 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
                   {navItems
                     .find((i) => i.label === dropdownOpen)
                     ?.submenu?.map((cat) => {
@@ -1096,8 +1096,8 @@ const Header = ({ currentPath }: { currentPath: string }) => {
                 <NavLink
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="flex-1 text-center px-5 py-3 rounded-[30px] text-white font-medium bg-gradient-to-r from-green-500 to-teal-400"
-                  style={{ background: gradient }}
+                  className="flex-1 text-center px-5 py-3 rounded-[30px] text-white font-medium 
+             border-2 border-primary bg-transparent hover:bg-primary hover:text-white transition"
                 >
                   Contact Us
                 </NavLink>
