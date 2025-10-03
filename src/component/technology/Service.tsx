@@ -11,18 +11,25 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web Site Development",
+    title: "Web Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc1,
     path: "/technology/WebService",
   },
   {
-    title: "System Development",
+    title: "Web System Development",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc2,
     path: "/technology/SystemService",
+  },
+  {
+    title: "Standalone System Development",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc2,
+    path: "/technology/StandaloneSysDevService",
   },
   {
     title: "Mobile Application Development",
@@ -32,13 +39,19 @@ const services = [
     path: "/technology/MobileService",
   },
   {
-    title: "Search Engine Optimization (SEO)",
+    title: "AI Solutions",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc4,
-    path: "/technology/SEOService",
+    path: "/technology/AIService",
   },
-
+  {
+    title: "Test Automation Solutions",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/technology/TestAutomationService",
+  },
 ];
 
 const Service: React.FC = () => {

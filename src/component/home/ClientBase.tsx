@@ -414,7 +414,7 @@ const ClientBase: React.FC = () => {
           slidesToScroll={1}
           speed={1000}
           autoplay={true}
-          autoplaySpeed={2500}
+          autoplaySpeed={2000}
           dots={true}
           className="h-full w-full"
           responsive={[
@@ -422,21 +422,21 @@ const ClientBase: React.FC = () => {
               breakpoint: 1024,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 1,
+                slidesToScroll: 3,
               },
             },
             {
               breakpoint: 768,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
               },
             },
           ]}
         >
           {/* Each column is a slide, vertical logos, responsive */}
           {[
-            [EkhoElla, Aluviharaya, Logo2, Villa],
+            [EkhoElla, Logo2, Aluviharaya, Villa],
             [EkhoSafari, CCL, Eikone, GoAhead],
             [EkhoLake, HotelQueens, HotelSuisse, PanAsiaBank],
             [EkhoSigiriya, Dinunda, DoctoDO, Ehelepola],
@@ -457,7 +457,7 @@ const ClientBase: React.FC = () => {
                   <img
                     src={logo}
                     alt={`logo-mobile-${colIdx}-${rowIdx}`}
-                    className="object-contain w-24 h-14 xs:w-28 xs:h-16 sm:w-32 sm:h-20 md:w-36 md:h-24 min-w-0 max-w-full max-h-full filter grayscale hover:grayscale-0 hover:cursor-pointer"
+                    className="object-contain w-32 h-20 md:w-36 md:h-24 max-w-full max-h-full filter grayscale hover:grayscale-0 hover:cursor-pointer"
                   />
                 </div>
               ))}
