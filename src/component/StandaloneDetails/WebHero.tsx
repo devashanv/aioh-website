@@ -21,15 +21,13 @@ const WebHero: React.FC = () => {
         >
           Standalone
           <br />
-          <span className="text-[#02ec97]">System</span>Development
+          <span className="text-[#02ec97]">System</span> Development
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          Build powerful, independent software solutions that integrate complex
+          enterprise operations from resource management to point of sale and
+          educational administration.
         </p>
 
         {/* Mobile/Tablet Image Only */}

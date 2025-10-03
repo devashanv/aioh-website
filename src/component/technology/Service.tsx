@@ -13,42 +13,42 @@ const services = [
   {
     title: "Web Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Through custom web development, clients establish compelling, user-friendly websites that increase traffic and conversions",
     img: sc1,
     path: "/technology/WebService",
   },
   {
     title: "Web System Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Web system development automates key business processes such as HR, CRM, e-commerce, and bookings, improving efficiency and customer satisfaction.",
     img: sc2,
     path: "/technology/SystemService",
   },
   {
     title: "Standalone System Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Standalone systems like ERP and POS optimize resource management and daily operations, reducing costs and scaling capacity.",
     img: sc2,
     path: "/technology/StandaloneSysDevService",
   },
   {
     title: "Mobile Application Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Mobile app development extends client reach with intuitive, high-performance apps tailored to industry-specific needs, increasing user engagement and loyalty",
     img: sc3,
     path: "/technology/MobileService",
   },
   {
     title: "AI Solutions",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "AI solutions like chatbots and virtual assistants improve customer interaction and automate routine tasks, enhancing productivity.",
     img: sc4,
     path: "/technology/AIService",
   },
   {
     title: "Test Automation Solutions",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Test automation ensures product quality and faster delivery through reliable functional, regression, and performance testing integrated with CI/CD pipelines.",
     img: sc4,
     path: "/technology/TestAutomationService",
   },
@@ -91,9 +91,8 @@ const Service: React.FC = () => {
           Expertise That Powers Growth
         </motion.h1>
         <p className="md:w-5/6 lg:w-3/4 mt-4 text-sm lg:text-lg leading-6 md:leading-7 lg:leading-8 font-light text-center">
-          We deliver data-driven marketing services tailored to your brand
-          combining strategy, creativity, and technology to accelerate your
-          digital growth.
+          We empower businesses with IT solutions blending technology, support,
+          and security to drive growth and unlock digital potential.
         </p>
       </motion.div>
 
