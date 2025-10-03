@@ -27,7 +27,7 @@ function WebService() {
         </div>
 
         <section className="rounded-[20px] lg:mb-30 mb-20">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-0 lg:mt-14">
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-0 lg:mt-14 mt-10">
             <AboutHero />
           </div>
         </section>

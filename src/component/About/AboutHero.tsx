@@ -138,14 +138,14 @@ const AboutHero: React.FC = () => {
       >
         {/* Images Row */}
         <div className="w-full flex justify-between gap-4">
-          <div className="w-[50%] rounded-lg overflow-hidden">
+          <div className="w-[50%] rounded-[20px] overflow-hidden">
             <img
               src={Image1}
               alt="Collaboration"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-[50%] rounded-lg overflow-hidden">
+          <div className="w-[50%] rounded-[20px] overflow-hidden">
             <img
               src={Image2}
               alt="Office"
