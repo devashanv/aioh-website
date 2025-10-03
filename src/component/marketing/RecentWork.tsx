@@ -154,9 +154,7 @@ const projects: Project[] = [
     challengesIntro:
       "Nestled in Sri Lanka’s scenic hill country, Ekho Ella offers travelers a boutique stays surrounded by natural beauty. However, its digital presence did not reflect this charm. Social media engagement was minimal, reach remained limited, and the property struggled to connect with the right audience.",
     challenges: [
-      "Minimal social media engagement",
-      "Limited reach",
-      "Difficulty connecting with the right audience",
+      
     ],
     strategyIntro:
       "We crafted a content-first approach to highlight Ella’s breathtaking landscapes, hotel amenities, and unique guest experiences. This included:",
