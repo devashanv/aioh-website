@@ -2,15 +2,15 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import Header from "../../component/common/Header";
-import WebHero from "../../component/SystemDetails/WebHero";
+import WebHero from "../../component/AISolutionsDetails/WebHero";
 import Breadcrumb from "../../component/common/Breadcrumb";
-import WebFramework from "../../component/SystemDetails/WebFramework";
+import WebFramework from "../../component/AISolutionsDetails/WebFramework";
 import WebContact from "../../component/common/WebContact";
 import FooterTop from "../../component/common/FooterTop";
 import Footer from "../../component/common/Footer";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
-function SystemService() {
+function AISolutions() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -35,7 +35,7 @@ function SystemService() {
               levels={[
                 { label: "Home", path: "/" },
                 { label: "Technology", path: "/technology" },
-                { label: "Web System Development" },
+                { label: "AI Solutions" },
               ]}
             />
           </motion.div>
@@ -72,4 +72,4 @@ function SystemService() {
   );
 }
 
-export default SystemService;
+export default AISolutions;

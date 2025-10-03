@@ -21,6 +21,9 @@ import SystemService from "./pages/technology/SystemService";
 import MobileService from "./pages/technology/MobileService";
 import SEOService from "./pages/marketing/SEOService";
 import UIUXDetails from "./pages/design/UIUXDetails";
+import AISolutions from "./pages/technology/AISolutionsService";
+import StandaloneService from "./pages/technology/StandaloneSysDevService";
+import TestAutomationService from "./pages/technology/TestAutomationService";
 
 function App() {
   return (
@@ -82,6 +85,15 @@ function App() {
         <Route path="/technology/MobileService" element={<MobileService />} />
         <Route path="/technology/SEOService" element={<SEOService />} />
         <Route path="/technology/SystemService" element={<SystemService />} />
+        <Route path="/technology/AIService" element={<AISolutions />} />
+        <Route
+          path="/technology/StandaloneSysDevService"
+          element={<StandaloneService />}
+        />
+        <Route
+          path="/technology/TestAutomationService"
+          element={<TestAutomationService />}
+        />
       </Routes>
     </Router>
   );

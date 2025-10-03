@@ -17,10 +17,10 @@ import UnknownCS from '../../assets/caseStudies/04.webp'
 const SuccessStoriesNew = () => {
     const slides = [
         {
-            title: "Rental Car Website Development",
-            client: "- Kandy Rental Car -",
+            title: "Developed museum website showcasing Kandyan heritage, boosting visibility globally.",
+            client: "- Sri Dalada Maligawa -",
             description:
-                "Designed and developed a responsive, user-friendly website for a car rental service, featuring real-time vehicle availability, booking functionality, and location-based search to enhance customer experience and streamline operations.",
+                "",
             challenges: [
                 "Simplifying a complicated design process",
                 "Giving consumers a seamless digital experience when designing their car",
@@ -41,10 +41,10 @@ const SuccessStoriesNew = () => {
             },
         },
         {
-            title: "Food Delivery App Design",
-            client: "- Colombo Eats -",
+            title: "Heritage storytelling unlocks 964.3% surge in organic engagement ",
+            client: "- Hotel Queens -",
             description:
-                "Built a mobile-first food delivery platform with real-time tracking, order management, and seamless payment integration to enhance customer engagement and operational efficiency.",
+                "",
             challenges: [
                 "Optimizing delivery routes",
                 "Integrating multiple payment options",
@@ -65,10 +65,10 @@ const SuccessStoriesNew = () => {
             },
         },
         {
-            title: "Food Delivery App Design",
-            client: "- Colombo Eats -",
+            title: "Built responsive website for Regency Travel House, boosting engagement and trust.",
+            client: "- Regency Travel House  -",
             description:
-                "Built a mobile-first food delivery platform with real-time tracking, order management, and seamless payment integration to enhance customer engagement and operational efficiency.",
+                "",
             challenges: [
                 "Optimizing delivery routes",
                 "Integrating multiple payment options",
@@ -89,10 +89,10 @@ const SuccessStoriesNew = () => {
             },
         },
         {
-            title: "Food Delivery App Design",
-            client: "- Colombo Eats -",
+            title: "Designed corporate website for Winchester Global, enhancing accessibility and presence",
+            client: "- Winchester Global  -",
             description:
-                "Built a mobile-first food delivery platform with real-time tracking, order management, and seamless payment integration to enhance customer engagement and operational efficiency.",
+                "",
             challenges: [
                 "Optimizing delivery routes",
                 "Integrating multiple payment options",
@@ -113,10 +113,10 @@ const SuccessStoriesNew = () => {
             },
         },
         {
-            title: "Food Delivery App Design",
-            client: "- Colombo Eats -",
+            title: "Selling Out Emirates Aviation Collectibles with a 1043% ROI ",
+            client: "- Wincraft -",
             description:
-                "Built a mobile-first food delivery platform with real-time tracking, order management, and seamless payment integration to enhance customer engagement and operational efficiency.",
+                "",
             challenges: [
                 "Optimizing delivery routes",
                 "Integrating multiple payment options",
@@ -137,10 +137,10 @@ const SuccessStoriesNew = () => {
             },
         },
         {
-            title: "Food Delivery App Design",
-            client: "- Colombo Eats -",
+            title: "Cutting Cost per Lead by 78% with Smarter Targeting ",
+            client: "- UK Education Consultancy -",
             description:
-                "Built a mobile-first food delivery platform with real-time tracking, order management, and seamless payment integration to enhance customer engagement and operational efficiency.",
+                "",
             challenges: [
                 "Optimizing delivery routes",
                 "Integrating multiple payment options",
@@ -236,7 +236,7 @@ const SuccessStoriesNew = () => {
                         <div
                             className="absolute w-1/3 text-white top-1/2 right-5 lg:right-16 transform -translate-y-1/2 flex flex-col gap-2 z-10 p-2">
                             <p
-                                className='text-[32px] md:text-[48px] lg:text-[52px] font-medium text-left leading-15'>
+                                className='text-[32px]  lg:text-[52px] font-medium text-left leading-15'>
                                 {slide.title}
                             </p>
 
@@ -296,9 +296,9 @@ const SuccessStoriesNew = () => {
 
                         {/* middle content */}
                         <div
-                            className="absolute w-1/2 text-white top-1/3 -mt-10 right-5 lg:right-16 transform -translate-y-1/2 flex flex-col gap-2 z-10 p-2">
+                            className="absolute w-2/3 text-white top-1/3 -mt-10 right-5 lg:right-16 transform -translate-y-1/2 flex flex-col gap-2 z-10 p-2">
                             <p
-                                className='text-[30px] md:text-[48px] lg:text-[52px] font-medium text-left leading-10'>
+                                className='text-[20px] md:text-[32px] lg:text-[52px] font-medium text-left leading-10'>
                                 {slide.title}
                             </p>
 
