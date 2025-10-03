@@ -19,14 +19,15 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          SEO
+          Create Stunning,
           <br />
-          <span className="text-[#02ec97]">Content</span> Details
+          <span className="text-[#02ec97]">User-Centered</span> Designs
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-Create captivating and intuitive digital experiences that truly connect by blending insightful user
-research, brand storytelling, and iterative design practices aimed at delighting users.
+          Create captivating and intuitive digital experiences that truly
+          connect by blending insightful user research, brand storytelling, and
+          iterative design practices aimed at delighting users.
         </p>
 
         {/* Mobile/Tablet Image Only */}
