@@ -7,8 +7,7 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/UIUXDetails/WebHero";
 import WebFramework from "../../component/UIUXDetails/WebFramework";
-import WebContact from "../../component/UIUXDetails/WebContact";
-import WebRecentWork from "../../component/UIUXDetails/WebRecentWork";
+import WebContact from "../../component/common/WebContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function UIUXDetails() {
@@ -51,16 +50,6 @@ function UIUXDetails() {
         <section className="bg-[#01213A] rounded-[20px] lg:mb-30 mb-20">
           <div className="w-11/12 mx-auto">
             <WebFramework />
-          </div>
-        </section>
-
-        {/* Section 3 */}
-        <section
-          id="WebRecentWork"
-          className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
-        >
-          <div className="w-11/12 mx-auto">
-            <WebRecentWork />
           </div>
         </section>
 
