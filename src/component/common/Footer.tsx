@@ -120,10 +120,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/marketing/content-marketing"
+                  to="/marketing/creative-marketing"
                   className="hover:text-[#02EC97]"
                 >
-                  Content Marketing
+                  creative Marketing
                 </Link>
               </li>
               <li>
