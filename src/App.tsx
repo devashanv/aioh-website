@@ -24,6 +24,9 @@ import UIUXDetails from "./pages/design/UIUXDetails";
 import AISolutions from "./pages/technology/AISolutionsService";
 import StandaloneService from "./pages/technology/StandaloneSysDevService";
 import TestAutomationService from "./pages/technology/TestAutomationService";
+import PayPerClickService from "./pages/marketing/Pay-per-clickDetails";
+import EmailMarketingService from "./pages/marketing/EmailMarketing";
+import BrandingService from "./pages/marketing/Branding";
 
 function App() {
   return (
@@ -51,13 +54,22 @@ function App() {
           element={<ManagementDetails />}
         />
         <Route
-          path="/marketing/conversion-rate-optimization"
+          path="/marketing/lead-generation-&-conversion-rate-optimization"
           element={<OptimizationDetails />}
         />
         <Route
-          path="/marketing/content-marketing"
+          path="/marketing/creative-marketing"
           element={<MarketingDetails />}
         />
+        <Route
+          path="/marketing/pay-per-click-marketing"
+          element={<PayPerClickService />}
+        />
+        <Route
+          path="/marketing/email-marketing"
+          element={<EmailMarketingService />}
+        />
+        <Route path="/marketing/branding" element={<BrandingService />} />
         <Route
           path="/marketing/search-engine-optimization"
           element={<SEOService />}
