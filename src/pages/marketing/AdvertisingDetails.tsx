@@ -35,7 +35,7 @@ function AdevertisingService() {
               levels={[
                 { label: "Home", path: "/" },
                 { label: "Marketing", path: "/marketing" },
-                { label: "Advertising Details" },
+                { label: "Social Media Advertising Details" },
               ]}
             />
           </motion.div>
