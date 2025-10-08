@@ -141,30 +141,7 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "Conversion Rate Optimization",
-        items: [
-          {
-            title: "Social Media",
-            description: "Engage with audiences.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/social",
-          },
-          {
-            title: "Email",
-            description: "Convert with campaigns.",
-            icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email",
-          },
-          {
-            title: "Influencer",
-            description: "Partner with creators.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/influencer",
-          },
-        ],
-      },
-      {
-        label: "Content Marketing",
+        label: "Lead generation, & Conversion Rate Optimization",
         items: [
           {
             title: "Social Media",
@@ -246,6 +223,98 @@ const navItems: NavItem[] = [
               "Identify high-value keywords to target the right audience.",
             icon: <HiOutlineUser className="text-black" />,
             to: "/marketing/seo/keyword-research",
+          },
+        ],
+      },
+      {
+        label: "Pay-Per-Click Marketing",
+        items: [
+          {
+            title: "Social Media",
+            description: "Engage with audiences.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/social",
+          },
+          {
+            title: "Email",
+            description: "Convert with campaigns.",
+            icon: <HiOutlineEnvelope className="text-black" />,
+            to: "/marketing/email",
+          },
+          {
+            title: "Influencer",
+            description: "Partner with creators.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/influencer",
+          },
+        ],
+      },
+      {
+        label: "Email Marketing",
+        items: [
+          {
+            title: "Social Media",
+            description: "Engage with audiences.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/social",
+          },
+          {
+            title: "Email",
+            description: "Convert with campaigns.",
+            icon: <HiOutlineEnvelope className="text-black" />,
+            to: "/marketing/email",
+          },
+          {
+            title: "Influencer",
+            description: "Partner with creators.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/influencer",
+          },
+        ],
+      },
+      {
+        label: "Branding",
+        items: [
+          {
+            title: "Social Media",
+            description: "Engage with audiences.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/social",
+          },
+          {
+            title: "Email",
+            description: "Convert with campaigns.",
+            icon: <HiOutlineEnvelope className="text-black" />,
+            to: "/marketing/email",
+          },
+          {
+            title: "Influencer",
+            description: "Partner with creators.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/influencer",
+          },
+        ],
+      },
+      {
+        label: "Creative Marketing",
+        items: [
+          {
+            title: "Social Media",
+            description: "Engage with audiences.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/social",
+          },
+          {
+            title: "Email",
+            description: "Convert with campaigns.",
+            icon: <HiOutlineEnvelope className="text-black" />,
+            to: "/marketing/email",
+          },
+          {
+            title: "Influencer",
+            description: "Partner with creators.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/influencer",
           },
         ],
       },
