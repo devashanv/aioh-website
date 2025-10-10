@@ -1,8 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-import Logo2 from "../../assets/img/logos/logo (2).webp"; // Cafe Lavia logo
-
+import CafeLavia from "../../assets/clients/cafelavia.webp";
 import GOV from "../../assets/clients/gov.png";
 import Aluviharaya from "../../assets/clients/aluviharaya.png";
 import Nafco from "../../assets/clients/nafco.png";
@@ -371,7 +370,7 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Logo2}
+                src={CafeLavia}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
@@ -458,7 +457,7 @@ const ClientBase: React.FC = () => {
             [EkhoLake, Regency, Dinunda, Pussllawa],
             [EkhoSigiriya, NutriCrop, CCL, QB],
             [EkhoSurf, SeniorCargo, TKC, Trillium],
-            [Logo2, Aluviharaya, Nafco, Reviz],
+            [CafeLavia, Aluviharaya, Nafco, Reviz],
           ].map((col, colIdx) => (
             <div
               key={colIdx}
