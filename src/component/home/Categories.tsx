@@ -34,12 +34,12 @@ const Categories: React.FC = () => {
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
 
               {/* chips */}
-              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5">
+              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5 text-sm md:text-base">
                 <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
                   SEO
                 </p>
                 <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
-                  growth strategies
+                  Growth Strategies
                 </p>
                 <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
                   Paid ads
@@ -74,6 +74,25 @@ const Categories: React.FC = () => {
             <section className="relative h-8/12 rounded-[20px] w-full ">
               {/* gradient */}
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
+
+              {/* chips */}
+              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5 text-sm md:text-base">
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Web Solutions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Software Solutions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Mobile Apps
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  AI Solutions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Test Automation
+                </p>
+              </div>
 
               <img
                 src={TechnologyImg}
@@ -111,6 +130,34 @@ const Categories: React.FC = () => {
             <section className="relative h-8/12 rounded-[20px] w-full ">
               {/* gradient */}
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
+
+              {/* chips */}
+              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5 text-sm md:text-base">
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Visual Story Telling
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Photography
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Brand Identity
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Content
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Packaging
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Promotions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Creativity
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  UI/UX
+                </p>
+              </div>
 
               <img
                 src={DesignImg}
