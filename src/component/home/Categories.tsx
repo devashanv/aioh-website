@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MarketingImg from "../../assets/img/sample/marketing.gif";
-import TechnologyImg from "../../assets/img/sample/technology.gif";
-import DesignImg from "../../assets/img/sample/design.gif";
+import MarketingGif from "../../assets/img/marketing.gif";
+import TechnologyGif from "../../assets/img/technology.gif";
+import DesignGif from "../../assets/img/design.gif";
 import ExploreIcon from "../../assets/img/icons/project-explore.svg";
 
 const Categories: React.FC = () => {
@@ -59,7 +59,7 @@ const Categories: React.FC = () => {
               </div>
 
               <img
-                src={MarketingImg}
+                src={MarketingGif}
                 alt=""
                 className="w-full h-full object-cover rounded-[20px]"
               />
@@ -95,7 +95,7 @@ const Categories: React.FC = () => {
               </div>
 
               <img
-                src={TechnologyImg}
+                src={TechnologyGif}
                 alt=""
                 className="w-full h-full object-cover rounded-[20px]"
               />
@@ -160,7 +160,7 @@ const Categories: React.FC = () => {
               </div>
 
               <img
-                src={DesignImg}
+                src={DesignGif}
                 alt=""
                 className="w-full h-full object-cover rounded-[20px]"
               />

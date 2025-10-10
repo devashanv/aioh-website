@@ -16,13 +16,13 @@ const directorData = [
   {
     id: 2,
     quote:
-      "Together with our clients and team, we continue to challenge limits and redefine success. Our strategy is rooted in long-term vision and purposeful action.",
+      "We think like our customers, understand their stories, and turn insights into action that delivers real results. We are not here to give the best solution, what we deliver is the most profitable one.",
     role: "COO",
   },
   {
     id: 3,
     quote:
-      "Leadership is about inspiring change and pushing boundaries. We believe in collaboration, transparency, and making an impact that matters.",
+      "We are committed to design technology that drives growth and innovation. Our mission is to turn challenges into smart, future-ready solutions that create real impact and help businesses grow stronger through a powerful digital presence.",
     role: "CTO",
   },
 ];
