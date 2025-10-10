@@ -10,8 +10,8 @@ const directorData = [
   {
     id: 1,
     quote:
-      "At the heart of our company is a commitment to innovation, integrity, and impact. we’re shaping a smarter, more connected world.",
-    role: "CEO",
+      "We believe the future belongs to those with vision and courage. Through technology, creativity, and strategy, we empower businesses and communities to achieve purposeful growth and build a smarter, brighter future together.",
+    role: "Founder & CEO",
   },
   {
     id: 2,
@@ -95,17 +95,17 @@ const Message: React.FC = () => {
                 />
                 {/* Content on top of white background */}
                 <div className="absolute inset-0 px-4 pb-8 flex flex-col justify-between">
-                  <div className="space-y-2">
+                  <div className="space-y-0">
                     <img
                       src={quotesSvg}
                       alt="quote"
-                      className="md:w-16 md:h-16 w-12 h-12 px-0"
+                      className="md:w-14 md:h-14 w-10 h-10 px-0 mt-1"
                     />
-                    <p className="md:text-[16px] text-[14px] leading-relaxed text-black/80 ml-4">
+                    <p className="md:text-[16px] text-xs leading-relaxed text-black/80 ml-4">
                       {director.quote}
                     </p>
                   </div>
-                  <p className="text-sm font-semibold text-black/70 text-right">
+                  <p className="text-sm font-semibold text-black/70 text-right mt-0.5">
                     — {director.role}
                   </p>
                 </div>
