@@ -147,14 +147,16 @@ const Footer = () => {
 
           {/* Column 3 */}
           <div className="lg:ml-40 lg:w-full md:ml-0">
-            <h3 className="text-[18px] font-medium mb-3">Standout Services</h3>
+            <h3 className="text-[18px] font-medium mb-3">
+              Expert IT Solutions
+            </h3>
             <ul className="space-y-2 text-[#F5F5F5]">
               <li>
                 <Link
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Web Development
+                  UI/UX Design
                 </Link>
               </li>
               <li>
@@ -162,7 +164,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Web System Development
+                  Web Development
                 </Link>
               </li>
               <li>
@@ -186,7 +188,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Test Automation Solutions
+                  Search Engine Optimization
                 </Link>
               </li>
             </ul>

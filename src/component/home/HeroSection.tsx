@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
           <div className="h-80 w-full lg:block hidden">
             <HeroCardSlider />
           </div>
-          <div className="h-80 w-full lg:hidden block flex items-center justify-center">
+          <div className="h-80 w-full lg:hidden flex items-center justify-center">
             <MobileSlider options={OPTIONS} />
           </div>
 
