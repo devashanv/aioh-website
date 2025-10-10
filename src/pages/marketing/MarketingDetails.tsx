@@ -35,7 +35,7 @@ function MarketingService() {
               levels={[
                 { label: "Home", path: "/" },
                 { label: "Marketing", path: "/marketing" },
-                { label: "Marketing Details" },
+                { label: "Creative Marketing Service" },
               ]}
             />
           </motion.div>

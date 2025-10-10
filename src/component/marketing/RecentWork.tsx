@@ -153,9 +153,7 @@ const projects: Project[] = [
       "Scenic storytelling and organic strategy delivered a 193% lift in reach",
     challengesIntro:
       "Nestled in Sri Lanka’s scenic hill country, Ekho Ella offers travelers a boutique stays surrounded by natural beauty. However, its digital presence did not reflect this charm. Social media engagement was minimal, reach remained limited, and the property struggled to connect with the right audience.",
-    challenges: [
-      
-    ],
+    challenges: [],
     strategyIntro:
       "We crafted a content-first approach to highlight Ella’s breathtaking landscapes, hotel amenities, and unique guest experiences. This included:",
     strategy: [
@@ -364,8 +362,8 @@ const RecentWork: React.FC = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="w-11/12 md:w-3/4 lg:w-1/2 mt-4 text-sm lg:text-lg leading-6 md:leading-7 lg:leading-8 font-light text-center"
         >
-          Explore our recent projects to see how strategy, creativity, and
-          performance come together to drive meaningful results for our clients.
+          Explore our recent projects to see how Marketing, Data & Technology
+          come together to drive meaningful results for our clients.
         </motion.p>
       </motion.div>
 

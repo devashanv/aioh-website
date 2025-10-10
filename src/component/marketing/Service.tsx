@@ -8,7 +8,6 @@ import sc4 from "../../assets/img/services/cro.webp";
 import sc5 from "../../assets/img/services/ds.webp";
 import sc6 from "../../assets/img/services/SEO.webp";
 
-
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
@@ -35,28 +34,55 @@ const services = [
     path: "/marketing/social-media-management",
   },
   {
-    title: "Conversion Rate Optimization",
+    title: "Lead generation, & Conversion Rate Optimization",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
     img: sc4,
-    path: "/marketing/conversion-rate-optimization",
+    path: "/marketing/lead-generation-&-conversion-rate-optimization",
   },
   {
-    title: "Content Marketing",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc5,
-    path: "/marketing/content-marketing",
-  },
-    {
     title: "Search Engine Optimization (SEO)",
     description:
       "We optimize your website and content to improve search engine rankings, increase organic traffic, and attract more potential customers.",
     img: sc6,
     path: "/marketing/search-engine-optimization",
   },
+  {
+    title: "Pay-Per-Click Marketing",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/marketing/pay-per-click-marketing",
+  },
+  {
+    title: "Email Marketing",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/marketing/email-marketing",
+  },
+  {
+    title: "Branding",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/marketing/branding",
+  },
+  {
+    title: "Creative Marketing",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc5,
+    path: "/marketing/creative-marketing",
+  },
+  // {
+  //   title: "Website Development",
+  //   description:
+  //     "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+  //   img: sc5,
+  //   path: "/marketing/content-marketing",
+  // },
 ];
-
 
 const Service: React.FC = () => {
   const navigate = useNavigate();

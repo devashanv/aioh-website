@@ -584,7 +584,7 @@ const ContactForm: React.FC = () => {
           >
             <p className="text-[18px] font-normal mb-1">Address :</p>
             <p className="text-[16px] text-[#191818] leading-[24px] font-light">
-              3rd Floor, All in one Holdings, <br />
+              {/* 3rd Floor, All in one Holdings, <br /> */}
               349/2/1 Katugastota Rd, <br />
               Kandy, Sri Lanka.
             </p>

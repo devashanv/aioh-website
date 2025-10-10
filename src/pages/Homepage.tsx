@@ -56,15 +56,16 @@ function Homepage() {
         {/* team */}
         <section
           className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-0 mt-20"
-          id="">
+          id=""
+        >
           <Team />
         </section>
-
 
         {/* Tech Stack */}
         <section
           className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full lg:mt-0 mt-15"
-          id="techstack">
+          id="techstack"
+        >
           <video
             width="640"
             autoPlay
@@ -74,7 +75,6 @@ function Homepage() {
           >
             <source src={AnimationVideo} type="video/mp4" />
           </video>
-
         </section>
 
         {/* Core Services */}
@@ -97,9 +97,9 @@ function Homepage() {
 
         <section
           className="mb-3.5 px-1 lg:p-3.5 h-[80dvh] lg:h-[100dvh] lg:mt-30 mt-20"
-          id="success">
-          <div
-            className="w-full lg:hidden text-black text-center top-5 left-5 transform flex flex-col gap-2 z-10 p-2">
+          id="success"
+        >
+          <div className="w-full lg:hidden text-black text-center top-5 left-5 transform flex flex-col gap-2 z-10 p-2">
             <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3">
               Some of, our works
             </h1>
