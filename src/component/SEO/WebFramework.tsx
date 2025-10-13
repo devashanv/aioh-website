@@ -5,55 +5,47 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Goal Setting",
+    title: "Deep SEO Audit of Your Current Situation",
     description:
-      "Define business objectives, target audience, and competitor benchmarks to align SEO efforts.",
+      "We analyze your website, see why you're not ranking, and identify exactly what's holding you back. Then we show you the fastest path to page one.",
   },
   {
     number: "02",
-    title: "Technical Setup",
+    title: "Keyword Research That Targets Real Buyers",
     description:
-      "Configure Google Analytics, Search Console, and XML sitemaps while resolving errors and redirects.",
+      "We find the exact words your customers type into Google when they're ready to buy. Not just high-volume keywords—the ones that actually bring you revenue.",
   },
   {
     number: "03",
-    title: "Content & Structure",
+    title: "On-Page Optimization That Google Loves",
     description:
-      "Optimize Google My Business, refine URLs, implement breadcrumbs, and address duplicate content.",
+      "We optimize your website content, titles, meta descriptions, images, and technical elements so Google understands what you offer and ranks you higher for the right searches.",
   },
   {
     number: "04",
-    title: "On-Page Optimization",
+    title: "Content Strategy That Ranks and Converts",
     description:
-      "Enhance meta tags, headers, image attributes, and internal linking for stronger relevance.",
+      "Our experienced writers create content that both Google and your customers love. Blog posts, service pages, and resources that bring traffic AND turn visitors into customers.",
   },
   {
     number: "05",
-    title: "User-Focused Enhancements",
+    title: "Local SEO for Local Businesses",
     description:
-      "Develop FAQ pages, improve mobile usability, and ensure engaging, accessible content.",
+      "If you serve a specific area, we make sure you dominate local searches. Google Maps, local listings, reviews—we optimize everything so nearby customers find you first.",
   },
   {
     number: "06",
-    title: "Performance Monitoring",
+    title: "Link Building From Quality Sources",
     description:
-      "Track metrics, analyze keyword rankings, and refine elements like meta descriptions for higher CTR.",
+      "We get authoritative websites to link back to yours, telling Google you're trustworthy and relevant. More quality links = higher rankings = more customers.",
   },
   {
     number: "07",
-    title: "Reporting",
+    title: "Monthly Reports You Can Actually Understand",
     description:
-      "Provide regular SEO reports highlighting progress, challenges, and opportunities.",
-  },
-  {
-    number: "08",
-    title: "Continuous Maintenance",
-    description:
-      "Deliver ongoing updates and adapt strategies to algorithm changes for long-term growth.",
+      "See your keyword rankings climb, track your website traffic growth, and watch leads increase month after month. Clear data showing exactly how SEO is growing your business.",
   },
 ];
-
-
 
 const WebFramework: React.FC = () => {
   /* ---------- state & refs for mobile view ---------- */
@@ -133,7 +125,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Get You to the Top of Search engines
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -169,7 +161,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Get You to the Top of Search engines
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products
