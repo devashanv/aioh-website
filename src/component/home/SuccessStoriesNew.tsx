@@ -78,13 +78,13 @@ const SuccessStoriesNew = () => {
         },
       },
       popupData: {
-        title: "Ehelepola Website",
+        title: "Ehelepola Walawwa Website",
         description:
           "The official website for the Ehelepola Walawwa Wax Museum in Kandy, Sri Lanka.",
         image: dumy,
         link: "https://ehelepolawalawwa.lk/",
         description2:
-          "EhelepolaWalawwa is the official web presence for the Ehelepola Walawwa Wax Museum, a recently opened cultural heritage museum in Kandy, Sri Lanka, located in the historic Ehelepola Walawwa. The website promotes the museum, presents its exhibits, shares its historical significance, and provides clear information for visitors, both local and international. With a design focused on authenticity and accessibility, the platform highlights Kandyan history while introducing the unique wax museum experience to wider audiences.",
+          "Ehelepola Walawwa is the official web presence for the Ehelepola Walawwa Wax Museum, a recently opened cultural heritage museum in Kandy, Sri Lanka, located in the historic Ehelepola Walawwa. The website promotes the museum, presents its exhibits, shares its historical significance, and provides clear information for visitors, both local and international. With a design focused on authenticity and accessibility, the platform highlights Kandyan history while introducing the unique wax museum experience to wider audiences.",
         challenges: [
           "Communicating the deep historical and cultural background of the Ehelepola Walawwa in an engaging manner was complex.",
           "Introducing the waxworks museum concept to an audience familiar with traditional heritage sites required careful positioning.",
