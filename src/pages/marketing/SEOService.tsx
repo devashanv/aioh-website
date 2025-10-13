@@ -5,9 +5,10 @@ import Header from "../../component/common/Header";
 import WebHero from "../../component/SEO/WebHero";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebFramework from "../../component/SEO/WebFramework";
-import WebContact from "../../component/common/WebContact";
+import WebContact from "../../component/common/DetailsPageContact";
 import FooterTop from "../../component/common/FooterTop";
 import Footer from "../../component/common/Footer";
+import WebRecentWork from "../../component/SEO/RecentWork";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function SEOService() {
@@ -54,6 +55,16 @@ function SEOService() {
         </section>
 
         {/* Section 3 */}
+        <section
+          id="WebRecentWork"
+          className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
+        >
+          <div className="w-11/12 mx-auto">
+            <WebRecentWork />
+          </div>
+        </section>
+
+        {/* Section 4 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
           <WebContact />
         </section>

@@ -7,7 +7,8 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/OptimizationDetails/WebHero";
 import WebFramework from "../../component/OptimizationDetails/WebFramework";
-import WebContact from "../../component/common/WebContact";
+import WebContact from "../../component/common/DetailsPageContact";
+import WebRecentWork from "../../component/OptimizationDetails/RecentWork";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function OptimizationService() {
@@ -54,6 +55,16 @@ function OptimizationService() {
         </section>
 
         {/* Section 3 */}
+        <section
+          id="WebRecentWork"
+          className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
+        >
+          <div className="w-11/12 mx-auto">
+            <WebRecentWork />
+          </div>
+        </section>
+
+        {/* Section 4 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
           <WebContact />
         </section>
