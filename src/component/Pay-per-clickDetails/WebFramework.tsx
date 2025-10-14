@@ -6,39 +6,45 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Find the Keywords That Actually Make Money",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We target search terms from people ready to buy RIGHT NOW—not tire-kickers. High-intent keywords that bring customers with credit cards in hand, not just curious browsers.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Create Ads That Get Clicked",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Compelling headlines, benefit-driven copy, and clear calls-to-action. We write ads that stand out from competitors and make people want to click yours instead of theirs.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Build Landing Pages That Convert",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Getting clicks is easy. Turning clicks into customers is the real skill. We create or optimize landing pages designed to convert visitors into leads and sales—not just pretty pages that do nothing.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Smart Budget Management",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "We don't waste your money. We start with strategic testing, kill what doesn't work fast, and scale what does. Your budget goes only to campaigns that actually deliver ROI.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Track Every Dollar You Spend",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Know exactly how much you're spending, how many leads you're getting, and how much revenue you're making. Complete transparency with conversion tracking that shows your real return on investment.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Continuous Testing and Optimization",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "We constantly test ad copy, keywords, audiences, bidding strategies, and landing pages. Small improvements add up to massive savings and better results month after month.",
+  },
+  {
+    number: "07",
+    title: "Multi-Platform Expertise",
+    description:
+      "Google Ads, Bing Ads, Facebook Ads, Instagram Ads, LinkedIn Ads—we know which platforms work best for your business and how to dominate them all.",
   },
 ];
 
@@ -120,7 +126,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Make PPC Profitable for You
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -156,7 +162,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Make PPC Profitable for You
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

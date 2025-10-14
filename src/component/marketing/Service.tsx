@@ -5,7 +5,7 @@ import sc1 from "../../assets/img/services/bsy.webp";
 import sc2 from "../../assets/img/services/sma.webp";
 import sc3 from "../../assets/img/services/smm.webp";
 import sc4 from "../../assets/img/services/cro.webp";
-import sc5 from "../../assets/img/services/ds.webp";
+// import sc5 from "../../assets/img/services/ds.webp";
 import sc6 from "../../assets/img/services/SEO.webp";
 
 import { GoArrowUpRight } from "react-icons/go";
@@ -68,20 +68,20 @@ const services = [
     img: sc4,
     path: "/marketing/branding",
   },
-  {
-    title: "Creative Marketing",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc5,
-    path: "/marketing/creative-marketing",
-  },
   // {
-  //   title: "Website Development",
+  //   title: "Creative Marketing",
   //   description:
   //     "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
   //   img: sc5,
-  //   path: "/marketing/content-marketing",
+  //   path: "/marketing/creative-marketing",
   // },
+  {
+    title: "Website Development",
+    description:
+      "Through custom web development, clients establish compelling, user-friendly websites that increase traffic and conversions",
+    img: sc1,
+    path: "/technology/WebService",
+  },
 ];
 
 const Service: React.FC = () => {

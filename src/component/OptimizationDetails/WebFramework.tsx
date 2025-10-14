@@ -5,39 +5,39 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Platform-Specific Strategy That Works",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We don't use the same approach everywhere. Based on years of experience across different platforms, regions, and industries, we create a custom mix that actually works for YOUR business.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Expert Campaign Management",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "From Facebook and Instagram to Google and LinkedIn—we manage millions in ad spend across B2C and B2B businesses. You get proven strategies, not experiments on your budget.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "A/B Testing Everything for Maximum Conversions",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "We test ad copy, images, headlines, landing pages—everything. We figure out exactly what makes your customers click 'buy' and then scale it. No guesswork, just data-driven results.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "SEO That Brings Organic Leads",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Paid ads work fast, SEO builds lasting results. We combine both—using professional tools and experienced writers to get you found on Google while your ads run. Double the leads, smarter spending.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Track Every Lead Back to Its Source",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Know exactly where your customers are coming from—which ad, which platform, which keyword. We set up proper tracking so you can see what's making money and what's wasting it.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Real-Time Dashboards You Can Actually Understand",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "No complicated reports. See your campaign performance, monitor incoming leads, and track conversions in real-time. Make smart decisions fast based on live data, not last month's guesses.",
   },
 ];
 
@@ -119,7 +119,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Turn Leads Into Sales
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +155,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Turn Leads Into Sales
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

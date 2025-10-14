@@ -19,17 +19,19 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Branding
+          Build a Brand People
           <br />
-          <span className="text-[#02ec97]">Services</span>
+          <span className="text-[#02ec97]">Actually </span>Remember
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          Your business blends into the crowd. Customers can't tell you apart
+          from competitors. You're competing on price because you haven't given
+          people a better reason to choose you. Or maybe you just started and
+          have no idea how to position yourself in a crowded market. A strong
+          brand isn't just a logo—it's the feeling people get when they hear
+          your name. We help you build a brand that stands out, connects
+          emotionally, and makes customers choose you over everyone else.
         </p>
 
         {/* Mobile/Tablet Image Only */}
@@ -41,8 +43,8 @@ const WebHero: React.FC = () => {
           />
         </div>
 
-        {/* <button
-          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
+        <button
+          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
             if (section) {
@@ -51,7 +53,7 @@ const WebHero: React.FC = () => {
           }}
         >
           Explore Our Portfolio
-        </button> */}
+        </button>
       </motion.div>
 
       {/* Right Side: Desktop Image */}

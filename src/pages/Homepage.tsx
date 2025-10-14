@@ -71,7 +71,7 @@ function Homepage() {
             autoPlay
             loop
             muted
-            className="w-full rounded-[20px] lg:h-100"
+            className="w-full rounded-[20px] lg:h-100 object-cover"
           >
             <source src={AnimationVideo} type="video/mp4" />
           </video>

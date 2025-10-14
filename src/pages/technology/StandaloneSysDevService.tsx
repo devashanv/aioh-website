@@ -5,7 +5,7 @@ import Header from "../../component/common/Header";
 import WebHero from "../../component/StandaloneDetails/WebHero";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebFramework from "../../component/StandaloneDetails/WebFramework";
-import WebContact from "../../component/common/WebContact";
+import WebContact from "../../component/common/DetailsPageContact";
 import FooterTop from "../../component/common/FooterTop";
 import Footer from "../../component/common/Footer";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
