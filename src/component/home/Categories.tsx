@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MarketingImg from "../../assets/img/sample/marketing.gif";
-import TechnologyImg from "../../assets/img/sample/technology.gif";
-import DesignImg from "../../assets/img/sample/design.gif";
+import MarketingGif from "../../assets/img/marketing.gif";
+import TechnologyGif from "../../assets/img/technology.gif";
+import DesignGif from "../../assets/img/design.gif";
 import ExploreIcon from "../../assets/img/icons/project-explore.svg";
 
 const Categories: React.FC = () => {
@@ -34,12 +34,12 @@ const Categories: React.FC = () => {
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
 
               {/* chips */}
-              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5">
+              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5 text-sm md:text-base">
                 <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
                   SEO
                 </p>
                 <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
-                  growth strategies
+                  Growth Strategies
                 </p>
                 <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
                   Paid ads
@@ -59,7 +59,7 @@ const Categories: React.FC = () => {
               </div>
 
               <img
-                src={MarketingImg}
+                src={MarketingGif}
                 alt=""
                 className="w-full h-full object-cover rounded-[20px]"
               />
@@ -75,8 +75,27 @@ const Categories: React.FC = () => {
               {/* gradient */}
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
 
+              {/* chips */}
+              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5 text-sm md:text-base">
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Web Solutions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Software Solutions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Mobile Apps
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  AI Solutions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Test Automation
+                </p>
+              </div>
+
               <img
-                src={TechnologyImg}
+                src={TechnologyGif}
                 alt=""
                 className="w-full h-full object-cover rounded-[20px]"
               />
@@ -112,8 +131,36 @@ const Categories: React.FC = () => {
               {/* gradient */}
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
 
+              {/* chips */}
+              <div className="w-full h-auto absolute bottom-2 flex flex-wrap gap-3 px-5 text-sm md:text-base">
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Visual Story Telling
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Photography
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Brand Identity
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Content
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Packaging
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Promotions
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  Creativity
+                </p>
+                <p className="py-2 px-3 w-auto text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                  UI/UX
+                </p>
+              </div>
+
               <img
-                src={DesignImg}
+                src={DesignGif}
                 alt=""
                 className="w-full h-full object-cover rounded-[20px]"
               />

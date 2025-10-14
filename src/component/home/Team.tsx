@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import TeamSample from "../../assets/sample/Picture1.png";
+import TeamSample from "../../assets/img/team.png";
 import ExploreIcon from "../../assets/img/icons/project-explore.svg";
 
 const Team = () => {

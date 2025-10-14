@@ -14,8 +14,6 @@ import Image10 from "../../assets/about/usa2.jpeg";
 import Image11 from "../../assets/about/usa3.jpeg";
 import Image12 from "../../assets/about/usa4.jpeg";
 
-
-
 // Types
 type SubLocation = {
   label: string;
@@ -57,7 +55,7 @@ const locationCards: LocationCard[] = [
       {
         label: "Kandy",
         address:
-          "3rd Floor, All in One Holdings Headquarters, 349/2/1 Katugastota Rd, Kandy 20800",
+          "3rd Floor, All in One Holdings Headquarters, 349/2/1, Katugastota Rd, Kandy 20800",
         phone: "0812121051",
       },
       {
