@@ -15,28 +15,28 @@ const services = [
   {
     title: "Digital Strategy",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Define your market position and understand your audience. Research competitors and identify opportunities for growth.",
     img: sc1,
     path: "/marketing/digital-strategy",
   },
   {
     title: "Social Media Advertising",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Run targeted ad campaigns that reach ideal customers. Monitor, test, and optimize for maximum ROI.",
     img: sc2,
     path: "/marketing/social-media-advertising",
   },
   {
     title: "Social Media Management",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Manage your social presence with strategic content planning. Track performance and engage your community effectively.",
     img: sc3,
     path: "/marketing/social-media-management",
   },
   {
     title: "Lead generation, & Conversion Rate Optimization",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Turn more visitors into customers through testing. Optimize pages, funnels, and campaigns for results.",
     img: sc4,
     path: "/marketing/lead-generation-&-conversion-rate-optimization",
   },
