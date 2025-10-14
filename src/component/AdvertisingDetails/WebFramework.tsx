@@ -5,39 +5,39 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Understand Your Market",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We research your industry inside-out—what's working, what's saturated, and where the real opportunities are hiding. No cookie-cutter approaches here.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Understand Your Audience",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "We dig deep into who your customers really are—their problems, desires, where they hang out online, and what makes them buy. Then we create ads that speak directly to them.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Understand Your Services",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "We learn what makes your product or service different and valuable. Then we craft messages that make people stop scrolling and actually want what you're selling.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Set Goals and Choose the Right Platforms",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Not every platform works for every business. We figure out where your customers are (Facebook, Instagram, LinkedIn, TikTok, Google) and set clear, realistic goals you can measure.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Create a Sales Funnel That Converts",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Getting clicks is easy. Getting sales is hard. We build complete funnels that turn strangers into customers—from first ad to final purchase.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Test, Learn, and Scale What Works",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "We start smart, test everything, kill what doesn't work, and pour money into what does. Your ad budget grows as your profits grow—not before.",
   },
 ];
 
@@ -119,7 +119,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Make Your Ads Profitable
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +155,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Make Your Ads Profitable
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

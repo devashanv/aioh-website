@@ -19,17 +19,18 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Pay-Per-Click
+          Get Customers Now,
           <br />
-          <span className="text-[#02ec97]">Marketing</span>
+          Not Months <span className="text-[#02ec97]">From Now</span>
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          SEO takes time. Social media builds slowly. But PPC? It brings
+          customers TODAY. The problem is, most businesses waste thousands on
+          clicks that never convert into sales. Your ads show up, people click,
+          your wallet empties but your phone doesn't ring. We've managed
+          millions in ad spend across industries, and we know exactly how to
+          turn clicks into customers and make every dollar count.
         </p>
 
         {/* Mobile/Tablet Image Only */}
@@ -41,8 +42,8 @@ const WebHero: React.FC = () => {
           />
         </div>
 
-        {/* <button
-          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
+        <button
+          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
             if (section) {
@@ -51,7 +52,7 @@ const WebHero: React.FC = () => {
           }}
         >
           Explore Our Portfolio
-        </button> */}
+        </button>
       </motion.div>
 
       {/* Right Side: Desktop Image */}

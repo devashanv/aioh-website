@@ -6,39 +6,45 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Build Your Email List the Right Way",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We create lead magnets, landing pages, and signup forms that actually get people excited to join your list. Grow your audience with subscribers who want to hear from you.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Segment Your Audience",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Not everyone on your list wants the same thing. We group subscribers based on their interests, behavior, and purchase history—so every email feels personal and relevant to them.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Write Emails That Get Opened and Clicked",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Attention-grabbing subject lines, engaging content, and clear calls-to-action. We craft emails that don't get ignored or deleted—they get read and they get results.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Automated Sequences",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Welcome series, abandoned cart emails, post-purchase follow-ups, re-engagement campaigns. We set up automated flows that nurture leads and drive sales 24/7 without you lifting a finger.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Design That Works on Every Device",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Beautiful, mobile-responsive email templates that look professional and load fast. Your emails look great whether someone opens them on a phone, tablet, or computer.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "A/B Testing to Maximize Performance",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "We test subject lines, send times, content, and offers to find exactly what your audience responds to. Then we use those insights to make every email better than the last.",
+  },
+  {
+    number: "07",
+    title: "Track Results That Matter",
+    description:
+      "See your open rates, click rates, conversions, and revenue generated from every campaign. Know exactly what's working and what's making you money.",
   },
 ];
 
@@ -120,7 +126,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Make Email Marketing Work for You
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -156,7 +162,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Make Email Marketing Work for You
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

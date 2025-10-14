@@ -19,17 +19,17 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Lead generation, &
+          Let's Generate Leads
           <br />
-          <span className="text-[#02ec97]">Conversation Rate</span> Optimization
+          That <span className="text-[#02ec97]">Actually Convert</span>
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          Anyone can get you leads. That's easy. But leads that actually turn
+          into paying customers? That's the real challenge. It takes deep
+          research, smart testing, and strategic execution—and that's exactly
+          what we do. We make sure every dollar you spend on ads brings back
+          real revenue, not just empty inquiries.
         </p>
 
         {/* Mobile/Tablet Image Only */}
@@ -41,8 +41,8 @@ const WebHero: React.FC = () => {
           />
         </div>
 
-        {/* <button
-          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
+        <button
+          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
             if (section) {
@@ -51,7 +51,7 @@ const WebHero: React.FC = () => {
           }}
         >
           Explore Our Portfolio
-        </button> */}
+        </button>
       </motion.div>
 
       {/* Right Side: Desktop Image */}

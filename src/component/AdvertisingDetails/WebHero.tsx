@@ -19,17 +19,18 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Social Media
+          In a World Full of Ads,
           <br />
-          <span className="text-[#02ec97]">Advertising</span> Details
+          <span className="text-[#02ec97]">Be a Feeling</span>
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          We know your struggles. Maybe you're running ads that get clicks but
+          zero sales. Or spending thousands with terrible ROI. Maybe your ads
+          get no reach at all. Or you've never run ads before and feel
+          completely lost on where to even start. We get it—we've seen it all.
+          And we've helped hundreds of businesses break through these exact
+          problems and actually make money from their ads.
         </p>
 
         {/* Mobile/Tablet Image Only */}
@@ -40,9 +41,9 @@ const WebHero: React.FC = () => {
             className="w-full md:w-10/12 mx-auto rounded-lg object-cover"
           />
         </div>
-        {/* 
+
         <button
-          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
+          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
             if (section) {
@@ -51,7 +52,7 @@ const WebHero: React.FC = () => {
           }}
         >
           Explore Our Portfolio
-        </button> */}
+        </button>
       </motion.div>
 
       {/* Right Side: Desktop Image */}

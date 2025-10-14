@@ -7,7 +7,7 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/CreativeContent/WebHero";
 import WebFramework from "../../component/CreativeContent/WebFramework";
-import WebContact from "../../component/common/WebContact";
+import WebContact from "../../component/common/DetailsPageContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
 
 function CreativeService() {
