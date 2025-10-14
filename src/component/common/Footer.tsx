@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import bgImage from "../../assets/img/logo/footback.jpg";
+import bgImage from "../../assets/img/aioh-footer.webp";
 import topSvg from "../../assets/img/logo/allinone.svg";
 import FacebookIcon from "../../assets/contact/facebook.svg";
 import InstagramIcon from "../../assets/contact/instagram.svg";
@@ -100,14 +100,14 @@ const Footer = () => {
 
           {/* Column 2 */}
           <div className="lg:ml-50 md:ml-0 lg:w-full">
-            <h3 className="text-[18px] font-medium mb-3">What We Do Best</h3>
+            <h3 className="text-[18px] font-medium mb-3">Next-Gen Marketing</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/marketing/digital-strategy"
                   className="hover:text-[#02EC97]"
                 >
-                  Digital Strategy
+                  Brand Strategy
                 </Link>
               </li>
               <li>
@@ -115,7 +115,7 @@ const Footer = () => {
                   to="/marketing/social-media-advertising"
                   className="hover:text-[#02EC97]"
                 >
-                  Social Media Advertising
+                  Social Media Management
                 </Link>
               </li>
               <li>
@@ -123,7 +123,7 @@ const Footer = () => {
                   to="/marketing/creative-marketing"
                   className="hover:text-[#02EC97]"
                 >
-                  creative Marketing
+                  Social Media Advertising
                 </Link>
               </li>
               <li>
@@ -131,7 +131,7 @@ const Footer = () => {
                   to="/design/packaging-design"
                   className="hover:text-[#02EC97]"
                 >
-                  Packaging Design
+                  Creative Content
                 </Link>
               </li>
               <li>
@@ -139,7 +139,7 @@ const Footer = () => {
                   to="/marketing/search-engine-optimization"
                   className="hover:text-[#02EC97]"
                 >
-                  Search Engine Optimization
+                  Brand Identity Development
                 </Link>
               </li>
             </ul>
@@ -147,14 +147,16 @@ const Footer = () => {
 
           {/* Column 3 */}
           <div className="lg:ml-40 lg:w-full md:ml-0">
-            <h3 className="text-[18px] font-medium mb-3">Standout Services</h3>
+            <h3 className="text-[18px] font-medium mb-3">
+              Expert IT Solutions
+            </h3>
             <ul className="space-y-2 text-[#F5F5F5]">
               <li>
                 <Link
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Web Development
+                  UI/UX Design
                 </Link>
               </li>
               <li>
@@ -162,7 +164,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Web System Development
+                  Web Development
                 </Link>
               </li>
               <li>
@@ -186,7 +188,7 @@ const Footer = () => {
                   to="/technology/WebService"
                   className="hover:text-[#02EC97]"
                 >
-                  Test Automation Solutions
+                  Search Engine Optimization
                 </Link>
               </li>
             </ul>
@@ -205,7 +207,7 @@ const Footer = () => {
               <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
               <div>
                 {/* <p>3rd Floor, All in one Holdings,</p> */}
-                <p>349/17, Katugastota Rd,</p>
+                <p>349/2/1, Katugastota Rd,</p>
                 <p>Kandy, Sri Lanka.</p>
               </div>
             </div>
@@ -294,7 +296,7 @@ const Footer = () => {
         </div>
 
         {/* ✅ Credit Line */}
-        <div className="text-xs py-3 bg-[#000107]">
+        <div className="text-xs py-3 bg-[#01050A]">
           <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-2 text-[#F5F5F5]">
             <p className="hover:text-[#02EC97] transition-colors duration-200">
               Copyrights © 2025 All in One IT Solutions. All Rights Reserved

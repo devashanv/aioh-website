@@ -8,7 +8,6 @@ import sc4 from "../../assets/img/services/creativecon.webp";
 import sc5 from "../../assets/img/services/photography.webp";
 import sc6 from "../../assets/img/services/uiux.webp";
 
-
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
@@ -48,7 +47,7 @@ const services = [
     img: sc5,
     path: "/design/photography-and-videography",
   },
-    {
+  {
     title: "UI/UX Design",
     description:
       "We create intuitive and visually appealing interfaces to enhance user experience, improve engagement, and drive conversions.",
@@ -56,7 +55,6 @@ const services = [
     path: "/design/ui-ux-design",
   },
 ];
-
 
 const Service: React.FC = () => {
   const navigate = useNavigate();
@@ -142,9 +140,9 @@ const Service: React.FC = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0 }}
-                className="absolute sm:min-h-[60%] md:min-h-[50%] py-4 md:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
+                className="absolute min-h-[60%] lg:min-h-[50%] py-4 lg:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
               >
-                <p className="text-left md:text-justify leading-[22px] text-xs lg:text-sm text-white">
+                <p className="text-left md:text-justify leading-4 lg:leading-[22px] text-xs lg:text-sm text-white">
                   {service.description}
                 </p>
 
