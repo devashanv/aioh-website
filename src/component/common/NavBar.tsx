@@ -83,19 +83,19 @@ const navItems: NavItem[] = [
           {
             title: "Market research",
             description: "Analyze trends and growth opportunities.",
-            icon: <HiOutlineChartBar className="text-black" />,
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
             to: "/marketing/digital-strategy",
           },
           {
             title: "Competitive analysis",
             description: "Identify advantages over competitors.",
-            icon: <HiOutlineUser className="text-black" />,
+            icon: <HiOutlineChartBar className="text-black" />,
             to: "/marketing/digital-strategy",
           },
           {
             title: "Customer analysis",
             description: "Understand your target audience deeply.",
-            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            icon: <HiOutlineUser className="text-black" />,
             to: "/marketing/digital-strategy",
           },
         ],
@@ -124,7 +124,7 @@ const navItems: NavItem[] = [
           {
             title: "Retargeting campaigns",
             description: "Re-engage interested potential customers.",
-            icon: <HiOutlineEnvelope className="text-black" />,
+            icon: <HiOutlinePaperAirplane className="text-black" />,
             to: "/marketing/social-media-advertising",
           },
           {
@@ -153,7 +153,7 @@ const navItems: NavItem[] = [
           {
             title: "Audience research and setup",
             description: "Identify and target ideal customers.",
-            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            icon: <HiOutlineUser className="text-black" />,
             to: "/marketing/social-media-management",
           },
           {
@@ -182,7 +182,7 @@ const navItems: NavItem[] = [
           {
             title: "Campaign scaling",
             description: "Expand campaigns while maintaining performance.",
-            icon: <HiOutlineChartBar className="text-black" />,
+            icon: <HiOutlineTicket className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
@@ -194,7 +194,7 @@ const navItems: NavItem[] = [
           {
             title: "User experience analysis",
             description: "Identify and remove conversion barriers.",
-            icon: <HiOutlineUser className="text-black" />,
+            icon: <HiOutlineCheckCircle className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
@@ -292,7 +292,7 @@ const navItems: NavItem[] = [
           {
             title: "Influencer",
             description: "Partner with creators.",
-            icon: <HiOutlineUser className="text-black" />,
+            icon: <HiOutlineSparkles className="text-black" />,
             to: "/marketing/pay-per-click-marketing",
           },
         ],
@@ -338,7 +338,7 @@ const navItems: NavItem[] = [
           {
             title: "Influencer",
             description: "Partner with creators.",
-            icon: <HiOutlineUser className="text-black" />,
+            icon: <HiOutlineSparkles className="text-black" />,
             to: "/marketing/branding",
           },
         ],
@@ -745,19 +745,19 @@ const navItems: NavItem[] = [
           {
             title: "Brand videography",
             description: "Create compelling brand story videos.",
-            icon: <HiOutlineSparkles className="text-black" />,
+            icon: <HiOutlineAcademicCap className="text-black" />,
             to: "/design/photography-and-videography",
           },
           {
             title: "Video editing",
             description: "Polish footage into engaging content.",
-            icon: <HiOutlineCog className="text-black" />,
+            icon: <HiOutlineTicket className="text-black" />,
             to: "/design/photography-and-videography",
           },
           {
             title: "Motion graphics",
             description: "Animate graphics for dynamic visuals.",
-            icon: <HiOutlineViewColumns className="text-black" />,
+            icon: <HiOutlineSparkles className="text-black" />,
             to: "/design/photography-and-videography",
           },
         ],
@@ -774,37 +774,37 @@ const navItems: NavItem[] = [
           {
             title: "Brand guidelines",
             description: "Create standards for consistent identity.",
-            icon: <HiOutlineBookOpen className="text-black" />,
+            icon: <HiOutlineDocumentText className="text-black" />,
             to: "/design/brand-identity-development",
           },
           {
             title: "Letter heads",
             description: "Design professional branded letterheads.",
-            icon: <HiOutlineDocumentText className="text-black" />,
+            icon: <HiOutlineEnvelope className="text-black" />,
             to: "/design/brand-identity-development",
           },
           {
             title: "Business cards",
             description: "Create memorable cards for impressions.",
-            icon: <HiOutlineUser className="text-black" />,
+            icon: <HiOutlineTicket className="text-black" />,
             to: "/design/brand-identity-development",
           },
           {
             title: "Company profiles",
             description: "Design profiles showcasing your business.",
-            icon: <HiOutlineFolderOpen className="text-black" />,
+            icon: <HiOutlineUser className="text-black" />,
             to: "/design/brand-identity-development",
           },
           {
             title: "Banner design",
             description: "Create attention-grabbing promotional banners.",
-            icon: <HiOutlinePhoto className="text-black" />,
+            icon: <HiOutlinePaperAirplane className="text-black" />,
             to: "/design/brand-identity-development",
           },
           {
             title: "Leaflet design",
             description: "Design informative marketing leaflets.",
-            icon: <HiOutlineDocumentText className="text-black" />,
+            icon: <HiOutlineMapPin className="text-black" />,
             to: "/design/brand-identity-development",
           },
           {
@@ -827,7 +827,7 @@ const navItems: NavItem[] = [
           {
             title: "Social graphics",
             description: "Design scroll-stopping social media graphics.",
-            icon: <HiOutlinePhoto className="text-black" />,
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
             to: "/design/creative-content",
           },
           {
@@ -839,7 +839,7 @@ const navItems: NavItem[] = [
           {
             title: "Digital illustrations",
             description: "Create custom brand illustrations.",
-            icon: <HiOutlinePhoto className="text-black" />,
+            icon: <HiOutlineSparkles className="text-black" />,
             to: "/design/creative-content",
           },
         ],
@@ -856,7 +856,7 @@ const navItems: NavItem[] = [
           {
             title: "Label design",
             description: "Create clear, attractive product labels.",
-            icon: <HiOutlineDocumentText className="text-black" />,
+            icon: <HiOutlineTicket className="text-black" />,
             to: "/design/packaging-design",
           },
           {
@@ -879,7 +879,7 @@ const navItems: NavItem[] = [
           {
             title: "Flyer designs",
             description: "Create impactful promotional flyers.",
-            icon: <HiOutlinePhoto className="text-black" />,
+            icon: <HiOutlineDocumentText className="text-black" />,
             to: "/design/promotional-material-design",
           },
           {
