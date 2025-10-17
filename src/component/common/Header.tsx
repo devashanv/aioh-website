@@ -59,6 +59,877 @@ type NavItem = {
 
 type SubmenuItem = SubmenuCategory & { parent: string };
 
+// const navItems: NavItem[] = [
+//   { label: "Home", to: "/" },
+//   { label: "About", to: "/Aboutus" },
+//   {
+//     label: "Marketing",
+//     to: "/marketing",
+//     customLink: "/marketing",
+//     intro: {
+//       title: "Grow your audience",
+//       description: "Unlock SEO, social, and PPC strategies to scale faster.",
+//     },
+//     submenu: [
+//       {
+//         label: "Digital Strategy",
+//         items: [
+//           {
+//             title: "Brand positioning",
+//             description: "Define your unique market position.",
+//             icon: <HiOutlineSparkles className="text-black" />,
+//             to: "/marketing/digital-strategy",
+//           },
+//           {
+//             title: "Market research",
+//             description: "Analyze trends and growth opportunities.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/marketing/digital-strategy",
+//           },
+//           {
+//             title: "Competitive analysis",
+//             description: "Identify advantages over competitors.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/marketing/digital-strategy",
+//           },
+//           {
+//             title: "Customer analysis",
+//             description: "Understand your target audience deeply.",
+//             icon: <HiOutlineMagnifyingGlass className="text-black" />,
+//             to: "/marketing/digital-strategy",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Social Media Advertising",
+//         items: [
+//           {
+//             title: "Audience analysis",
+//             description: "Research and segment target audiences.",
+//             icon: <HiOutlineMagnifyingGlass className="text-black" />,
+//             to: "/marketing/social-media-advertising",
+//           },
+//           {
+//             title: "Campaign monitoring",
+//             description: "Track and optimize ad performance.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/marketing/social-media-advertising",
+//           },
+//           {
+//             title: "Creative angle testing",
+//             description: "Test ads to find winners.",
+//             icon: <HiOutlineSparkles className="text-black" />,
+//             to: "/marketing/social-media-advertising",
+//           },
+//           {
+//             title: "Retargeting campaigns",
+//             description: "Re-engage interested potential customers.",
+//             icon: <HiOutlineEnvelope className="text-black" />,
+//             to: "/marketing/social-media-advertising",
+//           },
+//           {
+//             title: "KPI setup",
+//             description: "Define metrics to track ROI.",
+//             icon: <HiOutlineCheckCircle className="text-black" />,
+//             to: "/marketing/social-media-advertising",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Social Media Management",
+//         items: [
+//           {
+//             title: "Content strategy",
+//             description: "Plan engaging content for goals.",
+//             icon: <HiOutlinePencil className="text-black" />,
+//             to: "/marketing/social-media-management",
+//           },
+//           {
+//             title: "Social media page management",
+//             description: "Manage posting, engagement, and community.",
+//             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//             to: "/marketing/social-media-management",
+//           },
+//           {
+//             title: "Audience research and setup",
+//             description: "Identify and target ideal customers.",
+//             icon: <HiOutlineMagnifyingGlass className="text-black" />,
+//             to: "/marketing/social-media-management",
+//           },
+//           {
+//             title: "Analytics & reporting",
+//             description: "Track performance and optimize campaigns.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/marketing/social-media-management",
+//           },
+//           {
+//             title: "KPI setup",
+//             description: "Establish clear performance indicators.",
+//             icon: <HiOutlineCheckCircle className="text-black" />,
+//             to: "/marketing/social-media-management",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Lead generation, & Conversion Rate Optimization",
+//         items: [
+//           {
+//             title: "A/B testing",
+//             description: "Test variations for better conversions.",
+//             icon: <HiOutlineViewColumns className="text-black" />,
+//             to: "/marketing/lead-generation-&-conversion-rate-optimization",
+//           },
+//           {
+//             title: "Campaign scaling",
+//             description: "Expand campaigns while maintaining performance.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/marketing/lead-generation-&-conversion-rate-optimization",
+//           },
+//           {
+//             title: "Landing page optimization",
+//             description: "Improve pages to increase conversions.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/marketing/lead-generation-&-conversion-rate-optimization",
+//           },
+//           {
+//             title: "User experience analysis",
+//             description: "Identify and remove conversion barriers.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/marketing/lead-generation-&-conversion-rate-optimization",
+//           },
+//           {
+//             title: "Funnel optimization",
+//             description: "Streamline journey from awareness to purchase.",
+//             icon: <HiOutlineSparkles className="text-black" />,
+//             to: "/marketing/lead-generation-&-conversion-rate-optimization",
+//           },
+//           {
+//             title: "Campaign Data Analysis",
+//             description: "Analyze metrics for actionable insights.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/marketing/lead-generation-&-conversion-rate-optimization",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Search Engine Optimization (SEO)",
+//         items: [
+//           {
+//             title: "On-Page SEO",
+//             description:
+//               "Optimize page structure, tags, and content for better rankings.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "Off-Page SEO",
+//             description: "Build backlinks and improve domain authority.",
+//             icon: <HiOutlineLink className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "Technical SEO",
+//             description: "Enhance site speed, crawlability, and indexing.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "Local SEO",
+//             description: "Boost visibility in local search and Google Maps.",
+//             icon: <HiOutlineMapPin className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "E-commerce SEO",
+//             description: "Increase traffic and sales for online stores.",
+//             icon: <HiOutlineShoppingCart className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "Content SEO & Optimization",
+//             description: "Improve content relevance and keyword targeting.",
+//             icon: <HiOutlinePencil className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "Mobile SEO",
+//             description:
+//               "Optimize for smartphones and tablets for higher mobile rankings.",
+//             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "SEO Audits & Reporting",
+//             description:
+//               "Comprehensive analysis with actionable recommendations.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//           {
+//             title: "Keyword Research & Strategy",
+//             description:
+//               "Identify high-value keywords to target the right audience.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/marketing/search-engine-optimization",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Pay-Per-Click Marketing",
+//         items: [
+//           {
+//             title: "Social Media",
+//             description: "Engage with audiences.",
+//             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//             to: "/marketing/pay-per-click-marketing",
+//           },
+//           {
+//             title: "Email",
+//             description: "Convert with campaigns.",
+//             icon: <HiOutlineEnvelope className="text-black" />,
+//             to: "/marketing/pay-per-click-marketing",
+//           },
+//           {
+//             title: "Influencer",
+//             description: "Partner with creators.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/marketing/pay-per-click-marketing",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Email Marketing",
+//         items: [
+//           {
+//             title: "Social Media",
+//             description: "Engage with audiences.",
+//             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//             to: "/marketing/email-marketing",
+//           },
+//           {
+//             title: "Email",
+//             description: "Convert with campaigns.",
+//             icon: <HiOutlineEnvelope className="text-black" />,
+//             to: "/marketing/email-marketing",
+//           },
+//           {
+//             title: "Influencer",
+//             description: "Partner with creators.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/marketing/email-marketing",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Branding",
+//         items: [
+//           {
+//             title: "Social Media",
+//             description: "Engage with audiences.",
+//             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//             to: "/marketing/branding",
+//           },
+//           {
+//             title: "Email",
+//             description: "Convert with campaigns.",
+//             icon: <HiOutlineEnvelope className="text-black" />,
+//             to: "/marketing/branding",
+//           },
+//           {
+//             title: "Influencer",
+//             description: "Partner with creators.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/marketing/branding",
+//           },
+//         ],
+//       },
+//       // {
+//       //   label: "Creative Marketing",
+//       //   items: [
+//       //     {
+//       //       title: "Social Media",
+//       //       description: "Engage with audiences.",
+//       //       icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//       //       to: "/marketing/social",
+//       //     },
+//       //     {
+//       //       title: "Email",
+//       //       description: "Convert with campaigns.",
+//       //       icon: <HiOutlineEnvelope className="text-black" />,
+//       //       to: "/marketing/email",
+//       //     },
+//       //     {
+//       //       title: "Influencer",
+//       //       description: "Partner with creators.",
+//       //       icon: <HiOutlineUser className="text-black" />,
+//       //       to: "/marketing/influencer",
+//       //     },
+//       //   ],
+//       // },
+//       {
+//         label: "Web Development",
+//         items: [
+//           {
+//             title: "Showcase / Business Websites",
+//             description:
+//               "Professional websites to highlight your business and services.",
+//             icon: <HiOutlineBuildingOffice className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Portfolio Websites",
+//             description:
+//               "Creative platforms to display your work and achievements.",
+//             icon: <HiOutlinePaintBrush className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Blog & News Websites",
+//             description:
+//               "Dynamic platforms for sharing articles, updates, and stories.",
+//             icon: <HiOutlineNewspaper className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Educational Websites & e-Learning Portals",
+//             description:
+//               "Interactive learning platforms with courses and quizzes.",
+//             icon: <HiOutlineAcademicCap className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Membership & Subscription-Based Websites",
+//             description:
+//               "Secure platforms for recurring subscriptions and member access.",
+//             icon: <HiOutlineKey className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Nonprofit & Charity Websites",
+//             description:
+//               "Websites designed to raise awareness and accept donations.",
+//             icon: <HiOutlineFolderOpen className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Job Board Websites",
+//             description:
+//               "Platforms to post job openings and connect candidates.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Directory & Listing Websites",
+//             description:
+//               "Organized directories for businesses, services, or events.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     label: "Technology",
+//     to: "/technology",
+//     customLink: "/technology",
+//     intro: {
+//       title: "Build smarter products",
+//       description: "From web apps to AI, accelerate your innovation pipeline.",
+//     },
+//     submenu: [
+//       {
+//         label: "Web Development",
+//         items: [
+//           {
+//             title: "Showcase / Business Websites",
+//             description:
+//               "Professional websites to highlight your business and services.",
+//             icon: <HiOutlineBuildingOffice className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Portfolio Websites",
+//             description:
+//               "Creative platforms to display your work and achievements.",
+//             icon: <HiOutlinePaintBrush className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Blog & News Websites",
+//             description:
+//               "Dynamic platforms for sharing articles, updates, and stories.",
+//             icon: <HiOutlineNewspaper className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Educational Websites & e-Learning Portals",
+//             description:
+//               "Interactive learning platforms with courses and quizzes.",
+//             icon: <HiOutlineAcademicCap className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Membership & Subscription-Based Websites",
+//             description:
+//               "Secure platforms for recurring subscriptions and member access.",
+//             icon: <HiOutlineKey className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Nonprofit & Charity Websites",
+//             description:
+//               "Websites designed to raise awareness and accept donations.",
+//             icon: <HiOutlineFolderOpen className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Job Board Websites",
+//             description:
+//               "Platforms to post job openings and connect candidates.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//           {
+//             title: "Directory & Listing Websites",
+//             description:
+//               "Organized directories for businesses, services, or events.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/technology/WebService",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Web System Development",
+//         items: [
+//           {
+//             title: "Management Web Applications (HRM, CRM, etc.)",
+//             description:
+//               "Web-based tools to streamline and automate business operations.",
+//             icon: <HiOutlineFolderOpen className="text-black" />,
+//             to: "/technology/SystemService",
+//           },
+//           {
+//             title: "Learning Management Systems (LMS)",
+//             description:
+//               "Platforms to create, manage, and track online courses.",
+//             icon: <HiOutlineAcademicCap className="text-black" />,
+//             to: "/technology/SystemService",
+//           },
+//           {
+//             title: "Booking & Reservation Websites",
+//             description:
+//               "Websites for scheduling appointments and managing bookings.",
+//             icon: <HiOutlineCalendar className="text-black" />,
+//             to: "/technology/SystemService",
+//           },
+//           {
+//             title: "Custom Web Applications",
+//             description:
+//               "Tailor-made solutions for unique business requirements.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/technology/SystemService",
+//           },
+//           {
+//             title: "Event Management Websites",
+//             description:
+//               "Online platforms to promote and manage events efficiently.",
+//             icon: <HiOutlineTicket className="text-black" />,
+//             to: "/technology/SystemService",
+//           },
+//           {
+//             title: "E-commerce Websites & Solutions",
+//             description:
+//               "Online stores with secure payments and product management.",
+//             icon: <HiOutlineShoppingCart className="text-black" />,
+//             to: "/technology/SystemService",
+//           },
+//           {
+//             title: "Health & Clinic Management Web Applications",
+//             description:
+//               "Web systems for patient records, appointments, and billing.",
+//             icon: <HiOutlineBuildingLibrary className="text-black" />,
+//             to: "/technology/SystemService",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Standalone System Development",
+//         items: [
+//           {
+//             title: "Enterprise Resource Planning (ERP) Systems",
+//             description:
+//               "Integrate finance, HR, and operations in one platform.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/technology/StandaloneSysDevService",
+//           },
+//           {
+//             title: "Point of Sale (POS) Systems",
+//             description:
+//               "Retail solutions for billing, inventory, and sales tracking.",
+//             icon: <HiOutlineShoppingCart className="text-black" />,
+//             to: "/technology/StandaloneSysDevService",
+//           },
+//           {
+//             title: "Inventory & Warehouse Management Systems",
+//             description:
+//               "Track stock levels and manage supply chains effectively.",
+//             icon: <HiOutlineFolderOpen className="text-black" />,
+//             to: "/technology/StandaloneSysDevService",
+//           },
+//           {
+//             title: "Hospital & Clinic Management Systems",
+//             description: "Comprehensive systems for healthcare administration.",
+//             icon: <HiOutlineBuildingLibrary className="text-black" />,
+//             to: "/technology/StandaloneSysDevService",
+//           },
+//           {
+//             title: "School / University Management Systems",
+//             description:
+//               "Manage student data, classes, and academic operations.",
+//             icon: <HiOutlineBuildingLibrary className="text-black" />,
+//             to: "/technology/StandaloneSysDevService",
+//           },
+//           {
+//             title: "Custom Business Automation Solutions",
+//             description:
+//               "Automate tasks to improve efficiency and productivity.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/technology/StandaloneSysDevService",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Mobile Application Development",
+//         items: [
+//           {
+//             title: "Android & iOS Native Apps",
+//             description:
+//               "High-performance apps built for specific mobile platforms.",
+//             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Cross-Platform Mobile Apps (Flutter, React Native)",
+//             description:
+//               "Apps running seamlessly on both Android and iOS devices.",
+//             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "E-commerce Mobile Apps",
+//             description:
+//               "Mobile shopping apps with secure payments and cart features.",
+//             icon: <HiOutlineShoppingCart className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Educational & LMS Mobile Apps",
+//             description: "Apps for learning, quizzes, and course management.",
+//             icon: <HiOutlineAcademicCap className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Event & Ticketing Apps",
+//             description: "Mobile solutions for event booking and ticket sales.",
+//             icon: <HiOutlineTicket className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Delivery & Logistics Apps",
+//             description:
+//               "Track orders, deliveries, and fleet operations easily.",
+//             icon: <HiOutlineTruck className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Travel & Tourism Apps",
+//             description: "Guides, booking tools, and travel planning features.",
+//             icon: <HiOutlinePaperAirplane className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Financial & Fintech Apps",
+//             description:
+//               "Mobile banking, payment, and finance management apps.",
+//             icon: <HiOutlineCurrencyDollar className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Social Networking & Community Apps",
+//             description:
+//               "Platforms for connecting and engaging with communities.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//           {
+//             title: "Custom Business Mobile Apps",
+//             description:
+//               "Mobile solutions tailored to your unique business needs.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/technology/MobileService",
+//           },
+//         ],
+//       },
+//       {
+//         label: "AI Solutions",
+//         items: [
+//           {
+//             title: "AI Chatbots and Virtual Assistants",
+//             description:
+//               "Intelligent bots for customer support and automation.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/technology/AIService",
+//           },
+//           {
+//             title: "Custom AI Solutions",
+//             description:
+//               "AI-powered applications for data analysis and automation.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/technology/AIService",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Test Automation Solutions",
+//         items: [
+//           {
+//             title: "Automated Functional Testing",
+//             description: "Automate repetitive test cases to improve accuracy.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/technology/TestAutomationService",
+//           },
+//           {
+//             title: "Regression Testing",
+//             description:
+//               "Ensure new updates don’t break existing functionality.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/technology/TestAutomationService",
+//           },
+//           {
+//             title: "Performance Testing",
+//             description: "Measure and improve system speed and responsiveness.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/technology/TestAutomationService",
+//           },
+//           {
+//             title: "CI/CD Support",
+//             description:
+//               "Integrate automated testing with your development pipeline.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/technology/TestAutomationService",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     label: "Design",
+//     to: "/design",
+//     customLink: "/design",
+//     intro: {
+//       title: "Design that inspires",
+//       description:
+//         "Craft user experiences and brand identities that stand out.",
+//     },
+//     submenu: [
+//       {
+//         label: "Video and Photography",
+//         items: [
+//           {
+//             title: "Product photography",
+//             description: "Capture stunning images that sell.",
+//             icon: <HiOutlinePhoto className="text-black" />,
+//             to: "/design/photography-and-videography",
+//           },
+//           {
+//             title: "Brand videography",
+//             description: "Create compelling brand story videos.",
+//             icon: <HiOutlineSparkles className="text-black" />,
+//             to: "/design/photography-and-videography",
+//           },
+//           {
+//             title: "Video editing",
+//             description: "Polish footage into engaging content.",
+//             icon: <HiOutlineCog className="text-black" />,
+//             to: "/design/photography-and-videography",
+//           },
+//           {
+//             title: "Motion graphics",
+//             description: "Animate graphics for dynamic visuals.",
+//             icon: <HiOutlineViewColumns className="text-black" />,
+//             to: "/design/photography-and-videography",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Identity Development",
+//         items: [
+//           {
+//             title: "Logo design",
+//             description: "Design memorable logos for brands.",
+//             icon: <HiOutlinePaintBrush className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//           {
+//             title: "Brand guidelines",
+//             description: "Create standards for consistent identity.",
+//             icon: <HiOutlineBookOpen className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//           {
+//             title: "Letter heads",
+//             description: "Design professional branded letterheads.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//           {
+//             title: "Business cards",
+//             description: "Create memorable cards for impressions.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//           {
+//             title: "Company profiles",
+//             description: "Design profiles showcasing your business.",
+//             icon: <HiOutlineFolderOpen className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//           {
+//             title: "Banner design",
+//             description: "Create attention-grabbing promotional banners.",
+//             icon: <HiOutlinePhoto className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//           {
+//             title: "Leaflet design",
+//             description: "Design informative marketing leaflets.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//           {
+//             title: "Brand books",
+//             description: "Develop complete brand documentation.",
+//             icon: <HiOutlineBookOpen className="text-black" />,
+//             to: "/design/brand-identity-development",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Creative Content",
+//         items: [
+//           {
+//             title: "Graphic design",
+//             description: "Create stunning visuals for marketing.",
+//             icon: <HiOutlinePaintBrush className="text-black" />,
+//             to: "/design/creative-content",
+//           },
+//           {
+//             title: "Social graphics",
+//             description: "Design scroll-stopping social media graphics.",
+//             icon: <HiOutlinePhoto className="text-black" />,
+//             to: "/design/creative-content",
+//           },
+//           {
+//             title: "Infographics",
+//             description: "Transform data into visual stories.",
+//             icon: <HiOutlineChartBar className="text-black" />,
+//             to: "/design/creative-content",
+//           },
+//           {
+//             title: "Digital illustrations",
+//             description: "Create custom brand illustrations.",
+//             icon: <HiOutlinePhoto className="text-black" />,
+//             to: "/design/creative-content",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Package Design",
+//         items: [
+//           {
+//             title: "Product packaging",
+//             description: "Design packaging that attracts customers.",
+//             icon: <HiOutlineShoppingCart className="text-black" />,
+//             to: "/design/packaging-design",
+//           },
+//           {
+//             title: "Label design",
+//             description: "Create clear, attractive product labels.",
+//             icon: <HiOutlineDocumentText className="text-black" />,
+//             to: "/design/packaging-design",
+//           },
+//           {
+//             title: "Box design",
+//             description: "Design functional, eye-catching boxes.",
+//             icon: <HiOutlineFolderOpen className="text-black" />,
+//             to: "/design/packaging-design",
+//           },
+//           {
+//             title: "Mockups & prototypes",
+//             description: "Visualize concepts before production.",
+//             icon: <HiOutlineViewColumns className="text-black" />,
+//             to: "/design/packaging-design",
+//           },
+//         ],
+//       },
+//       {
+//         label: "Promotional Material",
+//         items: [
+//           {
+//             title: "Flyer designs",
+//             description: "Create impactful promotional flyers.",
+//             icon: <HiOutlinePhoto className="text-black" />,
+//             to: "/design/promotional-material-design",
+//           },
+//           {
+//             title: "Color Grading",
+//             description: "Enhance visuals through color correction.",
+//             icon: <HiOutlineSparkles className="text-black" />,
+//             to: "/design/promotional-material-design",
+//           },
+//         ],
+//       },
+//       {
+//         label: "UI/UX Design",
+//         items: [
+//           {
+//             title: "User Research & Analysis",
+//             description: "Understand users’ needs.",
+//             icon: <HiOutlineUser className="text-black" />,
+//             to: "/design/ui-ux-design",
+//           },
+//           {
+//             title: "Brand Experience Integration",
+//             description: "Blend brand into design.",
+//             icon: <HiOutlineSparkles className="text-black" />,
+//             to: "/design/ui-ux-design",
+//           },
+//           {
+//             title: "Wireframing & Prototyping",
+//             description: "Create structure & flow.",
+//             icon: <HiOutlineViewColumns className="text-black" />,
+//             to: "/design/ui-ux-design",
+//           },
+//           {
+//             title: "Visual & Interaction Design",
+//             description: "Craft appealing visuals.",
+//             icon: <HiOutlinePaintBrush className="text-black" />,
+//             to: "/design/ui-ux-design",
+//           },
+//           {
+//             title: "Usability Testing & Optimization",
+//             description: "Improve user experience.",
+//             icon: <HiOutlineCheckCircle className="text-black" />,
+//             to: "/design/ui-ux-design",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   { label: "Contact", to: "/contact" },
+// ];
+
 const navItems: NavItem[] = [
   { label: "Home", to: "/" },
   { label: "About", to: "/Aboutus" },
@@ -75,22 +946,28 @@ const navItems: NavItem[] = [
         label: "Digital Strategy",
         items: [
           {
-            title: "SEO",
-            description: "Optimize search rankings.",
+            title: "Brand positioning",
+            description: "Define your unique market position.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Market research",
+            description: "Analyze trends and growth opportunities.",
             icon: <HiOutlineMagnifyingGlass className="text-black" />,
-            to: "/marketing/seo",
+            to: "/marketing/digital-strategy",
           },
           {
-            title: "Content",
-            description: "Create valuable content.",
-            icon: <HiOutlinePencil className="text-black" />,
-            to: "/marketing/content",
+            title: "Competitive analysis",
+            description: "Identify advantages over competitors.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/digital-strategy",
           },
           {
-            title: "PPC",
-            description: "Boost leads with paid ads.",
-            icon: <HiOutlineCurrencyDollar className="text-black" />,
-            to: "/marketing/ppc",
+            title: "Customer analysis",
+            description: "Understand your target audience deeply.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/digital-strategy",
           },
         ],
       },
@@ -98,22 +975,34 @@ const navItems: NavItem[] = [
         label: "Social Media Advertising",
         items: [
           {
-            title: "Social Media",
-            description: "Engage with audiences.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/social",
+            title: "Audience analysis",
+            description: "Research and segment target audiences.",
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            to: "/marketing/social-media-advertising",
           },
           {
-            title: "Email",
-            description: "Convert with campaigns.",
-            icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email",
+            title: "Campaign monitoring",
+            description: "Track and optimize ad performance.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/social-media-advertising",
           },
           {
-            title: "Influencer",
-            description: "Partner with creators.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/influencer",
+            title: "Creative angle testing",
+            description: "Test ads to find winners.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/marketing/social-media-advertising",
+          },
+          {
+            title: "Retargeting campaigns",
+            description: "Re-engage interested potential customers.",
+            icon: <HiOutlinePaperAirplane className="text-black" />,
+            to: "/marketing/social-media-advertising",
+          },
+          {
+            title: "KPI setup",
+            description: "Define metrics to track ROI.",
+            icon: <HiOutlineCheckCircle className="text-black" />,
+            to: "/marketing/social-media-advertising",
           },
         ],
       },
@@ -121,22 +1010,34 @@ const navItems: NavItem[] = [
         label: "Social Media Management",
         items: [
           {
-            title: "SEO",
-            description: "Optimize search rankings.",
-            icon: <HiOutlineMagnifyingGlass className="text-black" />,
-            to: "/marketing/seo",
-          },
-          {
-            title: "Content",
-            description: "Create valuable content.",
+            title: "Content strategy",
+            description: "Plan engaging content for goals.",
             icon: <HiOutlinePencil className="text-black" />,
-            to: "/marketing/content",
+            to: "/marketing/social-media-management",
           },
           {
-            title: "PPC",
-            description: "Boost leads with paid ads.",
-            icon: <HiOutlineCurrencyDollar className="text-black" />,
-            to: "/marketing/ppc",
+            title: "Social media page management",
+            description: "Manage posting, engagement, and community.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/social-media-management",
+          },
+          {
+            title: "Audience research and setup",
+            description: "Identify and target ideal customers.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/social-media-management",
+          },
+          {
+            title: "Analytics & reporting",
+            description: "Track performance and optimize campaigns.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/social-media-management",
+          },
+          {
+            title: "KPI setup",
+            description: "Establish clear performance indicators.",
+            icon: <HiOutlineCheckCircle className="text-black" />,
+            to: "/marketing/social-media-management",
           },
         ],
       },
@@ -144,22 +1045,40 @@ const navItems: NavItem[] = [
         label: "Lead generation, & Conversion Rate Optimization",
         items: [
           {
-            title: "Social Media",
-            description: "Engage with audiences.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/social",
+            title: "A/B testing",
+            description: "Test variations for better conversions.",
+            icon: <HiOutlineViewColumns className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
-            title: "Email",
-            description: "Convert with campaigns.",
-            icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email",
+            title: "Campaign scaling",
+            description: "Expand campaigns while maintaining performance.",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
-            title: "Influencer",
-            description: "Partner with creators.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/influencer",
+            title: "Landing page optimization",
+            description: "Improve pages to increase conversions.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
+          },
+          {
+            title: "User experience analysis",
+            description: "Identify and remove conversion barriers.",
+            icon: <HiOutlineCheckCircle className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
+          },
+          {
+            title: "Funnel optimization",
+            description: "Streamline journey from awareness to purchase.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
+          },
+          {
+            title: "Campaign Data Analysis",
+            description: "Analyze metrics for actionable insights.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
         ],
       },
@@ -171,58 +1090,58 @@ const navItems: NavItem[] = [
             description:
               "Optimize page structure, tags, and content for better rankings.",
             icon: <HiOutlineDocumentText className="text-black" />,
-            to: "/marketing/seo/on-page",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "Off-Page SEO",
             description: "Build backlinks and improve domain authority.",
             icon: <HiOutlineLink className="text-black" />,
-            to: "/marketing/seo/off-page",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "Technical SEO",
             description: "Enhance site speed, crawlability, and indexing.",
             icon: <HiOutlineCog className="text-black" />,
-            to: "/marketing/seo/technical",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "Local SEO",
             description: "Boost visibility in local search and Google Maps.",
             icon: <HiOutlineMapPin className="text-black" />,
-            to: "/marketing/seo/local",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "E-commerce SEO",
             description: "Increase traffic and sales for online stores.",
             icon: <HiOutlineShoppingCart className="text-black" />,
-            to: "/marketing/seo/ecommerce",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "Content SEO & Optimization",
             description: "Improve content relevance and keyword targeting.",
             icon: <HiOutlinePencil className="text-black" />,
-            to: "/marketing/seo/content",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "Mobile SEO",
             description:
               "Optimize for smartphones and tablets for higher mobile rankings.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/seo/mobile",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "SEO Audits & Reporting",
             description:
               "Comprehensive analysis with actionable recommendations.",
             icon: <HiOutlineChartBar className="text-black" />,
-            to: "/marketing/seo/audits",
+            to: "/marketing/search-engine-optimization",
           },
           {
             title: "Keyword Research & Strategy",
             description:
               "Identify high-value keywords to target the right audience.",
             icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/seo/keyword-research",
+            to: "/marketing/search-engine-optimization",
           },
         ],
       },
@@ -233,19 +1152,19 @@ const navItems: NavItem[] = [
             title: "Social Media",
             description: "Engage with audiences.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/social",
+            to: "/marketing/pay-per-click-marketing",
           },
           {
             title: "Email",
             description: "Convert with campaigns.",
             icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email",
+            to: "/marketing/pay-per-click-marketing",
           },
           {
             title: "Influencer",
             description: "Partner with creators.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/influencer",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/marketing/pay-per-click-marketing",
           },
         ],
       },
@@ -256,19 +1175,19 @@ const navItems: NavItem[] = [
             title: "Social Media",
             description: "Engage with audiences.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/social",
+            to: "/marketing/email-marketing",
           },
           {
             title: "Email",
             description: "Convert with campaigns.",
             icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email",
+            to: "/marketing/email-marketing",
           },
           {
             title: "Influencer",
             description: "Partner with creators.",
             icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/influencer",
+            to: "/marketing/email-marketing",
           },
         ],
       },
@@ -279,42 +1198,103 @@ const navItems: NavItem[] = [
             title: "Social Media",
             description: "Engage with audiences.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/social",
+            to: "/marketing/branding",
           },
           {
             title: "Email",
             description: "Convert with campaigns.",
             icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email",
+            to: "/marketing/branding",
           },
           {
             title: "Influencer",
             description: "Partner with creators.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/influencer",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/marketing/branding",
           },
         ],
       },
+      // {
+      //   label: "Creative Marketing",
+      //   items: [
+      //     {
+      //       title: "Social Media",
+      //       description: "Engage with audiences.",
+      //       icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+      //       to: "/marketing/social",
+      //     },
+      //     {
+      //       title: "Email",
+      //       description: "Convert with campaigns.",
+      //       icon: <HiOutlineEnvelope className="text-black" />,
+      //       to: "/marketing/email",
+      //     },
+      //     {
+      //       title: "Influencer",
+      //       description: "Partner with creators.",
+      //       icon: <HiOutlineUser className="text-black" />,
+      //       to: "/marketing/influencer",
+      //     },
+      //   ],
+      // },
       {
-        label: "Creative Marketing",
+        label: "Web Development",
         items: [
           {
-            title: "Social Media",
-            description: "Engage with audiences.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/social",
+            title: "Showcase / Business Websites",
+            description:
+              "Professional websites to highlight your business and services.",
+            icon: <HiOutlineBuildingOffice className="text-black" />,
+            to: "/technology/WebService",
           },
           {
-            title: "Email",
-            description: "Convert with campaigns.",
-            icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email",
+            title: "Portfolio Websites",
+            description:
+              "Creative platforms to display your work and achievements.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/technology/WebService",
           },
           {
-            title: "Influencer",
-            description: "Partner with creators.",
+            title: "Blog & News Websites",
+            description:
+              "Dynamic platforms for sharing articles, updates, and stories.",
+            icon: <HiOutlineNewspaper className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Educational Websites & e-Learning Portals",
+            description:
+              "Interactive learning platforms with courses and quizzes.",
+            icon: <HiOutlineAcademicCap className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Membership & Subscription-Based Websites",
+            description:
+              "Secure platforms for recurring subscriptions and member access.",
+            icon: <HiOutlineKey className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Nonprofit & Charity Websites",
+            description:
+              "Websites designed to raise awareness and accept donations.",
+            icon: <HiOutlineFolderOpen className="text-black" />,
+            to: "/technology/WebService",
+          },
+          {
+            title: "Job Board Websites",
+            description:
+              "Platforms to post job openings and connect candidates.",
             icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/influencer",
+            to: "/technology/WebService",
+          },
+          {
+            title: "Directory & Listing Websites",
+            description:
+              "Organized directories for businesses, services, or events.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/technology/WebService",
           },
         ],
       },
@@ -398,49 +1378,49 @@ const navItems: NavItem[] = [
             description:
               "Web-based tools to streamline and automate business operations.",
             icon: <HiOutlineFolderOpen className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/SystemService",
           },
           {
             title: "Learning Management Systems (LMS)",
             description:
               "Platforms to create, manage, and track online courses.",
             icon: <HiOutlineAcademicCap className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/SystemService",
           },
           {
             title: "Booking & Reservation Websites",
             description:
               "Websites for scheduling appointments and managing bookings.",
             icon: <HiOutlineCalendar className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/SystemService",
           },
           {
             title: "Custom Web Applications",
             description:
               "Tailor-made solutions for unique business requirements.",
             icon: <HiOutlineCog className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/SystemService",
           },
           {
             title: "Event Management Websites",
             description:
               "Online platforms to promote and manage events efficiently.",
             icon: <HiOutlineTicket className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/SystemService",
           },
           {
             title: "E-commerce Websites & Solutions",
             description:
               "Online stores with secure payments and product management.",
             icon: <HiOutlineShoppingCart className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/SystemService",
           },
           {
             title: "Health & Clinic Management Web Applications",
             description:
               "Web systems for patient records, appointments, and billing.",
             icon: <HiOutlineBuildingLibrary className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/SystemService",
           },
         ],
       },
@@ -452,41 +1432,41 @@ const navItems: NavItem[] = [
             description:
               "Integrate finance, HR, and operations in one platform.",
             icon: <HiOutlineCog className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/StandaloneSysDevService",
           },
           {
             title: "Point of Sale (POS) Systems",
             description:
               "Retail solutions for billing, inventory, and sales tracking.",
             icon: <HiOutlineShoppingCart className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/StandaloneSysDevService",
           },
           {
             title: "Inventory & Warehouse Management Systems",
             description:
               "Track stock levels and manage supply chains effectively.",
             icon: <HiOutlineFolderOpen className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/StandaloneSysDevService",
           },
           {
             title: "Hospital & Clinic Management Systems",
             description: "Comprehensive systems for healthcare administration.",
             icon: <HiOutlineBuildingLibrary className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/StandaloneSysDevService",
           },
           {
             title: "School / University Management Systems",
             description:
               "Manage student data, classes, and academic operations.",
             icon: <HiOutlineBuildingLibrary className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/StandaloneSysDevService",
           },
           {
             title: "Custom Business Automation Solutions",
             description:
               "Automate tasks to improve efficiency and productivity.",
             icon: <HiOutlineCog className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/StandaloneSysDevService",
           },
         ],
       },
@@ -498,67 +1478,67 @@ const navItems: NavItem[] = [
             description:
               "High-performance apps built for specific mobile platforms.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Cross-Platform Mobile Apps (Flutter, React Native)",
             description:
               "Apps running seamlessly on both Android and iOS devices.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "E-commerce Mobile Apps",
             description:
               "Mobile shopping apps with secure payments and cart features.",
             icon: <HiOutlineShoppingCart className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Educational & LMS Mobile Apps",
             description: "Apps for learning, quizzes, and course management.",
             icon: <HiOutlineAcademicCap className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Event & Ticketing Apps",
             description: "Mobile solutions for event booking and ticket sales.",
             icon: <HiOutlineTicket className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Delivery & Logistics Apps",
             description:
               "Track orders, deliveries, and fleet operations easily.",
             icon: <HiOutlineTruck className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Travel & Tourism Apps",
             description: "Guides, booking tools, and travel planning features.",
             icon: <HiOutlinePaperAirplane className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Financial & Fintech Apps",
             description:
               "Mobile banking, payment, and finance management apps.",
             icon: <HiOutlineCurrencyDollar className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Social Networking & Community Apps",
             description:
               "Platforms for connecting and engaging with communities.",
             icon: <HiOutlineChartBar className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
           {
             title: "Custom Business Mobile Apps",
             description:
               "Mobile solutions tailored to your unique business needs.",
             icon: <HiOutlineCog className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/MobileService",
           },
         ],
       },
@@ -570,14 +1550,14 @@ const navItems: NavItem[] = [
             description:
               "Intelligent bots for customer support and automation.",
             icon: <HiOutlineUser className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/AIService",
           },
           {
             title: "Custom AI Solutions",
             description:
               "AI-powered applications for data analysis and automation.",
             icon: <HiOutlineCog className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/AIService",
           },
         ],
       },
@@ -588,27 +1568,27 @@ const navItems: NavItem[] = [
             title: "Automated Functional Testing",
             description: "Automate repetitive test cases to improve accuracy.",
             icon: <HiOutlineDocumentText className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/TestAutomationService",
           },
           {
             title: "Regression Testing",
             description:
               "Ensure new updates don’t break existing functionality.",
             icon: <HiOutlineChartBar className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/TestAutomationService",
           },
           {
             title: "Performance Testing",
             description: "Measure and improve system speed and responsiveness.",
             icon: <HiOutlineChartBar className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/TestAutomationService",
           },
           {
             title: "CI/CD Support",
             description:
               "Integrate automated testing with your development pipeline.",
             icon: <HiOutlineCog className="text-black" />,
-            to: "/technology/WebService",
+            to: "/technology/TestAutomationService",
           },
         ],
       },
@@ -625,71 +1605,84 @@ const navItems: NavItem[] = [
     },
     submenu: [
       {
-        label: "Brand Identity Development",
+        label: "Video and Photography",
         items: [
           {
-            title: "UX Research",
-            description: "User-focused design.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/design/ux",
-          },
-          {
-            title: "UI Design",
-            description: "Modern interfaces.",
-            icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/design/ui",
-          },
-          {
-            title: "Prototyping",
-            description: "Clickable mockups.",
+            title: "Product photography",
+            description: "Capture stunning images that sell.",
             icon: <HiOutlinePhoto className="text-black" />,
-            to: "/design/prototype",
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Brand videography",
+            description: "Create compelling brand story videos.",
+            icon: <HiOutlineAcademicCap className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Video editing",
+            description: "Polish footage into engaging content.",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Motion graphics",
+            description: "Animate graphics for dynamic visuals.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/design/photography-and-videography",
           },
         ],
       },
       {
-        label: "Packaging Design",
+        label: "Identity Development",
         items: [
           {
-            title: "Logos",
-            description: "Unique brand marks.",
+            title: "Logo design",
+            description: "Design memorable logos for brands.",
             icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/design/logo",
+            to: "/design/brand-identity-development",
           },
           {
-            title: "Style Guides",
-            description: "Consistent branding.",
+            title: "Brand guidelines",
+            description: "Create standards for consistent identity.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/design/brand-identity-development",
+          },
+          {
+            title: "Letter heads",
+            description: "Design professional branded letterheads.",
+            icon: <HiOutlineEnvelope className="text-black" />,
+            to: "/design/brand-identity-development",
+          },
+          {
+            title: "Business cards",
+            description: "Create memorable cards for impressions.",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/design/brand-identity-development",
+          },
+          {
+            title: "Company profiles",
+            description: "Design profiles showcasing your business.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/design/brand-identity-development",
+          },
+          {
+            title: "Banner design",
+            description: "Create attention-grabbing promotional banners.",
+            icon: <HiOutlinePaperAirplane className="text-black" />,
+            to: "/design/brand-identity-development",
+          },
+          {
+            title: "Leaflet design",
+            description: "Design informative marketing leaflets.",
+            icon: <HiOutlineMapPin className="text-black" />,
+            to: "/design/brand-identity-development",
+          },
+          {
+            title: "Brand books",
+            description: "Develop complete brand documentation.",
             icon: <HiOutlineBookOpen className="text-black" />,
-            to: "/design/guide",
-          },
-          {
-            title: "Illustrations",
-            description: "Custom visuals.",
-            icon: <HiOutlinePhoto className="text-black" />,
-            to: "/design/illustration",
-          },
-        ],
-      },
-      {
-        label: "Promotional Material Design",
-        items: [
-          {
-            title: "UX Research",
-            description: "User-focused design.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/design/ux",
-          },
-          {
-            title: "UI Design",
-            description: "Modern interfaces.",
-            icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/design/ui",
-          },
-          {
-            title: "Prototyping",
-            description: "Clickable mockups.",
-            icon: <HiOutlinePhoto className="text-black" />,
-            to: "/design/prototype",
+            to: "/design/brand-identity-development",
           },
         ],
       },
@@ -697,45 +1690,74 @@ const navItems: NavItem[] = [
         label: "Creative Content",
         items: [
           {
-            title: "Logos",
-            description: "Unique brand marks.",
+            title: "Graphic design",
+            description: "Create stunning visuals for marketing.",
             icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/design/logo",
+            to: "/design/creative-content",
           },
           {
-            title: "Style Guides",
-            description: "Consistent branding.",
-            icon: <HiOutlineBookOpen className="text-black" />,
-            to: "/design/guide",
+            title: "Social graphics",
+            description: "Design scroll-stopping social media graphics.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/design/creative-content",
           },
           {
-            title: "Illustrations",
-            description: "Custom visuals.",
-            icon: <HiOutlinePhoto className="text-black" />,
-            to: "/design/illustration",
+            title: "Infographics",
+            description: "Transform data into visual stories.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/design/creative-content",
+          },
+          {
+            title: "Digital illustrations",
+            description: "Create custom brand illustrations.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/design/creative-content",
           },
         ],
       },
       {
-        label: "Photography & Videography",
+        label: "Package Design",
         items: [
           {
-            title: "UX Research",
-            description: "User-focused design.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/design/ux",
+            title: "Product packaging",
+            description: "Design packaging that attracts customers.",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/design/packaging-design",
           },
           {
-            title: "UI Design",
-            description: "Modern interfaces.",
-            icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/design/ui",
+            title: "Label design",
+            description: "Create clear, attractive product labels.",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/design/packaging-design",
           },
           {
-            title: "Prototyping",
-            description: "Clickable mockups.",
-            icon: <HiOutlinePhoto className="text-black" />,
-            to: "/design/prototype",
+            title: "Box design",
+            description: "Design functional, eye-catching boxes.",
+            icon: <HiOutlineFolderOpen className="text-black" />,
+            to: "/design/packaging-design",
+          },
+          {
+            title: "Mockups & prototypes",
+            description: "Visualize concepts before production.",
+            icon: <HiOutlineViewColumns className="text-black" />,
+            to: "/design/packaging-design",
+          },
+        ],
+      },
+      {
+        label: "Promotional Material",
+        items: [
+          {
+            title: "Flyer designs",
+            description: "Create impactful promotional flyers.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/design/promotional-material-design",
+          },
+          {
+            title: "Color Grading",
+            description: "Enhance visuals through color correction.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/design/promotional-material-design",
           },
         ],
       },
@@ -746,31 +1768,31 @@ const navItems: NavItem[] = [
             title: "User Research & Analysis",
             description: "Understand users’ needs.",
             icon: <HiOutlineUser className="text-black" />,
-            to: "/uiux/user-research",
+            to: "/design/ui-ux-design",
           },
           {
             title: "Brand Experience Integration",
             description: "Blend brand into design.",
             icon: <HiOutlineSparkles className="text-black" />,
-            to: "/uiux/brand-experience",
+            to: "/design/ui-ux-design",
           },
           {
             title: "Wireframing & Prototyping",
             description: "Create structure & flow.",
             icon: <HiOutlineViewColumns className="text-black" />,
-            to: "/uiux/wireframe-prototype",
+            to: "/design/ui-ux-design",
           },
           {
             title: "Visual & Interaction Design",
             description: "Craft appealing visuals.",
             icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/uiux/visual-interaction",
+            to: "/design/ui-ux-design",
           },
           {
             title: "Usability Testing & Optimization",
             description: "Improve user experience.",
             icon: <HiOutlineCheckCircle className="text-black" />,
-            to: "/uiux/usability-testing",
+            to: "/design/ui-ux-design",
           },
         ],
       },
