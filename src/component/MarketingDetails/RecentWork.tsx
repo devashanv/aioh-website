@@ -7,7 +7,7 @@ import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
 import img1 from "../../assets/img/recentWork/queens pop up.webp";
-import img2 from "../../assets/img/recentWork/dumy.jpg";
+import img2 from "../../assets/img/recentWork/pop up wingscraft.webp";
 import img3 from "../../assets/img/recentWork/pop up eikone.webp";
 import img4 from "../../assets/img/recentWork/dumy.jpg";
 import img5 from "../../assets/img/recentWork/pop up walauwa.webp";
