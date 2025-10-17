@@ -5,39 +5,51 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Understand Your Promotion Goal",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "Is it a sale, a new product launch, brand awareness, or driving foot traffic? We design materials that are laser-focused on achieving your specific goal, not just looking decorative.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Create Eye-Catching Designs",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Bold headlines, vibrant colors, compelling imagery—we design materials that grab attention instantly. Your promotional materials will stand out from competitors and make people stop and read.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Write Copy That Converts",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Clear headlines, benefit-focused messaging, strong calls-to-action. We write copy that tells people exactly what you're offering and why they should care right now. No confusion, no wasted space.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Design for Your Medium",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Flyers, posters, banners, shelf talkers, table tents, window displays—each format needs different design thinking. We create materials optimized for where they'll actually be seen and read.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Maintain Brand Consistency",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Your promotional materials look and feel like they come from YOUR brand. Same colors, fonts, tone, and messaging. Consistency builds recognition and trust.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Include Clear Calls-to-Action",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Visit your store, call now, shop online, use this coupon—we make it crystal clear what you want customers to do next. No guessing, no missed opportunities.",
+  },
+  {
+    number: "07",
+    title: "Design for Print Quality",
+    description:
+      "We know print specs, color modes, bleeds, and resolution. Your materials arrive looking as beautiful as the design, not washed out or pixelated. Professional quality every time.",
+  },
+  {
+    number: "08",
+    title: "Create Campaign Continuity",
+    description:
+      "If you're running a bigger campaign, all your materials work together. Website graphics, social media, flyers, signage—everything reinforces the same message and looks cohesive.",
   },
 ];
 
@@ -119,7 +131,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Design Materials That Sell
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +167,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Design Materials That Sell
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

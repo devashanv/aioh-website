@@ -5,39 +5,75 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Understand Your Brand Story",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "Before we pick up a camera, we know what story we're telling. What's unique about your business? What do you want customers to feel? Every photo and video serves your brand mission.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Product Photography That Sells",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Beautiful product shots from every angle. Close-ups that show detail, lifestyle photos that show products in use, flat lays that look stunning on social media. Photography that makes customers want to buy.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Lifestyle & Brand Photography",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Photos of your team, your workspace, your process. Real people and real moments that build connection and trust. Customers buy from businesses they feel they know—photography makes that possible.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Professional Video Production",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "From concept to final edit—we handle it all. Product videos, testimonial videos, explainer videos, social media videos. Professional quality that keeps viewers watching and drives action.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Video Storytelling That Connects",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "We don't just film—we tell stories. Compelling narratives that emotionally connect with your audience. Videos that people watch all the way through and actually remember.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Before & After Content",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Service videos that show transformation. Before & after photography that proves your product or service works. Visual proof that builds confidence and drives conversions.",
+  },
+  {
+    number: "07",
+    title: "Behind-The-Scenes Content",
+    description:
+      "Show customers how you work. Behind-the-scenes videos and photos build authenticity and trust. People connect with real, unpolished moments more than perfect corporate imagery.",
+  },
+  {
+    number: "08",
+    title: "Social Media Video Content",
+    description:
+      "Short-form videos, reels, stories, TikToks. We create video content optimized for every social platform. Engaging, shareable, designed to perform on the algorithm.",
+  },
+  {
+    number: "09",
+    title: "Testimonial & Case Study Videos",
+    description:
+      "Real customers sharing real results. Video testimonials are 10x more powerful than written reviews. We produce professional testimonial videos that build credibility and drive sales.",
+  },
+  {
+    number: "10",
+    title: "Event & Live Coverage",
+    description:
+      "Conference coverage, product launches, grand openings, company events. Professional photography and videography that captures the moment and extends your reach beyond attendees.",
+  },
+  {
+    number: "11",
+    title: "Professional Editing & Post-Production",
+    description:
+      "Color correction, sound design, motion graphics, subtitles. We don't just film—we create polished, professional final products ready for every platform.",
+  },
+  {
+    number: "12",
+    title: "Optimized for Every Platform",
+    description:
+      "YouTube videos, Instagram Reels, TikTok content, website videos, email videos. We optimize every video for where it will actually be seen and watched.",
   },
 ];
 
@@ -119,7 +155,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Create Professional Visuals
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +191,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Create Professional Visuals
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

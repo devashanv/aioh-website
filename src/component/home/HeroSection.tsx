@@ -74,9 +74,9 @@ const HeroSection: React.FC = () => {
           {/* bottom data */}
           <div className="flex gap-5 items-center justify-center lg:w-1/2">
             <div className="flex items-end justify-center">
-              <p className="text-xl md:text-3xl text-white font-medium">08</p>
+              <p className="text-xl md:text-3xl text-white font-medium">25</p>
               <p className="text-primary">+</p>
-              <p className="text-white font-thin ml-1">Years</p>
+              <p className="text-white font-thin ml-1">Industries</p>
             </div>
 
             <p className="text-xl md:text-3xl text-white font-thin">|</p>
