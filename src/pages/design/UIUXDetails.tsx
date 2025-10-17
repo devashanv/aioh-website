@@ -9,6 +9,7 @@ import WebHero from "../../component/UIUXDetails/WebHero";
 import WebFramework from "../../component/UIUXDetails/WebFramework";
 import WebContact from "../../component/common/DetailsPageContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
+import RecentWork from "../../component/UIUXDetails/RecentWork";
 
 function UIUXDetails() {
   useEffect(() => {
@@ -50,6 +51,16 @@ function UIUXDetails() {
         <section className="bg-[#01213A] rounded-[20px] lg:mb-30 mb-20">
           <div className="w-11/12 mx-auto">
             <WebFramework />
+          </div>
+        </section>
+
+        {/* Section 3 */}
+        <section
+          id="WebRecentWork"
+          className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
+        >
+          <div className="w-11/12 mx-auto">
+            <RecentWork />
           </div>
         </section>
 
