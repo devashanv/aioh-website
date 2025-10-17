@@ -6,7 +6,8 @@ import { IoClose } from "react-icons/io5";
 import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
-import dumy from "../../assets/img/recentWork/dumy.jpg";
+import img1 from "../../assets/img/recentWork/Musswanna Pop up.webp";
+import img2 from "../../assets/img/recentWork/Suisse rebranding video pop up.webp";
 import { AnimatePresence, motion } from "framer-motion";
 
 type Project = {
@@ -33,7 +34,7 @@ const projects: Project[] = [
   {
     title: "Muswenna Tea Factory",
     description: "Rebranding a 25-Year Legacy into a Modern Premium Brand",
-    image: dumy,
+    image: img1,
     link: "#",
     description2:
       "Muswenna Tea, a premium Sri Lankan tea brand with a proud 25-year legacy, approached us for a complete rebranding project. The scope included creating a new brand identity, product packaging, company profile, and website redesign. The challenge was to craft a brand that not only stood out in crowded retail shelves but also carried the heritage and authenticity of Sri Lankan tea while appealing to international markets.",
@@ -69,7 +70,7 @@ const projects: Project[] = [
     title: "Hotel Suisse",
     description:
       "Blending Heritage with Modern Identity Through Rebranding campaign",
-    image: dumy,
+    image: img2,
     link: "#",
     description2:
       "Hotel Suisse, one of Kandy’s most iconic heritage landmarks, wanted to reposition itself with a modern yet timeless brand identity. To achieve this, we developed a rebranding Campaign that followed the journey of a “Swiss lady” exploring Kandy’s cultural treasures before arriving at Hotel Suisse. Her journey symbolized the hotel’s unique essence - a seamless blend of heritage, elegance, and modern sophistication.",
