@@ -6,7 +6,11 @@ import { IoClose } from "react-icons/io5";
 import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
-import dumy from "../../assets/img/recentWork/dumy.jpg";
+import img1 from "../../assets/img/recentWork/queens pop up.webp";
+import img2 from "../../assets/img/recentWork/dumy.jpg";
+import img3 from "../../assets/img/recentWork/pop up eikone.webp";
+import img4 from "../../assets/img/recentWork/dumy.jpg";
+import img5 from "../../assets/img/recentWork/pop up walauwa.webp";
 import { AnimatePresence, motion } from "framer-motion";
 
 type Project = {
@@ -36,7 +40,7 @@ const projects: Project[] = [
     title: "Queens Hotel Kandy",
     description:
       "Heritage storytelling unlocks 964.3% surge in organic engagement",
-    image: dumy,
+    image: img1,
     link: "#",
     description2:
       "When Queens Hotel Kandy recognized their digital presence wasn't reflecting their prestigious heritage status, our organic social media strategy transformed underperforming channels into a content powerhouse, delivering 615,910 unique reach and an extraordinary 964% increase in content interactions.",
@@ -62,7 +66,7 @@ const projects: Project[] = [
   {
     title: "Emirates Aviation Collectibles",
     description: "Selling Out Emirates Aviation Collectibles with a 1043% ROI",
-    image: dumy,
+    image: img2,
     link: "#",
     description2:
       "A structured full-funnel Meta strategy transformed niche awareness into 100% sales conversion",
@@ -105,7 +109,7 @@ const projects: Project[] = [
   {
     title: "UK Education Consultancy",
     description: "Cutting Cost per Lead by 78% with Smarter Targeting",
-    image: dumy,
+    image: img3,
     link: "#",
     description2:
       "Data-driven testing and refined ad strategies reduced CPL from $19.90 to $4.38 while hitting the targets",
@@ -147,7 +151,7 @@ const projects: Project[] = [
   {
     title: "Ekho Ella",
     description: "Driving Organic Growth in the Hills of Ella",
-    image: dumy,
+    image: img4,
     link: "#",
     description2:
       "Scenic storytelling and organic strategy delivered a 193% lift in reach",
@@ -183,7 +187,7 @@ const projects: Project[] = [
   {
     title: "Ehelepola Walawwa",
     description: "Shaping the Brand of Sri Lanka’s Largest Cultural Landmark",
-    image: dumy,
+    image: img5,
     link: "#",
     description2:
       "AI-powered innovation and unified branding brought a historic destination to life",
