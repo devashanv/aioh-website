@@ -15,35 +15,35 @@ const services = [
   {
     title: "Brand Identity Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Build consistent brand identity across all touchpoints. Design logos, guidelines, and branded materials.",
     img: sc1,
     path: "/design/brand-identity-development",
   },
   {
     title: "Packaging Design",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Design packaging that stands out on shelves. Create labels, boxes, and mockups that sell.",
     img: sc2,
     path: "/design/packaging-design",
   },
   {
     title: "Promotional Material Design",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Design marketing materials that capture attention. Create flyers and enhance visuals professionally.",
     img: sc3,
     path: "/design/promotional-material-design",
   },
   {
     title: "Creative Content",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Design eye-catching graphics for digital platforms. Create infographics, illustrations, and social visuals.",
     img: sc4,
     path: "/design/creative-content",
   },
   {
     title: "Photography & Videography",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Capture your brand through professional visuals. Create videos and images that tell stories.",
     img: sc5,
     path: "/design/photography-and-videography",
   },
