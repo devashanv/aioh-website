@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import heroVM from "../../assets/video/heroD.mp4";
+import { useNavigate } from "react-router-dom";
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-11/12 mx-auto">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-1">
@@ -18,7 +20,8 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary">Design</span> That Defines Experience
+            <span className="text-primary">Design</span> That Actually Solves
+            Problems
           </motion.h1>
 
           <motion.p
@@ -27,23 +30,22 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            We craft growth-driven marketing strategies that thoughtfully
-            connect ambitious brands with the audiences that matter most
-            seamlessly blending strategic insight, creative storytelling, and
-            performance-focused execution across every digital touch-point to
-            drive real, measurable business impact.
+            We don't just make things look pretty. We create designs that work.
+            Whether it's confusing brand identity, packaging that doesn't sell,
+            or marketing materials that get ignored - we analyze your real
+            needs, understand your market and customers, and craft creative
+            solutions that deliver results. Beautiful design is great. Design
+            that makes you money is what we do.
           </motion.p>
 
           <button
             className="w-fit lg:mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center"
             onClick={() => {
-              const section = document.getElementById("services");
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
+              navigate("/consultation", { replace: true });
+              window.location.reload();
             }}
           >
-            <span>Explore Our Services</span>
+            <span>Schedule a Call</span>
           </button>
         </motion.div>
 

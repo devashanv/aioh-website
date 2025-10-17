@@ -6,7 +6,7 @@ const stats = [
   { value: 7, label: "Countries" },
   { value: 50, label: "Clients" },
   { value: 250, label: "Projects" },
-  { value: 70, label: "Ongoing" },
+  { value: 25, label: "Industries" },
 ];
 
 const Counter: React.FC = () => {

@@ -5,39 +5,63 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Understand Your Content Goals",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "More awareness? More engagement? More website traffic? More conversions? We design content strategically based on what you actually want to achieve—not just what looks cool.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Create Scroll-Stopping Visuals",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Bold designs, eye-catching colors, stunning imagery. We create graphics so visually compelling that people stop scrolling through their feed specifically to look at yours. Attention is the first battle—we win it.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Design for Each Platform",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Instagram, TikTok, Facebook, LinkedIn, Pinterest—each platform has different sizes, styles, and what works. We create platform-specific designs that perform best where your audience actually is.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Tell Your Brand Story Visually",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Every piece of content reinforces who you are. Consistent colors, fonts, imagery style, and tone. Your audience recognizes your content instantly, even without your name attached.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Make Complex Ideas Simple",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Infographics, explainer graphics, data visualizations. We take confusing information and turn it into beautiful, easy-to-understand visuals that people actually want to share.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Design Social Media Graphics That Convert",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Quote graphics, promotional posts, educational content, carousel posts—we design social content that gets engagement and drives traffic back to your website or store.",
+  },
+  {
+    number: "07",
+    title: "Create Video Thumbnails That Get Clicks",
+    description:
+      "YouTube thumbnails, video still frames, thumbnail graphics. We design visuals so compelling that people click your video instead of 100 other options. Thumbnails matter—we make them count.",
+  },
+  {
+    number: "08",
+    title: "Develop Content Templates You Can Reuse",
+    description:
+      "Branded templates for social posts, email headers, blog graphics, stories. Professional-looking content that you can create quickly and consistently without needing a designer every single time.",
+  },
+  {
+    number: "09",
+    title: "Optimize for Mobile Viewing",
+    description:
+      "Most people see content on phones. We design vertically, use readable fonts, bold text, and clear messaging. Content that looks amazing whether someone's on a phone, tablet, or desktop.",
+  },
+  {
+    number: "10",
+    title: "Test and Refine Based on Performance",
+    description:
+      "We monitor which content designs get the most engagement, clicks, and conversions. Then we create more of what works. Data-driven creative that improves every month.",
   },
 ];
 
@@ -119,7 +143,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            How We Design Content That Engages
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +179,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          How We Design Content That Engages
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

@@ -5,39 +5,45 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Discover Your Unique Brand Story",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We dig deep into who you are, what you stand for, and what makes you different. Your story becomes the foundation of everything—your look, your voice, your message. People connect with stories, not just businesses.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Design a Logo That Sticks",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "A memorable logo that represents your brand essence. We create designs that work everywhere—your website, business cards, signage, social media. Professional, timeless, and impossible to forget.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Choose Your Visual Style",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Color palette, typography, imagery style, and graphic elements. We create a complete visual language that feels consistent whether someone sees your ad, visits your website, or walks into your store.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Develop Your Brand Voice",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "How you talk matters. We define your tone and messaging so everything you say—from website copy to social media posts to customer emails—sounds like the same professional, authentic company.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Create Your Brand Guidelines",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "A complete playbook that keeps everything consistent. Logo usage, color codes, fonts, imagery rules, tone of voice—everything your team needs to represent your brand correctly every single time.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Design Brand Assets You'll Use Everywhere",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Business cards, letterheads, email signatures, social media templates, brand presentations. Professional assets that make your business look polished and put-together from day one.",
+  },
+  {
+    number: "07",
+    title: "Build Emotional Connection",
+    description:
+      "We don't just make you look professional—we make people FEEL something when they interact with your brand. Trust, confidence, excitement, belonging. The right identity creates loyalty.",
   },
 ];
 
@@ -119,7 +125,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Build Your Brand Identity
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +161,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Build Your Brand Identity
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products
