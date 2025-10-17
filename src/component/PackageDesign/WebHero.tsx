@@ -19,17 +19,20 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Package
+          Make Them Buy With
           <br />
-          <span className="text-[#02ec97]">Design</span> Details
+          Your <span className="text-[#02ec97]">Package Design</span>
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          Your product is great, but your packaging tells a different story.
+          Customers walk past it on the shelf because it looks cheap or
+          confusing. Or they buy once but never come back because the unboxing
+          experience was forgettable. Packaging is often the first physical
+          impression customers have of your brand—and it either sells or it
+          doesn't. We design packages that stop people in their tracks,
+          communicate your value, and make customers excited to buy and share
+          your product.
         </p>
 
         {/* Mobile/Tablet Image Only */}
@@ -41,8 +44,8 @@ const WebHero: React.FC = () => {
           />
         </div>
 
-        {/* <button
-          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
+        <button
+          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
             if (section) {
@@ -51,7 +54,7 @@ const WebHero: React.FC = () => {
           }}
         >
           Explore Our Portfolio
-        </button> */}
+        </button>
       </motion.div>
 
       {/* Right Side: Desktop Image */}
