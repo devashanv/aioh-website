@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 // bg images
 import sc1 from "../../assets/img/services/website.webp";
 import sc2 from "../../assets/img/services/websystem.webp";
-import sc3 from "../../assets/img/services/tech-sc3.png";
-import sc4 from "../../assets/img/services/tech-sc4.png";
+import sc3 from "../../assets/img/services/standalone.webp";
+import sc4 from "../../assets/img/services/websystem.webp";
+import sc5 from "../../assets/img/services/AI.webp";
+import sc6 from "../../assets/img/services/websystem.webp";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -28,28 +30,28 @@ const services = [
     title: "Standalone System Development",
     description:
       "Standalone systems like ERP and POS optimize resource management and daily operations, reducing costs and scaling capacity.",
-    img: sc2,
+    img: sc3,
     path: "/technology/StandaloneSysDevService",
   },
   {
     title: "Mobile Application Development",
     description:
       "Mobile app development extends client reach with intuitive, high-performance apps tailored to industry-specific needs, increasing user engagement and loyalty",
-    img: sc3,
+    img: sc4,
     path: "/technology/MobileService",
   },
   {
     title: "AI Solutions",
     description:
       "AI solutions like chatbots and virtual assistants improve customer interaction and automate routine tasks, enhancing productivity.",
-    img: sc4,
+    img: sc5,
     path: "/technology/AIService",
   },
   {
     title: "Test Automation Solutions",
     description:
       "Test automation ensures product quality and faster delivery through reliable functional, regression, and performance testing integrated with CI/CD pipelines.",
-    img: sc4,
+    img: sc6,
     path: "/technology/TestAutomationService",
   },
 ];
