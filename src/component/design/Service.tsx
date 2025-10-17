@@ -27,21 +27,21 @@ const services = [
     path: "/design/packaging-design",
   },
   {
-    title: "Promotional Material Design",
+    title: "Promotion or POS Material Design",
     description:
       "Design marketing materials that capture attention. Create flyers and enhance visuals professionally.",
     img: sc3,
     path: "/design/promotional-material-design",
   },
   {
-    title: "Creative Content",
+    title: "Creative Content Design",
     description:
       "Design eye-catching graphics for digital platforms. Create infographics, illustrations, and social visuals.",
     img: sc4,
     path: "/design/creative-content",
   },
   {
-    title: "Photography & Videography",
+    title: "Photography & Videography productions ",
     description:
       "Capture your brand through professional visuals. Create videos and images that tell stories.",
     img: sc5,
