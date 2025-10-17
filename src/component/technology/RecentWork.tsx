@@ -6,20 +6,30 @@ import { IoClose } from "react-icons/io5";
 import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
-import tech_rw1 from "../../assets/img/recentWork/tech-rw1.png";
-import tech_rw2 from "../../assets/img/recentWork/tech-rw2.png";
-import tech_rw3 from "../../assets/img/recentWork/tech-rw3.png";
-import tech_rw4 from "../../assets/img/recentWork/tech-rw4.png";
-import tech_rw5 from "../../assets/img/recentWork/tech-rw5.png";
-import tech_rw6 from "../../assets/img/recentWork/tech-rw6.png";
-import tech_rw7 from "../../assets/img/recentWork/tech-rw7.png";
-import tech_rw8 from "../../assets/img/recentWork/tech-rw8.png";
-import tech_rw9 from "../../assets/img/recentWork/tech-rw9.png";
-import tech_rw10 from "../../assets/img/recentWork/tech-rw10.png";
-import tech_rw11 from "../../assets/img/recentWork/tech-rw11.png";
-import tech_rw12 from "../../assets/img/recentWork/tech-rw10.png";
-import tech_rw13 from "../../assets/img/recentWork/tech-rw11.png";
-import tech_rw14 from "../../assets/img/recentWork/tech-rw10.png";
+import goahead from "../../assets/img/recentWork/goahead.png";
+import onedigital from "../../assets/img/recentWork/onedigital.png";
+import automobile from "../../assets/img/recentWork/automobile.png";
+import flylimo from "../../assets/img/recentWork/flylimo.png";
+import mycourse from "../../assets/img/recentWork/mycourse.png";
+import wasantha from "../../assets/img/recentWork/wasantha.png";
+import Ltt from "../../assets/img/recentWork/ltt.png";
+import dinuda from "../../assets/img/recentWork/dinuda.png";
+import muswenn from "../../assets/img/recentWork/muswenn.png";
+import aluvihara from "../../assets/img/recentWork/aluvihara.png";
+import kandyclub from "../../assets/img/recentWork/kandyclub.png";
+import quickbox from "../../assets/img/recentWork/quickbox.png";
+import kandyrentcars from "../../assets/img/recentWork/kandyrentcars.png";
+import nafco from "../../assets/img/recentWork/nafco.png";
+import regency from "../../assets/img/recentWork/regency.png";
+import moh from "../../assets/img/recentWork/moh.png";
+import ehelepola from "../../assets/img/recentWork/ehelepola.png";
+import winchester from "../../assets/img/recentWork/winchester.png";
+import officeone from "../../assets/img/recentWork/officeone.png";
+import cafelavia from "../../assets/img/recentWork/cafelavia.png";
+import medone from "../../assets/img/recentWork/medone.png";
+import buycraft from "../../assets/img/recentWork/buycraft.png";
+import eikone from "../../assets/img/recentWork/eikone.png";
+
 import dumy from "../../assets/img/recentWork/dumy.jpg";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -31,7 +41,7 @@ const projects = [
     title: "OneDigital Website",
     description:
       "A premier U.S. firm in HR, insurance, and financial services.",
-    image: tech_rw1,
+    image: onedigital,
     link: "https://onedigitalusa.com",
     description2:
       "This platform was crafted to showcase OneDigital, a premier U.S. firm specializing in employee benefits, HR consulting, insurance, and financial services. As a trusted partner to businesses and individuals nationwide, the site presents their capabilities from retirement planning and PEO solutions to technology-forward consulting through a professional, mobile-friendly design. Built using enterprise-grade frameworks and a robust CMS, the website delivers an optimized experience across devices.",
@@ -54,7 +64,7 @@ const projects = [
     title: "MyCourse.lk Website",
     description:
       "Sri Lanka’s first and largest online course marketplace for students.",
-    image: tech_rw2,
+    image: mycourse,
     link: "https://mycourse.lk",
     description2:
       "This website was designed to promote MyCourse.lk, Sri Lanka’s first and largest course marketplace, enabling students to discover, compare, and apply for educational programs from institutions across the country. Built with a clean, responsive design stack likely based on WordPress (PHP/MySQL) or a custom CMS, the platform ensures fast performance and user-friendly access across all devices. ",
@@ -77,7 +87,7 @@ const projects = [
     title: "EIKONE Website",
     description:
       "A digital agency platform showcasing innovation, brand strategy, and design.",
-    image: tech_rw3,
+    image: eikone,
     link: "https://eikone.co.uk",
     description2:
       "This website was crafted to showcase Eikone's strength in digital innovation, brand strategy, and design. As a forward-thinking digital agency, Eikone needed an online presence that  reflects their modern approach and creative mindset. Built using Next.js, Tailwind CSS, and  Headless CMS, the platform is fast, scalable, and delivers a seamless experience across all  devices.",
@@ -101,7 +111,7 @@ const projects = [
     title: "Kandy Rent Cars",
     description:
       "Kandy Rent Cars is your trusted car rental service in Kandy and beyond.",
-    image: tech_rw4,
+    image: kandyrentcars,
     link: "https://kandyrentcars.lk",
     description2:
       "This website was crafted to help tourists and visitors in Sri Lanka easily rent vehicles for travel in and around Kandy. Designed to promote both self-drive and chauffeur-driven car services, the platform offers users a convenient booking experience, transparent pricing, and detailed vehicle options. Built for simplicity and accessibility, it supports multilingual browsing and mobile responsiveness across devices.",
@@ -122,7 +132,7 @@ const projects = [
     title: "BuyCrafts Website",
     description:
       "An online platform showcasing handmade crafts for global customers.",
-    image: tech_rw3,
+    image: buycraft,
     link: "https://buycrafts.net",
     description2:
       "This website was crafted to showcase Sri Lankan handmade crafts from wooden carvings to brass inlays. It enables both artisans and customers globally to connect through a storefront that's fast, visually engaging, and easy to navigate. Built on a modern e-commerce framework, it supports multi-currency, multi-language, and a responsive UI for shoppers worldwide.",
@@ -145,7 +155,7 @@ const projects = [
     title: "Winchester Global",
     description:
       "A corporate platform showcasing global logistics and consultancy services.",
-    image: tech_rw4,
+    image: winchester,
     link: "https://winchesterglobal.com",
     description2:
       "This website is presented as the digital front for Winchester Global, a company offering global logistics, trade, or consultancy services. The platform presumably showcases service offerings, industry sectors, and contact capability via a clean, corporate design aiming to be accessible across devices. ",
@@ -168,7 +178,7 @@ const projects = [
     title: "Dinuda Resort",
     description:
       "Dinuda Resort offers an unparalleled escape into tropical paradise.",
-    image: tech_rw5,
+    image: dinuda,
     link: "https://dinudaresortkalpitiya.com",
     description2:
       "This website was crafted to present Dinuda Resort, a beachfront retreat in Kalpitiya offering serene lagoon-side stays and adventure activities like kitesurfing, kayaking, dolphin watching, and wildlife tours. Built using a visually engaging, responsive design likely powered by WordPress with a custom theme the platform delivers a tranquil yet dynamic browsing experience across all devices.",
@@ -192,7 +202,7 @@ const projects = [
     title: "Fly Limousines",
     description:
       "A premium platform for booking luxury chauffeur and limousine services.",
-    image: tech_rw6,
+    image: flylimo,
     link: "https://flylimosines.com",
     description2:
       "This website was crafted to offer a luxury and professional transportation booking experience through Fly Limousines Sri Lanka, a premium chauffeur service. The platform helps both local and international clients book limousines for weddings, airport transfers, corporate events, and special occasions. Built using responsive and elegant design principles, the site ensures smooth access across all devices with a focus on class and clarity.",
@@ -216,7 +226,7 @@ const projects = [
     title: "NAFCO",
     description:
       "A trusted Sri Lankan cement block manufacturer with 35+ years of experience.",
-    image: tech_rw7,
+    image: nafco,
     link: "https://nafco.lk",
     description2:
       "This website was designed to represent Nafco Industries, a trusted Sri Lankan cement block manufacturer with over 35 years of experience. The site serves as an informative and reliable platform for customers to explore Nafco’s products, services, and technical specifications. Built with HTML5, CSS, and WordPress, the platform ensures fast loading, mobile responsiveness, and easy content management.",
@@ -240,7 +250,7 @@ const projects = [
     title: "Muswenna Tea",
     description:
       "A family owned tea manufacturer in Galle offering certified teas and factory tours.",
-    image: tech_rw8,
+    image: muswenn,
     link: "https://muswennatea.com/",
     description2:
       "This website was built to showcase the identity of Muswenna Tea Factory, a family-owned  tea manufacturing company located in Galle, Sri Lanka. The platform provides a simple, informative, and welcoming space for customers and tourists to explore the brand, discover its certified tea products, and book factory tours. The site was developed with a clean layout, multilingual support, and mobile responsiveness to ensure easy access for local and international audiences.",
@@ -263,7 +273,7 @@ const projects = [
     title: "The Kandy Club Management System",
     description:
       "A digital platform automating operations and member services for the historic Kandy Club.",
-    image: tech_rw9,
+    image: kandyclub,
     link: "",
     description2:
       "The Kandy Club Management System (KCMS) was developed as an all-in-one digital platform to modernize and automate the day-to-day operations of the historic Kandy Club a private social and hospitality club offering accommodation, dining, event hosting, and member services. Designed to streamline complex workflows, the system integrates administration, finance, hospitality, and inventory management into a unified platform, improving both staff productivity and member satisfaction. Built using a secure and scalable architecture, KCMS ensures centralized data access, role-based controls, and seamless real-time operations.",
@@ -289,7 +299,7 @@ const projects = [
     title: "Chandula Nanayakkara Website",
     description:
       "A platform highlighting the journey and leadership work of Chandula Nanayakkara.",
-    image: tech_rw10,
+    image: dumy,
     link: "https://chandulananayakkara.com",
     description2:
       "This website was crafted to showcase the inspiring journey and impactful work of Chandula Nanayakkara a youth leader, mentor, author, and CEO of All in One Holdings. The site serves as a central platform for sharing his personal story, publications, leadership initiatives, and professional engagements. Built using WordPress with Element or, PHP, and JavaScript, the site offers a smooth and professional user experience across all devices.",
@@ -313,7 +323,7 @@ const projects = [
     title: "Ministry of Indigenous Medicine",
     description:
       "The official platform promoting traditional healthcare services in Sri Lanka.",
-    image: tech_rw11,
+    image: moh,
     link: "https://mim.gov.lk",
     description2:
       "This official website represents Sri Lanka’s Ministry of Indigenous Medicine, showcasing straditional healthcare services and policy information. Built using modern web standards  (HTML5, CSS, likely with a CMS backend), the site provides content in English, Sinhala, and  Tamil and is optimized for government use reflecting the ministry’s mission to promote  Ayurveda, Siddha, Unani, and Homeopathy across Sri Lanka.",
@@ -338,7 +348,7 @@ const projects = [
     title: "Lanka Travel Trails Website",
     description:
       "A travel platform for hiking, nature, and adventure experiences in Sri Lanka.",
-    image: tech_rw12,
+    image: Ltt,
     link: "https://lankatraveltrails.com",
     description2:
       "This website was developed to support Lanka Travel Trails in offering unique and unforgettable nature, hiking, and adventure experiences across Sri Lanka. The platform  showcases various scenic destinations and trail packages, helping travelers easily explore,  inquire, and book their next journey. Built using WordPress, Element or, HTML5, CSS3, and  JavaScript, the site provides a modern, mobile-responsive, and user-friendly interface on all  devices.",
@@ -360,7 +370,7 @@ const projects = [
   {
     title: "Wasantha Withanage Personal Website",
     description: "Renowned Sri Lankan boxing coach and sports leader.",
-    image: tech_rw13,
+    image: wasantha,
     link: "https://wasanthawithanage.com/",
     description2:
       "This site was crafted to present Wasantha Kumara Withanage, a renowned Sri Lankan boxing  coach, sports official, and community leader. It serves as a central platform highlighting his professional journey from national coaching roles and AIBA technical officiating to educational and leadership positions. Built with a clean, WordPress-powered CMS, the platform offers a straightforward and responsive browsing experience tailored to both domestic and international audiences.",
@@ -384,7 +394,7 @@ const projects = [
     title: "Office One Sri Lanka website",
     description:
       "A platform showcasing premium co-working spaces in Colombo and Kandy.",
-    image: tech_rw14,
+    image: officeone,
     link: "https://officeone.lk",
     description2:
       "This website was crafted to showcase Office One, a premium co-working space provider with locations in Colombo and Kandy, Sri Lanka. The platform presents workspace packages  such as hot desks, single cabins, and meeting rooms alongside amenities and booking options. Built on a WordPress-powered CMS using HTML5, CSS3, JavaScript, and PHP, the  site delivers a clean, user-friendly, and mobile-responsive experience. It enables flexible  browsing and seamless inquiries via prominently placed contact forms and CTAs.",
@@ -409,7 +419,7 @@ const projects = [
     title: "Cafe Lavia Website",
     description:
       "A cozy couple-friendly café in Kandy offering coffee, brunch, and online orders.",
-    image: dumy,
+    image: cafelavia,
     link: "https://cafelavia.net/",
     description2:
       "This website was crafted to showcase Cafe Lavia, a cozy, couple-friendly café nestled in the heart of Kandy, Sri Lanka. The platform invites visitors to explore its curated menu of  specialty coffees, bagels, cakes, and brunch options, while offering seamless online  ordering via Uber Eats. Built with a visually appealing, lightweight design likely using  WordPress or a simple CMS powered by HTML, CSS, and JavaScript the site delivers a  responsive, user-friendly experience to both locals and tourists.",
@@ -431,7 +441,7 @@ const projects = [
     title: "QuickBox Website",
     description:
       "A courier and logistics platform for reliable parcel delivery in Sri Lanka.",
-    image: dumy,
+    image: quickbox,
     link: "https://quickbox.lk/",
     description2:
       "This website was developed to introduce QuickBox.lk, a professional courier and logistics brand in Sri Lanka focused on reliable parcel delivery services. The platform enables  customers to easily book delivery services, track parcels, and access essential courier  information through a modern, clean, and responsive interface. Built using HTML5, CSS3,  JavaScript, and likely powered by a PHP-based CMS like WordPress, the site ensures smooth  usability and cross-device compatibility.",
@@ -480,7 +490,7 @@ const projects = [
     title: "Automobile Billing & Management System",
     description:
       "A digital platform for billing and service management in automotive repair.",
-    image: dumy,
+    image: automobile,
     link: "",
     description2:
       "This custom-built web platform was designed to digitalize and streamline the complete billing and service management process for Willis AutoCare, a local automotive repair  service provider. The system supports real-time job tracking, invoice generation, item  registration, and user management all within a secure and user-friendly environment. Built  using Laravel (PHP) for the backend, Tailwind CSS for responsive UI design, and MySQL as  the database, the solution replaces manual operations with digital precision.",
@@ -506,7 +516,7 @@ const projects = [
     title: "MedOne - Patient Management System",
     description:
       "A digital platform for streamlined patient and healthcare management.",
-    image: dumy,
+    image: medone,
     link: "",
     description2:
       "The MedOne platform was developed to modernize and streamline healthcare workflows by providing an all-in-one digital patient management solution. Designed specifically for hospitals, clinics, and private practices, the system enables healthcare professionals to efficiently manage patient records, investigations, prescriptions, and administrativedocumentation. Built using modern web technologies (PHP, MySQL, HTML5, CSS3) with a focus on clean UI/UX, MedOne offers a seamless experience for both doctors and administrative staff. ",
@@ -531,7 +541,7 @@ const projects = [
     title: "Go Ahead Lanka Tours Website",
     description:
       "A travel platform offering guided tours and easy booking across Sri Lanka.",
-    image: dumy,
+    image: goahead,
     link: "https://goaheadlankatours.com/",
     description2:
       "This website was built to elevate Go Ahead Lanka Tours, a Sri Lankan-based travel service offering guided tours across the island. The platform enables travelers to search, book, and  manage tour experiences with ease. Featuring responsive design, advanced filtering, and a  secure booking engine, the site was developed using PHP 8, HTML5, CSS3, JavaScript, and  MySQL for reliable performance and smooth user interaction.",
@@ -556,7 +566,7 @@ const projects = [
     title: "Aluviharaya.lk Website",
     description:
       "A cultural and heritage platform showcasing the historic Aluviharaya Rock Cave Temple.",
-    image: dumy,
+    image: aluvihara,
     link: "https://www.aluviharaya.lk/",
     description2:
       "This website was developed to introduce Aluviharaya Rock Cave Temple, a historic Buddhist temple in Matale, Sri Lanka, known as the place where the Tripiṭaka was first written on ola leaves. The platform provides visitors and pilgrims with accurate cultural, historical, and travel-related information, while also promoting the temple as a national heritage site. With a clean, informative, and responsive design, the site ensures accessibility for both local and international audiences, helping them understand Aluviharaya’s religious and cultural significance.",
@@ -601,7 +611,7 @@ const projects = [
     title: "Ehelepola Walawwa Website",
     description:
       "The official website for the Ehelepola Walawwa Wax Museum in Kandy, Sri Lanka.",
-    image: dumy,
+    image: ehelepola,
     link: "https://ehelepolawalawwa.lk/",
     description2:
       "Ehelepola Walawwa is the official web presence for the Ehelepola Walawwa Wax Museum, a recently opened cultural heritage museum in Kandy, Sri Lanka, located in the historic Ehelepola Walawwa. The website promotes the museum, presents its exhibits, shares its historical significance, and provides clear information for visitors, both local and international. With a design focused on authenticity and accessibility, the platform highlights Kandyan history while introducing the unique wax museum experience to wider audiences.",
@@ -624,7 +634,7 @@ const projects = [
     title: "Regency Travel House Website",
     description:
       "A professional travel and tourism platform for Regency Travel House.",
-    image: dumy,
+    image: regency,
     link: "https://regency.knowmo.me/",
     description2:
       "Regency Travel House is a professional travel and tourism service provider in Sri Lanka, offering a wide range of holiday packages, cultural tours, hotel bookings, transport services, and customized travel itineraries. The website serves as a digital platform for both local and international travelers to explore packages, make inquiries, and learn about Regency’s services in a modern and user-friendly format.",
