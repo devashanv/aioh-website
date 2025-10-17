@@ -56,7 +56,7 @@ const SuccessStoriesNew = () => {
   }> = [
     {
       title:
-        "Developed museum website showcasing Kandyan heritage, boosting visibility globally.",
+        "Resilient web design drove 240% traffic, boosting local economic growth.",
       client: "- Sri Dalada Maligawa -",
       description: "",
       challenges: [
@@ -153,8 +153,7 @@ const SuccessStoriesNew = () => {
       },
     },
     {
-      title:
-        "Built responsive website for Regency Travel House, boosting engagement and trust.",
+      title: "Grew online brand footprint by 186%, driving market growth.",
       client: "- Regency Travel House  -",
       description: "",
       challenges: [
@@ -202,7 +201,7 @@ const SuccessStoriesNew = () => {
     },
     {
       title:
-        "Designed corporate website for Winchester Global, enhancing accessibility and presence",
+        "Boosted patient bookings 15% through advanced digital infrastructure and SEO strategy",
       client: "- Winchester Global  -",
       description: "",
       challenges: [

@@ -55,10 +55,11 @@ const ContactForm: React.FC = () => {
   // errors state
   const [errors, setErrors] = useState({
     from_name: false,
-    from_company: false,
+    // from_company: false,
     from_phone: false,
     from_email: false,
     main_service: false,
+    sub_service: false,
   });
 
   const handleInputChange = (
@@ -92,7 +93,7 @@ const ContactForm: React.FC = () => {
 
     const formData = new FormData(form.current);
     const name = formData.get("from_name")?.toString().trim();
-    const company = formData.get("from_company")?.toString().trim();
+    // const company = formData.get("from_company")?.toString().trim();
     const email = formData.get("from_email")?.toString().trim();
     const service = formData.get("main_service")?.toString().trim();
 
@@ -101,10 +102,11 @@ const ContactForm: React.FC = () => {
 
     const newErrors = {
       from_name: !name,
-      from_company: !company,
+      // from_company: !company,
       from_phone: !phone.number || !isValidPhone(fullPhoneNumber),
       from_email: !email || !isValidEmail(email),
       main_service: !service,
+      sub_service: !selectedSubService,
     };
 
     setErrors(newErrors);
@@ -157,10 +159,11 @@ const ContactForm: React.FC = () => {
           setPhone({ countryCode: "94", number: "" });
           setErrors({
             from_name: false,
-            from_company: false,
+            // from_company: false,
             from_phone: false,
             from_email: false,
             main_service: false,
+            sub_service: false,
           });
           setIsSending(false);
         },
@@ -187,8 +190,13 @@ const ContactForm: React.FC = () => {
   // Get current path using useLocation hook
   const location = useLocation();
 
-  // Extract last part of URL like "marketing", "design", etc.
-  const currentPath = location.pathname.split("/").filter(Boolean).pop() || "";
+  // Extract last part of URL
+  // const currentPath = location.pathname.split("/").filter(Boolean).pop() || "";
+
+  // Extract second-to-last part of URL
+  const pathParts = location.pathname.split("/").filter(Boolean);
+  const currentPath =
+    pathParts.length > 1 ? pathParts[pathParts.length - 2] : pathParts[0] || "";
 
   // Main services dropdown options
   const services = [
@@ -243,6 +251,61 @@ const ContactForm: React.FC = () => {
   //   ],
   // };
 
+  // sub services for each main service
+  const subService: Record<string, { label: string; value: string }[]> = {
+    Marketing: [
+      { label: "Digital Strategy", value: "Digital Strategy" },
+      { label: "Social Media Advertising", value: "Social Media Advertising" },
+      { label: "Social Media Management", value: "Social Media Management" },
+      {
+        label: "Lead generation, & Conversion Rate Optimization",
+        value: "Lead generation, & Conversion Rate Optimization",
+      },
+      {
+        label: "Search Engine Optimization (SEO)",
+        value: "Search Engine Optimization (SEO)",
+      },
+      { label: "Pay-Per-Click Marketing", value: "Pay-Per-Click Marketing" },
+      { label: "Email Marketing", value: "Email Marketing" },
+      { label: "Branding", value: "Branding" },
+      { label: "Website Development", value: "Website Development" },
+    ],
+    Technology: [
+      { label: "Web Development", value: "Web Development" },
+      { label: "Web System Development", value: "Web System Development" },
+      {
+        label: "Standalone System Development",
+        value: "Standalone System Development",
+      },
+      {
+        label: "Mobile Application Development",
+        value: "Mobile Application Development",
+      },
+      { label: "AI Solutions", value: "AI Solutions" },
+      {
+        label: "Test Automation Solutions",
+        value: "Test Automation Solutions",
+      },
+    ],
+    Design: [
+      {
+        label: "Brand Identity Development",
+        value: "Brand Identity Development",
+      },
+      { label: "Packaging Design", value: "Packaging Design" },
+      {
+        label: "Promotional Material Design",
+        value: "Promotional Material Design",
+      },
+      { label: "Creative Content", value: "Creative Content" },
+      {
+        label: "Photography & Videography",
+        value: "Photography & Videography",
+      },
+      { label: "UI/UX Design", value: "UI/UX Design" },
+    ],
+  };
+
   // Default selected service based on current path
   const capitalizeFirstLetter = (str: string) =>
     str.charAt(0).toUpperCase() + str.slice(1);
@@ -252,9 +315,11 @@ const ContactForm: React.FC = () => {
       ?.value || "";
 
   // State to manage selected main service
-  // const [selectedMainService, setSelectedMainService] =
-  //   useState(defaultService);
+  const [selectedMainService, setSelectedMainService] =
+    useState(defaultService);
+  // const [selectedMainService, setSelectedMainService] = useState("");
 
+  const [selectedSubService, setSelectedSubService] = useState("");
   // const [selectedQuestion, setSelectedQuestion] = useState("");
 
   // State to manage sending state for the button
@@ -310,7 +375,7 @@ const ContactForm: React.FC = () => {
           <Box sx={{ width: "100%" }}>
             <TextField
               name="from_name"
-              label="First name and last name"
+              label="Enter your name (e.g. Nimal Perera)"
               fullWidth
               error={errors.from_name}
               helperText={errors.from_name ? "Name is required." : ""}
@@ -323,12 +388,12 @@ const ContactForm: React.FC = () => {
           <Box sx={{ width: "100%" }}>
             <TextField
               name="from_company"
-              label="Company name"
+              label="Enter your company"
               fullWidth
-              error={errors.from_company}
-              helperText={
-                errors.from_company ? "Company name is required." : ""
-              }
+              // error={errors.from_company}
+              // helperText={
+              //   errors.from_company ? "Company name is required." : ""
+              // }
               onChange={handleInputChange}
               sx={textFieldStyles}
             />
@@ -338,7 +403,7 @@ const ContactForm: React.FC = () => {
           <Box sx={{ width: "100%" }}>
             <TextField
               name="from_email"
-              label="E-mail"
+              label="Enter your e-mail"
               fullWidth
               error={errors.from_email}
               helperText={
@@ -482,7 +547,7 @@ const ContactForm: React.FC = () => {
                   }));
                 }}
                 error={errors.from_phone}
-                placeholder="Phone number"
+                placeholder="Enter your phone number"
                 sx={{
                   ...textFieldStyles,
                   flex: 1,
@@ -511,18 +576,18 @@ const ContactForm: React.FC = () => {
           <Box sx={{ width: "100%" }}>
             <TextField
               name="main_service"
-              label="Select a service"
+              label="Select a service category"
               select
               fullWidth
               defaultValue={defaultService}
               error={errors.main_service}
               helperText={
-                errors.main_service ? "Please select a main service." : ""
+                errors.main_service ? "Please select a service category." : ""
               }
               sx={textFieldStyles}
               onChange={(e) => {
                 handleInputChange(e);
-                // setSelectedMainService(e.target.value);
+                setSelectedMainService(e.target.value);
               }}
             >
               {services.map((service) => (
@@ -533,6 +598,32 @@ const ContactForm: React.FC = () => {
             </TextField>
           </Box>
 
+          {/* Sub services Dropdown */}
+          {selectedMainService && (
+            <Box sx={{ width: "100%" }}>
+              <TextField
+                name="sub_service"
+                label="Select your requirement"
+                select
+                fullWidth
+                value={selectedSubService}
+                onChange={(e) => setSelectedSubService(e.target.value)}
+                error={errors.sub_service && !selectedSubService}
+                helperText={
+                  !selectedSubService && errors.sub_service
+                    ? "Please select a requirement."
+                    : ""
+                }
+                sx={textFieldStyles}
+              >
+                {subService[selectedMainService]?.map((sub) => (
+                  <MenuItem key={sub.value} value={sub.value}>
+                    {sub.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Box>
+          )}
           {/* Questionss Dropdown */}
           {/* <Box sx={{ width: "100%" }}>
             <TextField
@@ -562,9 +653,9 @@ const ContactForm: React.FC = () => {
           <Box sx={{ width: "100%" }}>
             <TextField
               name="message"
-              label="Brief About requirement"
+              label="Type brief about your requirement"
               multiline
-              rows={6}
+              rows={5}
               fullWidth
               onChange={handleInputChange}
               sx={textFieldStyles}
@@ -574,7 +665,7 @@ const ContactForm: React.FC = () => {
           <button
             type="submit"
             disabled={isSending}
-            className={`w-full lg:w-fit mt-4 text-[18px] font-medium rounded-full py-[12px] px-6  transition cursor-pointer ${
+            className={`w-full lg:w-fit mt-4 text-[18px] font-medium rounded-full py-[12px] px-6 transition cursor-pointer ${
               isSending
                 ? "bg-primary/60 text-[#19181899] cursor-not-allowed"
                 : "bg-primary text-[#191818] hover:bg-primary/80"
