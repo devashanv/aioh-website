@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import heroVM from "../../assets/video/heroM.mp4";
+import TestVideo from '../../assets/img/sample/test-new.mp4'
+
 
 const Hero: React.FC = () => {
   return (
@@ -73,7 +75,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <video
-              src={heroVM}
+              src={TestVideo}
               className="w-full h-auto lg:h-[480px] object-cover"
               autoPlay
               muted
