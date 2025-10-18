@@ -55,7 +55,7 @@ function Homepage() {
 
         {/* team */}
         <section
-          className="px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-20 mt-10"
+          className="px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-0 mt-10"
           id=""
         >
           <Team />
@@ -114,7 +114,7 @@ function Homepage() {
 
         {/* Categories */}
         <section
-          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:py-8 lg:h-[100dvh] lg:mt-15 mt-20"
           id="catego"
         >
           <Categories />

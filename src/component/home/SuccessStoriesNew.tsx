@@ -419,8 +419,8 @@ const SuccessStoriesNew = () => {
         {/* top content */}
         <div className="absolute w-1/4 text-black text-left top-5 left-5 transform flex flex-col gap-2 z-10 p-2">
           <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3">
-            Some of, <br />
-            our Works
+            Case <br />
+            Studies
           </h1>
           <p className="text-[18px] pr-10 font-light mb-6 ">
             Showcasing impactful digital solutions that drive real business

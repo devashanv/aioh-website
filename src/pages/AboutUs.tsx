@@ -68,8 +68,8 @@ function WebService() {
         </section>
 
         {/* Section 7 */}
-        <section className="rounded-[20px] lg:mb-30 mb-20">
-          <div className="w-11/12 mx-auto">
+        <section className="rounded-[20px] lg:mb-30 mb-20 ">
+          <div className="w-11/12 mx-auto ">
             <Locations />
           </div>
         </section>

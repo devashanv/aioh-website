@@ -39,7 +39,7 @@ const Message: React.FC = () => {
         className="text-center mb-12"
       >
         <h2 className="text-[28px] md:text-[48px] lg:text-[52px] font-bold text-black">
-          Our Director’s Insight
+          Our Leadership Insights
         </h2>
         <p className="text-[18px] font-light text-black mt-2 max-w-3xl mx-auto">
           Insights from our leadership—highlighting the values and vision
@@ -101,7 +101,7 @@ const Message: React.FC = () => {
                       alt="quote"
                       className="md:w-14 md:h-14 w-10 h-10 px-0 mt-1"
                     />
-                    <p className="md:text-[16px] text-xs leading-relaxed text-black/80 ml-4">
+                    <p className="md:text-[14px] text-xs leading-relaxed text-black/80 ml-4">
                       {director.quote}
                     </p>
                   </div>
