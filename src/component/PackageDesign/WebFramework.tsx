@@ -5,39 +5,45 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Understand Your Target Buyer",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We research who's actually buying your product, what appeals to them, what they value, and what makes them reach for your box instead of a competitor's. Design that speaks directly to your ideal customer.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Stand Out on the Shelf",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Your packaging competes with dozens of other options. We create bold, eye-catching designs that grab attention instantly. Color, typography, imagery—everything works together to make your product impossible to ignore.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Communicate Your Brand Instantly",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Your packaging tells your brand story in seconds. We design packages that instantly communicate what you offer, who you are, and why customers should care. Clear messaging that converts browsers into buyers.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Include Compelling Copy",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Product benefits, ingredients, instructions, your story—we write copy that's both informative and persuasive. Packaging that educates customers and gives them reasons to buy.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Create an Unboxing Experience",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Make customers so excited about your product that they unbox it, take photos, and share it on social media. We design the complete experience—from the outside box to tissue paper to thank you cards.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Design for Multiple Formats",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "E-commerce boxes, retail shelf packaging, gift packaging—we create designs that work across all your sales channels. Consistent branding everywhere your customer encounters you.",
+  },
+  {
+    number: "07",
+    title: "Test With Real Customers",
+    description:
+      "We put your package designs in front of actual buyers from your target audience to confirm the design works. Does the messaging land? Does it stand out? Would they buy it? We iterate based on real feedback.",
   },
 ];
 
@@ -119,7 +125,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Design Packages That Sell
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +161,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Design Packages That Sell
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

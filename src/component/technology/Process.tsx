@@ -8,59 +8,48 @@ import {
   MdOutlineTrendingUp,
   MdOutlineUpdate,
 } from "react-icons/md";
-import { TbTargetArrow, TbWorldCheck } from "react-icons/tb";
-import { HiOutlineChartBar } from "react-icons/hi2";
+import {TbWorldCheck } from "react-icons/tb";
 
 const steps = [
   {
-    label: "Brand Platform",
+    label: "Requirement Gathering and Research",
     icon: <MdOutlineDashboard />,
     description:
-      "Establish the brand’s vision, values, and positioning to ensure a clear identity that guides all marketing and business decisions.",
+      "We start by understanding your unique needs and project goals through detailed discussions and analysis.",
   },
   {
-    label: "Business Objectives",
-    icon: <TbTargetArrow />,
-    description:
-      "Define specific, measurable goals that connect brand efforts with overall business growth and long-term success.",
-  },
-  {
-    label: "The Foundation",
+    label: "Planning & Design",
     icon: <MdOutlineLayers />,
     description:
-      "Build a strong base by researching market trends, audience needs, and competitor activities to inform strategy.",
+      "A clear roadmap and design prototype are created to align expectations and set project direction.",
   },
   {
-    label: "Digital Strategy",
-    icon: <TbWorldCheck />,
-    description:
-      "Develop a structured plan that integrates channels, content, and customer journeys to achieve objectives effectively.",
-  },
-  {
-    label: "Execution",
+    label: "Development",
     icon: <MdOutlineRocketLaunch />,
     description:
-      "Implement campaigns and initiatives across digital platforms, ensuring consistent messaging and brand alignment.",
+      "Our skilled developers build and integrate features using agile methods for continuous feedback and improvement.",
   },
   {
-    label: "Performance",
+    label: "Testing",
     icon: <MdOutlineTrendingUp />,
     description:
-      "Monitor results through KPIs and analytics to measure engagement, conversions, and return on investment.",
+      "Rigorous functional, regression, and performance tests ensure quality, reliability, and security.",
   },
   {
-    label: "Evolution",
+    label: "Deployment",
+    icon: <TbWorldCheck />,
+    description:
+      "We smoothly launch your solution with minimal disruption using controlled rollout and best practices.",
+  },
+  {
+    label: "Support & Maintenance",
     icon: <MdOutlineUpdate />,
     description:
-      "Use performance insights to refine strategies, improve results, and stay aligned with shifting market demands.",
+      "Ongoing monitoring, updates, and support keep your systems optimized and future-proof.",
   },
-  {
-    label: "Sustainability & Growth",
-    icon: <HiOutlineChartBar />,
-    description:
-      "Strengthen customer relationships, embrace innovation, and scale strategies for long-term brand growth.",
-  },
+  
 ];
+
 
 const Process: React.FC = () => {
   return (

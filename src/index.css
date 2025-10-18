@@ -74,3 +74,9 @@ html, body, #root {
   width: max-content;
   animation: scroll 60s linear infinite;
 }
+
+/* Override Flowbite Accordion arrow icon size */
+.accordion-title svg {
+  width: 20px !important;
+  height: 20px !important;
+}

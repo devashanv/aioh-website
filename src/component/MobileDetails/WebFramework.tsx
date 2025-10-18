@@ -5,41 +5,42 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Vision & Strategy",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "Establish the app’s purpose, user personas, and priority features for focused delivery.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Prototype & Validation",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Create user-friendly UI/UX mockups and gather feedback before development.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Feature Rollouts",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Release app capabilities progressively, keeping usability and business goals in sync.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Performance Testing",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Ensure speed, responsiveness, and reliability throughout the development cycle.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Progress Demonstrations",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Present updates frequently, reprioritizing features based on user input.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Release & Enhancement",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Launch the app with confidence and refine it continuously for evolving needs.",
   },
 ];
+
 
 /* -------------------------------- desktop row -------------------------------- */
 type Step = { number: string; title: string; description: string };

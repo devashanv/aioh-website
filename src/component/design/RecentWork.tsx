@@ -219,8 +219,8 @@ const RecentWork: React.FC = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="w-11/12 md:w-3/4 lg:w-1/2 mt-4 text-sm lg:text-lg leading-6 md:leading-7 lg:leading-8 font-light text-center"
         >
-          Explore our recent projects to see how strategy, creativity, and
-          performance come together to drive meaningful results for our clients.
+          Explore our recent projects to see how Marketing, Data & Technology
+          come together to drive meaningful results for our clients.{" "}
         </motion.p>
       </motion.div>
 
@@ -514,7 +514,10 @@ const RecentWork: React.FC = () => {
                       )} */}
                       <ul className="text-base md:text-lg font-light space-y-2">
                         {popupData.takeaway.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-justify">
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-justify"
+                          >
                             {/* <LiaHandPointRightSolid
                               style={{ width: "16px", height: "16px" }}
                               className="text-white mt-1.5 shrink-0"

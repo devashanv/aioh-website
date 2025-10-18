@@ -5,41 +5,42 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Requirement Grooming",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "Collaborate with users to break down complex workflows into user stories.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Sprint Planning",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "Prioritize modules like CRM, LMS, or booking systems for development cycles.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Incremental Builds",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Develop system components iteratively delivering working software each sprint.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Continuous Integration and Testing",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "Regularly merge and test code to ensure stability.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "User Acceptance Review",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "Gather feedback through demos and adjust features.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Frequent Releases",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "Deploy updates continuously while supporting users with training.",
   },
 ];
+
 
 /* -------------------------------- desktop row -------------------------------- */
 type Step = { number: string; title: string; description: string };

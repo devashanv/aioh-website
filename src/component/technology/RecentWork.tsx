@@ -6,17 +6,30 @@ import { IoClose } from "react-icons/io5";
 import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
-// import tech_rw1 from "../../assets/img/recentWork/tech-rw1.png";
-// import tech_rw2 from "../../assets/img/recentWork/tech-rw2.png";
-import tech_rw3 from "../../assets/img/recentWork/tech-rw3.png";
-import tech_rw4 from "../../assets/img/recentWork/tech-rw4.png";
-// import tech_rw5 from "../../assets/img/recentWork/tech-rw5.png";
-import tech_rw6 from "../../assets/img/recentWork/tech-rw6.png";
-import tech_rw7 from "../../assets/img/recentWork/tech-rw7.png";
-import tech_rw8 from "../../assets/img/recentWork/tech-rw8.png";
-import tech_rw9 from "../../assets/img/recentWork/tech-rw9.png";
-import tech_rw10 from "../../assets/img/recentWork/tech-rw10.png";
-import tech_rw11 from "../../assets/img/recentWork/tech-rw11.png";
+import goahead from "../../assets/img/recentWork/goahead.png";
+import onedigital from "../../assets/img/recentWork/onedigital.png";
+import automobile from "../../assets/img/recentWork/automobile.png";
+import flylimo from "../../assets/img/recentWork/flylimo.png";
+import mycourse from "../../assets/img/recentWork/mycourse.png";
+import wasantha from "../../assets/img/recentWork/wasantha.png";
+import Ltt from "../../assets/img/recentWork/ltt.png";
+import dinuda from "../../assets/img/recentWork/dinuda.png";
+import muswenn from "../../assets/img/recentWork/muswenn.png";
+import aluvihara from "../../assets/img/recentWork/aluvihara.png";
+import kandyclub from "../../assets/img/recentWork/kandyclub.png";
+import quickbox from "../../assets/img/recentWork/quickbox.png";
+import kandyrentcars from "../../assets/img/recentWork/kandyrentcars.png";
+import nafco from "../../assets/img/recentWork/nafco.png";
+import regency from "../../assets/img/recentWork/regency.png";
+import moh from "../../assets/img/recentWork/moh.png";
+import ehelepola from "../../assets/img/recentWork/ehelepola.png";
+import winchester from "../../assets/img/recentWork/winchester.png";
+import officeone from "../../assets/img/recentWork/officeone.png";
+import cafelavia from "../../assets/img/recentWork/cafelavia.png";
+import medone from "../../assets/img/recentWork/medone.png";
+import buycraft from "../../assets/img/recentWork/buycraft.png";
+import eikone from "../../assets/img/recentWork/eikone.png";
+
 import dumy from "../../assets/img/recentWork/dumy.jpg";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -28,16 +41,16 @@ const projects = [
     title: "OneDigital Website",
     description:
       "A premier U.S. firm in HR, insurance, and financial services.",
-    image: dumy,
+    image: onedigital,
     link: "https://onedigitalusa.com",
     description2:
       "This platform was crafted to showcase OneDigital, a premier U.S. firm specializing in employee benefits, HR consulting, insurance, and financial services. As a trusted partner to businesses and individuals nationwide, the site presents their capabilities from retirement planning and PEO solutions to technology-forward consulting through a professional, mobile-friendly design. Built using enterprise-grade frameworks and a robust CMS, the website delivers an optimized experience across devices.",
     challenges: [
-      "Clearly presenting a broad spectrum of services such as insurance brokerage, HR consulting, wealth management, and PEO solutions.",
-      "Supporting consistent access to resources for varying user groups: employers and individuals. ",
-      "Building credibility in a field that combines financial services with compliance and strategic advisory.",
-      "Ensuring seamless access to insights and news, while integrating navigation across multiple sub-brands like Bold Studio and Resourcing Edge.",
-      "Delivering fast, reliable performance for high-traffic enterprise pages.",
+      "Clearly presenting a wide range of services, including insurance brokerage, HR consulting, wealth management, and PEO solutions, proved difficult.",
+      "Ensuring consistent access to resources for diverse user groups, employers, and individuals was essential.",
+      "Building credibility in a field combining financial services with compliance and strategic consulting required focused effort.",
+      "Seamless access to insights and news while integrating navigation across multiple sub-brands like Bold Studio and Resourcing Edge was challenging.",
+      "Delivering fast and reliable performance for high-traffic enterprise pages was critical to optimize user experience.",
     ],
     solutions: [
       "Structured the website into clear sections Employer Services, Individual Solutions, Technology & Innovation, Newsroom, and Careers to accommodate diverse audiences. ",
@@ -51,16 +64,16 @@ const projects = [
     title: "MyCourse.lk Website",
     description:
       "Sri Lanka’s first and largest online course marketplace for students.",
-    image: dumy,
+    image: mycourse,
     link: "https://mycourse.lk",
     description2:
       "This website was designed to promote MyCourse.lk, Sri Lanka’s first and largest course marketplace, enabling students to discover, compare, and apply for educational programs from institutions across the country. Built with a clean, responsive design stack likely based on WordPress (PHP/MySQL) or a custom CMS, the platform ensures fast performance and user-friendly access across all devices. ",
     challenges: [
-      "Improving transparency in Sri Lankan higher education by presenting clear and comparable course information.",
-      "Helping users navigate thousands of programs across disciplines from diplomas and degrees to postgraduate qualifications.",
-      "Delivering complex content in an accessible, intuitive way suitable for both general and academic users.  ",
-      "Enabling institutions to regularly update their own course data for accuracy and relevance.",
-      "Guiding students along education pathways via structured planning tools.",
+      "Improving transparency in Sri Lankan higher education by presenting clear and comparable course information was a key challenge.",
+      "Helping users navigate thousands of programs from diplomas to postgraduate qualifications required careful structuring.",
+      "Delivering complex content in an accessible and intuitive way for both general and academic users was essential.",
+      "Enabling institutions to regularly update course data for accuracy and relevance posed an ongoing focus.",
+      "Guiding students through education pathways using structured planning tools was an important consideration.",
     ],
     solutions: [
       "Launched a centralized course platform featuring thousands of listings across disciplines like Business, IT, Engineering, and Health.",
@@ -74,16 +87,16 @@ const projects = [
     title: "EIKONE Website",
     description:
       "A digital agency platform showcasing innovation, brand strategy, and design.",
-    image: tech_rw3,
+    image: eikone,
     link: "https://eikone.co.uk",
     description2:
       "This website was crafted to showcase Eikone's strength in digital innovation, brand strategy, and design. As a forward-thinking digital agency, Eikone needed an online presence that  reflects their modern approach and creative mindset. Built using Next.js, Tailwind CSS, and  Headless CMS, the platform is fast, scalable, and delivers a seamless experience across all  devices.",
     challenges: [
-      "Communicating a wide range of services with clarity and focus. ",
-      "Creating a strong visual identity through a functional, minimal design.",
-      "Structuring the site to be scalable and easy to update by the eikone team. ",
-      "Ensuring consistency in branding across all devices",
-      "Delivering high performance while maintaining design excellence.",
+      "Clearly communicating the wide range of services offered was a key challenge.",
+      "Creating a strong visual identity through a functional yet minimalist design was essential.",
+      "Structuring the website to be scalable and easy for the Eikone team to update proved challenging.",
+      "Ensuring consistent branding across all devices required careful attention.",
+      "Delivering high performance while maintaining design excellence demanded thorough planning.",
     ],
     solutions: [
       "Crafted a sleek, intuitive user interface that reflects Eikone’s brand identity.",
@@ -98,15 +111,15 @@ const projects = [
     title: "Kandy Rent Cars",
     description:
       "Kandy Rent Cars is your trusted car rental service in Kandy and beyond.",
-    image: tech_rw4,
+    image: kandyrentcars,
     link: "https://kandyrentcars.lk",
     description2:
       "This website was crafted to help tourists and visitors in Sri Lanka easily rent vehicles for travel in and around Kandy. Designed to promote both self-drive and chauffeur-driven car services, the platform offers users a convenient booking experience, transparent pricing, and detailed vehicle options. Built for simplicity and accessibility, it supports multilingual browsing and mobile responsiveness across devices.",
     challenges: [
-      "Limited clarity around rental options: self-drive vs chauffeur-driven, vehicle types, and service areas.",
-      "Difficulty communicating deposit policies to international renters.",
-      "Uncertainty about vehicle delivery and collection logistics in remote areas.",
-      "Lack of clear price and mileage packages for different travel needs.",
+      "Providing clear information about rental options, including self-drive versus driver-drive, vehicle types, and service areas was complex.",
+      "Communicating deposit policies clearly and user-friendly to international renters was essential.",
+      "Managing logistics for vehicle delivery and collection, particularly in remote areas, posed significant difficulties.",
+      "Designing transparent pricing and mileage packages tailored to diverse travel needs required careful planning.",
     ],
     solutions: [
       "Developed a website presenting both self-drive and chauffeur-driven rental services, with clear vehicle categories from economy to luxury SUVs and wedding cars.",
@@ -119,16 +132,16 @@ const projects = [
     title: "BuyCrafts Website",
     description:
       "An online platform showcasing handmade crafts for global customers.",
-    image: dumy,
+    image: buycraft,
     link: "https://buycrafts.net",
     description2:
       "This website was crafted to showcase Sri Lankan handmade crafts from wooden carvings to brass inlays. It enables both artisans and customers globally to connect through a storefront that's fast, visually engaging, and easy to navigate. Built on a modern e-commerce framework, it supports multi-currency, multi-language, and a responsive UI for shoppers worldwide.",
     challenges: [
-      "Limited visibility for local artisans on a global scale.",
-      "No centralized online platform featuring diverse craft categories.",
-      "Difficulty showcasing rich visuals and detailed product descriptions.",
-      "Complex checkout process with shipping to international customers.",
-      "Low trust signals for first-time buyers unfamiliar with Sri Lankan crafts.",
+      "Limited global visibility for local artisans restricted their reach to wider audiences.",
+      "Absence of a centralized online platform hindered the showcase of diverse craft categories.",
+      "Presenting rich visuals and detailed product descriptions in an engaging way required careful design.",
+      "Managing a smooth checkout process amid international shipping complexities was difficult.",
+      "Building trust for first-time buyers unfamiliar with Sri Lankan crafts was crucial to drive sales.",
     ],
     solutions: [
       "Developed a clean, attractive storefront with product categories like wooden and metal crafts, featuring high-resolution photos and pricing.",
@@ -142,16 +155,16 @@ const projects = [
     title: "Winchester Global",
     description:
       "A corporate platform showcasing global logistics and consultancy services.",
-    image: tech_rw6,
+    image: winchester,
     link: "https://winchesterglobal.com",
     description2:
       "This website is presented as the digital front for Winchester Global, a company offering global logistics, trade, or consultancy services. The platform presumably showcases service offerings, industry sectors, and contact capability via a clean, corporate design aiming to be accessible across devices. ",
     challenges: [
-      "Lack of a clear and cohesive digital footprint to explain global services.",
-      "Uncertainty around the scope of service offerings warehousing, shipping, trade consulting, etc.",
-      "Missing trust signals like client testimonials, certifications, or case studies.",
-      "Limited pathways for inquiries or lead capture for business clients.",
-      "General branding and positioning gaps in a competitive international services market. ",
+      "Lack of a clear and integrated digital footprint to explain global services hindered communication.",
+      "Unclear scope of service offerings like warehousing, shipping, and trade consulting caused confusion.",
+      "Absence of trust signals such as client testimonials, certifications, and case studies limited credibility.",
+      "Difficulty in providing clear channels for business clients to capture inquiries and leads.",
+      "Branding and positioning gaps affected competitiveness in the international services market.",
     ],
     solutions: [
       "Designed a professional, responsive homepage that introduces Winchester global services and industry focus.",
@@ -165,16 +178,16 @@ const projects = [
     title: "Dinuda Resort",
     description:
       "Dinuda Resort offers an unparalleled escape into tropical paradise.",
-    image: tech_rw7,
+    image: dinuda,
     link: "https://dinudaresortkalpitiya.com",
     description2:
       "This website was crafted to present Dinuda Resort, a beachfront retreat in Kalpitiya offering serene lagoon-side stays and adventure activities like kitesurfing, kayaking, dolphin watching, and wildlife tours. Built using a visually engaging, responsive design likely powered by WordPress with a custom theme the platform delivers a tranquil yet dynamic browsing experience across all devices.",
     challenges: [
-      "Conveying the resort’s unique lagoon-front location and access to wind and water sports (e.g. kite surfing, boating, diving).",
-      "Combining peaceful getaway imagery with activity-driven adventure content.",
-      "Presenting room options Standard, Deluxe, Superior with views and amenities in a clear layout. ",
-      "Building trust through guest reviews and showcasing friendly, helpful service.",
-      "Providing easy ways to inquire, book, or get pricing with clear contact details.",
+      "The resort’s unique lagoon-front location and water sports offerings like kite surfing, boating, and diving presented significant challenges.",
+      "Balancing the serene resort imagery with engaging adventure content required careful design.",
+      "Presenting room options like standard, deluxe, superior with clear layouts, views, and amenities was necessary for clarity.",
+      "Building trust through guest reviews and emphasizing the resort’s friendly service was important.",
+      "Providing easy access to inquiries, reservations, and pricing via clear contact information was essential to improve user experience.",
     ],
     solutions: [
       "Developed a clean, immersive homepage showcasing lagoon and beach visuals, service highlights, and room types.",
@@ -189,16 +202,16 @@ const projects = [
     title: "Fly Limousines",
     description:
       "A premium platform for booking luxury chauffeur and limousine services.",
-    image: tech_rw8,
+    image: flylimo,
     link: "https://flylimosines.com",
     description2:
       "This website was crafted to offer a luxury and professional transportation booking experience through Fly Limousines Sri Lanka, a premium chauffeur service. The platform helps both local and international clients book limousines for weddings, airport transfers, corporate events, and special occasions. Built using responsive and elegant design principles, the site ensures smooth access across all devices with a focus on class and clarity.",
     challenges: [
-      "Lack of a dedicated online platform for high-end limousine bookings.",
-      "Difficulty in clearly showcasing fleet details and available services.",
-      "No real-time visibility for booking or contact options.",
-      "Inconsistent brand presence in a competitive luxury transport market.",
-      "Lack of trust-building information like driver professionalism and service packages. ",
+      "Absence of a dedicated online platform for high-end limousine bookings limited customer access.",
+      "Showcasing fleet details and available services in an engaging way required strategic planning.",
+      "Lack of real-time visibility for bookings and contact options impacted customer convenience.",
+      "Maintaining consistent brand presence in a competitive luxury transport market was challenging.",
+      "Building trust through driver professionalism and service packages was critical for credibility.",
     ],
     solutions: [
       "Designed a modern, mobile-responsive website reflecting the premium quality of the service",
@@ -213,16 +226,16 @@ const projects = [
     title: "NAFCO",
     description:
       "A trusted Sri Lankan cement block manufacturer with 35+ years of experience.",
-    image: tech_rw9,
+    image: nafco,
     link: "https://nafco.lk",
     description2:
       "This website was designed to represent Nafco Industries, a trusted Sri Lankan cement block manufacturer with over 35 years of experience. The site serves as an informative and reliable platform for customers to explore Nafco’s products, services, and technical specifications. Built with HTML5, CSS, and WordPress, the platform ensures fast loading, mobile responsiveness, and easy content management.",
     challenges: [
-      "Outdated company branding and limited online presence.",
-      "No digital platform to showcase products and technical specifications.",
-      "Manual inquiry and order handling caused communication delays.",
-      "Lack of project portfolio visibility to new customers",
-      "No clear display of SLS certifications or quality assurances",
+      "Outdated company branding and limited online presence hindered market reach.",
+      "Absence of a digital platform to effectively showcase products and technical specifications.",
+      "Manual inquiry and order handling caused communication delays and inefficiencies.",
+      "Low visibility of the project portfolio affected new customer acquisition.",
+      "Lack of clear presentation of SLS certifications and quality assurances impacted trust-building.",
     ],
     solutions: [
       "Created a clean, professional website with easy navigation and a modern design.",
@@ -237,16 +250,16 @@ const projects = [
     title: "Muswenna Tea",
     description:
       "A family owned tea manufacturer in Galle offering certified teas and factory tours.",
-    image: tech_rw10,
+    image: muswenn,
     link: "https://muswennatea.com/",
     description2:
       "This website was built to showcase the identity of Muswenna Tea Factory, a family-owned  tea manufacturing company located in Galle, Sri Lanka. The platform provides a simple, informative, and welcoming space for customers and tourists to explore the brand, discover its certified tea products, and book factory tours. The site was developed with a clean layout, multilingual support, and mobile responsiveness to ensure easy access for local and international audiences.",
     challenges: [
-      "Lack of digital presence for a small-scale, family-run tea factory.",
-      "No online platform to promote certifications and export capabilities. ",
-      "Difficulty in sharing factory visit details with tourists.",
-      "Limited brand awareness outside local markets.",
-      "No digital showcase for different tea products (black, white, green, flavored).",
+      "Lack of digital presence for the small-scale, family-run tea factory limited market reach.",
+      "Creating an online platform to showcase certifications and export capabilities was essential.",
+      "Presenting clear and accessible factory visit details for tourists required careful planning.",
+      "Increasing brand awareness beyond local markets remained a significant obstacle.",
+      "Developing a digital showcase for various tea products such as black, white, green, and flavored was important for customer engagement.",
     ],
     solutions: [
       "Developed a clean, responsive website highlighting the factory’s heritage, product range, and certifications. ",
@@ -260,17 +273,17 @@ const projects = [
     title: "The Kandy Club Management System",
     description:
       "A digital platform automating operations and member services for the historic Kandy Club.",
-    image: dumy,
+    image: kandyclub,
     link: "",
     description2:
       "The Kandy Club Management System (KCMS) was developed as an all-in-one digital platform to modernize and automate the day-to-day operations of the historic Kandy Club a private social and hospitality club offering accommodation, dining, event hosting, and member services. Designed to streamline complex workflows, the system integrates administration, finance, hospitality, and inventory management into a unified platform, improving both staff productivity and member satisfaction. Built using a secure and scalable architecture, KCMS ensures centralized data access, role-based controls, and seamless real-time operations.",
     challenges: [
-      "Fragmented member and booking records due to manual data entry.",
-      "Double bookings caused by spreadsheet-based scheduling.",
-      "Inefficient stock tracking for the bar and restaurant.",
-      "Manual billing errors affecting revenue transparency.",
-      "Delays in generating financial reports.",
-      "Limited communication between departments and members.",
+      "Fragmented members and booking records caused by manual data entry created data inconsistencies.",
+      "Preventing double bookings due to spreadsheet-based scheduling was necessary to avoid conflicts.",
+      "Inventory tracking for the bar and restaurant required improvement for better resource management.",
+      "Manual billing errors needed reduction to ensure accurate revenue reporting.",
+      "Delays in generating financial reports hindered timely decision-making.",
+      "Communication gaps between departments and members affected operational efficiency.",
     ],
     solutions: [
       "Implemented a centralized member management system with search, billing, and notification features.",
@@ -291,11 +304,11 @@ const projects = [
     description2:
       "This website was crafted to showcase the inspiring journey and impactful work of Chandula Nanayakkara a youth leader, mentor, author, and CEO of All in One Holdings. The site serves as a central platform for sharing his personal story, publications, leadership initiatives, and professional engagements. Built using WordPress with Element or, PHP, and JavaScript, the site offers a smooth and professional user experience across all devices.",
     challenges: [
-      "Presenting a multifaceted personal brand covering biography, leadership, publications, and entrepreneurship All In One cohesive space.",
-      "Structuring rich content like leadership training, community service, gallery, and book info in a clean layout.",
-      "Engaging a wide audience from students to corporate professionals and institutions.",
-      "Establishing credibility through testimonials, professional achievements, and media presence.",
-      "Ensuring seamless navigation through multiple content types Books, Gallery, Contact, About, Services.",
+      "Presenting a multifaceted personal brand covering biography, leadership, publications, and entrepreneurship in one cohesive digital space was difficult.",
+      "Structuring rich content such as leadership training, community service, gallery, and book information into a clean, user-friendly layout required detailed planning.",
+      "Designing the site to engage a wide audience, from students to corporate professionals and institutions, posed significant challenges.",
+      "Establishing credibility through testimonials, achievements, and media presence was essential to build trust.",
+      "Ensuring seamless navigation across diverse content types like Books, Gallery, Contact, About, and Services demanded careful attention.",
     ],
     solutions: [
       "Developed a clean and elegant homepage summarizing Chandula’s leadership philosophy, key roles, and offerings.",
@@ -310,16 +323,16 @@ const projects = [
     title: "Ministry of Indigenous Medicine",
     description:
       "The official platform promoting traditional healthcare services in Sri Lanka.",
-    image: dumy,
+    image: moh,
     link: "https://mim.gov.lk",
     description2:
       "This official website represents Sri Lanka’s Ministry of Indigenous Medicine, showcasing straditional healthcare services and policy information. Built using modern web standards  (HTML5, CSS, likely with a CMS backend), the site provides content in English, Sinhala, and  Tamil and is optimized for government use reflecting the ministry’s mission to promote  Ayurveda, Siddha, Unani, and Homeopathy across Sri Lanka.",
     challenges: [
-      "No centralized digital platform to present traditional medicine policy, services, and public education.",
-      "Multilingual content that requires consistent translation and readability across Sinhala, Tamil, and English.",
-      "Limited interactivity and user engagement for citizens seeking guidance or services.",
-      "Low visibility for events, announcements, and herbal research activities.",
-      "Accessibility and navigation issues for a diverse user base.",
+      "Lack of a centralized digital platform for presenting traditional medical policies, services, and public education was a major obstacle.",
+      "Ensuring multilingual content with consistent translation and readability across Sinhala, Tamil, and English was essential.",
+      "Improving interactivity and user engagement for citizens seeking guidance or services was a key focus.",
+      "Increasing visibility for events, announcements, and pharmaceutical research activities was important for community awareness.",
+      "Addressing accessibility and navigation challenges for a diverse user base was critical.",
     ],
     solutions: [
       "Developed a clear, multilingual website interface supporting all three official languages to ensure broad public access.",
@@ -335,16 +348,16 @@ const projects = [
     title: "Lanka Travel Trails Website",
     description:
       "A travel platform for hiking, nature, and adventure experiences in Sri Lanka.",
-    image: tech_rw11,
+    image: Ltt,
     link: "https://lankatraveltrails.com",
     description2:
       "This website was developed to support Lanka Travel Trails in offering unique and unforgettable nature, hiking, and adventure experiences across Sri Lanka. The platform  showcases various scenic destinations and trail packages, helping travelers easily explore,  inquire, and book their next journey. Built using WordPress, Element or, HTML5, CSS3, and  JavaScript, the site provides a modern, mobile-responsive, and user-friendly interface on all  devices.",
     challenges: [
-      "Presenting a wide variety of adventure and nature-based tours in an organized and attractive layout.",
-      "Improving online discoverability and professionalism to attract international and local travelers.",
-      "Creating a responsive experience suitable for both desktop and mobile browsing",
-      "Enabling quick inquiries and seamless access to tour information.",
-      "Showcasing multiple destinations without overwhelming the user.",
+      "Presenting a wide range of adventure and nature-based tours in an organized and visually appealing layout was a major challenge.",
+      "Improving online discoverability and professionalism was essential to attract international and domestic tourists.",
+      "Creating responsive experience for seamless browsing on desktop and mobile devices was a key focus.",
+      "Enabling quick queries and easy access to detailed travel information was important for user convenience.",
+      "Displaying multiple destinations without overwhelming users required careful design and planning.",
     ],
     solutions: [
       "Designed a clean and visually appealing layout that highlights top destinations like Ella, Sigiriya, Nuwara Eliya, and Jaffna.",
@@ -357,16 +370,16 @@ const projects = [
   {
     title: "Wasantha Withanage Personal Website",
     description: "Renowned Sri Lankan boxing coach and sports leader.",
-    image: dumy,
+    image: wasantha,
     link: "https://wasanthawithanage.com/",
     description2:
       "This site was crafted to present Wasantha Kumara Withanage, a renowned Sri Lankan boxing  coach, sports official, and community leader. It serves as a central platform highlighting his professional journey from national coaching roles and AIBA technical officiating to educational and leadership positions. Built with a clean, WordPress-powered CMS, the platform offers a straightforward and responsive browsing experience tailored to both domestic and international audiences.",
     challenges: [
-      "Presenting multifaceted achievements spanning sports, academia, and social leadership.",
-      "Structuring high-volume biography details in an accessible layout. ",
-      "Showcasing professional credibility to establish trust.",
-      "Balancing informational content with engagement features like article access and contact forms.",
-      "Enabling easy onboarding for inquiries and speaking or mentorship requests.",
+      "Presenting multiple achievements across sports, academics, and community leadership in a coherent manner was difficult.",
+      "Structuring extensive biographical details into an accessible layout required careful design.",
+      "Demonstrating professional credibility to build trust posed a significant focus.",
+      "Balancing informative content with engaging features like article access and contact forms was challenging.",
+      "Enabling easy entry for inquiries, speaking engagements, or mentorship requests demanded user-friendly solutions.",
     ],
     solutions: [
       "Developed a lightweight, fast-loading frontend using React + Vite to reduce initial load time.",
@@ -381,16 +394,16 @@ const projects = [
     title: "Office One Sri Lanka website",
     description:
       "A platform showcasing premium co-working spaces in Colombo and Kandy.",
-    image: dumy,
+    image: officeone,
     link: "https://officeone.lk",
     description2:
       "This website was crafted to showcase Office One, a premium co-working space provider with locations in Colombo and Kandy, Sri Lanka. The platform presents workspace packages  such as hot desks, single cabins, and meeting rooms alongside amenities and booking options. Built on a WordPress-powered CMS using HTML5, CSS3, JavaScript, and PHP, the  site delivers a clean, user-friendly, and mobile-responsive experience. It enables flexible  browsing and seamless inquiries via prominently placed contact forms and CTAs.",
     challenges: [
-      "Communicating a variety of workspace packages (hot desks, cabins, conference rooms) with clear pricing and descriptions.",
-      "Building trust and professionalism through showcase of amenities: high-speed internet, ergonomic furniture, printing, café areas, and parking.",
-      "Supporting two branches Colombo and Kandy and their specific packages under one platform.",
-      "Enabling easy lead capture and booking via contact forms and inquiry CTAs. ",
-      "Ensuring fast load times and responsive viewing across mobile and desktop devices. ",
+      "Clearly communicating the variety of hot desks, cabins, and conference rooms with prices and details.",
+      "Building trust and professionalism by effectively showcasing amenities like high-speed internet, quality furniture, printing, cafe areas, and parking required careful presentation.",
+      "Supporting two branches in Colombo and Kandy with their specific packages under one platform created complexity.",
+      "Enabling easy lead capture and booking through contact forms and inquiry calls-to-action was essential for user engagement.",
+      "Ensuring fast loading times and responsive display on both mobile and desktop devices was a challenge to provide a smooth user experience.",
     ],
     solutions: [
       "Designed a modern, clean homepage showcasing workspace types, branch options, and booking calls-to-action.",
@@ -406,16 +419,16 @@ const projects = [
     title: "Cafe Lavia Website",
     description:
       "A cozy couple-friendly café in Kandy offering coffee, brunch, and online orders.",
-    image: dumy,
+    image: cafelavia,
     link: "https://cafelavia.net/",
     description2:
       "This website was crafted to showcase Cafe Lavia, a cozy, couple-friendly café nestled in the heart of Kandy, Sri Lanka. The platform invites visitors to explore its curated menu of  specialty coffees, bagels, cakes, and brunch options, while offering seamless online  ordering via Uber Eats. Built with a visually appealing, lightweight design likely using  WordPress or a simple CMS powered by HTML, CSS, and JavaScript the site delivers a  responsive, user-friendly experience to both locals and tourists.",
     challenges: [
-      "Communicating the café’s elegant and intimate ambiance in a crowded local café market. ",
-      "Presenting a diverse all-day menu (breakfast, sandwiches, pastries, coffee) in a clear, navigable format. ",
-      "Supporting online orders via Uber Eats without cluttering the main site experience. ",
-      "Establishing trust through reviews and visitor testimonials from platforms like Tripadvisor.  ",
-      "Ensuring mobile responsiveness and quick access to contact and location details.",
+      "Effectively communicating the café’s elegant and intimate ambiance in a highly competitive local market.",
+      "Presenting a diverse all-day menu including breakfast, sandwiches, pastries, and coffee in a clear, navigable format.",
+      "Supporting online orders via Uber Eats while maintaining a clean, uncluttered main site experience.",
+      "Building trust and credibility through customer reviews and testimonials from platforms like Tripadvisor.",
+      "Ensuring full mobile responsiveness with easy access to contact and location details for customer convenience.",
     ],
     solutions: [
       "Developed a clean, inviting homepage that highlights charming café interiors, featured dishes, and ordering links.",
@@ -428,16 +441,16 @@ const projects = [
     title: "QuickBox Website",
     description:
       "A courier and logistics platform for reliable parcel delivery in Sri Lanka.",
-    image: dumy,
+    image: quickbox,
     link: "https://quickbox.lk/",
     description2:
       "This website was developed to introduce QuickBox.lk, a professional courier and logistics brand in Sri Lanka focused on reliable parcel delivery services. The platform enables  customers to easily book delivery services, track parcels, and access essential courier  information through a modern, clean, and responsive interface. Built using HTML5, CSS3,  JavaScript, and likely powered by a PHP-based CMS like WordPress, the site ensures smooth  usability and cross-device compatibility.",
     challenges: [
-      "Introducing a new courier service within a competitive logistics industry.",
-      "Explaining various services (local, international, packaging, tracking) clearly and simply.",
-      "Providing real-time parcel tracking and a fast-booking experience.",
-      "Ensuring mobile-first performance with a rich content layout.",
-      "Building brand trust through transparency, contact options, and verified information.",
+      "Introducing a new courier service in a competitive logistics industry was a key challenge.",
+      "Clearly explaining local, international, packaging, and tracking services was essential.",
+      "Providing real-time parcel tracking and a fast, seamless booking experience required focus.",
+      "Ensuring mobile-first performance while maintaining a rich content layout was important.",
+      "Building brand trust through transparency, accessible contact options, and verified information was critical.",
     ],
     solutions: [
       "Designed a streamlined homepage focused on delivery booking, parcel tracking, and service information.",
@@ -457,11 +470,11 @@ const projects = [
     description2:
       "This website was designed for Senior Cargo, a Sri Lankan freight forwarder and logistics provider specializing in air, sea, and land cargo services across the island and  internationally. The platform helps customers book shipments, track consignments, and  explore service options via a clean, responsive, and user-friendly interface. Built using a  professional CMS such as WordPress with HTML5, CSS3, JavaScript, and backend support  from PHP/MySQL, the site ensures fast performance and cross-device accessibility.",
     challenges: [
-      "Explaining different service categories such as air freight, sea freight, cargo consolidation, and customs clearance clearly.",
-      "Enabling customers to book shipments and issue tracking references online.",
-      "Establishing brand credibility in a competitive logistics and cargo market.",
-      "Presenting regulatory and documentation details in an understandable format.",
-      "Ensuring the website supports responsive viewing for both desktop and mobile users.",
+      "Clearly explaining various service categories such as air freight, ocean freight, cargo consolidation, and customs clearance was complex.",
+      "Enabling customers to book shipments and access tracking information online required seamless functionality.",
+      "Building brand credibility in a competitive logistics and freight market demanded strategic focus.",
+      "Presenting regulatory and documentation details in an easy-to-understand format was challenging.",
+      "Ensuring responsive design for both desktop and mobile devices was critical for user accessibility and convenience.",
     ],
 
     solutions: [
@@ -477,17 +490,17 @@ const projects = [
     title: "Automobile Billing & Management System",
     description:
       "A digital platform for billing and service management in automotive repair.",
-    image: dumy,
+    image: automobile,
     link: "",
     description2:
       "This custom-built web platform was designed to digitalize and streamline the complete billing and service management process for Willis AutoCare, a local automotive repair  service provider. The system supports real-time job tracking, invoice generation, item  registration, and user management all within a secure and user-friendly environment. Built  using Laravel (PHP) for the backend, Tailwind CSS for responsive UI design, and MySQL as  the database, the solution replaces manual operations with digital precision.",
     challenges: [
-      "Replacing inefficient manual billing with a professional digital format.",
-      "Handling complex invoice formats tailored to Willis AutoCare’s legacy system.",
-      "Managing job categories, parts, and quotations under one unified platform.",
-      "Reducing dependency on physical materials (paper quotations, hand-written bills)",
-      "Meeting highly specific client requirements through point-by-point customization.",
-      "Ensuring consistent document formatting across multi-page invoices.",
+      "Inefficient manual billing caused operational inefficiencies.",
+      "Complex invoice structures from Willis Autocare’s legacy processes complicated system integration.",
+      "Lack of a unified platform for job categories, parts, and pricing created data fragmentation.",
+      "High reliance on paper documents such as handwritten invoices and quotes led to workflow delays.",
+      "Standard system features did not meet specific client customization needs.",
+      "Inconsistent formatting of multi-page invoices affected professionalism and readability.",
     ],
     solutions: [
       "Developed a category-based billing system to reduce redundancy and increase input speed.",
@@ -503,16 +516,16 @@ const projects = [
     title: "MedOne - Patient Management System",
     description:
       "A digital platform for streamlined patient and healthcare management.",
-    image: dumy,
+    image: medone,
     link: "",
     description2:
       "The MedOne platform was developed to modernize and streamline healthcare workflows by providing an all-in-one digital patient management solution. Designed specifically for hospitals, clinics, and private practices, the system enables healthcare professionals to efficiently manage patient records, investigations, prescriptions, and administrativedocumentation. Built using modern web technologies (PHP, MySQL, HTML5, CSS3) with a focus on clean UI/UX, MedOne offers a seamless experience for both doctors and administrative staff. ",
     challenges: [
-      "Fragmented or paper-based systems that slowed down access to patient data. ",
-      "Errors and inefficiencies caused by manual data entry and physical recordkeeping. ",
-      "Lack of a centralized platform to manage consultations, prescriptions, and medical notes. ",
-      "Absence of system-generated letters and digital communication between healthcare staff. ",
-      "Need for secure access and scalable architecture for growing healthcare facilities.",
+      "Fragmented and paper-based systems slowed access to patient data.",
+      "Manual data entry and physical record keeping caused errors and inefficiencies.",
+      "Lack of a centralized platform for managing consultations, prescriptions, and medical notes hindered workflow.",
+      "Absence of system-generated letters and digital communication limited staff efficiency.",
+      "Ensuring secure access and scalable architecture to support facility growth was a critical need.",
     ],
     solutions: [
       "Developed a user-friendly dashboard displaying patient visits, checklists, and daily activity logs",
@@ -528,15 +541,16 @@ const projects = [
     title: "Go Ahead Lanka Tours Website",
     description:
       "A travel platform offering guided tours and easy booking across Sri Lanka.",
-    image: dumy,
+    image: goahead,
     link: "https://goaheadlankatours.com/",
     description2:
       "This website was built to elevate Go Ahead Lanka Tours, a Sri Lankan-based travel service offering guided tours across the island. The platform enables travelers to search, book, and  manage tour experiences with ease. Featuring responsive design, advanced filtering, and a  secure booking engine, the site was developed using PHP 8, HTML5, CSS3, JavaScript, and  MySQL for reliable performance and smooth user interaction.",
     challenges: [
-      "Absence of a centralized online tour booking system tailored for Sri Lanka Lack of support for group travel coordination and loyalty programs.",
-      "No mobile-friendly solution for booking and browsing tours.",
-      "Need for advanced filtering options to help tourists find relevant packages.",
-      "Security concerns in handling sensitive customer and payment data.",
+      "Absence of a centralized online tour booking system tailored for Sri Lanka limited platform efficiency.",
+      "Supporting group travel coordination and loyalty programs added complexity to system design.",
+      "Lack of a mobile-friendly solution affected accessibility for booking and browsing tours.",
+      "Insufficient advanced filtering options made it difficult for tourists to find relevant packages.",
+      "Ensuring security in handling sensitive customer and payment data was a critical requirement.",
     ],
     solutions: [
       "Designed a clean, mobile-responsive interface accessible across all devices.",
@@ -552,16 +566,16 @@ const projects = [
     title: "Aluviharaya.lk Website",
     description:
       "A cultural and heritage platform showcasing the historic Aluviharaya Rock Cave Temple.",
-    image: dumy,
+    image: aluvihara,
     link: "https://www.aluviharaya.lk/",
     description2:
       "This website was developed to introduce Aluviharaya Rock Cave Temple, a historic Buddhist temple in Matale, Sri Lanka, known as the place where the Tripiṭaka was first written on ola leaves. The platform provides visitors and pilgrims with accurate cultural, historical, and travel-related information, while also promoting the temple as a national heritage site. With a clean, informative, and responsive design, the site ensures accessibility for both local and international audiences, helping them understand Aluviharaya’s religious and cultural significance.",
     challenges: [
       "Showcasing a centuries-old religious and cultural heritage site in a modern digital format.",
       "Explaining historical, archaeological, and religious details in a clear and engaging manner.",
-      "Providing visitor guidance (location, visiting hours, dress code, tour details) effectively.",
-      "Ensuring mobile-friendly accessibility for tourists who rely on smartphones.",
-      "Building trust by presenting verified information and authentic visuals.",
+      "Providing visitor guidance including location, visiting hours, dress code, and tour details effectively.",
+      "Ensuring mobile-friendly accessibility for tourists relying on smartphones",
+      "Building trust through verified information and authentic visuals.",
     ],
     solutions: [
       "Designed an informative homepage highlighting the temple’s history, cultural importance, and significance in Buddhist heritage.",
@@ -580,10 +594,11 @@ const projects = [
     description2:
       "CCL Academy is a creative and professional education institution based in Kandy, Sri Lanka. It offers a variety of academic and industry-relevant courses through its faculties such as Design, Business, and other professional studies. The website serves as the primary portal for information about courses, admissions, contact details, and student engagement, ensuring accessibility and clarity for both local and international students.",
     challenges: [
-      "Presenting a wide range of courses (design, business, etc.) in a clear, navigable way for prospective students.",
-      "Making admissions, contact, and faculty information easily accessible.",
-      "Reflecting both creativity (for design students) and professionalism (for business studies) in the website’s design.",
-      "Ensuring the site appeals to local and possibly international students, in how content is organized and conveyed.",
+      "Presenting a multifaceted personal brand covering biography, leadership, publications, and entrepreneurship in one cohesive digital space was difficult.",
+      "Structuring rich content such as leadership training, community service, gallery, and book information into a clean, user-friendly layout required detailed planning.",
+      "Designing the site to engage a wide audience, from students to corporate professionals and institutions, posed significant challenges.",
+      "Establishing credibility through testimonials, achievements, and media presence was essential to build trust.",
+      "Ensuring seamless navigation across diverse content types like Books, Gallery, Contact, About, and Services demanded careful attention.",
     ],
     solutions: [
       "Designed a homepage that highlights the main faculties: School of Design, School of Business, etc., so students can immediately see what disciplines are on offer.",
@@ -593,19 +608,19 @@ const projects = [
     ],
   },
   {
-    title: "Ehelepola Website",
+    title: "Ehelepola Walawwa Website",
     description:
       "The official website for the Ehelepola Walawwa Wax Museum in Kandy, Sri Lanka.",
-    image: dumy,
+    image: ehelepola,
     link: "https://ehelepolawalawwa.lk/",
     description2:
-      "EhelepolaWalawwa is the official web presence for the Ehelepola Walawwa Wax Museum, a recently opened cultural heritage museum in Kandy, Sri Lanka, located in the historic Ehelepola Walawwa. The website promotes the museum, presents its exhibits, shares its historical significance, and provides clear information for visitors, both local and international. With a design focused on authenticity and accessibility, the platform highlights Kandyan history while introducing the unique wax museum experience to wider audiences.",
+      "Ehelepola Walawwa is the official web presence for the Ehelepola Walawwa Wax Museum, a recently opened cultural heritage museum in Kandy, Sri Lanka, located in the historic Ehelepola Walawwa. The website promotes the museum, presents its exhibits, shares its historical significance, and provides clear information for visitors, both local and international. With a design focused on authenticity and accessibility, the platform highlights Kandyan history while introducing the unique wax museum experience to wider audiences.",
     challenges: [
-      "Communicating the deep historical and cultural background of Ehelepola Walawwa in an engaging manner.",
-      "Introducing a new kind of museum (wax figures) to audiences more familiar with conventional heritage sites.",
-      "Presenting exhibit details and visitor logistics clearly (opening, location, tickets).",
-      "Ensuring the site reflects authority and authenticity, especially given the academic involvement for costume and fashion reconstructions.",
-      "Making the interface accessible and informative for both local and international visitors.",
+      "Communicating the deep historical and cultural background of the Ehelepola Walawwa in an engaging manner was complex.",
+      "Introducing the waxworks museum concept to an audience familiar with traditional heritage sites required careful positioning.",
+      "Clearly presenting exhibition details like opening hours, location, tickets, and visitor supplies was essential.",
+      "Ensuring the website conveyed authority and authenticity, particularly due to academic involvement in costumes and fashion reconstruction, was critical.",
+      "Making the interface accessible and informative for both local and international visitors needed thoughtful design.",
     ],
     solutions: [
       "Created a homepage that highlights the wax museum’s mission, the museum opening announcement, and the significance of Ehelepola Walawwa within Kandyan history.",
@@ -619,16 +634,16 @@ const projects = [
     title: "Regency Travel House Website",
     description:
       "A professional travel and tourism platform for Regency Travel House.",
-    image: dumy,
+    image: regency,
     link: "https://regency.knowmo.me/",
     description2:
       "Regency Travel House is a professional travel and tourism service provider in Sri Lanka, offering a wide range of holiday packages, cultural tours, hotel bookings, transport services, and customized travel itineraries. The website serves as a digital platform for both local and international travelers to explore packages, make inquiries, and learn about Regency’s services in a modern and user-friendly format.",
     challenges: [
-      "Presenting a diverse set of tour packages in a structured and easy-to-browse way.",
-      "Building brand trust by showcasing Regency as a professional and reliable travel partner in a competitive tourism market.",
-      "Providing transparent service information including package highlights, itineraries, and pricing upon request.",
-      "Ensuring a mobile-friendly experience for international tourists accessing the site from abroad.",
-      "Offering quick contact channels for customer inquiries and bookings.",
+      "Presenting a diverse range of travel packages in a structured and easily navigable format was difficult.",
+      "Building brand trust to position Regency as a professional and reliable travel partner in a competitive market required strategic focus.",
+      "Providing transparent service details, including package highlights, itineraries, and on-demand pricing, posed information clarity challenges.",
+      "Delivering a mobile-friendly experience for international travelers accessing the site abroad was essential yet challenging.",
+      "Offering quick and accessible contact options for customer inquiries and bookings needed careful implementation.",
     ],
     solutions: [
       "Developed a clean and visually engaging homepage highlighting Regency’s identity, featured packages, and core services.",
@@ -784,8 +799,9 @@ const RecentWork: React.FC = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="w-11/12 md:w-3/4 lg:w-1/2 mt-4 text-sm lg:text-lg leading-6 md:leading-7 lg:leading-8 font-light text-center"
         >
-          Explore our recent projects to see how strategy, creativity, and
-          performance come together to drive meaningful results for our clients.
+          We’ve transformed ideas into impactful solutions, driving growth and
+          innovation for our clients through creativity, technology, and
+          unwavering commitment.
         </motion.p>
       </motion.div>
 

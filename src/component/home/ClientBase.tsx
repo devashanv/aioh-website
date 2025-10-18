@@ -1,9 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 
-import Logo2 from "../../assets/img/logos/logo (2).webp";
-
-import Aluviharaya from "../../assets/clients/aluviharaya.webp";
+import CafeLavia from "../../assets/clients/cafelavia.webp";
+import GOV from "../../assets/clients/gov.png";
+import Aluviharaya from "../../assets/clients/aluviharaya.png";
+import Nafco from "../../assets/clients/nafco.png";
+import Muswenna from "../../assets/clients/muswenna.webp";
 import EkhoElla from "../../assets/clients/EKHO_Ella.webp";
 import EkhoLake from "../../assets/clients/EKHO_LakeHouse.webp";
 import EkhoSafari from "../../assets/clients/EKHO_Safari.webp";
@@ -18,7 +20,7 @@ import CCL from "../../assets/clients/ccl.webp";
 import Dinunda from "../../assets/clients/dinunda.webp";
 import DoctoDO from "../../assets/clients/doctodo.webp";
 import Ehelepola from "../../assets/clients/Ehelepola walauwwe logo black.png";
-import Eikone from "../../assets/clients/eikone.webp";
+// import Eikone from "../../assets/clients/eikone.webp";
 import Limo from "../../assets/clients/limo copy.webp";
 import LTT from "../../assets/clients/ltt logo.webp";
 import Villa from "../../assets/clients/villa logo.webp";
@@ -31,6 +33,7 @@ import SeniorCargo from "../../assets/clients/senior-cargo.webp";
 import TKC from "../../assets/clients/tkc logo.webp";
 import Trillium from "../../assets/clients/trillium.webp";
 import Wingcraft from "../../assets/clients/wingscraft gold logo.webp";
+import Reviz from "../../assets/clients/reviz.png";
 
 const ClientBase: React.FC = () => {
   const logoWrapperClass =
@@ -38,7 +41,7 @@ const ClientBase: React.FC = () => {
 
   const settings = {
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     speed: 2000,
     autoplay: true,
@@ -142,30 +145,30 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Aluviharaya}
+                src={GOV}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-16 h-16"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={EkhoElla}
+                src={PanAsiaBank}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-16 h-16"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={Logo2}
+                src={Wingcraft}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={HotelQueens}
+                src={Ehelepola}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer black.png object-contain w-20 h-20"
               />
             </div>
           </div>
@@ -174,30 +177,30 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Dinunda}
+                src={HotelQueens}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={EkhoSafari}
+                src={HotelSuisse}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
-              />
-            </div>
-            <div className={logoWrapperClass}>
-              <img
-                src={Limo}
-                alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-28 h-28"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
                 src={GoAhead}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
+              />
+            </div>
+            <div className={logoWrapperClass}>
+              <img
+                src={Limo}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
               />
             </div>
           </div>
@@ -206,30 +209,30 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Villa}
+                src={EkhoElla}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={EkhoLake}
+                src={Arrogance}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-36 h-36"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={HotelSuisse}
+                src={DoctoDO}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={PanAsiaBank}
+                src={Muswenna}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
           </div>
@@ -238,30 +241,30 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={CCL}
+                src={EkhoSafari}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={EkhoSigiriya}
+                src={MSS}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-16 h-16"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={DoctoDO}
+                src={Villa}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={Ehelepola}
+                src={LTT}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer-50c:\Users\Welcome\Downloads\Ehelepola walauwwe logo black.png object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
               />
             </div>
           </div>
@@ -270,31 +273,31 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Eikone}
+                src={EkhoLake}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={EkhoSurf}
+                src={Regency}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-30 h-30"
               />
             </div>
 
             <div className={logoWrapperClass}>
               <img
-                src={LTT}
+                src={Dinunda}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-32 h-32"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
                 src={Pussllawa}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
           </div>
@@ -303,30 +306,30 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={MSS}
+                src={EkhoSigiriya}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
                 src={NutriCrop}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={Arrogance}
+                src={CCL}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
                 src={QB}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
           </div>
@@ -335,30 +338,30 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Regency}
+                src={EkhoSurf}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
                 src={SeniorCargo}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-16 h-16"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
                 src={TKC}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-30 h-30"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
                 src={Trillium}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
           </div>
@@ -367,33 +370,44 @@ const ClientBase: React.FC = () => {
           <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Wingcraft}
+                src={CafeLavia}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={NutriCrop}
+                src={Aluviharaya}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-32 h-32"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={Arrogance}
+                src={Nafco}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={QB}
+                src={Reviz}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-40 h-30"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-20 h-20"
               />
             </div>
           </div>
+
+          {/* Column 9 */}
+          {/* <div className="h-full flex flex-col gap-10">
+            <div className={logoWrapperClass}>
+              <img
+                src={Eikone}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
+              />
+            </div>
+          </div> */}
         </Slider>
       </section>
 
@@ -414,7 +428,7 @@ const ClientBase: React.FC = () => {
           slidesToScroll={1}
           speed={1000}
           autoplay={true}
-          autoplaySpeed={2500}
+          autoplaySpeed={2000}
           dots={true}
           className="h-full w-full"
           responsive={[
@@ -422,28 +436,28 @@ const ClientBase: React.FC = () => {
               breakpoint: 1024,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 1,
+                slidesToScroll: 3,
               },
             },
             {
               breakpoint: 768,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
               },
             },
           ]}
         >
           {/* Each column is a slide, vertical logos, responsive */}
           {[
-            [EkhoElla, Aluviharaya, Logo2, Villa],
-            [EkhoSafari, CCL, Eikone, GoAhead],
-            [EkhoLake, HotelQueens, HotelSuisse, PanAsiaBank],
-            [EkhoSigiriya, Dinunda, DoctoDO, Ehelepola],
-            [EkhoSurf, Limo, LTT, Pussllawa],
-            [MSS, NutriCrop, Arrogance, QB],
-            [Regency, SeniorCargo, TKC, Trillium],
-            [Wingcraft, NutriCrop, Arrogance, QB],
+            [GOV, PanAsiaBank, Wingcraft, Ehelepola],
+            [HotelQueens, HotelSuisse, GoAhead, Limo],
+            [EkhoElla, Arrogance, DoctoDO, Muswenna],
+            [EkhoSafari, MSS, Villa, LTT],
+            [EkhoLake, Regency, Dinunda, Pussllawa],
+            [EkhoSigiriya, NutriCrop, CCL, QB],
+            [EkhoSurf, SeniorCargo, TKC, Trillium],
+            [CafeLavia, Aluviharaya, Nafco, Reviz],
           ].map((col, colIdx) => (
             <div
               key={colIdx}
@@ -452,12 +466,12 @@ const ClientBase: React.FC = () => {
               {col.map((logo, rowIdx) => (
                 <div
                   key={rowIdx}
-                  className="w-full flex items-center justify-center"
+                  className="w-full flex items-center justify-center py-2"
                 >
                   <img
                     src={logo}
                     alt={`logo-mobile-${colIdx}-${rowIdx}`}
-                    className="object-contain w-24 h-14 xs:w-28 xs:h-16 sm:w-32 sm:h-20 md:w-36 md:h-24 min-w-0 max-w-full max-h-full filter grayscale hover:grayscale-0 hover:cursor-pointer"
+                    className="object-contain w-14 h-14 filter grayscale hover:grayscale-0 hover:cursor-pointer"
                   />
                 </div>
               ))}

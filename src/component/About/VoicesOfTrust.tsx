@@ -4,9 +4,9 @@ import { FaStar } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
 import googleImg1 from "../../assets/about/client.png";
-import googleImg2 from "../../assets/about/client2.jpeg";
-import googleImg3 from "../../assets/about/client.png";
-import googleImg4 from "../../assets/about/client2.jpeg";
+import googleImg2 from "../../assets/about/client2.png";
+import googleImg3 from "../../assets/about/client3.png";
+import googleImg4 from "../../assets/about/client4.png";
 import googleImg5 from "../../assets/about/google.jpg";
 import quotesSvg from "../../assets/about/quotes.svg";
 import LeftArrow from "../../assets/about/left.svg";

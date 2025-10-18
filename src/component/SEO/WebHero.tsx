@@ -19,17 +19,21 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          SEO
+          {/* Enhance Online Presence */}
+          {/* <br />
+          <span className="text-[#02ec97]">Through</span> SEO */}
+          Stop Being Invisible
           <br />
-          <span className="text-[#02ec97]">Content</span> Details
+          on<span className="text-[#02ec97]"> Google</span>
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          You have a great business and a decent website but when people search
+          for what you offer, they find your competitors instead. Maybe you're
+          on page 3 of Google (where nobody looks), or you're not showing up at
+          all. You're losing customers every single day to businesses that
+          aren't even better than you-they just rank higher. We fix that. We get
+          you found by people actively searching for exactly what you sell.
         </p>
 
         {/* Mobile/Tablet Image Only */}
@@ -41,8 +45,8 @@ const WebHero: React.FC = () => {
           />
         </div>
 
-        {/* <button
-          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
+        <button
+          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
             if (section) {
@@ -51,7 +55,7 @@ const WebHero: React.FC = () => {
           }}
         >
           Explore Our Portfolio
-        </button> */}
+        </button>
       </motion.div>
 
       {/* Right Side: Desktop Image */}

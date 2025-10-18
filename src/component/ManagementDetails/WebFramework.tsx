@@ -5,39 +5,39 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Understand Your Brand Voice",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We learn what makes your business unique and create a consistent personality across all platforms. No more random posts that don't sound like you.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "Know What Your Audience Actually Wants",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "We research what your customers care about, what problems they have, and what content they engage with. Then we create posts they actually want to see and share.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Create Content That Stops the Scroll",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "Eye-catching graphics, engaging videos, compelling captions—content designed to get attention, spark conversations, and build real connections with your audience.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Post Consistently Without the Headache",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "We handle everything—planning, creating, scheduling, and posting. You stay active on social media without lifting a finger or stressing about what to post next.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Engage and Build Your Community",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "We respond to comments, messages, and mentions on your behalf. Real conversations that turn followers into loyal customers who actually buy from you.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Track Growth and Optimize Performance",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "We monitor what's working, what's not, and constantly improve your strategy. Watch your followers, engagement, and website traffic grow month after month.",
   },
 ];
 
@@ -119,7 +119,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            Here's How We Grow Your Social Presence
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -155,7 +155,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          Here's How We Grow Your Social Presence
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products

@@ -55,10 +55,11 @@ const ContactForm: React.FC = () => {
   // errors state
   const [errors, setErrors] = useState({
     from_name: false,
+    // from_company: false,
     from_phone: false,
     from_email: false,
     main_service: false,
-    question: false,
+    sub_service: false,
   });
 
   const handleInputChange = (
@@ -92,19 +93,20 @@ const ContactForm: React.FC = () => {
 
     const formData = new FormData(form.current);
     const name = formData.get("from_name")?.toString().trim();
+    // const company = formData.get("from_company")?.toString().trim();
     const email = formData.get("from_email")?.toString().trim();
     const service = formData.get("main_service")?.toString().trim();
-    const Question = formData.get("question")?.toString().trim();
 
     // Combine phone number with country code
     const fullPhoneNumber = `+${phone.countryCode}${phone.number}`;
 
     const newErrors = {
       from_name: !name,
+      // from_company: !company,
       from_phone: !phone.number || !isValidPhone(fullPhoneNumber),
       from_email: !email || !isValidEmail(email),
       main_service: !service,
-      question: !Question,
+      sub_service: !selectedSubService,
     };
 
     setErrors(newErrors);
@@ -153,14 +155,15 @@ const ContactForm: React.FC = () => {
             buttonsStyling: false,
           });
           form.current?.reset();
-          setSelectedQuestion("");
+          // setSelectedQuestion("");
           setPhone({ countryCode: "94", number: "" });
           setErrors({
             from_name: false,
+            // from_company: false,
             from_phone: false,
             from_email: false,
             main_service: false,
-            question: false,
+            sub_service: false,
           });
           setIsSending(false);
         },
@@ -187,8 +190,13 @@ const ContactForm: React.FC = () => {
   // Get current path using useLocation hook
   const location = useLocation();
 
-  // Extract last part of URL like "marketing", "design", etc.
-  const currentPath = location.pathname.split("/").filter(Boolean).pop() || "";
+  // Extract last part of URL
+  // const currentPath = location.pathname.split("/").filter(Boolean).pop() || "";
+
+  // Extract second-to-last part of URL
+  const pathParts = location.pathname.split("/").filter(Boolean);
+  const currentPath =
+    pathParts.length > 1 ? pathParts[pathParts.length - 2] : pathParts[0] || "";
 
   // Main services dropdown options
   const services = [
@@ -198,48 +206,103 @@ const ContactForm: React.FC = () => {
   ];
 
   // Questions for each main service
-  const Question: Record<string, { label: string; value: string }[]> = {
+  // const Question: Record<string, { label: string; value: string }[]> = {
+  //   Marketing: [
+  //     {
+  //       label: "How can I increase my sales?",
+  //       value: "How can I increase my sales?",
+  //     },
+  //     {
+  //       label: "How do I improve my brand visibility online?",
+  //       value: "How do I improve my brand visibility online?",
+  //     },
+  //     {
+  //       label: "Can you help me with SEO?",
+  //       value: "Can you help me with SEO?",
+  //     },
+  //   ],
+  //   Technology: [
+  //     {
+  //       label: "Do you provide mobile app development?",
+  //       value: "Do you provide mobile app development?",
+  //     },
+  //     {
+  //       label: "How do you ensure website security?",
+  //       value: "How do you ensure website security?",
+  //     },
+  //     {
+  //       label: "Do you offer ongoing maintenance and support?",
+  //       value: "Do you offer ongoing maintenance and support?",
+  //     },
+  //   ],
+  //   Design: [
+  //     {
+  //       label: "Do you provide UX/UI design services?",
+  //       value: "Do you provide UX/UI design services?",
+  //     },
+  //     {
+  //       label: "How can I make my website look more modern?",
+  //       value: "How can I make my website look more modern?",
+  //     },
+  //     {
+  //       label: "Do you create mobile-friendly designs?",
+  //       value: "Do you create mobile-friendly designs?",
+  //     },
+  //   ],
+  // };
+
+  // sub services for each main service
+  const subService: Record<string, { label: string; value: string }[]> = {
     Marketing: [
+      { label: "Digital Strategy", value: "Digital Strategy" },
+      { label: "Social Media Advertising", value: "Social Media Advertising" },
+      { label: "Social Media Management", value: "Social Media Management" },
       {
-        label: "How can I increase my sales?",
-        value: "How can I increase my sales?",
+        label: "Lead generation, & Conversion Rate Optimization",
+        value: "Lead generation, & Conversion Rate Optimization",
       },
       {
-        label: "How do I improve my brand visibility online?",
-        value: "How do I improve my brand visibility online?",
+        label: "Search Engine Optimization (SEO)",
+        value: "Search Engine Optimization (SEO)",
       },
-      {
-        label: "Can you help me with SEO?",
-        value: "Can you help me with SEO?",
-      },
+      { label: "Pay-Per-Click Marketing", value: "Pay-Per-Click Marketing" },
+      { label: "Email Marketing", value: "Email Marketing" },
+      { label: "Branding", value: "Branding" },
+      { label: "Website Development", value: "Website Development" },
     ],
     Technology: [
+      { label: "Web Development", value: "Web Development" },
+      { label: "Web System Development", value: "Web System Development" },
       {
-        label: "Do you provide mobile app development?",
-        value: "Do you provide mobile app development?",
+        label: "Standalone System Development",
+        value: "Standalone System Development",
       },
       {
-        label: "How do you ensure website security?",
-        value: "How do you ensure website security?",
+        label: "Mobile Application Development",
+        value: "Mobile Application Development",
       },
+      { label: "AI Solutions", value: "AI Solutions" },
       {
-        label: "Do you offer ongoing maintenance and support?",
-        value: "Do you offer ongoing maintenance and support?",
+        label: "Test Automation Solutions",
+        value: "Test Automation Solutions",
       },
     ],
     Design: [
       {
-        label: "Do you provide UX/UI design services?",
-        value: "Do you provide UX/UI design services?",
+        label: "Brand Identity Development",
+        value: "Brand Identity Development",
       },
+      { label: "Packaging Design", value: "Packaging Design" },
       {
-        label: "How can I make my website look more modern?",
-        value: "How can I make my website look more modern?",
+        label: "Promotional Material Design",
+        value: "Promotional Material Design",
       },
+      { label: "Creative Content", value: "Creative Content" },
       {
-        label: "Do you create mobile-friendly designs?",
-        value: "Do you create mobile-friendly designs?",
+        label: "Photography & Videography",
+        value: "Photography & Videography",
       },
+      { label: "UI/UX Design", value: "UI/UX Design" },
     ],
   };
 
@@ -254,8 +317,10 @@ const ContactForm: React.FC = () => {
   // State to manage selected main service
   const [selectedMainService, setSelectedMainService] =
     useState(defaultService);
+  // const [selectedMainService, setSelectedMainService] = useState("");
 
-  const [selectedQuestion, setSelectedQuestion] = useState("");
+  const [selectedSubService, setSelectedSubService] = useState("");
+  // const [selectedQuestion, setSelectedQuestion] = useState("");
 
   // State to manage sending state for the button
   const [isSending, setIsSending] = useState(false);
@@ -268,12 +333,21 @@ const ContactForm: React.FC = () => {
         direction="fade"
         className="block lg:hidden mb-2 w-full text-center"
       >
-        <h2 className="text-[24px] md:text-[30px] leading-[26px] font-bold text-[#191818]">
+        {/* <h2 className="text-[24px] md:text-[30px] leading-[26px] font-bold text-[#191818]">
           Reach Out, We're Listening
         </h2>
         <p className="text-[16px] leading-[26px] text-[#191818] mt-4 font-light">
           We're ready to assist. Share the details below and we'll get back to
           you soon.
+        </p> */}
+        <h1 className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold">
+          Ready to Grow Your
+          <br />
+          <span className="text-primary">Business?</span>
+        </h1>
+        <p className="lg:w-1/2 mt-4 text-sm lg:text-lg leading-6 md:leading-6 lg:leading-7 font-light text-center">
+          Stop guessing. Let's create a plan that actually works. Schedule your
+          free consultation call today.
         </p>
       </MotionSection>
 
@@ -283,16 +357,17 @@ const ContactForm: React.FC = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="w-full lg:w-1/2 space-y-10 lg:space-y-6 lg:pr-4"
+        className="w-full lg:w-1/2 space-y-10 lg:space-y-6 lg:pt-2 lg:pr-4"
       >
         {/* <div className="lg:hidden block text-center justify-center">
           <h1 className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold">
-            Partner with us to build <br /> what’s{" "}
-            <span className="text-primary">next</span>
+            Ready to Grow Your
+            <br />
+            <span className="text-primary">Business?</span>
           </h1>
           <p className="lg:w-1/2 mt-4 text-sm lg:text-lg leading-6 md:leading-6 lg:leading-7 font-light text-center">
-            Have an idea? Let’s bring it to life. Whether it's a bold vision or
-            a simple spark, we're here to help turn your ideas into reality.
+            Stop guessing. Let's create a plan that actually works. Schedule
+            your free consultation call today.
           </p>
         </div> */}
         <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
@@ -300,10 +375,40 @@ const ContactForm: React.FC = () => {
           <Box sx={{ width: "100%" }}>
             <TextField
               name="from_name"
-              label="Your name"
+              label="Enter your name (e.g. Nimal Perera)"
               fullWidth
               error={errors.from_name}
               helperText={errors.from_name ? "Name is required." : ""}
+              onChange={handleInputChange}
+              sx={textFieldStyles}
+            />
+          </Box>
+
+          {/* Company */}
+          <Box sx={{ width: "100%" }}>
+            <TextField
+              name="from_company"
+              label="Enter your company"
+              fullWidth
+              // error={errors.from_company}
+              // helperText={
+              //   errors.from_company ? "Company name is required." : ""
+              // }
+              onChange={handleInputChange}
+              sx={textFieldStyles}
+            />
+          </Box>
+
+          {/* Email */}
+          <Box sx={{ width: "100%" }}>
+            <TextField
+              name="from_email"
+              label="Enter your e-mail"
+              fullWidth
+              error={errors.from_email}
+              helperText={
+                errors.from_email ? "Please enter a valid email address." : ""
+              }
               onChange={handleInputChange}
               sx={textFieldStyles}
             />
@@ -442,7 +547,7 @@ const ContactForm: React.FC = () => {
                   }));
                 }}
                 error={errors.from_phone}
-                placeholder="Phone number"
+                placeholder="Enter your phone number"
                 sx={{
                   ...textFieldStyles,
                   flex: 1,
@@ -467,31 +572,17 @@ const ContactForm: React.FC = () => {
             )}
           </Box>
 
-          {/* Email */}
-          <Box sx={{ width: "100%" }}>
-            <TextField
-              name="from_email"
-              label="E-mail"
-              fullWidth
-              error={errors.from_email}
-              helperText={
-                errors.from_email ? "Please enter a valid email address." : ""
-              }
-              onChange={handleInputChange}
-              sx={textFieldStyles}
-            />
-          </Box>
           {/* Main service Dropdown */}
           <Box sx={{ width: "100%" }}>
             <TextField
               name="main_service"
-              label="Main service"
+              label="Select a service category"
               select
               fullWidth
               defaultValue={defaultService}
               error={errors.main_service}
               helperText={
-                errors.main_service ? "Please select a main service." : ""
+                errors.main_service ? "Please select a service category." : ""
               }
               sx={textFieldStyles}
               onChange={(e) => {
@@ -506,8 +597,35 @@ const ContactForm: React.FC = () => {
               ))}
             </TextField>
           </Box>
+
+          {/* Sub services Dropdown */}
+          {selectedMainService && (
+            <Box sx={{ width: "100%" }}>
+              <TextField
+                name="sub_service"
+                label="Select your requirement"
+                select
+                fullWidth
+                value={selectedSubService}
+                onChange={(e) => setSelectedSubService(e.target.value)}
+                error={errors.sub_service && !selectedSubService}
+                helperText={
+                  !selectedSubService && errors.sub_service
+                    ? "Please select a requirement."
+                    : ""
+                }
+                sx={textFieldStyles}
+              >
+                {subService[selectedMainService]?.map((sub) => (
+                  <MenuItem key={sub.value} value={sub.value}>
+                    {sub.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Box>
+          )}
           {/* Questionss Dropdown */}
-          <Box sx={{ width: "100%" }}>
+          {/* <Box sx={{ width: "100%" }}>
             <TextField
               name="question"
               label="What do you want to ask?"
@@ -529,14 +647,15 @@ const ContactForm: React.FC = () => {
                 </MenuItem>
               ))}
             </TextField>
-          </Box>
+          </Box> */}
+
           {/* Message */}
           <Box sx={{ width: "100%" }}>
             <TextField
               name="message"
-              label="Enter your message"
+              label="Type brief about your requirement"
               multiline
-              rows={6}
+              rows={5}
               fullWidth
               onChange={handleInputChange}
               sx={textFieldStyles}
@@ -546,7 +665,7 @@ const ContactForm: React.FC = () => {
           <button
             type="submit"
             disabled={isSending}
-            className={`w-full lg:w-fit mt-4 text-[18px] font-medium rounded-full py-[12px] px-6  transition cursor-pointer ${
+            className={`w-full lg:w-fit mt-4 text-[18px] font-medium rounded-full py-[12px] px-6 transition cursor-pointer ${
               isSending
                 ? "bg-primary/60 text-[#19181899] cursor-not-allowed"
                 : "bg-primary text-[#191818] hover:bg-primary/80"
@@ -564,7 +683,7 @@ const ContactForm: React.FC = () => {
         className="w-full lg:w-1/2 flex flex-col"
       >
         {/* Desktop Heading & Description - show only lg and above */}
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <h2 className="text-[26px] lg:text-[48px] md:text-[30px] leading-[40px] lg:leading-[40px] font-bold text-[#191818]">
             Reach Out, We're Listening
           </h2>
@@ -572,7 +691,34 @@ const ContactForm: React.FC = () => {
             We're ready to assist. Share your technology needs below, <br /> and
             we'll get back to you soon.
           </p>
-        </div>
+        </div> */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="hidden lg:block"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-[26px] md:text-3xl lg:text-5xl lg:leading-[62px] font-bold w-2/3 lg:w-full"
+          >
+            Ready to Grow Your
+            <br />
+            <span className="text-primary">Business?</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="mt-4 text-sm lg:text-lg leading-6 md:leading-7 lg:leading-8 font-light text-justify"
+          >
+            Stop guessing. Let's create a plan that actually works. Schedule
+            your free consultation call today.
+          </motion.p>
+        </motion.div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:mt-10 ">
@@ -584,8 +730,8 @@ const ContactForm: React.FC = () => {
           >
             <p className="text-[18px] font-normal mb-1">Address :</p>
             <p className="text-[16px] text-[#191818] leading-[24px] font-light">
-              3rd Floor, All in one Holdings, <br />
-              349/2/1 Katugastota Rd, <br />
+              {/* 3rd Floor, All in one Holdings, <br /> */}
+              349/2/1, Katugastota Rd, <br />
               Kandy, Sri Lanka.
             </p>
           </MotionSection>

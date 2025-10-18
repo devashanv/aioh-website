@@ -8,7 +8,6 @@ import sc4 from "../../assets/img/services/creativecon.webp";
 import sc5 from "../../assets/img/services/photography.webp";
 import sc6 from "../../assets/img/services/uiux.webp";
 
-
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
@@ -16,39 +15,39 @@ const services = [
   {
     title: "Brand Identity Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Build consistent brand identity across all touchpoints. Design logos, guidelines, and branded materials.",
     img: sc1,
     path: "/design/brand-identity-development",
   },
   {
     title: "Packaging Design",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Design packaging that stands out on shelves. Create labels, boxes, and mockups that sell.",
     img: sc2,
     path: "/design/packaging-design",
   },
   {
-    title: "Promotional Material Design",
+    title: "Promotion or POS Material Design",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Design marketing materials that capture attention. Create flyers and enhance visuals professionally.",
     img: sc3,
     path: "/design/promotional-material-design",
   },
   {
-    title: "Creative Content",
+    title: "Creative Content Design",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Design eye-catching graphics for digital platforms. Create infographics, illustrations, and social visuals.",
     img: sc4,
     path: "/design/creative-content",
   },
   {
-    title: "Photography & Videography",
+    title: "Photography & Videography productions ",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Capture your brand through professional visuals. Create videos and images that tell stories.",
     img: sc5,
     path: "/design/photography-and-videography",
   },
-    {
+  {
     title: "UI/UX Design",
     description:
       "We create intuitive and visually appealing interfaces to enhance user experience, improve engagement, and drive conversions.",
@@ -56,7 +55,6 @@ const services = [
     path: "/design/ui-ux-design",
   },
 ];
-
 
 const Service: React.FC = () => {
   const navigate = useNavigate();
@@ -142,9 +140,9 @@ const Service: React.FC = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0 }}
-                className="absolute sm:min-h-[60%] md:min-h-[50%] py-4 md:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
+                className="absolute min-h-[60%] lg:min-h-[50%] py-4 lg:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
               >
-                <p className="text-left md:text-justify leading-[22px] text-xs lg:text-sm text-white">
+                <p className="text-left md:text-justify leading-4 lg:leading-[22px] text-xs lg:text-sm text-white">
                   {service.description}
                 </p>
 

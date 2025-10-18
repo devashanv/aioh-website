@@ -1,14 +1,15 @@
 import Hero from "../component/marketing/Hero";
 import Service from "../component/marketing/Service";
-import Process from "../component/marketing/Process";
-import RecentWork from "../component/marketing/RecentWork";
-import Contact from "../component/marketing/ContactSection";
+// import Process from "../component/marketing/Process";
+// import RecentWork from "../component/marketing/RecentWork";
+// import Contact from "../component/marketing/ContactSection";
 
 import { useEffect } from "react";
 import Header from "../component/common/Header";
 import FooterTop from "../component/common/FooterTop";
 import Footer from "../component/common/Footer";
 import ChatWithUsButton from "../component/common/ChatWithUsButton";
+import FAQ from "../component/marketing/FAQ";
 
 const Merketing: React.FC = () => {
   useEffect(() => {
@@ -37,18 +38,19 @@ const Merketing: React.FC = () => {
         </section>
 
         {/* Process */}
-        <section className="mt-20 md:mt-30 bg-gradient-to-r from-[#01213A] from-5% to-[#035BA0] to-100% rounded-[20px]">
+        {/* <section className="mt-20 md:mt-30 bg-gradient-to-r from-[#01213A] from-5% to-[#035BA0] to-100% rounded-[20px]">
           <Process />
-        </section>
+        </section> */}
 
         {/* RecentWork */}
-        <section className="mt-20 md:mt-30 bg-transparent rounded-[20px]">
+        {/* <section className="mt-20 md:mt-30 bg-transparent rounded-[20px]">
           <RecentWork />
-        </section>
+        </section> */}
 
         {/* Contact */}
         <section className="mt-20 md:mt-30 bg-white rounded-[20px]">
-          <Contact />
+          {/* <Contact /> */}
+          <FAQ />
         </section>
       </div>
       {/* Before Footer */}

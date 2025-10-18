@@ -7,8 +7,9 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/PromotionalDetails/WebHero";
 import WebFramework from "../../component/PromotionalDetails/WebFramework";
-import WebContact from "../../component/common/WebContact";
+import WebContact from "../../component/common/DetailsPageContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
+import RecentWork from "../../component/PromotionalDetails/RecentWork";
 
 function PromotionalService() {
   useEffect(() => {
@@ -54,6 +55,16 @@ function PromotionalService() {
         </section>
 
         {/* Section 3 */}
+        <section
+          id="WebRecentWork"
+          className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
+        >
+          <div className="w-11/12 mx-auto">
+            <RecentWork />
+          </div>
+        </section>
+
+        {/* Section 4 */}
         <section className="bg-white rounded-[20px] py-10 lg:mb-30 mb-20">
           <WebContact />
         </section>

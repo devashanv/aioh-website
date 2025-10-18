@@ -3,42 +3,57 @@ import { useNavigate } from "react-router-dom";
 // bg images
 import sc1 from "../../assets/img/services/website.webp";
 import sc2 from "../../assets/img/services/websystem.webp";
-import sc3 from "../../assets/img/services/tech-sc3.png";
-import sc4 from "../../assets/img/services/tech-sc4.png";
+import sc3 from "../../assets/img/services/standalone.webp";
+import sc4 from "../../assets/img/services/websystem.webp";
+import sc5 from "../../assets/img/services/AI.webp";
+import sc6 from "../../assets/img/services/websystem.webp";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web Site Development",
+    title: "Web Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Through custom web development, clients establish compelling, user-friendly websites that increase traffic and conversions",
     img: sc1,
     path: "/technology/WebService",
   },
   {
-    title: "System Development",
+    title: "Web System Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Web system development automates key business processes such as HR, CRM, e-commerce, and bookings, improving efficiency and customer satisfaction.",
     img: sc2,
     path: "/technology/SystemService",
   },
   {
+    title: "Standalone System Development",
+    description:
+      "Standalone systems like ERP and POS optimize resource management and daily operations, reducing costs and scaling capacity.",
+    img: sc3,
+    path: "/technology/StandaloneSysDevService",
+  },
+  {
     title: "Mobile Application Development",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc3,
+      "Mobile app development extends client reach with intuitive, high-performance apps tailored to industry-specific needs, increasing user engagement and loyalty",
+    img: sc4,
     path: "/technology/MobileService",
   },
   {
-    title: "Search Engine Optimization (SEO)",
+    title: "AI Solutions",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc4,
-    path: "/technology/SEOService",
+      "AI solutions like chatbots and virtual assistants improve customer interaction and automate routine tasks, enhancing productivity.",
+    img: sc5,
+    path: "/technology/AIService",
   },
-
+  {
+    title: "Test Automation Solutions",
+    description:
+      "Test automation ensures product quality and faster delivery through reliable functional, regression, and performance testing integrated with CI/CD pipelines.",
+    img: sc6,
+    path: "/technology/TestAutomationService",
+  },
 ];
 
 const Service: React.FC = () => {
@@ -78,9 +93,8 @@ const Service: React.FC = () => {
           Expertise That Powers Growth
         </motion.h1>
         <p className="md:w-5/6 lg:w-3/4 mt-4 text-sm lg:text-lg leading-6 md:leading-7 lg:leading-8 font-light text-center">
-          We deliver data-driven marketing services tailored to your brand
-          combining strategy, creativity, and technology to accelerate your
-          digital growth.
+          We empower businesses with IT solutions blending technology, support,
+          and security to drive growth and unlock digital potential.
         </p>
       </motion.div>
 
@@ -125,9 +139,9 @@ const Service: React.FC = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0 }}
-                className="absolute sm:min-h-[60%] md:min-h-[50%] py-4 md:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
+                className="absolute min-h-[60%] lg:min-h-[50%] py-4 lg:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
               >
-                <p className="text-left md:text-justify leading-[22px] text-xs lg:text-sm text-white">
+                <p className="text-left md:text-justify leading-4 lg:leading-[22px] text-xs lg:text-sm text-white">
                   {service.description}
                 </p>
 

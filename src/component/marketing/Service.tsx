@@ -5,9 +5,8 @@ import sc1 from "../../assets/img/services/bsy.webp";
 import sc2 from "../../assets/img/services/sma.webp";
 import sc3 from "../../assets/img/services/smm.webp";
 import sc4 from "../../assets/img/services/cro.webp";
-import sc5 from "../../assets/img/services/ds.webp";
+// import sc5 from "../../assets/img/services/ds.webp";
 import sc6 from "../../assets/img/services/SEO.webp";
-
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -16,47 +15,74 @@ const services = [
   {
     title: "Digital Strategy",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Define your market position and understand your audience. Research competitors and identify opportunities for growth.",
     img: sc1,
     path: "/marketing/digital-strategy",
   },
   {
     title: "Social Media Advertising",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Run targeted ad campaigns that reach ideal customers. Monitor, test, and optimize for maximum ROI.",
     img: sc2,
     path: "/marketing/social-media-advertising",
   },
   {
     title: "Social Media Management",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Manage your social presence with strategic content planning. Track performance and engage your community effectively.",
     img: sc3,
     path: "/marketing/social-media-management",
   },
   {
-    title: "Conversion Rate Optimization",
+    title: "Lead generation, & Conversion Rate Optimization",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Turn more visitors into customers through testing. Optimize pages, funnels, and campaigns for results.",
     img: sc4,
-    path: "/marketing/conversion-rate-optimization",
+    path: "/marketing/lead-generation-&-conversion-rate-optimization",
   },
   {
-    title: "Content Marketing",
-    description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc5,
-    path: "/marketing/content-marketing",
-  },
-    {
     title: "Search Engine Optimization (SEO)",
     description:
       "We optimize your website and content to improve search engine rankings, increase organic traffic, and attract more potential customers.",
     img: sc6,
     path: "/marketing/search-engine-optimization",
   },
+  {
+    title: "Pay-Per-Click Marketing",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/marketing/pay-per-click-marketing",
+  },
+  {
+    title: "Email Marketing",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/marketing/email-marketing",
+  },
+  {
+    title: "Branding",
+    description:
+      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+    img: sc4,
+    path: "/marketing/branding",
+  },
+  // {
+  //   title: "Creative Marketing",
+  //   description:
+  //     "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+  //   img: sc5,
+  //   path: "/marketing/creative-marketing",
+  // },
+  {
+    title: "Website Development",
+    description:
+      "Through custom web development, clients establish compelling, user-friendly websites that increase traffic and conversions",
+    img: sc1,
+    path: "/technology/WebService",
+  },
 ];
-
 
 const Service: React.FC = () => {
   const navigate = useNavigate();
@@ -142,9 +168,9 @@ const Service: React.FC = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0 }}
-                className="absolute sm:min-h-[60%] md:min-h-[50%] py-4 md:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
+                className="absolute min-h-[60%] lg:min-h-[50%] py-4 lg:py-2 bottom-0 left-0 w-full bg-[#01213A]/20 backdrop-blur-md flex-col items-center justify-between z-30 px-8"
               >
-                <p className="text-left md:text-justify leading-[22px] text-xs lg:text-sm text-white">
+                <p className="text-left md:text-justify leading-4 lg:leading-[22px] text-xs lg:text-sm text-white">
                   {service.description}
                 </p>
 

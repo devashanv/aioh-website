@@ -2,13 +2,13 @@ import { useEffect } from "react";
 
 import Header from "../component/common/Header";
 import AboutHero from "../component/About/AboutHero";
-import WhoAre from "../component/About/WhoAre";
+// import WhoAre from "../component/About/WhoAre";
 import Counter from "../component/About/Counter";
 import Map from "../component/About/Map";
 import WhatSets from "../component/About/WhatSets";
 import VoicesOfTrust from "../component/About/VoicesOfTrust";
 import Message from "../component/About/Message";
-import Locations from "../component/About/Locations";  
+import Locations from "../component/About/Locations";
 import Footer from "../component/common/Footer";
 import FooterTop from "../component/common/FooterTop";
 import ChatWithUsButton from "../component/common/ChatWithUsButton";
@@ -33,11 +33,11 @@ function WebService() {
         </section>
 
         {/* Section 2 */}
-        <section className="bg-transparent rounded-[20px] lg:mb-30 mb-20">
+        {/* <section className="bg-transparent rounded-[20px] lg:mb-30 mb-20">
           <div className="mx-auto">
             <WhoAre />
           </div>
-        </section>
+        </section> */}
 
         {/* Section 3 */}
         <section className="bg-white rounded-[20px] lg:mb-30 mb-20">

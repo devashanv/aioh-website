@@ -7,9 +7,9 @@ import Footer from "../../component/common/Footer";
 import Breadcrumb from "../../component/common/Breadcrumb";
 import WebHero from "../../component/UIUXDetails/WebHero";
 import WebFramework from "../../component/UIUXDetails/WebFramework";
-import WebContact from "../../component/UIUXDetails/WebContact";
-import WebRecentWork from "../../component/UIUXDetails/WebRecentWork";
+import WebContact from "../../component/common/DetailsPageContact";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
+import RecentWork from "../../component/UIUXDetails/RecentWork";
 
 function UIUXDetails() {
   useEffect(() => {
@@ -60,7 +60,7 @@ function UIUXDetails() {
           className=" rounded-[20px] lg:mb-30 mb-20 bg-transparent"
         >
           <div className="w-11/12 mx-auto">
-            <WebRecentWork />
+            <RecentWork />
           </div>
         </section>
 

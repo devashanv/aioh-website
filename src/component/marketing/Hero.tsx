@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import heroVM from "../../assets/video/heroM.mp4";
-import TestVideo from '../../assets/img/sample/test-new.mp4'
-
+import { useNavigate } from "react-router-dom";
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-11/12 mx-auto">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-1">
@@ -20,8 +20,8 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary">Marketing</span> That Moves Brands
-            Forward
+            Your Growth <span className="text-primary">Marketing</span>{" "}
+            Powerhouse
           </motion.h1>
 
           <motion.p
@@ -30,23 +30,26 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            We craft growth-driven marketing strategies that thoughtfully
-            connect ambitious brands with the audiences that matter most
-            seamlessly blending strategic insight, creative storytelling, and
-            performance-focused execution across every digital touch-point to
-            drive real, measurable business impact.
+            We don't just run random stuff and hope for the best. We take time
+            to understand your business, study your customers, and create
+            marketing strategies that deliver quick wins today and sustainable
+            growth tomorrow.
           </motion.p>
 
           <button
             className="w-fit lg:mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center"
+            // onClick={() => {
+            //   const section = document.getElementById("services");
+            //   if (section) {
+            //     section.scrollIntoView({ behavior: "smooth" });
+            //   }
+            // }}
             onClick={() => {
-              const section = document.getElementById("services");
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
+              navigate("/consultation", { replace: true });
+              window.location.reload();
             }}
           >
-            <span>Explore Our Services</span>
+            <span>Schedule a Call</span>
           </button>
         </motion.div>
 
@@ -64,8 +67,8 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary">Marketing</span> That Moves Brands
-            Forward
+            Your Growth <span className="text-primary">Marketing</span>{" "}
+            Powerhouse
           </motion.h1>
 
           <motion.div
@@ -75,7 +78,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <video
-              src={TestVideo}
+              src={heroVM}
               className="w-full h-auto lg:h-[480px] object-cover"
               autoPlay
               muted

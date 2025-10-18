@@ -8,7 +8,7 @@ const WebHero: React.FC = () => {
     <>
       {/* Left Side: Text */}
       <motion.div
-        className="w-full lg:w-1/2 pr-0 lg:mt-20 mt-16"
+        className="w-full lg:w-1/2 pr-0 lg:mt-20 my-16"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
@@ -19,21 +19,19 @@ const WebHero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          UIUX
+          Create Stunning,
           <br />
-          <span className="text-[#02ec97]">DESIGN</span> Details
+          <span className="text-[#02ec97]">User-Centered</span> Designs
         </motion.h1>
 
         <p className="text-[16px] lg:text-[20px] leading-7 lg:leading-8 text-[#191818] mt-6 font-light lg:text-left text-justify">
-          Unlock the true potential of technology with All in One IT Solution’s
-          comprehensive range of services. We deliver innovative, scalable, and
-          end-to-end technology solutions tailored to meet the unique needs of
-          businesses across industries. From software development and web
-          solutions to cloud integration, cybersecurity, and ongoing IT support.
+          Create captivating and intuitive digital experiences that truly
+          connect by blending insightful user research, brand storytelling, and
+          iterative design practices aimed at delighting users.
         </p>
 
         {/* Mobile/Tablet Image Only */}
-        <div className="block lg:hidden w-full my-6">
+        <div className="block lg:hidden w-full mt-6">
           <img
             src={Image1}
             alt="Responsive Showcase"
@@ -42,7 +40,7 @@ const WebHero: React.FC = () => {
         </div>
 
         <button
-          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center mb-10 ml-0"
+          className="w-fit mt-10 px-6 py-3 bg-primary hover:bg-primary/80 text-base lg:text-xl rounded-full cursor-pointer font-medium flex items-center justify-center ml-0"
           onClick={() => {
             const section = document.getElementById("WebRecentWork");
             if (section) {

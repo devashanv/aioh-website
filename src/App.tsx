@@ -21,6 +21,12 @@ import SystemService from "./pages/technology/SystemService";
 import MobileService from "./pages/technology/MobileService";
 import SEOService from "./pages/marketing/SEOService";
 import UIUXDetails from "./pages/design/UIUXDetails";
+import AISolutions from "./pages/technology/AISolutionsService";
+import StandaloneService from "./pages/technology/StandaloneSysDevService";
+import TestAutomationService from "./pages/technology/TestAutomationService";
+import PayPerClickService from "./pages/marketing/Pay-per-clickDetails";
+import EmailMarketingService from "./pages/marketing/EmailMarketing";
+import BrandingService from "./pages/marketing/Branding";
 
 function App() {
   return (
@@ -48,13 +54,22 @@ function App() {
           element={<ManagementDetails />}
         />
         <Route
-          path="/marketing/conversion-rate-optimization"
+          path="/marketing/lead-generation-&-conversion-rate-optimization"
           element={<OptimizationDetails />}
         />
         <Route
-          path="/marketing/content-marketing"
+          path="/marketing/creative-marketing"
           element={<MarketingDetails />}
         />
+        <Route
+          path="/marketing/pay-per-click-marketing"
+          element={<PayPerClickService />}
+        />
+        <Route
+          path="/marketing/email-marketing"
+          element={<EmailMarketingService />}
+        />
+        <Route path="/marketing/branding" element={<BrandingService />} />
         <Route
           path="/marketing/search-engine-optimization"
           element={<SEOService />}
@@ -82,6 +97,15 @@ function App() {
         <Route path="/technology/MobileService" element={<MobileService />} />
         <Route path="/technology/SEOService" element={<SEOService />} />
         <Route path="/technology/SystemService" element={<SystemService />} />
+        <Route path="/technology/AIService" element={<AISolutions />} />
+        <Route
+          path="/technology/StandaloneSysDevService"
+          element={<StandaloneService />}
+        />
+        <Route
+          path="/technology/TestAutomationService"
+          element={<TestAutomationService />}
+        />
       </Routes>
     </Router>
   );

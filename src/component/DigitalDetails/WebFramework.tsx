@@ -6,39 +6,39 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    title: "Study and Research",
+    title: "Understand Where You Stand Today",
     description:
-      "We analyze industry trends, user needs, and tech insights to build a strong foundation for project success.",
+      "We assess what's working, what's not, and what's costing you money. Then we identify quick wins to improve your digital presence and start getting results fast.",
   },
   {
     number: "02",
-    title: "Plan and Strategic",
+    title: "See How You Compare to Competitors",
     description:
-      "Our team creates detailed plans, defines goals, and sets timelines to guide every stage of the project.",
+      "We analyze how your competitors are winning online and where you can beat them. Discover your hidden strengths, fix your weaknesses, and spot untapped opportunities.",
   },
   {
     number: "03",
-    title: "Design",
+    title: "Know Exactly Who to Target",
     description:
-      "We craft clean, modern UI/UX designs that align with client goals and ensure a smooth user experience.",
+      "We identify your ideal customer segments—who they are, what they want, and how they behave online. Then we show you exactly how to reach them where they're already spending time.",
   },
   {
     number: "04",
-    title: "Prototype",
+    title: "Monitor Your Digital Performance",
     description:
-      "We build interactive prototypes to visualize ideas and gather feedback before full-scale development begins.",
+      "No more guessing games. We track every click, every dollar, and every result in real-time. You'll see exactly what's working and what's wasting money. so you can make smart decisions fast and stop throwing cash at things that don't deliver.",
   },
   {
     number: "05",
-    title: "Develop and Test",
+    title: "Improve User Experience & Conversion Rates",
     description:
-      "Our developers write clean code and rigorously test each feature to ensure performance, speed, and security.",
+      "We map out your customer journey from first click to final purchase, fixing the leaks where you're losing leads. Shorter sales cycles, higher conversion rates, more revenue.",
   },
   {
     number: "06",
-    title: "Launch and Support",
+    title: "Data Driven Strategy Roadmap",
     description:
-      "We deploy your product with care and provide ongoing updates, maintenance, and technical support.",
+      "A clear, step-by-step action plan based on real data - not guesswork. You'll know exactly what to do, when to do it, and why it'll work for YOUR specific business.",
   },
 ];
 
@@ -120,7 +120,7 @@ const WebFramework: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-center text-[26px] lg:text-[48px] font-bold text-white">
-            The Way We Build
+            What You'll Get
           </h2>
           <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
             How We Design, Develop, and Deliver Impactful Digital Products
@@ -156,7 +156,7 @@ const WebFramework: React.FC = () => {
       {/* Mobile/Tab */}
       <div className="lg:hidden w-full py-12 flex flex-col items-center">
         <h2 className="text-center text-2xl font-medium text-white mb-4">
-          The Way We Build
+          What You'll Get
         </h2>
         <p className="text-center text-[16px] lg:text-[18px] text-white mt-0 font-light mb-12">
           How We Design, Develop, and Deliver Impactful Digital Products
