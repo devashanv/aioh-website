@@ -75,28 +75,36 @@ const navItems: NavItem[] = [
         label: "Digital Strategy",
         items: [
           {
-            title: "Brand positioning",
-            description: "Define your unique market position.",
-            icon: <HiOutlineSparkles className="text-black" />,
-            to: "/marketing/digital-strategy",
-          },
-          {
-            title: "Market research",
-            description: "Analyze trends and growth opportunities.",
-            icon: <HiOutlineMagnifyingGlass className="text-black" />,
-            to: "/marketing/digital-strategy",
-          },
-          {
-            title: "Competitive analysis",
-            description: "Identify advantages over competitors.",
+            title: "Digital audit & analysis",
+            description:
+              "Evaluate current performance and identify opportunities.",
             icon: <HiOutlineChartBar className="text-black" />,
-            to: "/marketing/digital-strategy",
+            to: "/marketing/digital-audit-analysis",
           },
           {
-            title: "Customer analysis",
-            description: "Understand your target audience deeply.",
-            icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/digital-strategy",
+            title: "Customer journey mapping",
+            description: "Map touchpoints from awareness to conversion.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/marketing/customer-journey-mapping",
+          },
+          {
+            title: "Channel strategy planning",
+            description: "Select optimal platforms for target audiences.",
+            icon: <HiOutlineViewColumns className="text-black" />,
+            to: "/marketing/channel-strategy-planning",
+          },
+          {
+            title: "KPI development",
+            description: "Establish measurable goals for campaign success.",
+            icon: <HiOutlineCheckCircle className="text-black" />,
+            to: "/marketing/kpi-development",
+          },
+          {
+            title: "Marketing automation setup",
+            description:
+              "Streamline workflows for efficient campaign management.",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/marketing/marketing-automation-setup",
           },
         ],
       },
@@ -278,22 +286,34 @@ const navItems: NavItem[] = [
         label: "Pay-Per-Click Marketing",
         items: [
           {
-            title: "Social Media",
-            description: "Engage with audiences.",
+            title: "Google Ads management",
+            description: "Optimize search campaigns for maximum conversions.",
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            to: "/marketing/pay-per-click-marketing/google-ads-management",
+          },
+          {
+            title: "Social media advertising",
+            description: "Run targeted ads across social platforms.",
             icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/pay-per-click-marketing",
+            to: "/marketing/pay-per-click-marketing/social-media-advertising",
           },
           {
-            title: "Email",
-            description: "Convert with campaigns.",
-            icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/pay-per-click-marketing",
+            title: "Remarketing campaigns",
+            description: "Re-engage visitors who didn't convert initially.",
+            icon: <HiOutlinePaperAirplane className="text-black" />,
+            to: "/marketing/pay-per-click-marketing/remarketing-campaigns",
           },
           {
-            title: "Influencer",
-            description: "Partner with creators.",
-            icon: <HiOutlineSparkles className="text-black" />,
-            to: "/marketing/pay-per-click-marketing",
+            title: "Keyword research & targeting",
+            description: "Find high-intent keywords that drive sales.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/pay-per-click-marketing/keyword-research-targeting",
+          },
+          {
+            title: "Campaign performance reporting",
+            description: "Track ROI and optimize ad spend.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/marketing/pay-per-click-marketing/campaign-performance-reporting",
           },
         ],
       },
@@ -301,22 +321,34 @@ const navItems: NavItem[] = [
         label: "Email Marketing",
         items: [
           {
-            title: "Social Media",
-            description: "Engage with audiences.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/email-marketing",
+            title: "Email strategy development",
+            description: "Create comprehensive plans for email success.",
+            icon: <HiOutlineDocumentText className="text-black" />,
+            to: "/marketing/email-marketing/email-strategy-development",
           },
           {
-            title: "Email",
-            description: "Convert with campaigns.",
-            icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/email-marketing",
-          },
-          {
-            title: "Influencer",
-            description: "Partner with creators.",
+            title: "List building & segmentation",
+            description: "Grow and organize subscribers for targeting.",
             icon: <HiOutlineUser className="text-black" />,
-            to: "/marketing/email-marketing",
+            to: "/marketing/email-marketing/list-building-segmentation",
+          },
+          {
+            title: "Campaign design & copywriting",
+            description: "Craft compelling emails that drive action.",
+            icon: <HiOutlinePencil className="text-black" />,
+            to: "/marketing/email-marketing/campaign-design-copywriting",
+          },
+          {
+            title: "Automation workflows",
+            description: "Set up triggered sequences for engagement.",
+            icon: <HiOutlineCog className="text-black" />,
+            to: "/marketing/email-marketing/automation-workflows",
+          },
+          {
+            title: "Analytics & reporting",
+            description: "Track opens, clicks, and conversion metrics.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/email-marketing/analytics-reporting",
           },
         ],
       },
@@ -324,22 +356,28 @@ const navItems: NavItem[] = [
         label: "Branding",
         items: [
           {
-            title: "Social Media",
-            description: "Engage with audiences.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/marketing/branding",
-          },
-          {
-            title: "Email",
-            description: "Convert with campaigns.",
-            icon: <HiOutlineEnvelope className="text-black" />,
-            to: "/marketing/branding",
-          },
-          {
-            title: "Influencer",
-            description: "Partner with creators.",
+            title: "Brand positioning",
+            description: "Define your unique market position.",
             icon: <HiOutlineSparkles className="text-black" />,
-            to: "/marketing/branding",
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Market research",
+            description: "Analyze trends and growth opportunities.",
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Competitive analysis",
+            description: "Identify advantages over competitors.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Customer analysis",
+            description: "Understand your target audience deeply.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/digital-strategy",
           },
         ],
       },
@@ -734,36 +772,7 @@ const navItems: NavItem[] = [
     },
     submenu: [
       {
-        label: "Video and Photography",
-        items: [
-          {
-            title: "Product photography",
-            description: "Capture stunning images that sell.",
-            icon: <HiOutlinePhoto className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-          {
-            title: "Brand videography",
-            description: "Create compelling brand story videos.",
-            icon: <HiOutlineAcademicCap className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-          {
-            title: "Video editing",
-            description: "Polish footage into engaging content.",
-            icon: <HiOutlineTicket className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-          {
-            title: "Motion graphics",
-            description: "Animate graphics for dynamic visuals.",
-            icon: <HiOutlineSparkles className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-        ],
-      },
-      {
-        label: "Identity Development",
+        label: "Brand Identity Development",
         items: [
           {
             title: "Logo design",
@@ -816,35 +825,6 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "Creative Content",
-        items: [
-          {
-            title: "Graphic design",
-            description: "Create stunning visuals for marketing.",
-            icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/design/creative-content",
-          },
-          {
-            title: "Social graphics",
-            description: "Design scroll-stopping social media graphics.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/design/creative-content",
-          },
-          {
-            title: "Infographics",
-            description: "Transform data into visual stories.",
-            icon: <HiOutlineChartBar className="text-black" />,
-            to: "/design/creative-content",
-          },
-          {
-            title: "Digital illustrations",
-            description: "Create custom brand illustrations.",
-            icon: <HiOutlineSparkles className="text-black" />,
-            to: "/design/creative-content",
-          },
-        ],
-      },
-      {
         label: "Package Design",
         items: [
           {
@@ -874,7 +854,7 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "Promotional Material",
+        label: "Promotion or POS Material Design",
         items: [
           {
             title: "Flyer designs",
@@ -887,6 +867,64 @@ const navItems: NavItem[] = [
             description: "Enhance visuals through color correction.",
             icon: <HiOutlineSparkles className="text-black" />,
             to: "/design/promotional-material-design",
+          },
+        ],
+      },
+      {
+        label: "Creative Content",
+        items: [
+          {
+            title: "Graphic design",
+            description: "Create stunning visuals for marketing.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/design/creative-content",
+          },
+          {
+            title: "Social graphics",
+            description: "Design scroll-stopping social media graphics.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/design/creative-content",
+          },
+          {
+            title: "Infographics",
+            description: "Transform data into visual stories.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/design/creative-content",
+          },
+          {
+            title: "Digital illustrations",
+            description: "Create custom brand illustrations.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/design/creative-content",
+          },
+        ],
+      },
+      {
+        label: "Photography and Videography Productions",
+        items: [
+          {
+            title: "Product photography",
+            description: "Capture stunning images that sell.",
+            icon: <HiOutlinePhoto className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Brand videography",
+            description: "Create compelling brand story videos.",
+            icon: <HiOutlineAcademicCap className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Video editing",
+            description: "Polish footage into engaging content.",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Motion graphics",
+            description: "Animate graphics for dynamic visuals.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/design/photography-and-videography",
           },
         ],
       },

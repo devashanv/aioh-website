@@ -15,7 +15,7 @@ const services = [
   {
     title: "Digital Strategy",
     description:
-      "Define your market position and understand your audience. Research competitors and identify opportunities for growth.",
+      "Craft comprehensive digital roadmaps aligning business goals with actionable tactics, transforming online presence into a powerful growth engine.",
     img: sc1,
     path: "/marketing/digital-strategy",
   },
@@ -64,7 +64,7 @@ const services = [
   {
     title: "Branding",
     description:
-      "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
+      "Define your market position and understand your audience. Research competitors and identify opportunities for growth.",
     img: sc4,
     path: "/marketing/branding",
   },

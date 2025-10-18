@@ -4,12 +4,10 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 import Regency from "../../assets/img/herohome/regency.webp";
 import Winchester from "../../assets/img/herohome/winchester.webp";
-import Ehelepola from "../../assets/img/herohome/ehelepola.webp";
+import Ehelepola from "../../assets/img/herohome/ehelepola.png";
 import TestProject3 from "../../assets/img/herohome/test-project1.webp";
 import TestProject5 from "../../assets/img/herohome/test-project2.webp";
 import TestProject6 from "../../assets/img/herohome/test-project3.webp";
-
-
 
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -19,7 +17,7 @@ const HeroProjectSlider: React.FC = () => {
   const images = [
     Regency,
     TestProject3,
-     Winchester,
+    Winchester,
     TestProject5,
     Ehelepola,
     TestProject6,
