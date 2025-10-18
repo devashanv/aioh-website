@@ -127,8 +127,8 @@ const ContactSection: React.FC = () => {
     setIsSending(true);
 
     emailjs
-      .sendForm("service_yxj2rit", "template_d3x0uv7", form.current, {
-        publicKey: "vC8wukAc-UNdnr0Cu",
+      .sendForm("service_cl58hqk", "template_3ex1xyr", form.current, {
+        publicKey: "96Kjb1SnOHOQCVkGt",
       })
       .then(
         (result) => {

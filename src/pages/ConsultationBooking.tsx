@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect } from "react";
 import Header from "../component/common/Header";
 import { useLocation } from "react-router-dom";
@@ -29,7 +28,8 @@ const ConsultationBooking: React.FC = () => {
             <div className="flex-1 flex justify-center">
               <div
                 className="calendly-inline-widget min-w-[320px] w-full max-w-2xl h-screen lg:h-[85dvh]"
-                data-url="https://calendly.com/pmbandara408/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=191818&primary_color=01213a"
+                data-url="https://calendly.com/allinoneitdep/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=191818"
+                // data-url="https://calendly.com/pmbandara408/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=191818&primary_color=01213a"
               ></div>
               <script
                 type="text/javascript"
