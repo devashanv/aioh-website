@@ -599,11 +599,14 @@ const ContactSection: React.FC = () => {
         >
           {/* Address Card */}
           <div className="bg-gradient-to-b from-[#01213A] from-0% to-[#035BA0] to-100% rounded-[20px] p-6 pr-2">
-            <p className="text-lg font-normal mb-1 text-white ">Address :</p>
+            <p className="text-lg font-normal mb-1 text-white ">Locations :</p>
             <p className="text-base text-white leading-6 font-light">
               {/* 3rd Floor, All in one Holdings, <br /> */}
-              349/2/1, Katugastota Rd, <br />
-              Kandy, Sri Lanka.
+              <span className="font-normal">Sri Lanka: </span>Colombo, Kandy
+              <br />
+              <span className="font-normal">Australia: </span>Notting Hill
+              <br />
+              <span className="font-normal">USA: </span>San Francisco
             </p>
           </div>
 
