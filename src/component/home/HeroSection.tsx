@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
             <div className="flex items-end justify-center">
               <p className="text-lg md:text-3xl text-white font-medium">25</p>
               <p className="text-primary">+</p>
-              <p className="text-white text-sm text-xl font-thin ml-1">Industries</p>
+              <p className="text-white text-sm lg:text-xl font-thin ml-1">Industries</p>
             </div>
 
             <p className="text-xl md:text-3xl text-white font-thin">|</p>
