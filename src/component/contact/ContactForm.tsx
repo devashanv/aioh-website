@@ -728,11 +728,14 @@ const ContactForm: React.FC = () => {
             direction="right"
             className="bg-white rounded-[20px] p-6 shadow-sm"
           >
-            <p className="text-[18px] font-normal mb-1">Address :</p>
-            <p className="text-[16px] text-[#191818] leading-[24px] font-light">
+            <p className="text-[18px] font-normal mb-1">Locations :</p>
+            <p className="text-[16px] text-[#191818] leading-6 font-light">
               {/* 3rd Floor, All in one Holdings, <br /> */}
-              349/2/1, Katugastota Rd, <br />
-              Kandy, Sri Lanka.
+              <span className="font-normal">Sri Lanka: </span>Colombo, Kandy
+              <br />
+              <span className="font-normal">Australia: </span>Notting Hill
+              <br />
+              <span className="font-normal">USA: </span>San Francisco
             </p>
           </MotionSection>
 
