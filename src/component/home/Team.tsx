@@ -8,7 +8,7 @@ const Team = () => {
     <>
       <section className="w-11/12 mx-auto h-full flex flex-col lg:flex-row gap-10">
         <section className="w-full lg:w-1/2">
-          <img src={TeamSample} alt="" className="h-full w-full object-cover" />
+          <img src={TeamSample} alt="" className="h-full w-full" />
         </section>
 
         <section className="w-full lg:w-1/2 text-center lg:text-left flex flex-col ">

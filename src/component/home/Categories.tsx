@@ -29,7 +29,7 @@ const Categories: React.FC = () => {
               </p>
             </section>
 
-            <section className="relative h-8/12 w-full rounded-xl">
+            <section className="relative h-8/12 lg:h-80 w-full rounded-xl">
               {/* gradient */}
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
 
@@ -71,7 +71,7 @@ const Categories: React.FC = () => {
             </section>
           </section>
           <section className="w-full lg:w-1/3 h-full flex flex-col-reverse lg:flex-col gap-8">
-            <section className="relative h-8/12 rounded-[20px] w-full ">
+            <section className="relative h-8/12 lg:h-80 rounded-[20px] w-full ">
               {/* gradient */}
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
 
@@ -108,7 +108,7 @@ const Categories: React.FC = () => {
 
             <section className="bg-white h-4/12 rounded-[20px] p-5 text-left flex flex-col gap-3">
               <h2 className="font-medium text-2xl">Technology</h2>
-              <p className="font-light text-sm">
+              <p className="font-light lg:text-sm">
                 From Web development to custom software and mobile apps to
                 system integrations and automation - we build technology that
                 solves real business problems. Perfect for companies ready to
@@ -127,7 +127,7 @@ const Categories: React.FC = () => {
               </p>
             </section>
 
-            <section className="relative h-8/12 rounded-[20px] w-full ">
+            <section className="relative h-8/12 lg:h-80 rounded-[20px] w-full ">
               {/* gradient */}
               <div className="absolute bg-gradient-to-b from-[#078BD6]/44 to-[#D9D9D9]/0 h-64 w-full rounded-[20px]"></div>
 

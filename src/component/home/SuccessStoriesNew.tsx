@@ -16,8 +16,13 @@ import { LiaHandPointRightSolid } from "react-icons/lia";
 import { ImCheckmark2 } from "react-icons/im";
 
 // case study popup images
-import dumy from "../../assets/img/recentWork/dumy.jpg";
-import tech_rw6 from "../../assets/img/recentWork/tech-rw6.png";
+import ehelepola from "../../assets/img/recentWork/ehelepola.png";
+import winchester from "../../assets/img/recentWork/winchester.png";
+import regency from "../../assets/img/recentWork/regency.png";
+
+import img1 from "../../assets/img/recentWork/queens pop up.webp";
+import img2 from "../../assets/img/recentWork/pop up wingscraft.webp";
+import img3 from "../../assets/img/recentWork/pop up eikone.webp";
 
 type popupData = {
   title: string;
@@ -81,7 +86,7 @@ const SuccessStoriesNew = () => {
         title: "Ehelepola Walawwa Website",
         description:
           "The official website for the Ehelepola Walawwa Wax Museum in Kandy, Sri Lanka.",
-        image: dumy,
+        image: ehelepola,
         link: "https://ehelepolawalawwa.lk/",
         description2:
           "Ehelepola Walawwa is the official web presence for the Ehelepola Walawwa Wax Museum, a recently opened cultural heritage museum in Kandy, Sri Lanka, located in the historic Ehelepola Walawwa. The website promotes the museum, presents its exhibits, shares its historical significance, and provides clear information for visitors, both local and international. With a design focused on authenticity and accessibility, the platform highlights Kandyan history while introducing the unique wax museum experience to wider audiences.",
@@ -128,7 +133,7 @@ const SuccessStoriesNew = () => {
         title: "Queens Hotel Kandy",
         description:
           "Heritage storytelling unlocks 964.3% surge in organic engagement",
-        image: dumy,
+        image: img1,
         link: "#",
         description2:
           "When Queens Hotel Kandy recognized their digital presence wasn't reflecting their prestigious heritage status, our organic social media strategy transformed underperforming channels into a content powerhouse, delivering 615,910 unique reach and an extraordinary 964% increase in content interactions.",
@@ -178,7 +183,7 @@ const SuccessStoriesNew = () => {
         title: "Regency Travel House Website",
         description:
           "A professional travel and tourism platform for Regency Travel House.",
-        image: dumy,
+        image: regency,
         link: "https://regency.knowmo.me/",
         description2:
           "Regency Travel House is a professional travel and tourism service provider in Sri Lanka, offering a wide range of holiday packages, cultural tours, hotel bookings, transport services, and customized travel itineraries. The website serves as a digital platform for both local and international travelers to explore packages, make inquiries, and learn about Regency’s services in a modern and user-friendly format.",
@@ -226,7 +231,7 @@ const SuccessStoriesNew = () => {
         title: "Winchester Global",
         description:
           "A corporate platform showcasing global logistics and consultancy services.",
-        image: tech_rw6,
+        image: winchester,
         link: "https://winchesterglobal.com",
         description2:
           "This website is presented as the digital front for Winchester Global, a company offering global logistics, trade, or consultancy services. The platform presumably showcases service offerings, industry sectors, and contact capability via a clean, corporate design aiming to be accessible across devices. ",
@@ -272,7 +277,7 @@ const SuccessStoriesNew = () => {
         title: "Emirates Aviation Collectibles",
         description:
           "Selling Out Emirates Aviation Collectibles with a 1043% ROI",
-        image: dumy,
+        image: img2,
         link: "#",
         description2:
           "A structured full-funnel Meta strategy transformed niche awareness into 100% sales conversion",
@@ -338,7 +343,7 @@ const SuccessStoriesNew = () => {
       popupData: {
         title: "UK Education Consultancy",
         description: "Cutting Cost per Lead by 78% with Smarter Targeting",
-        image: dumy,
+        image: img3,
         link: "#",
         description2:
           "Data-driven testing and refined ad strategies reduced CPL from $19.90 to $4.38 while hitting the targets",

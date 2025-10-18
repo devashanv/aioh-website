@@ -107,12 +107,12 @@ const Footer = () => {
                   to="/marketing/digital-strategy"
                   className="hover:text-[#02EC97]"
                 >
-                  Brand Strategy
+                  Digital Strategy
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/marketing/social-media-advertising"
+                  to="/marketing/social-media-management"
                   className="hover:text-[#02EC97]"
                 >
                   Social Media Management
@@ -120,7 +120,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/marketing/creative-marketing"
+                  to="/marketing/social-media-advertising"
                   className="hover:text-[#02EC97]"
                 >
                   Social Media Advertising
@@ -128,7 +128,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/design/packaging-design"
+                  to="/design/creative-content"
                   className="hover:text-[#02EC97]"
                 >
                   Creative Content
@@ -136,7 +136,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/marketing/search-engine-optimization"
+                  to="/design/brand-identity-development"
                   className="hover:text-[#02EC97]"
                 >
                   Brand Identity Development
@@ -153,7 +153,7 @@ const Footer = () => {
             <ul className="space-y-2 text-[#F5F5F5]">
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/design/ui-ux-design"
                   className="hover:text-[#02EC97]"
                 >
                   UI/UX Design
@@ -169,7 +169,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/technology/MobileService"
                   className="hover:text-[#02EC97]"
                 >
                   Mobile App Development
@@ -177,7 +177,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/technology/AIService"
                   className="hover:text-[#02EC97]"
                 >
                   AI Solutions
@@ -185,7 +185,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/technology/WebService"
+                  to="/technology/SEOService"
                   className="hover:text-[#02EC97]"
                 >
                   Search Engine Optimization
