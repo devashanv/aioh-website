@@ -7,37 +7,37 @@ import {
   AccordionTitle,
 } from "flowbite-react";
 
-const customAccordion = {
-  root: {
-    base: "",
-    flush: {
-      off: "",
-      on: "",
-    },
-  },
-  content: {
-    base: "",
-  },
-  title: {
-    arrow: {
-      base: "",
-      open: {
-        off: "",
-        on: "",
-      },
-    },
-    base: "",
-    flush: {
-      off: "focus:ring-0",
-      on: "",
-    },
-    heading: "",
-    open: {
-      off: "",
-      on: "bg-gray-100",
-    },
-  },
-};
+// const customAccordion = {
+//   root: {
+//     base: "",
+//     flush: {
+//       off: "",
+//       on: "",
+//     },
+//   },
+//   content: {
+//     base: "",
+//   },
+//   title: {
+//     arrow: {
+//       base: "",
+//       open: {
+//         off: "",
+//         on: "",
+//       },
+//     },
+//     base: "",
+//     flush: {
+//       off: "focus:ring-0",
+//       on: "",
+//     },
+//     heading: "",
+//     open: {
+//       off: "",
+//       on: "bg-gray-100",
+//     },
+//   },
+// };
 
 const FAQ: React.FC = () => {
   return (
@@ -78,7 +78,7 @@ const FAQ: React.FC = () => {
         className="py-6 md:py-10"
       >
         <Accordion
-          theme={customAccordion}
+          // theme={customAccordion}
           className="flex flex-col gap-4 border-0"
         >
           <AccordionPanel>

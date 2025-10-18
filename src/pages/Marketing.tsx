@@ -1,7 +1,7 @@
 import Hero from "../component/marketing/Hero";
 import Service from "../component/marketing/Service";
 // import Process from "../component/marketing/Process";
-// import RecentWork from "../component/marketing/RecentWork";
+import RecentWork from "../component/marketing/RecentWork";
 // import Contact from "../component/marketing/ContactSection";
 
 import { useEffect } from "react";
@@ -43,9 +43,9 @@ const Merketing: React.FC = () => {
         </section> */}
 
         {/* RecentWork */}
-        {/* <section className="mt-20 md:mt-30 bg-transparent rounded-[20px]">
+        <section className="mt-20 md:mt-30 bg-transparent rounded-[20px]">
           <RecentWork />
-        </section> */}
+        </section>
 
         {/* Contact */}
         <section className="mt-20 md:mt-30 bg-white rounded-[20px]">
