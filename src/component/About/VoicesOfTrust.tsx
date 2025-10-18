@@ -34,10 +34,10 @@ const testimonials = [
 ];
 
 // Helper function
-function getYouTubeThumbnail(url: string) {
-  const videoId = url.split("embed/")[1];
-  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-}
+// function getYouTubeThumbnail(url: string) {
+//   const videoId = url.split("embed/")[1];
+//   return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+// }
 
 const VoicesOfTrust: React.FC = () => {
   const [current, setCurrent] = useState(0);
