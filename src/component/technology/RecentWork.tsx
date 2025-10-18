@@ -274,7 +274,6 @@ const projects = [
     description:
       "A digital platform automating operations and member services for the historic Kandy Club.",
     image: kandyclub,
-    link: "",
     description2:
       "The Kandy Club Management System (KCMS) was developed as an all-in-one digital platform to modernize and automate the day-to-day operations of the historic Kandy Club a private social and hospitality club offering accommodation, dining, event hosting, and member services. Designed to streamline complex workflows, the system integrates administration, finance, hospitality, and inventory management into a unified platform, improving both staff productivity and member satisfaction. Built using a secure and scalable architecture, KCMS ensures centralized data access, role-based controls, and seamless real-time operations.",
     challenges: [
@@ -491,7 +490,6 @@ const projects = [
     description:
       "A digital platform for billing and service management in automotive repair.",
     image: automobile,
-    link: "",
     description2:
       "This custom-built web platform was designed to digitalize and streamline the complete billing and service management process for Willis AutoCare, a local automotive repair  service provider. The system supports real-time job tracking, invoice generation, item  registration, and user management all within a secure and user-friendly environment. Built  using Laravel (PHP) for the backend, Tailwind CSS for responsive UI design, and MySQL as  the database, the solution replaces manual operations with digital precision.",
     challenges: [
@@ -517,7 +515,6 @@ const projects = [
     description:
       "A digital platform for streamlined patient and healthcare management.",
     image: medone,
-    link: "",
     description2:
       "The MedOne platform was developed to modernize and streamline healthcare workflows by providing an all-in-one digital patient management solution. Designed specifically for hospitals, clinics, and private practices, the system enables healthcare professionals to efficiently manage patient records, investigations, prescriptions, and administrativedocumentation. Built using modern web technologies (PHP, MySQL, HTML5, CSS3) with a focus on clean UI/UX, MedOne offers a seamless experience for both doctors and administrative staff. ",
     challenges: [
@@ -661,7 +658,7 @@ type Project = {
   title: string;
   description: string;
   image: string;
-  link: string;
+  link?: string;
   description2?: string;
   challenges?: string[];
   solutions?: string[];
@@ -933,20 +930,22 @@ const RecentWork: React.FC = () => {
                     className="w-full h-full object-fill object-top"
                     // className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute flex items-center justify-center bottom-0 left-0 w-full p-2 md:p-4 bg-white/20 backdrop-blur-md rounded-b-[20px] z-0">
-                    <button
-                      onClick={() => window.open(popupData.link, "_blank")}
-                      className="text-secondary flex items-center justify-center gap-1 w-fit px-6 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-pointer"
-                    >
-                      <span className="text-sm md:text-base font-medium">
-                        Explore
-                      </span>
-                      <GoArrowUpRight
-                        style={{ strokeWidth: 1 }}
-                        className="text-sm md:text-base"
-                      />
-                    </button>
-                  </div>
+                  {popupData.link && (
+                    <div className="absolute flex items-center justify-center bottom-0 left-0 w-full p-2 md:p-4 bg-white/20 backdrop-blur-md rounded-b-[20px] z-0">
+                      <button
+                        onClick={() => window.open(popupData.link, "_blank")}
+                        className="text-secondary flex items-center justify-center gap-1 w-fit px-6 py-2 bg-primary hover:bg-primary/80 rounded-full cursor-pointer"
+                      >
+                        <span className="text-sm md:text-base font-medium">
+                          Explore
+                        </span>
+                        <GoArrowUpRight
+                          style={{ strokeWidth: 1 }}
+                          className="text-sm md:text-base"
+                        />
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -999,18 +998,22 @@ const RecentWork: React.FC = () => {
                   )}
                 </div>
 
-                <div className="mt-6 text-secondary">
-                  <button
-                    onClick={() => window.open(popupData.link, "_blank")}
-                    className="w-fit my-4 px-6 py-4 rounded-full font-medium bg-primary hover:bg-primary/80 flex items-center justify-center gap-2 transition cursor-pointer"
-                  >
-                    <span className="leading-none lg:mb-0.5">View Project</span>
-                    <LuCircleChevronRight
-                      style={{ width: "18px", height: "18px" }}
-                      className="text-base leading-none"
-                    />
-                  </button>
-                </div>
+                {popupData.link && (
+                  <div className="mt-6 text-secondary">
+                    <button
+                      onClick={() => window.open(popupData.link, "_blank")}
+                      className="w-fit my-4 px-6 py-4 rounded-full font-medium bg-primary hover:bg-primary/80 flex items-center justify-center gap-2 transition cursor-pointer"
+                    >
+                      <span className="leading-none lg:mb-0.5">
+                        View Project
+                      </span>
+                      <LuCircleChevronRight
+                        style={{ width: "18px", height: "18px" }}
+                        className="text-base leading-none"
+                      />
+                    </button>
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>

@@ -41,7 +41,7 @@ const services = [
     path: "/design/creative-content",
   },
   {
-    title: "Photography & Videography productions ",
+    title: "Photography & Videography Productions ",
     description:
       "Capture your brand through professional visuals. Create videos and images that tell stories.",
     img: sc5,

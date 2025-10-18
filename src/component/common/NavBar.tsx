@@ -734,36 +734,7 @@ const navItems: NavItem[] = [
     },
     submenu: [
       {
-        label: "Video and Photography",
-        items: [
-          {
-            title: "Product photography",
-            description: "Capture stunning images that sell.",
-            icon: <HiOutlinePhoto className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-          {
-            title: "Brand videography",
-            description: "Create compelling brand story videos.",
-            icon: <HiOutlineAcademicCap className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-          {
-            title: "Video editing",
-            description: "Polish footage into engaging content.",
-            icon: <HiOutlineTicket className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-          {
-            title: "Motion graphics",
-            description: "Animate graphics for dynamic visuals.",
-            icon: <HiOutlineSparkles className="text-black" />,
-            to: "/design/photography-and-videography",
-          },
-        ],
-      },
-      {
-        label: "Identity Development",
+        label: "Brand Identity Development",
         items: [
           {
             title: "Logo design",
@@ -816,35 +787,6 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "Creative Content",
-        items: [
-          {
-            title: "Graphic design",
-            description: "Create stunning visuals for marketing.",
-            icon: <HiOutlinePaintBrush className="text-black" />,
-            to: "/design/creative-content",
-          },
-          {
-            title: "Social graphics",
-            description: "Design scroll-stopping social media graphics.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-            to: "/design/creative-content",
-          },
-          {
-            title: "Infographics",
-            description: "Transform data into visual stories.",
-            icon: <HiOutlineChartBar className="text-black" />,
-            to: "/design/creative-content",
-          },
-          {
-            title: "Digital illustrations",
-            description: "Create custom brand illustrations.",
-            icon: <HiOutlineSparkles className="text-black" />,
-            to: "/design/creative-content",
-          },
-        ],
-      },
-      {
         label: "Package Design",
         items: [
           {
@@ -874,7 +816,7 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "Promotional Material",
+        label: "Promotion or POS Material Design",
         items: [
           {
             title: "Flyer designs",
@@ -887,6 +829,64 @@ const navItems: NavItem[] = [
             description: "Enhance visuals through color correction.",
             icon: <HiOutlineSparkles className="text-black" />,
             to: "/design/promotional-material-design",
+          },
+        ],
+      },
+      {
+        label: "Creative Content",
+        items: [
+          {
+            title: "Graphic design",
+            description: "Create stunning visuals for marketing.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
+            to: "/design/creative-content",
+          },
+          {
+            title: "Social graphics",
+            description: "Design scroll-stopping social media graphics.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/design/creative-content",
+          },
+          {
+            title: "Infographics",
+            description: "Transform data into visual stories.",
+            icon: <HiOutlineChartBar className="text-black" />,
+            to: "/design/creative-content",
+          },
+          {
+            title: "Digital illustrations",
+            description: "Create custom brand illustrations.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/design/creative-content",
+          },
+        ],
+      },
+      {
+        label: "Photography and Videography Productions",
+        items: [
+          {
+            title: "Product photography",
+            description: "Capture stunning images that sell.",
+            icon: <HiOutlinePhoto className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Brand videography",
+            description: "Create compelling brand story videos.",
+            icon: <HiOutlineAcademicCap className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Video editing",
+            description: "Polish footage into engaging content.",
+            icon: <HiOutlineTicket className="text-black" />,
+            to: "/design/photography-and-videography",
+          },
+          {
+            title: "Motion graphics",
+            description: "Animate graphics for dynamic visuals.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/design/photography-and-videography",
           },
         ],
       },
