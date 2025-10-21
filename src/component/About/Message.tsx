@@ -1,10 +1,13 @@
 import React from "react";
-import manImg from "../../assets/about/man.png";
 import quotesSvg from "../../assets/about/quotes.svg";
 import gradientBg from "../../assets/about/gredientbg.png";
 import whiteBg from "../../assets/about/whitebg.png";
 
 import { motion } from "framer-motion";
+
+import ceo from '../../assets/about/ceo.png'
+import coo from '../../assets/about/coo.png'
+import cto from '../../assets/about/cto.png'
 
 const directorData = [
   {
@@ -12,18 +15,21 @@ const directorData = [
     quote:
       "We believe the future belongs to those with vision and courage. Through technology, creativity, and strategy, we empower businesses and communities to achieve purposeful growth and build a smarter, brighter future together.",
     role: "Founder & CEO",
+    image: ceo,
   },
   {
     id: 2,
     quote:
       "We think like our customers, understand their stories, and turn insights into action that delivers real results. We are not here to give the best solution, what we deliver is the most profitable one.",
     role: "COO",
+    image: coo,
   },
   {
     id: 3,
     quote:
       "We are committed to design technology that drives growth and innovation. Our mission is to turn challenges into smart, future-ready solutions that create real impact and help businesses grow stronger through a powerful digital presence.",
     role: "CTO",
+    image: cto,
   },
 ];
 
@@ -76,7 +82,7 @@ const Message: React.FC = () => {
 
             {/* Man Image */}
             <img
-              src={manImg}
+              src={director.image}
               alt="Director"
               className="absolute z-[5] w-[200px] h-auto object-contain"
               style={{
