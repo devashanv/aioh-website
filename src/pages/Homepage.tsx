@@ -13,6 +13,7 @@ import Team from "../component/home/Team";
 import SuccessStoriesNew from "../component/home/SuccessStoriesNew";
 
 import AnimationVideo from "../assets/video/animation.mp4";
+import Team2 from "../component/home/Team2";
 
 function Homepage() {
   return (
@@ -55,7 +56,7 @@ function Homepage() {
 
         {/* team */}
         <section
-          className="px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-20 mt-10"
+          className="px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-20 mt-10 lg:mb-0 mb-10 "
           id=""
         >
           <Team />
@@ -77,6 +78,14 @@ function Homepage() {
           </video>
         </section>
 
+        {/* team 2*/}
+        <section
+          className="px-1 lg:px-3.5 h-auto lg:h-[70dvh] lg:mt-30 mt-10 "
+          id=""
+        >
+          <Team2 />
+        </section>
+
         {/* Core Services */}
         {/* <section
             className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
@@ -96,7 +105,7 @@ function Homepage() {
         </section> */}
 
         <section
-          className="mb-3.5 px-1 lg:p-3.5 h-[80dvh] lg:h-[100dvh] lg:mt-30 mt-20"
+          className="mb-3.5 px-1 lg:p-3.5 lg:pt-0 h-[80dvh] lg:h-[100dvh] lg:mt-0 mt-10"
           id="success"
         >
           <div className="w-full lg:hidden text-black text-center top-5 left-5 transform flex flex-col gap-2 z-10 p-2">

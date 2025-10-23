@@ -29,7 +29,7 @@ const Footer = () => {
 
       {/* ✅ Main content */}
       <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-0 text-left text-[16px] font-light leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-0 text-left text-[16px] font-light leading-relaxed ">
           {/* Column 1 → full width on md */}
           <div className="md:col-span-3 lg:col-span-1 lg:w-[430px] text-center md:text-left flex flex-col items-center md:items-start">
             {/* Logo */}
@@ -46,7 +46,7 @@ const Footer = () => {
               <p className="mb-2 text-[#F5F5F5] text-justify">
                 Empowering startups and businesses with result-driven Digital
                 Marketing and custom-built Software Solutions. Turn your ideas
-                into digital succes
+                into digital success.
               </p>
 
               <div className="mt-4 flex items-center justify-center lg:justify-start w-full">
@@ -74,7 +74,7 @@ const Footer = () => {
               <p className="text-[#F5F5F5] text-justify flex-1">
                 Empowering startups and businesses with result-driven Digital
                 Marketing and custom-built Software Solutions. Turn your ideas
-                into digital succes
+                into digital success.
               </p>
 
               <div className="flex items-center justify-start w-1/2">
@@ -96,10 +96,38 @@ const Footer = () => {
                 </button>
               </div>
             </div>
+
+            {/* --- Contact Info --- */}
+            <div className="mt-6 text-[#F5F5F5] w-full text-left">
+              <h3 className="text-[18px] font-medium mb-2">Contact</h3>
+
+              {/* Phone */}
+              <p className="text-sm flex items-center gap-2 mb-4 justify-start">
+                <img src={PhoneIcon} alt="Phone" className="w-4 h-4" />
+                +94 81 2121 051
+              </p>
+
+              {/* Location */}
+              <p className="text-sm flex items-start gap-2 mb-4 justify-start">
+                <img
+                  src={LocationIcon}
+                  alt="Location"
+                  className="w-5 h-5 mt-[2px]"
+                />
+                349/2/1, Katugastota Rd, Kandy, Sri Lanka.
+              </p>
+
+              {/* Email */}
+              <p className="text-sm flex items-center gap-2 justify-start">
+                <img src={EmailIcon} alt="Email" className="w-4 h-4" />
+                info@allinoneholdings.com
+              </p>
+            </div>
           </div>
 
+          {/* Show only Mobile */}
           {/* Column 2 */}
-          <div className="lg:ml-50 md:ml-0 lg:w-full">
+          <div className="md:hidden md:ml-0">
             <h3 className="text-[18px] font-medium mb-3">Next-Gen Marketing</h3>
             <ul className="space-y-2">
               <li>
@@ -146,7 +174,7 @@ const Footer = () => {
           </div>
 
           {/* Column 3 */}
-          <div className="lg:ml-40 lg:w-full md:ml-0">
+          <div className="md:hidden md:ml-0">
             <h3 className="text-[18px] font-medium mb-3">
               Expert IT Solutions
             </h3>
@@ -194,30 +222,191 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4 */}
-          <div className="lg:ml-28 lg:w-fit w-full text-left flex flex-col items-start ml-0">
-            <h3 className="text-[18px] font-medium mb-3">Contact</h3>
+          {/* Show only Desktop + Tablet */}
+          {/* Column 2 - Marketing */}
+          <div className="md:block hidden lg:ml-40 md:ml-0 lg:w-full lg:mt-21">
+            <h3 className="text-[18px] font-medium mb-3">Marketing</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/marketing/digital-strategy"
+                  className="hover:text-[#02EC97]"
+                >
+                  Digital Strategy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/marketing/social-media-advertising"
+                  className="hover:text-[#02EC97]"
+                >
+                  Social Media Advertising
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/marketing/social-media-management"
+                  className="hover:text-[#02EC97]"
+                >
+                  Social Media Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/marketing/lead-generation-&-conversion-rate-optimization"
+                  className="hover:text-[#02EC97]"
+                >
+                  Lead Generation & CRO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/marketing/search-engine-optimization"
+                  className="hover:text-[#02EC97]"
+                >
+                  Search Engine Optimization
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/marketing/pay-per-click-marketing"
+                  className="hover:text-[#02EC97]"
+                >
+                  Pay-Per-Click Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/marketing/email-marketing"
+                  className="hover:text-[#02EC97]"
+                >
+                  Email Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/marketing/branding" className="hover:text-[#02EC97]">
+                  Branding
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Web Development
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
-              <img src={PhoneIcon} alt="Phone" className="w-5 h-5 mt-1" />
-              <p>+94 81 2121 051</p>
-            </div>
+          {/* Column 3 - Technology */}
+          <div className="md:block hidden lg:ml-40 lg:w-full md:ml-0 lg:mt-21">
+            <h3 className="text-[18px] font-medium mb-3">Technology</h3>
+            <ul className="space-y-2 text-[#F5F5F5]">
+              <li>
+                <Link
+                  to="/technology/WebService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/SystemService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Web System Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/StandaloneSysDevService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Standalone System Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/MobileService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Mobile Application Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/AIService"
+                  className="hover:text-[#02EC97]"
+                >
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/technology/TestAutomationService"
+                  className="hover:text-[#02EC97]"
+                >
+                  Test Automation Solutions
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            <div className="flex items-start gap-2 mb-2 text-[#F5F5F5]">
-              <img src={LocationIcon} alt="Location" className="w-5 h-5 mt-1" />
-              <div>
-                {/* <p>3rd Floor, All in one Holdings,</p> */}
-                <p>349/2/1, Katugastota Rd,</p>
-                <p>Kandy, Sri Lanka.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-2 mt-1 text-[#F5F5F5]">
-              <img src={EmailIcon} alt="Email" className="w-5 h-5 mt-1" />
-              <p className="w-full sm:w-auto text-center md:text-left">
-                info@allinoneholdings.com
-              </p>
-            </div>
+          {/* Column 4 - Design */}
+          <div className="md:block hidden lg:ml-40 lg:w-full md:ml-0 lg:mt-21">
+            <h3 className="text-[18px] font-medium mb-3">Design</h3>
+            <ul className="space-y-2 text-[#F5F5F5]">
+              <li>
+                <Link
+                  to="/design/brand-identity-development"
+                  className="hover:text-[#02EC97]"
+                >
+                  Brand Identity Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/design/packaging-design"
+                  className="hover:text-[#02EC97]"
+                >
+                  Package Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/design/promotional-material-design"
+                  className="hover:text-[#02EC97]"
+                >
+                  Promotion Material Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/design/creative-content"
+                  className="hover:text-[#02EC97]"
+                >
+                  Creative Content
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/design/photography-and-videography"
+                  className="hover:text-[#02EC97]"
+                >
+                  Photography & Videography
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/design/ui-ux-design"
+                  className="hover:text-[#02EC97]"
+                >
+                  UI/UX Design
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

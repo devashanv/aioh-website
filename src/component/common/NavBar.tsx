@@ -32,7 +32,16 @@ import {
   HiOutlineMapPin,
   HiOutlineCheckCircle,
   HiOutlineSparkles,
+  HiOutlineFire,
   HiOutlineViewColumns,
+  HiOutlineUserGroup,
+  HiOutlineCube,
+  HiOutlineMegaphone,
+  HiOutlineChatBubbleLeftRight,
+  HiOutlineFunnel,
+  HiOutlineChartBarSquare,
+  HiOutlineHashtag,
+  HiOutlineArrowTrendingUp,
 } from "react-icons/hi2";
 
 type SubmenuCategory = {
@@ -75,35 +84,57 @@ const navItems: NavItem[] = [
         label: "Digital Strategy",
         items: [
           {
-            title: "Digital audit & analysis",
+            title: "Brand Positioning",
             description:
-              "Evaluate current performance and identify opportunities.",
+              "Define your unique market position and competitive edge.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Market Research",
+            description: "Analyze trends, opportunities, and market dynamics.",
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Competitor Analysis",
+            description:
+              "Identify advantages over competitors and market gaps.",
             icon: <HiOutlineChartBar className="text-black" />,
             to: "/marketing/digital-strategy",
           },
           {
-            title: "Customer journey mapping",
-            description: "Map touchpoints from awareness to conversion.",
+            title: "Customer Analysis",
+            description:
+              "Understand your target audience deeply through data insights.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Digital Marketing Strategy Creation",
+            description: "Build comprehensive roadmaps for measurable growth.",
             icon: <HiOutlineDocumentText className="text-black" />,
             to: "/marketing/digital-strategy",
           },
           {
-            title: "Channel strategy planning",
-            description: "Select optimal platforms for target audiences.",
-            icon: <HiOutlineViewColumns className="text-black" />,
-            to: "/marketing/digital-strategy",
-          },
-          {
-            title: "KPI development",
-            description: "Establish measurable goals for campaign success.",
-            icon: <HiOutlineCheckCircle className="text-black" />,
-            to: "/marketing/digital-strategy",
-          },
-          {
-            title: "Marketing automation setup",
+            title: "Social Media Strategy Creation",
             description:
-              "Streamline workflows for efficient campaign management.",
-            icon: <HiOutlineCog className="text-black" />,
+              "Develop platform-specific plans that drive engagement.",
+            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Brand Guidelines",
+            description:
+              "Create consistent standards for visual and verbal communication.",
+            icon: <HiOutlineBookOpen className="text-black" />,
+            to: "/marketing/digital-strategy",
+          },
+          {
+            title: "Brand Repositioning Strategies",
+            description:
+              "Refresh your brand for evolving markets and audiences.",
+            icon: <HiOutlineFire className="text-black" />,
             to: "/marketing/digital-strategy",
           },
         ],
@@ -112,33 +143,63 @@ const navItems: NavItem[] = [
         label: "Social Media Advertising",
         items: [
           {
-            title: "Audience analysis",
-            description: "Research and segment target audiences.",
-            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            title: "Audience Analysis",
+            description:
+              "Identify and segment your ideal customers for precise ad targeting.",
+            icon: <HiOutlineUserGroup className="text-black" />,
             to: "/marketing/social-media-advertising",
           },
           {
-            title: "Campaign monitoring",
-            description: "Track and optimize ad performance.",
-            icon: <HiOutlineChartBar className="text-black" />,
+            title: "Product/Service Analysis",
+            description:
+              "Highlight unique selling points that resonate with buyers.",
+            icon: <HiOutlineCube className="text-black" />,
             to: "/marketing/social-media-advertising",
           },
           {
-            title: "Creative angle testing",
-            description: "Test ads to find winners.",
-            icon: <HiOutlineSparkles className="text-black" />,
+            title: "A/B Testing & Scaling",
+            description:
+              "Test variations and scale winning campaigns for maximum ROI.",
+            icon: <HiOutlineViewColumns className="text-black" />,
             to: "/marketing/social-media-advertising",
           },
           {
-            title: "Retargeting campaigns",
-            description: "Re-engage interested potential customers.",
-            icon: <HiOutlinePaperAirplane className="text-black" />,
+            title: "Digital Campaign Setup & Monitoring",
+            description: "Launch and optimize campaigns across all platforms.",
+            icon: <HiOutlineCog className="text-black" />,
             to: "/marketing/social-media-advertising",
           },
           {
-            title: "KPI setup",
-            description: "Define metrics to track ROI.",
-            icon: <HiOutlineCheckCircle className="text-black" />,
+            title: "Retargeting Campaigns",
+            description: "Re-engage warm audiences who haven't converted yet.",
+            icon: <HiOutlineFire className="text-black" />,
+            to: "/marketing/social-media-advertising",
+          },
+          {
+            title: "Brand Awareness Campaigns",
+            description:
+              "Expand reach and build recognition in your target market.",
+            icon: <HiOutlineMegaphone className="text-black" />,
+            to: "/marketing/social-media-advertising",
+          },
+          {
+            title: "Lead/Sales Generating Campaigns",
+            description:
+              "Drive qualified leads and direct revenue through ads.",
+            icon: <HiOutlineShoppingCart className="text-black" />,
+            to: "/marketing/social-media-advertising",
+          },
+          {
+            title: "Engagement Campaigns",
+            description:
+              "Foster community interaction and build brand loyalty.",
+            icon: <HiOutlineChatBubbleLeftRight className="text-black" />,
+            to: "/marketing/social-media-advertising",
+          },
+          {
+            title: "Marketing Funnel Creation & Optimization",
+            description: "Design complete customer journeys that convert.",
+            icon: <HiOutlineFunnel className="text-black" />,
             to: "/marketing/social-media-advertising",
           },
         ],
@@ -147,33 +208,45 @@ const navItems: NavItem[] = [
         label: "Social Media Management",
         items: [
           {
-            title: "Content strategy",
-            description: "Plan engaging content for goals.",
-            icon: <HiOutlinePencil className="text-black" />,
+            title: "Content Strategy",
+            description:
+              "Plan engaging content aligned with business goals and audience needs.",
+            icon: <HiOutlineDocumentText className="text-black" />,
             to: "/marketing/social-media-management",
           },
           {
-            title: "Social media page management",
-            description: "Manage posting, engagement, and community.",
-            icon: <HiOutlineDevicePhoneMobile className="text-black" />,
+            title: "Social Media Page Management",
+            description:
+              "Daily posting, community engagement, and inbox management.",
+            icon: <HiOutlineChatBubbleLeftRight className="text-black" />,
             to: "/marketing/social-media-management",
           },
           {
-            title: "Audience research and setup",
-            description: "Identify and target ideal customers.",
-            icon: <HiOutlineUser className="text-black" />,
+            title: "SM Page Setup & Optimization",
+            description:
+              "Professional profile creation with optimized bios and visuals.",
+            icon: <HiOutlineCog className="text-black" />,
             to: "/marketing/social-media-management",
           },
           {
-            title: "Analytics & reporting",
-            description: "Track performance and optimize campaigns.",
-            icon: <HiOutlineChartBar className="text-black" />,
+            title: "Analytics & Reporting",
+            description:
+              "Track key metrics and provide actionable monthly insights.",
+            icon: <HiOutlineChartBarSquare className="text-black" />,
             to: "/marketing/social-media-management",
           },
           {
-            title: "KPI setup",
-            description: "Establish clear performance indicators.",
-            icon: <HiOutlineCheckCircle className="text-black" />,
+            title: "Hashtag Strategy",
+            description:
+              "Research and implement hashtags that expand organic reach.",
+            icon: <HiOutlineHashtag className="text-black" />,
+            to: "/marketing/social-media-management",
+          },
+          {
+            title: "Creative Marketing",
+            description:
+              "Produce scroll-stopping graphics, videos, and original content.",
+            icon: <HiOutlinePaintBrush className="text-black" />,
             to: "/marketing/social-media-management",
           },
         ],
@@ -182,39 +255,59 @@ const navItems: NavItem[] = [
         label: "Lead generation, & Conversion Rate Optimization",
         items: [
           {
-            title: "A/B testing",
-            description: "Test variations for better conversions.",
+            title: "A/B Testing",
+            description:
+              "Test headlines, copy, design, and CTAs to maximize conversions.",
             icon: <HiOutlineViewColumns className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
-            title: "Campaign scaling",
-            description: "Expand campaigns while maintaining performance.",
-            icon: <HiOutlineTicket className="text-black" />,
+            title: "Campaign Scaling",
+            description:
+              "Expand budget on high-performing campaigns for more leads.",
+            icon: <HiOutlineArrowTrendingUp className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
-            title: "Landing page optimization",
-            description: "Improve pages to increase conversions.",
+            title: "Campaign Audit & Setup",
+            description:
+              "Analyze existing efforts and launch optimized new campaigns.",
+            icon: <HiOutlineMagnifyingGlass className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
+          },
+          {
+            title: "Sales Funnel Creation & Optimization",
+            description:
+              "Build complete funnels that turn visitors into customers.",
+            icon: <HiOutlineFunnel className="text-black" />,
+            to: "/marketing/lead-generation-&-conversion-rate-optimization",
+          },
+          {
+            title: "Landing Page Optimization",
+            description:
+              "Design high-converting pages that reduce bounce and increase action.",
             icon: <HiOutlineDocumentText className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
-            title: "User experience analysis",
-            description: "Identify and remove conversion barriers.",
-            icon: <HiOutlineCheckCircle className="text-black" />,
+            title: "Sales Funnel Automation",
+            description:
+              "Automate email sequences and follow-ups for hands-free nurturing.",
+            icon: <HiOutlineCog className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
-            title: "Funnel optimization",
-            description: "Streamline journey from awareness to purchase.",
-            icon: <HiOutlineSparkles className="text-black" />,
+            title: "Conversion Rate and ROAS Optimizations",
+            description:
+              "Continuously improve performance metrics and ad returns.",
+            icon: <HiOutlineChartBar className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
           {
             title: "Campaign Data Analysis",
-            description: "Analyze metrics for actionable insights.",
-            icon: <HiOutlineChartBar className="text-black" />,
+            description:
+              "Deep-dive into data to uncover insights and improvement opportunities.",
+            icon: <HiOutlineChartBarSquare className="text-black" />,
             to: "/marketing/lead-generation-&-conversion-rate-optimization",
           },
         ],
@@ -356,54 +449,63 @@ const navItems: NavItem[] = [
         label: "Branding",
         items: [
           {
-            title: "Brand positioning",
-            description: "Define your unique market position.",
-            icon: <HiOutlineSparkles className="text-black" />,
-            to: "/marketing/branding",
-          },
-          {
-            title: "Market research",
-            description: "Analyze trends and growth opportunities.",
+            title: "Market Research",
+            description:
+              "Study industry landscape, trends, and consumer behavior patterns.",
             icon: <HiOutlineMagnifyingGlass className="text-black" />,
             to: "/marketing/branding",
           },
           {
-            title: "Competitive analysis",
-            description: "Identify advantages over competitors.",
+            title: "Customer Analysis",
+            description:
+              "Understand target audience demographics, psychographics, and pain points.",
+            icon: <HiOutlineUser className="text-black" />,
+            to: "/marketing/branding",
+          },
+          {
+            title: "Product/Service Analysis",
+            description:
+              "Define core offerings, benefits, and unique value propositions.",
+            icon: <HiOutlineCube className="text-black" />,
+            to: "/marketing/branding",
+          },
+          {
+            title: "Competitor Analysis",
+            description:
+              "Evaluate competitor positioning and identify differentiation opportunities.",
             icon: <HiOutlineChartBar className="text-black" />,
             to: "/marketing/branding",
           },
           {
-            title: "Customer analysis",
-            description: "Understand your target audience deeply.",
-            icon: <HiOutlineUser className="text-black" />,
+            title: "Brand Message/Voice and Promise",
+            description:
+              "Craft compelling messaging that resonates emotionally with audiences.",
+            icon: <HiOutlineChatBubbleLeftRight className="text-black" />,
+            to: "/marketing/branding",
+          },
+          {
+            title: "Brand Guidelines and Brand Architecture Design",
+            description:
+              "Establish visual identity systems and brand hierarchy.",
+            icon: <HiOutlineBookOpen className="text-black" />,
+            to: "/marketing/branding",
+          },
+          {
+            title: "Brand Positioning",
+            description:
+              "Define your unique space in the market and competitive advantages.",
+            icon: <HiOutlineSparkles className="text-black" />,
+            to: "/marketing/branding",
+          },
+          {
+            title: "Brand Strategy Creation",
+            description:
+              "Develop comprehensive brand blueprints for long-term success.",
+            icon: <HiOutlineDocumentText className="text-black" />,
             to: "/marketing/branding",
           },
         ],
       },
-      // {
-      //   label: "Creative Marketing",
-      //   items: [
-      //     {
-      //       title: "Social Media",
-      //       description: "Engage with audiences.",
-      //       icon: <HiOutlineDevicePhoneMobile className="text-black" />,
-      //       to: "/marketing/social",
-      //     },
-      //     {
-      //       title: "Email",
-      //       description: "Convert with campaigns.",
-      //       icon: <HiOutlineEnvelope className="text-black" />,
-      //       to: "/marketing/email",
-      //     },
-      //     {
-      //       title: "Influencer",
-      //       description: "Partner with creators.",
-      //       icon: <HiOutlineUser className="text-black" />,
-      //       to: "/marketing/influencer",
-      //     },
-      //   ],
-      // },
       {
         label: "Web Development",
         items: [
