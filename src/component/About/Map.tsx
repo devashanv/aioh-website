@@ -38,7 +38,7 @@ const Map: React.FC = () => {
           loop
           muted
           playsInline
-          className="w-full max-w-6xl h-auto object-cover"
+          className="w-full max-w-6xl h-auto lg:h-[78dvh] object-cover"
         />
       </motion.div>
     </div>

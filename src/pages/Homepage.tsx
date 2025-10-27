@@ -64,7 +64,7 @@ function Homepage() {
 
         {/* Tech Stack */}
         <section
-          className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full"
+          className="mx-auto mb-3.5 px-1 lg:px-3.5 w-full lg:mt-0 mt-5"
           id="techstack"
         >
           <video
@@ -110,7 +110,7 @@ function Homepage() {
         >
           <div className="w-full lg:hidden text-black text-center top-5 left-5 transform flex flex-col gap-2 z-10 p-2">
             <h1 className="text-[32px] md:text-[48px] lg:text-[52px] font-medium mb-3">
-              Some of, our works
+              Case Studies
             </h1>
             <p className="text-[18px] pr-10 font-light mb-6 ">
               Showcasing impactful digital solutions that drive real business
@@ -123,7 +123,7 @@ function Homepage() {
 
         {/* Categories */}
         <section
-          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:h-[100dvh] lg:mt-30 mt-20"
+          className="mb-3.5 px-1 lg:px-3.5 h-auto lg:py-8 lg:h-[100dvh] lg:mt-15 mt-20"
           id="catego"
         >
           <Categories />

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
+// import { FaStar } from "react-icons/fa";
 
 import { AnimatePresence, motion } from "framer-motion";
 
-import googleImg1 from "../../assets/about/client.png";
-import googleImg2 from "../../assets/about/client2.png";
-import googleImg3 from "../../assets/about/client3.png";
-import googleImg4 from "../../assets/about/client4.png";
-import googleImg5 from "../../assets/about/google.jpg";
+// import googleImg1 from "../../assets/about/client.png";
+// import googleImg2 from "../../assets/about/client2.png";
+// import googleImg3 from "../../assets/about/client3.png";
+// import googleImg4 from "../../assets/about/client4.png";
+// import googleImg5 from "../../assets/about/google.jpg";
+
+import Logo from '../../assets/about/AIOH.png'
 import quotesSvg from "../../assets/about/quotes.svg";
 import LeftArrow from "../../assets/about/left.svg";
 import RightArrow from "../../assets/about/right.svg";
@@ -32,10 +34,10 @@ const testimonials = [
 ];
 
 // Helper function
-function getYouTubeThumbnail(url: string) {
-  const videoId = url.split("embed/")[1];
-  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-}
+// function getYouTubeThumbnail(url: string) {
+//   const videoId = url.split("embed/")[1];
+//   return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+// }
 
 const VoicesOfTrust: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -83,7 +85,10 @@ const VoicesOfTrust: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="bg-gradient-to-b from-[#010A12] to-[#074378] lg:py-20 rounded-xl p-6 lg:px-6 md:px-38 text-white shadow-lg flex flex-col items-center justify-center text-center"
         >
-          <div className="text-[96px] font-medium text-[#02EC97]">4.9</div>
+          <div className="px-5">
+            <img src={Logo  } alt="" />
+          </div>
+          {/* <div className="text-[96px] font-medium text-[#02EC97]">4.9</div>
           <div className="flex items-center justify-center gap-4 mb-12 mt-[-10px]">
             {Array(5)
               .fill(0)
@@ -101,8 +106,8 @@ const VoicesOfTrust: React.FC = () => {
                 />
               )
             )}
-          </div>
-          <div className="text-[18px] font-medium">Google Ratings</div>
+          </div> */}
+          {/* <div className="text-[18px] font-medium">Google Ratings</div> */}
           <p className="text-[18px] font-light mt-4 text-white">
             Here’s how our partners describe their experience working with us
           </p>
@@ -167,11 +172,11 @@ const VoicesOfTrust: React.FC = () => {
                 {/* Video Thumbnail + Popup Trigger */}
                 <div className="w-full sm:w-[300px] h-[150px] relative">
                   <div
-                    onClick={() => setIsModalOpen(true)}
+                    // onClick={() => setIsModalOpen(true)}
                     className="w-full h-full rounded-[20px] overflow-hidden shadow-md relative cursor-pointer"
                   >
                     <img
-                      src={getYouTubeThumbnail(testimonial.videoUrl)}
+                      // src={getYouTubeThumbnail(testimonial.videoUrl)}
                       alt="Video thumbnail"
                       className="w-full h-full object-cover"
                     />
