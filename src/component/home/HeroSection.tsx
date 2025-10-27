@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
           <div className="h-auto">
             <div>
               <h1 className="gradient-text text-4xl md:text-[65px] font-semibold mb-5">
-                Building Profitable Business
+                Building Profitable Businesses
               </h1>
               <h1 className="gradient-text text-xl md:text-3xl mb-5">
                 With Marketing, Data & Technology

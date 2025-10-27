@@ -721,123 +721,162 @@ const ContactForm: React.FC = () => {
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:mt-10 ">
-          {/* Card 1 - Address */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:mt-10 items-start">
+          {/* Left Column – Full Height Address Card */}
           <MotionSection
             delay={0.7}
             direction="right"
-            className="bg-white rounded-[20px] p-6 shadow-sm"
+            className="bg-white rounded-[20px] p-6 shadow-sm h-full"
           >
-            <p className="text-[18px] font-normal mb-1">Locations :</p>
-            <p className="text-[16px] text-[#191818] leading-6 font-light">
-              {/* 3rd Floor, All in one Holdings, <br /> */}
-              <span className="font-normal">Sri Lanka: </span>Colombo, Kandy
-              <br />
-              <span className="font-normal">Australia: </span>Notting Hill
-              <br />
-              <span className="font-normal">USA: </span>San Francisco
-            </p>
-          </MotionSection>
+            <p className="text-[18px] font-normal mb-2">Locations :</p>
 
-          {/* Card 2 - Phone - Gradient */}
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="rounded-[20px] p-6 shadow-sm text-white  bg-[linear-gradient(180deg,_#01213A_0%,_#035BA0_100%)]"
-          >
-            <p className="text-[18px] font-normal mb-1">Phone :</p>
-            <p className="text-[16px] text-white leading-[32px] font-light">
-              +94 81 2121 051 <br />
-              +94 77 6722 709
-            </p>
-          </MotionSection>
+            <div className="text-[16px] text-[#191818] leading-7 font-light space-y-2">
+                            {/* Sri Lanka - Colombo */}
+              <div className="flex items-start">
+                <span className="font-normal min-w-[90px]">Colombo:</span>
+                <span>
+                  22 Sea Avenue, 
+                  <br />
+                  Colombo 00300 <br /> Sri Lanka.
+                </span>
+              </div>
 
-          {/* Card 3 - Email */}
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="bg-white rounded-[20px] p-6 shadow-sm"
-          >
-            <p className="text-[18px] font-normal mb-1">E-mail :</p>
-            <p className="text-[16px] text-[#191818] leading-[24px] font-light">
-              <a href="mailto:info@allinoneholdings.com">
-                info@allinoneholdings.com
-              </a>
-            </p>
-          </MotionSection>
+              {/* Sri Lanka - Kandy */}
+              <div className="flex items-start">
+                <span className="font-normal min-w-[90px]">Kandy:</span>
+                <span>
+                  349/2/1, Katugastota Rd,
+                  <br />
+                  Kandy, Sri Lanka.
+                </span>
+              </div>
 
-          {/* Card 4 - Social Icons */}
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="rounded-xl p-6 flex flex-col items-center md:items-start justify-center gap-4"
-          >
-            <p className="text-[18px] font-normal mb-1 text-center lg:text-left">
-              Follow Us:
-            </p>
-            <div className="flex flex-wrap  gap-4">
-              {/* Facebook */}
-              <a
-                href="https://www.facebook.com/allinoneholdings"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-              >
-                <img
-                  src={FacebookIcon}
-                  alt="Facebook"
-                  className="w-[18px] h-[18px]"
-                />
-              </a>
+              {/* Australia */}
+              <div className="flex items-start">
+                <span className="font-normal min-w-[90px]">Australia:</span>
+                <span>
+                  1 Redwood Dr,
+                  <br />
+                  Notting Hill VIC 3168,
+                  <br />
+                  Australia.
+                </span>
+              </div>
 
-              {/* Instagram */}
-              <a
-                href="https://www.instagram.com/all_in_one_holdings"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-              >
-                <img
-                  src={InstagramIcon}
-                  alt="Instagram"
-                  className="w-[18px] h-[18px]"
-                />
-              </a>
-
-              {/* Google */}
-              <a
-                href="https://g.co/kgs/Cw4rrUZ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-              >
-                <img
-                  src={GoogleIcon}
-                  alt="Google"
-                  className="w-[18px] h-[18px]"
-                />
-              </a>
-
-              {/* Linkedin */}
-              <a
-                href="https://lk.linkedin.com/company/all-in-one-holdings"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-              >
-                <img src={LinkIcon} alt="X" className="w-[18px] h-[18px]" />
-              </a>
-              {/* X com */}
-              <a
-                href="https://x.com/allinoneholding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-              >
-                <img src={XIcon} alt="X" className="w-[18px] h-[18px]" />
-              </a>
+              {/* USA */}
+              <div className="flex items-start">
+                <span className="font-normal min-w-[90px]">USA:</span>
+                <span>
+                  1846 E, Innovation Park Dr. STE 100,
+                  <br />
+                  ORO Valley, AZ 85755.
+                </span>
+              </div>
             </div>
           </MotionSection>
+
+          {/* Right Column – Stack of 3 Cards */}
+          <div className="flex flex-col gap-6 h-full">
+            {/* Card 2 - Phone */}
+            <MotionSection
+              delay={0.7}
+              direction="right"
+              className="rounded-[20px] p-6 shadow-sm text-white bg-[linear-gradient(180deg,_#01213A_0%,_#035BA0_100%)]"
+            >
+              <p className="text-[18px] font-normal mb-1">Phone :</p>
+              <p className="text-[16px] text-white leading-[32px] font-light">
+                +94 81 2121 051 <br />
+                +94 77 6722 709
+              </p>
+            </MotionSection>
+
+            {/* Card 3 - Email */}
+            <MotionSection
+              delay={0.7}
+              direction="right"
+              className="bg-white rounded-[20px] p-6 shadow-sm"
+            >
+              <p className="text-[18px] font-normal mb-1">E-mail :</p>
+              <p className="text-[16px] text-[#191818] leading-[24px] font-light">
+                <a href="mailto:info@allinoneholdings.com">
+                  info@allinoneholdings.com
+                </a>
+              </p>
+            </MotionSection>
+
+            {/* Card 4 - Social Icons */}
+            <MotionSection
+              delay={0.7}
+              direction="right"
+              className="bg-transparent rounded-xl p-6 flex flex-col items-center md:items-start justify-center gap-4"
+            >
+              <p className="text-[18px] font-normal mb-1 text-center lg:text-left">
+                Follow Us:
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://www.facebook.com/allinoneholdings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+                >
+                  <img
+                    src={FacebookIcon}
+                    alt="Facebook"
+                    className="w-[18px] h-[18px]"
+                  />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/all_in_one_holdings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+                >
+                  <img
+                    src={InstagramIcon}
+                    alt="Instagram"
+                    className="w-[18px] h-[18px]"
+                  />
+                </a>
+
+                <a
+                  href="https://g.co/kgs/Cw4rrUZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+                >
+                  <img
+                    src={GoogleIcon}
+                    alt="Google"
+                    className="w-[18px] h-[18px]"
+                  />
+                </a>
+
+                <a
+                  href="https://lk.linkedin.com/company/all-in-one-holdings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+                >
+                  <img
+                    src={LinkIcon}
+                    alt="LinkedIn"
+                    className="w-[18px] h-[18px]"
+                  />
+                </a>
+
+                <a
+                  href="https://x.com/allinoneholding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+                >
+                  <img src={XIcon} alt="X" className="w-[18px] h-[18px]" />
+                </a>
+              </div>
+            </MotionSection>
+          </div>
         </div>
       </MotionSection>
     </>

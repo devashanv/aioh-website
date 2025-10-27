@@ -72,8 +72,8 @@ const locationCards: LocationCard[] = [
     title: "USA",
     description:
       "Our U.S. office is strategically located to serve clients nationwide with tailored solutions and tech leadership.",
-    address: "456 Enterprise Lane, San Francisco, CA 94107",
-    phone: "+1 415 123 4567",
+    address: "1846 E, Innovation Park Dr. STE 100, ORO Valley, AZ 85755.",
+    phone: "+1 (682) 407-2898",
     images: [Image9, Image10, Image11, Image12],
     layout: "full",
   },
