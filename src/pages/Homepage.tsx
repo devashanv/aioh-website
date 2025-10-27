@@ -143,7 +143,7 @@ function Homepage() {
         </section>
 
         {/* Footer */}
-        <section className="lg:mt-30 mt-20">
+        <section className="lg:mt-50">
           <Footer />
         </section>
       </motion.div>
