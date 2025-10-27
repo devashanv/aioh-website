@@ -9,16 +9,17 @@ const Team = () => {
       <section className="w-11/12 mx-auto h-full flex flex-col lg:flex-row gap-10">
         <section className="w-full lg:w-1/2 text-center lg:text-left flex flex-col ">
           <p className="text-black text-[32px] md:text-[48px] lg:text-[52px] font-medium lg:leading-15 leading-12">
-            Whether you’re in Dubai, Brisbane, Texas, or Kandy.
+            We Don't Build the "Best" Solutions, We Build Profitable Ones
           </p>
 
           <p className="text-[18px] font-light text-justify mt-5 leading-8">
-            When we say we’re global, we mean it. Doesn’t matter where you are;
-            we build your brand, expand your footprint, and understand the quick
-            wins as well as the longer-term plan. Our offerings have been
-            designed to cater to both those starting from the very beginning and
-            the more experienced brands looking for new ways to grow their
-            business.
+            Anyone can throw technology at a problem. ChatGPT can suggest the
+            "best" solution in seconds. But here's what makes us different:
+            we're not chasing perfection. We're chasing results. As experienced
+            builders, we dig deep into your actual challenges. We analyze where
+            you are, where you want to be, and what's realistic in between. Then
+            we chart a clear, step-by-step path to get you there - one that fits
+            your budget, your timeline, and your business realities.
           </p>
 
           <Link to="/Marketing">

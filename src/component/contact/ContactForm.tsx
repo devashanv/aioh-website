@@ -731,24 +731,19 @@ const ContactForm: React.FC = () => {
             <p className="text-[18px] font-normal mb-2">Locations :</p>
 
             <div className="text-[16px] text-[#191818] leading-7 font-light space-y-2">
-                            {/* Sri Lanka - Colombo */}
+              {/* Sri Lanka - Colombo */}
               <div className="flex items-start">
                 <span className="font-normal min-w-[90px]">Colombo:</span>
                 <span>
-                  22 Sea Avenue, 
-                  <br />
-                  Colombo 00300 <br /> Sri Lanka.
+                  N.D.H Abdul Caffoor Building, No. 40, 1st floor, Church
+                  Street, Colombo 01, Sri Lanka.
                 </span>
               </div>
 
               {/* Sri Lanka - Kandy */}
               <div className="flex items-start">
                 <span className="font-normal min-w-[90px]">Kandy:</span>
-                <span>
-                  349/2/1, Katugastota Rd,
-                  <br />
-                  Kandy, Sri Lanka.
-                </span>
+                <span>349/2/1, Katugastota Rd, Kandy, Sri Lanka.</span>
               </div>
 
               {/* Australia */}

@@ -60,8 +60,8 @@ const locationCards: LocationCard[] = [
       },
       {
         label: "Colombo",
-        address: "22 Sea Avenue, Colombo 00300",
-        phone: "0812121051",
+        address: "N.D.H Abdul Caffoor Building, No. 40, 1st floor, Church Street, Colombo 01, Sri Lanka.",
+        phone: "+94 76 857 2709",
       },
     ],
     // 🔄 You can replace these with real Kandy/Colombo sets
