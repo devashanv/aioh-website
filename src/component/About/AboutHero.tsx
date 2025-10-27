@@ -25,8 +25,8 @@ const AboutHero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-[32px] md:text-[48px] lg:text-[52px] lg:leading-[80px] font-bold text-[#191818] text-center lg:text-left"
         >
-          Driven by Innovation,
-          <br /> Defined by <span className="text-[#02ec97]">Passion</span>
+          Helping Businesses to maximize their potential through
+          <span className="text-[#02ec97]"> marketing, data, and technology</span>
         </motion.h1>
 
         <motion.p

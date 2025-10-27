@@ -68,6 +68,7 @@ const HeroProjectSlider: React.FC = () => {
             <button>
               <MdOutlineArrowOutward
                 style={{ width: "25px", height: "25px" }}
+                className="hidden"
               />
             </button>
           </div>
