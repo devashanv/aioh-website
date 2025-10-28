@@ -19,7 +19,7 @@ const Footer = () => {
         <img
           src={topSvg}
           alt="AllinOne"
-          className="max-w-[100vw] h-auto object-contain"
+          className="w-full h-auto object-contain px-1"
         />
       </div>
 

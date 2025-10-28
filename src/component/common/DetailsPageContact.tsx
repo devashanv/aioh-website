@@ -13,7 +13,7 @@ import GoogleIcon from "../../assets/img/google.svg";
 import LinkIcon from "../../assets/img/linkedin.svg";
 import XIcon from "../../assets/img/x.svg";
 import AIOHImage from "../../assets/img/logo/aiohlogo.png";
-import MotionSection from "./MotionSection";
+// import MotionSection from "./MotionSection";
 
 const ContactSection: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -682,159 +682,154 @@ const ContactSection: React.FC = () => {
         </motion.div>
 
         {/* Cards Grid */}
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:mt-10 items-start">
-          {/* Left Column – Full Height Address Card */}
-          <MotionSection
-            delay={0.7}
-            direction="right"
-            className="bg-white rounded-[20px] p-6  h-full"
-          >
-            <p className="text-[18px] font-normal mb-2">Locations :</p>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full"
+        >
+          {/* Address Card */}
+          <div className="bg-white  p-6 pr-2 pb-0">
+            <p className="text-lg font-normal mb-3 text-black">Locations :</p>
 
-            <div className="text-[16px] text-[#191818] leading-7 font-light space-y-2">
-              {/* Sri Lanka - Colombo */}
-              <div className="flex items-start">
-                <span className="font-normal min-w-[90px]">Colombo:</span>
-                <span>
-                  N.D.H Abdul Caffoor Building, No. 40, 1st floor, Church
-                  Street, Colombo 01, Sri Lanka.
-                </span>
-              </div>
-
-              {/* Sri Lanka - Kandy */}
-              <div className="flex items-start">
-                <span className="font-normal min-w-[90px]">Kandy:</span>
-                <span>349/2/1, Katugastota Rd, Kandy, Sri Lanka.</span>
+            <div className="space-y-2 text-black text-base leading-6 font-light">
+              {/* Sri Lanka */}
+              <div className="flex items-start gap-2">
+                <img
+                  src="https://flagcdn.com/w20/lk.png"
+                  alt="Sri Lanka Flag"
+                  className="w-8 h-5 mt-1"
+                />
+                <p>
+                  <span className="font-normal">Sri Lanka: </span>Colombo, Kandy
+                </p>
               </div>
 
               {/* Australia */}
-              <div className="flex items-start">
-                <span className="font-normal min-w-[90px]">Australia:</span>
-                <span>
-                  1 Redwood Dr,
-                  <br />
-                  Notting Hill VIC 3168,
-                  <br />
-                  Australia.
-                </span>
+              <div className="flex items-start gap-2">
+                <img
+                  src="https://flagcdn.com/w20/au.png"
+                  alt="Australia Flag"
+                  className="w-8 h-5 mt-1"
+                />
+                <p>
+                  <span className="font-normal">Australia: </span>Notting Hill
+                </p>
               </div>
 
               {/* USA */}
-              <div className="flex items-start">
-                <span className="font-normal min-w-[90px]">USA:</span>
-                <span>
-                  1846 E, Innovation Park Dr. STE 100,
-                  <br />
-                  ORO Valley, AZ 85755.
-                </span>
+              <div className="flex items-start gap-2">
+                <img
+                  src="https://flagcdn.com/w20/us.png"
+                  alt="USA Flag"
+                  className="w-8 h-5 mt-1"
+                />
+                <p>
+                  <span className="font-normal">USA: </span>San Francisco
+                </p>
               </div>
             </div>
-          </MotionSection>
-
-          {/* Right Column – Stack of 3 Cards */}
-          <div className="flex flex-col gap-6 h-full">
-            {/* Card 2 - Phone */}
-            <MotionSection
-              delay={0.7}
-              direction="right"
-              className="rounded-[20px] p-6 shadow-sm text-white bg-[linear-gradient(180deg,_#01213A_0%,_#035BA0_100%)]"
-            >
-              <p className="text-[18px] font-normal mb-1">Phone :</p>
-              <p className="text-[16px] text-white leading-[32px] font-light">
-                +94 81 2121 051 <br />
-                +94 77 6722 709
-              </p>
-            </MotionSection>
-
-            {/* Card 3 - Email */}
-            <MotionSection
-              delay={0.7}
-              direction="right"
-              className="bg-white rounded-[20px] p-6 "
-            >
-              <p className="text-[18px] font-normal mb-1">E-mail :</p>
-              <p className="text-[16px] text-[#191818] leading-[24px] font-light">
-                <a href="mailto:info@allinoneholdings.com">
-                  info@allinoneholdings.com
-                </a>
-              </p>
-            </MotionSection>
-
-            {/* Card 4 - Social Icons */}
-            <MotionSection
-              delay={0.7}
-              direction="right"
-              className="bg-transparent rounded-xl p-6 flex flex-col items-center md:items-start justify-center gap-4"
-            >
-              <p className="text-[18px] font-normal mb-1 text-center lg:text-left">
-                Follow Us:
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="https://www.facebook.com/allinoneholdings"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-                >
-                  <img
-                    src={FacebookIcon}
-                    alt="Facebook"
-                    className="w-[18px] h-[18px]"
-                  />
-                </a>
-
-                <a
-                  href="https://www.instagram.com/all_in_one_holdings"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-                >
-                  <img
-                    src={InstagramIcon}
-                    alt="Instagram"
-                    className="w-[18px] h-[18px]"
-                  />
-                </a>
-
-                <a
-                  href="https://g.co/kgs/Cw4rrUZ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-                >
-                  <img
-                    src={GoogleIcon}
-                    alt="Google"
-                    className="w-[18px] h-[18px]"
-                  />
-                </a>
-
-                <a
-                  href="https://lk.linkedin.com/company/all-in-one-holdings"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-                >
-                  <img
-                    src={LinkIcon}
-                    alt="LinkedIn"
-                    className="w-[18px] h-[18px]"
-                  />
-                </a>
-
-                <a
-                  href="https://x.com/allinoneholding"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
-                >
-                  <img src={XIcon} alt="X" className="w-[18px] h-[18px]" />
-                </a>
-              </div>
-            </MotionSection>
           </div>
-        </div>
+
+          <div className="flex flex-col sm:flex-col md:flex-row gap-2 sm:gap-0 px-4 py-6 sm:p-0">
+            {/* Phone - Card */}
+            <div className="w-full md:flex-1 bg-gradient-to-b from-[#01213A] from-0% to-[#035BA0] to-100% rounded-[20px] text-white py-4 md:py-6 md:px-2">
+              <p className="text-lg font-normal text-start mb-1 pl-4">
+                Phone :
+              </p>
+              <div className="flex flex-col text-sm md:text-base leading-6 font-light items-start pl-4">
+                <p>+94 81 2121 051</p>
+                <p>+94 76 8572 709</p>
+              </div>
+            </div>
+
+            {/* Email Card - mobile */}
+            <div className="sm:hidden w-full bg-white rounded-[20px] p-4 mt-4 pb-0">
+              <p className="text-lg font-normal mb-1">E-mail :</p>
+              <p className="text-sm md:text-base leading-6 font-light">
+                info@allinoneholdings.com
+              </p>
+            </div>
+          </div>
+
+          {/* Email Card - tab & desktop*/}
+          <div className="hidden sm:block flex-1 bg-white rounded-[20px] p-2 md:p-6 md:pr-2 text-center md:text-start">
+            <p className="text-lg font-normal mb-1">E-mail :</p>
+            <p className="text-base  leading-6 font-light">
+              info@allinoneholdings.com
+            </p>
+          </div>
+
+          {/* Card 4 - Social Icons */}
+          <div className="rounded-xl py-6 px-2 flex flex-col items-center md:items-start justify-center gap-2">
+            <p className="text-[18px] font-normal mb-1 text-center lg:text-left">
+              Follow Us:
+            </p>
+            <div className="flex flex-wrap  gap-4">
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/allinoneholdings"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+              >
+                <img
+                  src={FacebookIcon}
+                  alt="Facebook"
+                  className="w-[18px] h-[18px]"
+                />
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/all_in_one_holdings"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+              >
+                <img
+                  src={InstagramIcon}
+                  alt="Instagram"
+                  className="w-[18px] h-[18px]"
+                />
+              </a>
+
+              {/* Google */}
+              <a
+                href="https://g.co/kgs/Cw4rrUZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+              >
+                <img
+                  src={GoogleIcon}
+                  alt="Google"
+                  className="w-[18px] h-[18px]"
+                />
+              </a>
+
+              {/* Linkedin */}
+              <a
+                href="https://lk.linkedin.com/company/all-in-one-holdings"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+              >
+                <img src={LinkIcon} alt="X" className="w-[18px] h-[18px]" />
+              </a>
+              {/* X com */}
+              <a
+                href="https://x.com/allinoneholding"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center transition hover:opacity-80"
+              >
+                <img src={XIcon} alt="X" className="w-[18px] h-[18px]" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

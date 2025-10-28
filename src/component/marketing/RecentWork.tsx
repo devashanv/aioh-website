@@ -15,6 +15,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 type Project = {
   title: string;
+  title2: string;
   description: string;
   image: string;
   link: string;
@@ -38,6 +39,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Queens Hotel Kandy",
+    title2: "Queens Hotel Kandy: Heritage storytelling unlocks 964.3% surge in organic engagement",
     description:
       "Heritage storytelling unlocks 964.3% surge in organic engagement",
     image: img1,
@@ -65,6 +67,7 @@ const projects: Project[] = [
   },
   {
     title: "Emirates Aviation Collectibles",
+    title2: "Selling Out Emirates Aviation Collectibles with a 1043% ROI",
     description: "Selling Out Emirates Aviation Collectibles with a 1043% ROI",
     image: img2,
     link: "#",
@@ -108,6 +111,7 @@ const projects: Project[] = [
   },
   {
     title: "UK Education Consultancy",
+    title2: "UK Education Consultancy: Cutting Cost per Lead by 78% with Smarter Targeting",
     description: "Cutting Cost per Lead by 78% with Smarter Targeting",
     image: img3,
     link: "#",
@@ -150,6 +154,7 @@ const projects: Project[] = [
   },
   {
     title: "Ekho Ella",
+    title2: "Ekho Ella: Driving Organic Growth in the Hills of Ella",
     description: "Driving Organic Growth in the Hills of Ella",
     image: img4,
     link: "#",
@@ -186,6 +191,7 @@ const projects: Project[] = [
   },
   {
     title: "Ehelepola Walawwa",
+    title2: "Ehelepola Walawwa: Shaping the Brand of Sri Lanka’s Largest Cultural Landmark",
     description: "Shaping the Brand of Sri Lanka’s Largest Cultural Landmark",
     image: img5,
     link: "#",
@@ -520,7 +526,7 @@ const RecentWork: React.FC = () => {
               <div className="flex-1 lg:flex-1/2 text-white flex flex-col justify-between text-left overflow-y-scroll mx-4 lg:mx-0 lg:pr-6">
                 <div>
                   <h2 className="text-2xl md:text-[32px] leading-[41px] font-semibold mb-4">
-                    {popupData.title}
+                    {popupData.title2}
                   </h2>
 
                   {popupData.description2 && (

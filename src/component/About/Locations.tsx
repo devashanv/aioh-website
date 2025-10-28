@@ -55,7 +55,7 @@ const locationCards: LocationCard[] = [
       {
         label: "Kandy",
         address:
-          "3rd Floor, All in One Holdings Headquarters, 349/2/1, Katugastota Rd, Kandy 20800",
+          "No: 349/2/1, Katugastota Rd, Kandy 20800",
         phone: "0812121051",
       },
       {

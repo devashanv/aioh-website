@@ -2,15 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import {
+  MdAssessment,
+  MdHandshake,
   MdOutlineDashboard,
   MdOutlineLayers,
   MdOutlineRocketLaunch,
   MdOutlineTrendingUp,
   MdOutlineUpdate,
 } from "react-icons/md";
-import {TbWorldCheck } from "react-icons/tb";
+import { TbWorldCheck } from "react-icons/tb";
 
 const steps = [
+  {
+    label: "Client Onboarding",
+    icon: <MdHandshake />,
+    description:
+      "We welcome new clients with clear communication, setting up accounts, tools, and timelines to ensure a smooth start to the project.",
+  },
   {
     label: "Requirement Gathering and Research",
     icon: <MdOutlineDashboard />,
@@ -47,9 +55,13 @@ const steps = [
     description:
       "Ongoing monitoring, updates, and support keep your systems optimized and future-proof.",
   },
-  
+  {
+    label: "Reporting",
+    icon: <MdAssessment />,
+    description:
+      "We provide detailed progress and performance reports, keeping you informed about milestones, outcomes, and future recommendations.",
+  },
 ];
-
 
 const Process: React.FC = () => {
   return (

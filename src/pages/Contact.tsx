@@ -23,14 +23,14 @@ const Contact = () => {
 
         {/* Section 2 */}
         <section className="bg-transparent">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 lg:mt-30 mt-20 pb-30">
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 lg:mt-30 mt-20">
             <ContactForm />
           </div>
         </section>
       </div>
 
       {/* Before Footer */}
-      <section className="lg:mt-30">
+      <section className="lg:mt-30 md:mt-30 mt-0">
         <FooterTop />
       </section>
 

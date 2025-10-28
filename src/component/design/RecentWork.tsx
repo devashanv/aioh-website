@@ -12,6 +12,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 type Project = {
   title: string;
+    title2: string;
   description: string;
   image: string;
   link: string;
@@ -33,6 +34,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Muswenna Tea Factory",
+    title2: "Muswenna Tea Factory – Rebranding a 25-Year Legacy into a Modern Premium Brand",
     description: "Rebranding a 25-Year Legacy into a Modern Premium Brand",
     image: img1,
     link: "#",
@@ -68,6 +70,7 @@ const projects: Project[] = [
   },
   {
     title: "Hotel Suisse",
+    title2: "Hotel Suisse – Blending Heritage with Modern Identity Through Rebranding campaign",
     description:
       "Blending Heritage with Modern Identity Through Rebranding campaign",
     image: img2,
@@ -374,7 +377,7 @@ const RecentWork: React.FC = () => {
               <div className="flex-1 lg:flex-1/2 text-white flex flex-col justify-between text-left overflow-y-scroll mx-4 lg:mx-0 lg:pr-6">
                 <div>
                   <h2 className="text-2xl md:text-[32px] leading-[41px] font-semibold mb-4">
-                    {popupData.title}
+                    {popupData.title2}
                   </h2>
 
                   {popupData.description2 && (

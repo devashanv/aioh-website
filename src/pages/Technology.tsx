@@ -60,7 +60,7 @@ const Merketing: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <section className="lg:mt-50 bg-amber-700" id="footer">
+      <section className="lg:mt-50" id="footer">
         <Footer />
       </section>
       <ChatWithUsButton />
