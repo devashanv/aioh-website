@@ -1,5 +1,6 @@
 import ChatWithUsButton from "../component/common/ChatWithUsButton";
 import Footer from "../component/common/Footer";
+import FooterNew from "../component/common/FooterNew";
 import FooterTop from "../component/common/FooterTop";
 import Header from "../component/common/Header";
 import ContactForm from "../component/contact/ContactForm";
@@ -34,8 +35,13 @@ const Contact = () => {
         <FooterTop />
       </section>
 
-      {/* Footer */}
-      <section className="lg:mt-50" id="footer">
+      {/* ✅ Desktop Footer (FooterNew) */}
+      <section className="hidden lg:block mt-50" id="footer">
+        <FooterNew />
+      </section>
+
+      {/* ✅ Tablet & Mobile Footer (Footer) */}
+      <section className="block lg:hidden lg:mt-50" id="footer">
         <Footer />
       </section>
 
