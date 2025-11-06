@@ -3,9 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: 7, label: "Countries" },
+  { value: 6, label: "Countries" },
   { value: 50, label: "Clients" },
-  { value: 250, label: "Projects" },
+  { value: 150, label: "Projects" },
   { value: 25, label: "Industries" },
 ];
 

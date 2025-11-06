@@ -13,6 +13,7 @@ import GoogleIcon from "../../assets/img/google.svg";
 import LinkIcon from "../../assets/img/linkedin.svg";
 import XIcon from "../../assets/img/x.svg";
 import AIOHImage from "../../assets/img/logo/aiohlogo.png";
+// import MotionSection from "./MotionSection";
 
 const ContactSection: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -689,31 +690,62 @@ const ContactSection: React.FC = () => {
           className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full"
         >
           {/* Address Card */}
-          <div className="bg-gradient-to-b from-[#01213A] from-0% to-[#035BA0] to-100% rounded-[20px] p-6 pr-2">
-            <p className="text-lg font-normal mb-1 text-white ">Locations :</p>
-            <p className="text-base text-white leading-6 font-light">
-              {/* 3rd Floor, All in one Holdings, <br /> */}
-              <span className="font-normal">Sri Lanka: </span>Colombo, Kandy
-              <br />
-              <span className="font-normal">Australia: </span>Notting Hill
-              <br />
-              <span className="font-normal">USA: </span>San Francisco
-            </p>
+          <div className="bg-white  p-6 pr-2 pb-0">
+            <p className="text-lg font-normal mb-3 text-black">Locations :</p>
+
+            <div className="space-y-2 text-black text-base leading-6 font-light">
+              {/* Sri Lanka */}
+              <div className="flex items-start gap-2">
+                <img
+                  src="https://flagcdn.com/w20/lk.png"
+                  alt="Sri Lanka Flag"
+                  className="w-8 h-5 mt-1"
+                />
+                <p>
+                  <span className="font-normal">Sri Lanka: </span>Colombo, Kandy
+                </p>
+              </div>
+
+              {/* Australia */}
+              <div className="flex items-start gap-2">
+                <img
+                  src="https://flagcdn.com/w20/au.png"
+                  alt="Australia Flag"
+                  className="w-8 h-5 mt-1"
+                />
+                <p>
+                  <span className="font-normal">Australia: </span>Notting Hill
+                </p>
+              </div>
+
+              {/* USA */}
+              <div className="flex items-start gap-2">
+                <img
+                  src="https://flagcdn.com/w20/us.png"
+                  alt="USA Flag"
+                  className="w-8 h-5 mt-1"
+                />
+                <p>
+                  <span className="font-normal">USA: </span>San Francisco
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-row sm:flex-col gap-2 sm:gap-0 px-4 py-6 sm:p-0">
+          <div className="flex flex-col sm:flex-col md:flex-row gap-2 sm:gap-0 px-4 py-6 sm:p-0">
             {/* Phone - Card */}
-            <div className="flex-1 rounded-[20px] md:py-6 md:px-2 bg-white">
-              {/*shadow-sm lg:shadow-none*/}
-              <p className="text-lg font-normal text-start mb-1">Phone :</p>
-              <div className="flex flex-col text-sm md:text-base leading-6 font-light items-start">
+            <div className="w-full md:flex-1 bg-gradient-to-b from-[#01213A] from-0% to-[#035BA0] to-100% rounded-[20px] text-white py-4 md:py-6 md:px-2">
+              <p className="text-lg font-normal text-start mb-1 pl-4">
+                Phone :
+              </p>
+              <div className="flex flex-col text-sm md:text-base leading-6 font-light items-start pl-4">
                 <p>+94 81 2121 051</p>
-                {/* <p className="block sm:hidden text-lg font-serif">/</p> */}
                 <p>+94 76 8572 709</p>
               </div>
             </div>
-            {/* Email Card - mpbile */}
-            <div className="sm:hidden block flex-1 bg-white rounded-[20px] md:p-6">
+
+            {/* Email Card - mobile */}
+            <div className="sm:hidden w-full bg-white rounded-[20px] p-4 mt-4 pb-0">
               <p className="text-lg font-normal mb-1">E-mail :</p>
               <p className="text-sm md:text-base leading-6 font-light">
                 info@allinoneholdings.com
@@ -1398,7 +1430,7 @@ export default ContactSection;
 //           <div className="flex flex-row sm:flex-col gap-2 sm:gap-0 px-4 py-6 sm:p-0">
 //             {/* Phone - Card */}
 //             <div className="flex-1 rounded-[20px] md:py-6 md:px-2 bg-white">
-//               {/*shadow-sm lg:shadow-none*/}
+//               {/* lg:shadow-none*/}
 //               <p className="text-lg font-normal text-start mb-1">Phone :</p>
 //               <div className="flex flex-col text-sm md:text-base leading-6 font-light items-start">
 //                 <p>+94 81 2121 051</p>

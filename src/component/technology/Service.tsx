@@ -111,12 +111,17 @@ const Service: React.FC = () => {
             className="relative rounded-[20px] overflow-hidden group shadow-lg cursor-pointer lg:cursor-default"
             onClick={(e) => handleCardClick(e, service.path)}
           >
-            {/* Bg image */}
-            <img
-              src={service.img}
-              alt={service.title}
-              className="object-cover w-full h-56 md:h-auto duration-500 group-hover:scale-105 transition"
-            />
+            <div className="relative w-full h-56 md:h-auto rounded-[20px] overflow-hidden">
+              {/* Bg image */}
+              <img
+                src={service.img}
+                alt={service.title}
+                className="object-cover w-full h-full duration-500 group-hover:scale-105 transition"
+              />
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#078BD6]/25 to-[#D9D9D9]/0"></div>
+            </div>
 
             {/* Floating Label with Outline */}
             <div className="absolute top-4 left-4 right-4 items-center z-50 mx-auto">

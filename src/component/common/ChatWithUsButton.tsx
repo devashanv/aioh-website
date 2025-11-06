@@ -6,7 +6,7 @@ const ChatWithUsButton: React.FC = () => {
 
   return (
     show && (
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className="fixed bottom-8 md:right-8 right-0 z-50">
         {/* Animated Blue Ping Circles */}
         <div className="relative w-[70px] h-[70px] flex items-center justify-center">
           <div className="absolute w-full h-full rounded-full bg-blue-400 opacity-75 animate-ping" />

@@ -55,13 +55,13 @@ const locationCards: LocationCard[] = [
       {
         label: "Kandy",
         address:
-          "3rd Floor, All in One Holdings Headquarters, 349/2/1, Katugastota Rd, Kandy 20800",
+          "No: 349/2/1, Katugastota Rd, Kandy 20800",
         phone: "0812121051",
       },
       {
         label: "Colombo",
-        address: "22 Sea Avenue, Colombo 00300",
-        phone: "0812121051",
+        address: "N.D.H Abdul Caffoor Building, No. 40, 1st floor, Church Street, Colombo 01, Sri Lanka.",
+        phone: "+94 76 857 2709",
       },
     ],
     // 🔄 You can replace these with real Kandy/Colombo sets
@@ -72,8 +72,8 @@ const locationCards: LocationCard[] = [
     title: "USA",
     description:
       "Our U.S. office is strategically located to serve clients nationwide with tailored solutions and tech leadership.",
-    address: "456 Enterprise Lane, San Francisco, CA 94107",
-    phone: "+1 415 123 4567",
+    address: "1846 E, Innovation Park Dr. STE 100, ORO Valley, AZ 85755.",
+    phone: "+1 (682) 407-2898",
     images: [Image9, Image10, Image11, Image12],
     layout: "full",
   },

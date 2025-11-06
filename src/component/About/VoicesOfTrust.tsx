@@ -9,27 +9,34 @@ import { AnimatePresence, motion } from "framer-motion";
 // import googleImg4 from "../../assets/about/client4.png";
 // import googleImg5 from "../../assets/about/google.jpg";
 
-import Logo from '../../assets/about/AIOH.png'
+import Logo from "../../assets/about/AIOH.png";
 import quotesSvg from "../../assets/about/quotes.svg";
 import LeftArrow from "../../assets/about/left.svg";
 import RightArrow from "../../assets/about/right.svg";
-import PlayIcon from "../../assets/about/play.svg";
+// import PlayIcon from "../../assets/about/play.svg";
 
 // Testimonials
 const testimonials = [
   {
-    text: "From the initial planning session to final deployment, the team demonstrated both technical expertise and professionalism. They built us a fast, scalable website with a clean UI and excellent user experience. Post-launch support was prompt and helpful. ",
-    name: "Sarah L",
-    title: "Head of Product",
-    company: "Nexora Tech",
+    text: "From the very first planning stage to the final deployment, the team handled everything with great skill and professionalism. They built us a fast, attractive, and user-friendly website that perfectly showcases our travel packages. Even after launch, their support was quick and reliable.",
+    name: "Mr. Manoj Rajaguru",
+    title: "Director",
+    company: "Regency Travel House",
     videoUrl: "https://www.youtube.com/embed/wa88vwvhR_U",
   },
   {
-    text: "Working with this team was a fantastic experience. Their attention to detail, design clarity, and tech-stack decisions made a major difference in how our app performs today. They've been more of a partner than just a service provider.",
-    name: "David K",
-    title: "Founder & CEO",
-    company: "BrightSync Labs",
+    text: "Our collaboration with this team was truly remarkable. They understood our vision for Café Lavia and delivered a stylish, high-performing website that perfectly represents our brand. Their clear communication and strong technical expertise made the entire process seamless.",
+    name: "Mr. Dilen Dinapala",
+    title: "Director",
+    company: "Café Lavia",
     videoUrl: "https://www.youtube.com/embed/QC8iQqtG0hg",
+  },
+  {
+    text: "The development team built a strong and professional website for our block and cement business. It’s well-designed, loads fast, and helps us connect with more customers online. Their support during and after the project has been excellent.",
+    name: "Mr. Jeganathan",
+    title: "Director",
+    company: "Nafco Industries",
+    videoUrl: "https://www.youtube.com/embed/QC8iQqtG0hgkl",
   },
 ];
 
@@ -41,7 +48,7 @@ const testimonials = [
 
 const VoicesOfTrust: React.FC = () => {
   const [current, setCurrent] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
   const [direction, setDirection] = useState<"left" | "right">("right");
 
   const testimonial = testimonials[current];
@@ -86,7 +93,7 @@ const VoicesOfTrust: React.FC = () => {
           className="bg-gradient-to-b from-[#010A12] to-[#074378] lg:py-20 rounded-xl p-6 lg:px-6 md:px-38 text-white shadow-lg flex flex-col items-center justify-center text-center"
         >
           <div className="px-5">
-            <img src={Logo  } alt="" />
+            <img src={Logo} alt="" />
           </div>
           {/* <div className="text-[96px] font-medium text-[#02EC97]">4.9</div>
           <div className="flex items-center justify-center gap-4 mb-12 mt-[-10px]">
@@ -133,7 +140,7 @@ const VoicesOfTrust: React.FC = () => {
               onClick={handleNext}
               className="w-10 h-10 bg-[#02EC97] text-white rounded-full flex items-center justify-center shadow-md hover:opacity-90 transition cursor-pointer"
             >
-              <img src={RightArrow} alt="Next" className="w-5 h-5" /> 
+              <img src={RightArrow} alt="Next" className="w-5 h-5" />
             </button>
           </div>
 
@@ -170,7 +177,7 @@ const VoicesOfTrust: React.FC = () => {
                 </div>
 
                 {/* Video Thumbnail + Popup Trigger */}
-                <div className="w-full sm:w-[300px] h-[150px] relative">
+                {/* <div className="w-full sm:w-[300px] h-[150px] relative">
                   <div
                     // onClick={() => setIsModalOpen(true)}
                     className="w-full h-full rounded-[20px] overflow-hidden shadow-md relative cursor-pointer"
@@ -192,7 +199,7 @@ const VoicesOfTrust: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </AnimatePresence>
@@ -200,7 +207,7 @@ const VoicesOfTrust: React.FC = () => {
       </div>
 
       {/* Video Modal Popup */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
           <button
             onClick={() => setIsModalOpen(false)}
@@ -219,7 +226,7 @@ const VoicesOfTrust: React.FC = () => {
             />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

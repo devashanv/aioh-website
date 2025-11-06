@@ -1,5 +1,6 @@
 import ChatWithUsButton from "../component/common/ChatWithUsButton";
 import Footer from "../component/common/Footer";
+import FooterNew from "../component/common/FooterNew";
 import FooterTop from "../component/common/FooterTop";
 import Header from "../component/common/Header";
 import ContactForm from "../component/contact/ContactForm";
@@ -23,19 +24,24 @@ const Contact = () => {
 
         {/* Section 2 */}
         <section className="bg-transparent">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 lg:mt-30 mt-20 pb-30">
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 lg:mt-30 mt-20">
             <ContactForm />
           </div>
         </section>
       </div>
 
       {/* Before Footer */}
-      <section className="lg:mt-30">
+      <section className="lg:mt-30 md:mt-30 mt-0">
         <FooterTop />
       </section>
 
-      {/* Footer */}
-      <section className="lg:mt-50" id="footer">
+      {/* ✅ Desktop Footer (FooterNew) */}
+      <section className="hidden lg:block mt-50" id="footer">
+        <FooterNew />
+      </section>
+
+      {/* ✅ Tablet & Mobile Footer (Footer) */}
+      <section className="block lg:hidden lg:mt-50" id="footer">
         <Footer />
       </section>
 
