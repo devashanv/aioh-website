@@ -41,10 +41,7 @@ const Merketing: React.FC = () => {
           <Process />
         </section>
 
-        {/* RecentWork */}
-        <section className="mt-20 md:mt-30 bg-transparent rounded-[20px]">
-          <RecentWork />
-        </section>
+         
 
         {/* Contact */}
         <section className="mt-20 md:mt-30 bg-white rounded-[20px]">
