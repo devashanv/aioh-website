@@ -9,6 +9,7 @@ import WebContact from "../../component/common/DetailsPageContact";
 import FooterTop from "../../component/common/FooterTop";
 import Footer from "../../component/common/Footer";
 import ChatWithUsButton from "../../component/common/ChatWithUsButton";
+import RecentWork from '../../component/technology/RecentWork'
 
 function WebService() {
   useEffect(() => {
@@ -51,6 +52,11 @@ function WebService() {
           <div className="w-11/12 mx-auto">
             <WebFramework />
           </div>
+        </section>
+
+        {/* RecentWork */}
+        <section className="mt-20 md:mt-30 md:mb-10 bg-transparent rounded-[20px]">
+          <RecentWork />
         </section>
 
         {/* Section 3 */}

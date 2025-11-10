@@ -10,8 +10,16 @@ import SendIcon from "../../assets/img/logo/Send.svg";
 import PhoneIcon from "../../assets/img/logo/Phone.svg";
 import LocationIcon from "../../assets/img/logo/Location.svg";
 import EmailIcon from "../../assets/img/logo/Email.svg";
+import SiteMap from "../Sitemap/SiteMap";
+import FooterNew from "../../component/common/FooterNew";
+
+import { IoArrowForward } from "react-icons/io5";
+import { useState } from "react";
 
 const Footer = () => {
+
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
   return (
     <>
       {/* ✅ SVG Floating Above Footer - MOVED OUTSIDE THE FOOTER */}
@@ -127,6 +135,12 @@ const Footer = () => {
                   <img src={EmailIcon} alt="Email" className="w-4 h-4" />
                   info@allinoneholdings.com
                 </p>
+
+                {/* sitemap */}
+                <h3 onClick={() => setIsMapOpen(true)} className="text-[18px] font-medium mb-2 mt-5 flex items-center hover:text-primary hover:cursor-pointer">
+                  Full Site Map
+                  <IoArrowForward style={{ height: "20px", width: "20px" }} className="w-5 h-4" />
+                </h3>
               </div>
             </div>
 
@@ -523,6 +537,17 @@ const Footer = () => {
           <div className="relative z-10 w-11/12 mx-auto">
             {/* All footer content */}
           </div>
+
+
+          {/* sitemap */}
+          <SiteMap
+            isOpen={isMapOpen}
+            onClose={() => setIsMapOpen(false)}
+            title="Welcome to the Popup!"
+          >
+            
+            <FooterNew />
+          </SiteMap>
         </div>
       </footer>
     </>
