@@ -22,7 +22,7 @@ const Team = () => {
             your budget, your timeline, and your business realities.
           </p>
 
-          <Link to="/Marketing">
+          <Link to="/Technology">
             <button className="bg-primary w-auto h-auto rounded-full hover:cursor-pointer hover:bg-primary/85 flex justify-center items-center py-2 px-4 mt-10">
               Let's Connect
               <img src={ExploreIcon} alt="" className="w-8 h-8" />

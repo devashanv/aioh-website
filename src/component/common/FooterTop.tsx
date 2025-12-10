@@ -7,7 +7,7 @@ const FooterTop: React.FC = () => {
     <>
       <div className="relative p-3">
         {/* Content + button */}
-        <div className="relative text-center text-2xl lg:text-[40px] font-semibold z-50">
+        <div className="relative text-center text-2xl lg:text-[40px] font-semibold z-10">
           <p>Have a Project for Us? Or don’t know where to start?</p>
           <p className="text-center text-[18px] lg:text-[24px] text-[#191818] font-light mt-1">
             Talk to our expert today.
@@ -18,7 +18,7 @@ const FooterTop: React.FC = () => {
             style={{ background: gradient }}
             onClick={() => (window.location.href = "/consultation")}
           >
-            Schedule a Call 
+            Schedule a Call
           </button>
 
           {/* robo */}

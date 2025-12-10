@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-import bgImage from "../../assets/img/aioh-footer.webp";
-import topSvg from "../../assets/img/logo/allinone.svg";
+// import bgImage from "../../assets/img/aioh-footer.webp";
+// import topSvg from "../../assets/img/logo/allinone.svg";
 import FacebookIcon from "../../assets/contact/facebook.svg";
 import InstagramIcon from "../../assets/contact/instagram.svg";
 import GoogleIcon from "../../assets/contact/google.svg";
-import AIOHLogo from "../../assets/img/logo/AIOH.png";
-import SendIcon from "../../assets/img/logo/Send.svg";
+// import AIOHLogo from "../../assets/img/logo/AIOH.png";
+// import SendIcon from "../../assets/img/logo/Send.svg";
 
 // Complete Footer data structure with ALL services from navItems
 const footerSections = [
@@ -618,10 +618,10 @@ const footerSections = [
 const Footer = () => {
   return (
     <>
-      <footer className="relative md:-mt-20 lg:mt-10 text-white font-light font-['Roboto'] overflow-x-hidden bg-secondary">
+      {/* bg-[#01213A] */}
+      <footer className="relative md:-mt-20 lg:mt-10 text-white font-light font-['Roboto'] overflow-x-hidden bg-gradient-to-b from-[#01213A] via-[#001627] to-black pt-[400px] lg:pt-72">
         {/* ✅ Main Footer Layout */}
-        <div className="relative z-10 w-11/12 mx-auto md:pt-60 pb-10">
-
+        <div className="relative z-50 w-11/12 mx-auto md:pt-60 pb-10">
           {/* ✅ Row 2 - footerSections (Full Width 6 Columns) */}
           <div className="columns-1 sm:columns-2 lg:columns-6 gap-8 text-left font-light leading-relaxed">
             {footerSections
@@ -725,7 +725,7 @@ const Footer = () => {
           </div>
 
           {/* ✅ Credit Line */}
-          <div className="text-xs py-3 bg-[#01050A]">
+          <div className="text-xs py-3 bg-black">
             <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-2 text-[#F5F5F5]">
               <p className="hover:text-[#02EC97] transition-colors duration-200">
                 Copyrights © 2025 All in One IT Solutions. All Rights Reserved
