@@ -1,6 +1,6 @@
 import ChatWithUsButton from "../component/common/ChatWithUsButton";
 import Footer from "../component/common/Footer";
-import FooterNew from "../component/common/FooterNew";
+// import FooterNew from "../component/common/FooterNew";
 import FooterTop from "../component/common/FooterTop";
 import Header from "../component/common/Header";
 import ContactForm from "../component/contact/ContactForm";

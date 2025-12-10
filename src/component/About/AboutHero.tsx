@@ -1,8 +1,8 @@
 import React from "react";
 
-import Image1 from "../../assets/about/image1.webp";
-import Image2 from "../../assets/about/image2.webp";
-import Image3 from "../../assets/about/image3.webp";
+import Image1 from "../../assets/about/01.jpg";
+import Image2 from "../../assets/about/03.jpg";
+import Image3 from "../../assets/about/02.jpg";
 import FacebookIcon from "../../assets/contact/facebook.svg";
 import InstagramIcon from "../../assets/contact/instagram.svg";
 import GoogleIcon from "../../assets/contact/google.svg";

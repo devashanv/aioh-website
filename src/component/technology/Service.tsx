@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
 // bg images
-import sc1 from "../../assets/img/services/website.webp";
-import sc2 from "../../assets/img/services/websystem.webp";
-import sc3 from "../../assets/img/services/standalone.webp";
-import sc4 from "../../assets/img/services/websystem.webp";
-import sc5 from "../../assets/img/services/AI.webp";
-import sc6 from "../../assets/img/services/websystem.webp";
+import WebDevelopment from "../../assets/img/services/Web Development 2.jpg";
+import WebSystemDevelopment from "../../assets/img/services/Web System Development.jpg";
+import StandaloneSystemDevelopment from "../../assets/img/services/Standalone System Development.jpg";
+import MobileApplicationDevelopment from "../../assets/img/services/Mobile Application Development.jpg";
+import AISolutions from "../../assets/img/services/AI Solutions.jpg";
+import TestAutomationSolutions from "../../assets/img/services/Test Automation Solutions.jpg";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -16,42 +16,42 @@ const services = [
     title: "Web Development",
     description:
       "Through custom web development, clients establish compelling, user-friendly websites that increase traffic and conversions",
-    img: sc1,
+    img: WebDevelopment,
     path: "/technology/WebService",
   },
   {
     title: "Web System Development",
     description:
       "Web system development automates key business processes such as HR, CRM, e-commerce, and bookings, improving efficiency and customer satisfaction.",
-    img: sc2,
+    img: WebSystemDevelopment,
     path: "/technology/SystemService",
   },
   {
     title: "Standalone System Development",
     description:
       "Standalone systems like ERP and POS optimize resource management and daily operations, reducing costs and scaling capacity.",
-    img: sc3,
+    img: StandaloneSystemDevelopment,
     path: "/technology/StandaloneSysDevService",
   },
   {
     title: "Mobile Application Development",
     description:
       "Mobile app development extends client reach with intuitive, high-performance apps tailored to industry-specific needs, increasing user engagement and loyalty",
-    img: sc4,
+    img: MobileApplicationDevelopment,
     path: "/technology/MobileService",
   },
   {
     title: "AI Solutions",
     description:
       "AI solutions like chatbots and virtual assistants improve customer interaction and automate routine tasks, enhancing productivity.",
-    img: sc5,
+    img: AISolutions,
     path: "/technology/AIService",
   },
   {
     title: "Test Automation Solutions",
     description:
       "Test automation ensures product quality and faster delivery through reliable functional, regression, and performance testing integrated with CI/CD pipelines.",
-    img: sc6,
+    img: TestAutomationSolutions,
     path: "/technology/TestAutomationService",
   },
 ];

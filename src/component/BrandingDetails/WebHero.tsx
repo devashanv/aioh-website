@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Image1 from "../../assets/serv_details/web/herowork.png";
+import Image1 from "../../assets/serv_details/web/Branding.png";
 
 const WebHero: React.FC = () => {
   return (
