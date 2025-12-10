@@ -14,52 +14,52 @@ import { TbWorldCheck } from "react-icons/tb";
 
 const steps = [
   {
-    label: "Client Onboarding",
+    label: "Building the Vision Together",
     icon: <MdHandshake />,
     description:
-      "We welcome new clients with clear communication, setting up accounts, tools, and timelines to ensure a smooth start to the project.",
+      "Every great project starts with understanding. We collaborate closely with the client to capture their vision, goals, and expectations, setting the foundation for a strong and transparent partnership.",
   },
   {
-    label: "Requirement Gathering and Research",
+    label: "Shaping the Blueprint",
     icon: <MdOutlineDashboard />,
     description:
-      "We start by understanding your unique needs and project goals through detailed discussions and analysis.",
+      "Through strategic discussions and in-depth analysis, we define the project’s functional and technical scope. This phase transforms ideas into a clear and actionable development roadmap.",
   },
   {
-    label: "Planning & Design",
+    label: "Crafting the Experience",
     icon: <MdOutlineLayers />,
     description:
-      "A clear roadmap and design prototype are created to align expectations and set project direction.",
+      "Our team plans every step with precision by allocating resources, defining milestones, and designing intuitive, user-focused interfaces that reflect usability and brand identity.",
   },
   {
-    label: "Development",
+    label: "Bringing Ideas to Life",
     icon: <MdOutlineRocketLaunch />,
     description:
-      "Our skilled developers build and integrate features using agile methods for continuous feedback and improvement.",
+      "Using the latest technologies and frameworks, our developers build scalable, secure, and high-performing systems. Each module is coded and integrated to deliver a seamless digital experience.",
   },
   {
-    label: "Testing",
+    label: "Ensuring Perfection",
     icon: <MdOutlineTrendingUp />,
     description:
-      "Rigorous functional, regression, and performance tests ensure quality, reliability, and security.",
+      "Before any launch, our QA engineers rigorously test every feature through multiple layers of validation including unit, integration, and system testing to ensure stability, performance, and reliability.",
   },
   {
-    label: "Deployment",
+    label: "From Code to Reality",
     icon: <TbWorldCheck />,
     description:
-      "We smoothly launch your solution with minimal disruption using controlled rollout and best practices.",
+      "With careful planning and precision, we deploy the finalized system to the live environment. Our team ensures a smooth transition with zero downtime and post-launch performance checks.",
   },
   {
-    label: "Support & Maintenance",
+    label: "Delivering Knowledge and Control",
     icon: <MdOutlineUpdate />,
     description:
-      "Ongoing monitoring, updates, and support keep your systems optimized and future-proof.",
+      "We provide complete technical documentation, user manuals, and project reports, ensuring the client has full ownership and understanding of their system.",
   },
   {
-    label: "Reporting",
+    label: "Sustaining Excellence",
     icon: <MdAssessment />,
     description:
-      "We provide detailed progress and performance reports, keeping you informed about milestones, outcomes, and future recommendations.",
+      "Our commitment continues beyond the launch. We monitor, maintain, and update systems regularly to ensure optimal performance, security, and adaptability to future needs.",
   },
 ];
 

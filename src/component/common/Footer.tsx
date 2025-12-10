@@ -13,11 +13,10 @@ import EmailIcon from "../../assets/img/logo/Email.svg";
 import SiteMap from "../Sitemap/SiteMap";
 import FooterNew from "../../component/common/FooterNew";
 
-import { IoArrowForward } from "react-icons/io5";
+// import { IoArrowForward } from "react-icons/io5";
 import { useState } from "react";
 
 const Footer = () => {
-
   const [isMapOpen, setIsMapOpen] = useState(false);
 
   return (
@@ -137,10 +136,10 @@ const Footer = () => {
                 </p>
 
                 {/* sitemap */}
-                <h3 onClick={() => setIsMapOpen(true)} className="text-[18px] font-medium mb-2 mt-5 flex items-center hover:text-primary hover:cursor-pointer">
+                {/* <h3 onClick={() => setIsMapOpen(true)} className="text-[18px] font-medium mb-2 mt-5 flex items-center hover:text-primary hover:cursor-pointer">
                   Full Site Map
                   <IoArrowForward style={{ height: "20px", width: "20px" }} className="w-5 h-4" />
-                </h3>
+                </h3> */}
               </div>
             </div>
 
@@ -467,6 +466,13 @@ const Footer = () => {
                 <Link to="/Contact" className="hover:text-[#02EC97] transition">
                   Contact
                 </Link>
+
+                <p
+                  onClick={() => setIsMapOpen(true)}
+                  className="hover:text-[#02EC97] transition cursor-pointer hidden lg:block"
+                >
+                  Sitemap
+                </p>
               </div>
             </div>
 
@@ -538,14 +544,12 @@ const Footer = () => {
             {/* All footer content */}
           </div>
 
-
           {/* sitemap */}
           <SiteMap
             isOpen={isMapOpen}
             onClose={() => setIsMapOpen(false)}
             title="Welcome to the Popup!"
           >
-            
             <FooterNew />
           </SiteMap>
         </div>
@@ -556,28 +560,7 @@ const Footer = () => {
 
 export default Footer;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // OLD CODE
-
 
 // import { Link } from "react-router-dom";
 

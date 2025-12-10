@@ -1266,8 +1266,9 @@ const Header = ({ currentPath }: { currentPath: string }) => {
         <img
           src={logo}
           alt="Logo"
-          className="h-8 lg:h-12 w-auto"
+          className="h-8 lg:h-12 w-auto cursor-pointer"
           draggable={false}
+          onClick={() => navigate("/")}
         />
 
         {/* Desktop Nav */}

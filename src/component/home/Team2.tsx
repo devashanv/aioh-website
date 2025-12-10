@@ -21,7 +21,6 @@ const Team = () => {
             we chart a clear, step-by-step path to get you there - one that fits
             your budget, your timeline, and your business realities.
           </p>
-
           <Link to="/Marketing">
             <button className="bg-primary w-auto h-auto rounded-full hover:cursor-pointer hover:bg-primary/85 flex justify-center items-center py-2 px-4 mt-4">
               Let's Connect
