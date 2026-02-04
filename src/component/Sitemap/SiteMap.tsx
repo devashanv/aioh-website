@@ -13,7 +13,7 @@ interface ModalProps {
 const SiteMap: React.FC<ModalProps> = ({
   isOpen,
   onClose,
-  title,
+  // title,
   children,
 }) => {
   useEffect(() => {

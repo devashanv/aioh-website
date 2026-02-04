@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import MapVideo from "../../assets/sample/Map.mp4";
+import MapVideo from "../../assets/video/map.mp4";
 
 const Map: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const Map: React.FC = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex justify-center"
+        className="flex justify-center lg:-mt-10"
       >
         {/* <img src={MapVideo} className="w-full max-w-6xl h-auto object-cover" /> */}
         <video
@@ -38,7 +38,7 @@ const Map: React.FC = () => {
           loop
           muted
           playsInline
-          className="w-full max-w-6xl h-auto lg:h-[78dvh] object-cover"
+          className="w-full max-w-6xl h-auto lg:h-[90dvh] object-cover"
         />
       </motion.div>
     </div>

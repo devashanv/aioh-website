@@ -146,6 +146,10 @@ function Homepage() {
         <section className="lg:mt-50">
           <Footer />
         </section>
+
+
+         
+
       </motion.div>
       {/* )} */}
     </>

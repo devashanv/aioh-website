@@ -14,7 +14,7 @@ const FooterTop: React.FC = () => {
           </p>
 
           <button
-            className="lg:inline-block px-5 py-2 lg:py-3 text-lg font-normal rounded-[30px] text-white whitespace-nowrap cursor-pointer mt-4"
+            className="lg:inline-block z-10 px-5 py-2 lg:py-3 text-lg font-normal rounded-[30px] text-white whitespace-nowrap cursor-pointer mt-4"
             style={{ background: gradient }}
             onClick={() => (window.location.href = "/consultation")}
           >
@@ -36,12 +36,12 @@ const FooterTop: React.FC = () => {
         </div>
 
         {/* Footer Line image (unchanged style, just z fixed) */}
-        <div className="flex z-10 absolute items-center justify-center bottom-10 right-0 w-1/2">
+        <div className="flex z-0 absolute items-center justify-center bottom-10 right-0 w-1/2">
           <div className="relative flex w-full pr-25">
             <img
               src={FooterLine}
               alt="line"
-              className="hidden lg:block w-full px-5"
+              className="hidden lg:block w-full px-5 z-0"
             />
           </div>
         </div>
