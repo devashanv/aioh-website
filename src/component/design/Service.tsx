@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
 // bg images
-import sc1 from "../../assets/img/services/brandid.webp";
-import sc2 from "../../assets/img/services/design.webp";
-import sc3 from "../../assets/img/services/matirieal.webp";
-import sc4 from "../../assets/img/services/creativecon.webp";
-import sc5 from "../../assets/img/services/photography.webp";
-import sc6 from "../../assets/img/services/uiux.webp";
+import BrandIdentityDevelopment from "../../assets/img/services/Brand Identity Development.jpg";
+import PackagingDesign from "../../assets/img/services/Packaging Design.jpg";
+import PromotionPOSMaterialDesign from "../../assets/img/services/Promotion or POS Material Design.jpg";
+import CreativeContentDesign from "../../assets/img/services/Creative Content Design.jpg";
+import PhotographyVideography from "../../assets/img/services/Photography & Videography Productions.jpg";
+import UIUXDesign from "../../assets/img/services/UIUX Design.jpg";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -16,42 +16,42 @@ const services = [
     title: "Brand Identity Development",
     description:
       "Build consistent brand identity across all touchpoints. Design logos, guidelines, and branded materials.",
-    img: sc1,
+    img: BrandIdentityDevelopment,
     path: "/design/brand-identity-development",
   },
   {
     title: "Packaging Design",
     description:
       "Design packaging that stands out on shelves. Create labels, boxes, and mockups that sell.",
-    img: sc2,
+    img: PackagingDesign,
     path: "/design/packaging-design",
   },
   {
     title: "Promotion or POS Material Design",
     description:
       "Design marketing materials that capture attention. Create flyers and enhance visuals professionally.",
-    img: sc3,
+    img: PromotionPOSMaterialDesign,
     path: "/design/promotional-material-design",
   },
   {
     title: "Creative Content Design",
     description:
       "Design eye-catching graphics for digital platforms. Create infographics, illustrations, and social visuals.",
-    img: sc4,
+    img: CreativeContentDesign,
     path: "/design/creative-content",
   },
   {
     title: "Photography & Videography Productions ",
     description:
       "Capture your brand through professional visuals. Create videos and images that tell stories.",
-    img: sc5,
+    img: PhotographyVideography,
     path: "/design/photography-and-videography",
   },
   {
     title: "UI/UX Design",
     description:
       "We create intuitive and visually appealing interfaces to enhance user experience, improve engagement, and drive conversions.",
-    img: sc6,
+    img: UIUXDesign,
     path: "/design/ui-ux-design",
   },
 ];

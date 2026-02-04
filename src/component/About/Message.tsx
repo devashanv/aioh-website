@@ -5,9 +5,9 @@ import whiteBg from "../../assets/about/whitebg.png";
 
 import { motion } from "framer-motion";
 
-import ceo from '../../assets/about/ceo.png'
-import coo from '../../assets/about/coo.png'
-import cto from '../../assets/about/cto.png'
+import ceo from '../../assets/about/CEO.png'
+import coo from '../../assets/about/COO.png'
+import cto from '../../assets/about/CTO.png'
 
 const directorData = [
   {
@@ -84,7 +84,7 @@ const Message: React.FC = () => {
             <img
               src={director.image}
               alt="Director"
-              className="absolute z-[5] w-[200px] h-auto object-contain"
+              className="absolute z-[5] w-[260px] h-auto object-contain"
               style={{
                 top: "-140px",
                 left: "60px",

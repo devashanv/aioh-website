@@ -1,12 +1,15 @@
 import { useNavigate } from "react-router-dom";
 
 // bg images
-import sc1 from "../../assets/img/services/bsy.webp";
-import sc2 from "../../assets/img/services/sma.webp";
-import sc3 from "../../assets/img/services/smm.webp";
-import sc4 from "../../assets/img/services/cro.webp";
-// import sc5 from "../../assets/img/services/ds.webp";
-import sc6 from "../../assets/img/services/SEO.webp";
+import DigitalStrategy from "../../assets/img/services/Digital Strategy.jpg";
+import SocialMediaAdvertising from "../../assets/img/services/Social Media Advertising.jpg";
+import SocialMediaManagement from "../../assets/img/services/Social Media Management.jpg";
+import ConversionRateOptimization from "../../assets/img/services/Lead generation, & Conversion Rate Optimization.jpg";
+import SearchEngineOptimization from "../../assets/img/services/Search Engine Optimization (SEO).jpg";
+import PayPerClickMarketing from "../../assets/img/services/Pay-Per-Click Marketing.png";
+import EmailMarketing from "../../assets/img/services/Email Marketing.png";
+import Branding from "../../assets/img/services/Branding.png";
+import WebsiteDevelopment from "../../assets/img/services/Website Development.png";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -16,56 +19,56 @@ const services = [
     title: "Digital Strategy",
     description:
       "Craft comprehensive digital roadmaps aligning business goals with actionable tactics, transforming online presence into a powerful growth engine.",
-    img: sc1,
+    img: DigitalStrategy,
     path: "/marketing/digital-strategy",
   },
   {
     title: "Social Media Advertising",
     description:
       "Run targeted ad campaigns that reach ideal customers. Monitor, test, and optimize for maximum ROI.",
-    img: sc2,
+    img: SocialMediaAdvertising,
     path: "/marketing/social-media-advertising",
   },
   {
     title: "Social Media Management",
     description:
       "Manage your social presence with strategic content planning. Track performance and engage your community effectively.",
-    img: sc3,
+    img: SocialMediaManagement,
     path: "/marketing/social-media-management",
   },
   {
     title: "Lead generation, & Conversion Rate Optimization",
     description:
       "Turn more visitors into customers through testing. Optimize pages, funnels, and campaigns for results.",
-    img: sc4,
+    img: ConversionRateOptimization,
     path: "/marketing/lead-generation-&-conversion-rate-optimization",
   },
   {
     title: "Search Engine Optimization (SEO)",
     description:
       "We optimize your website and content to improve search engine rankings, increase organic traffic, and attract more potential customers.",
-    img: sc6,
+    img: SearchEngineOptimization,
     path: "/marketing/search-engine-optimization",
   },
   {
     title: "Pay-Per-Click Marketing",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc4,
+    img: PayPerClickMarketing,
     path: "/marketing/pay-per-click-marketing",
   },
   {
     title: "Email Marketing",
     description:
       "We manage your social media to grow your audience, boost engagement, and strengthen your brand presence online.",
-    img: sc4,
+    img: EmailMarketing,
     path: "/marketing/email-marketing",
   },
   {
     title: "Branding",
     description:
       "Define your market position and understand your audience. Research competitors and identify opportunities for growth.",
-    img: sc4,
+    img: Branding,
     path: "/marketing/branding",
   },
   // {
@@ -79,7 +82,7 @@ const services = [
     title: "Website Development",
     description:
       "Through custom web development, clients establish compelling, user-friendly websites that increase traffic and conversions",
-    img: sc1,
+    img: WebsiteDevelopment,
     path: "/technology/WebService",
   },
 ];

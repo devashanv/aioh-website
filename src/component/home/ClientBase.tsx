@@ -34,6 +34,12 @@ import TKC from "../../assets/clients/tkc logo.webp";
 import Trillium from "../../assets/clients/trillium.webp";
 import Wingcraft from "../../assets/clients/wingscraft gold logo.webp";
 import Reviz from "../../assets/clients/reviz.png";
+import Sterling from "../../assets/clients/sterling.png";
+import Harrisson from "../../assets/clients/Harrisons-SI.png";
+import LakeAvenue from "../../assets/clients/lakeavenue.webp";
+import Caddcenter from "../../assets/clients/cadd.svg";
+import Siba from "../../assets/clients/siba.png";
+import DaladaMaligawa from "../../assets/clients/dadalamaligawa.png";
 
 const ClientBase: React.FC = () => {
   const logoWrapperClass =
@@ -159,9 +165,9 @@ const ClientBase: React.FC = () => {
             </div>
             <div className={logoWrapperClass}>
               <img
-                src={Wingcraft}
+                src={DaladaMaligawa}
                 alt=""
-                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-30 h-30"
               />
             </div>
             <div className={logoWrapperClass}>
@@ -399,15 +405,59 @@ const ClientBase: React.FC = () => {
           </div>
 
           {/* Column 9 */}
-          {/* <div className="h-full flex flex-col gap-10">
+          <div className="h-full flex flex-col gap-10">
             <div className={logoWrapperClass}>
               <img
-                src={Eikone}
+                src={Sterling}
                 alt=""
                 className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
               />
             </div>
-          </div> */}
+
+            <div className={logoWrapperClass}>
+              <img
+                src={Harrisson}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
+              />
+            </div>
+
+            <div className={logoWrapperClass}>
+              <img
+                src={Caddcenter}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
+              />
+            </div>
+
+            <div className={logoWrapperClass}>
+              <img
+                src={LakeAvenue}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
+              />
+            </div>
+          </div>
+
+          {/* Column 10 */}
+          <div className="h-full flex flex-col gap-10">
+            <div className={logoWrapperClass}>
+              <img
+                src={Siba}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
+              />
+            </div>
+
+            <div className={logoWrapperClass}>
+              <img
+                src={Wingcraft}
+                alt=""
+                className="filter grayscale hover:grayscale-0 hover:cursor-pointer object-contain w-24 h-24"
+              />
+            </div>
+
+          </div>
         </Slider>
       </section>
 
@@ -450,7 +500,7 @@ const ClientBase: React.FC = () => {
         >
           {/* Each column is a slide, vertical logos, responsive */}
           {[
-            [GOV, PanAsiaBank, Wingcraft, Ehelepola],
+            [GOV, PanAsiaBank, DaladaMaligawa, Ehelepola],
             [HotelQueens, HotelSuisse, GoAhead, Limo],
             [EkhoElla, Arrogance, DoctoDO, Muswenna],
             [EkhoSafari, MSS, Villa, LTT],
@@ -458,6 +508,8 @@ const ClientBase: React.FC = () => {
             [EkhoSigiriya, NutriCrop, CCL, QB],
             [EkhoSurf, SeniorCargo, TKC, Trillium],
             [CafeLavia, Aluviharaya, Nafco, Reviz],
+            [Sterling, Harrisson, Caddcenter, LakeAvenue],
+            [Siba, Wingcraft],
           ].map((col, colIdx) => (
             <div
               key={colIdx}

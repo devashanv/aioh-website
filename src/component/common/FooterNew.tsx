@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-import bgImage from "../../assets/img/aioh-footer.webp";
-import topSvg from "../../assets/img/logo/allinone.svg";
+// import bgImage from "../../assets/img/aioh-footer.webp";
+// import topSvg from "../../assets/img/logo/allinone.svg";
 import FacebookIcon from "../../assets/contact/facebook.svg";
 import InstagramIcon from "../../assets/contact/instagram.svg";
 import GoogleIcon from "../../assets/contact/google.svg";
-import AIOHLogo from "../../assets/img/logo/AIOH.png";
-import SendIcon from "../../assets/img/logo/Send.svg";
+// import AIOHLogo from "../../assets/img/logo/AIOH.png";
+// import SendIcon from "../../assets/img/logo/Send.svg";
 
 // Complete Footer data structure with ALL services from navItems
 const footerSections = [
@@ -618,105 +618,10 @@ const footerSections = [
 const Footer = () => {
   return (
     <>
-      {/* ✅ SVG Floating Above Footer */}
-      <div className="relative w-full flex justify-center z-10 md:translate-y-0 lg:-translate-y-40 translate-y-5">
-        <img
-          src={topSvg}
-          alt="AllinOne"
-          className="w-full h-auto object-contain px-1"
-        />
-      </div>
-
-      <footer className="relative md:-mt-20 lg:-mt-75 -mt-5 text-white font-light font-['Roboto'] overflow-x-hidden">
-        {/* Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-no-repeat bg-center z-0 rounded-[20px]"
-          style={{ backgroundImage: `url(${bgImage})` }}
-        >
-          <div className="absolute inset-0 bg-black opacity-80 rounded-[20px]" />
-        </div>
-
+      {/* bg-[#01213A] */}
+      <footer className="relative md:-mt-20 lg:mt-10 text-white font-light font-['Roboto'] overflow-x-hidden bg-gradient-to-b from-[#01213A] via-[#001627] to-black pt-[400px] lg:pt-72">
         {/* ✅ Main Footer Layout */}
-        <div className="relative z-10 w-11/12 mx-auto md:pt-60 pt-20 pb-10">
-          {/* ✅ Row 1 - Company + Addresses */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 text-left font-light leading-relaxed mb-10">
-            {/* Column 1 - Company Info (wide) */}
-            <div className="lg:col-span-2 text-center md:text-left flex flex-col items-center md:items-start">
-              {/* Logo */}
-              <div className="mb-3">
-                <img
-                  src={AIOHLogo}
-                  alt="All in One Holdings Logo"
-                  className="w-[250px] h-auto"
-                />
-              </div>
-
-              {/* Description & Newsletter */}
-              <div className="block md:hidden lg:block w-full">
-                <p className="mb-2 text-[#F5F5F5] text-justify">
-                  Empowering startups and businesses with result-driven Digital
-                  Marketing and custom-built Software Solutions. Turn your ideas
-                  into digital success.
-                </p>
-                <div className="mt-4 flex items-center justify-center lg:justify-start w-full">
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your email"
-                    className="px-4 py-2 w-full rounded-full border border-[#595959] text-white/60 placeholder-[#595959] focus:outline-none"
-                  />
-                  <button
-                    className="ml-2 w-11 h-10 rounded-full bg-[#02EC97] border-2 border-[#02EC97] flex items-center justify-center cursor-pointer hover:bg-[#02EC97]/90 transition-colors duration-300"
-                    aria-label="Subscribe"
-                  >
-                    <img
-                      src={SendIcon}
-                      alt="Send"
-                      className="w-[18px] h-[18px]"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Column 2 - Colombo */}
-            <div className="text-[#F5F5F5] text-[15px] leading-7 pl-6">
-              <h4 className="font-medium mb-1">Colombo</h4>
-              <p>
-                N.D.H Abdul Caffoor Building, No. 40, 1st floor, Church Street,
-                Colombo 01, Sri Lanka.
-              </p>
-            </div>
-
-            {/* Column 3 - Kandy */}
-            <div className="text-[#F5F5F5] text-[15px] leading-7 pl-6">
-              <h4 className="font-medium mb-1">Kandy</h4>
-              <p>349/2/1, Katugastota Rd, Kandy, Sri Lanka.</p>
-            </div>
-
-            {/* Column 4 - Australia */}
-            <div className="text-[#F5F5F5] text-[15px] leading-7 pl-6">
-              <h4 className="font-medium mb-1">Australia</h4>
-              <p>
-                1 Redwood Dr,
-                <br />
-                Notting Hill VIC 3168,
-                <br />
-                Australia.
-              </p>
-            </div>
-
-            {/* Column 5 - USA */}
-            <div className="text-[#F5F5F5] text-[15px] leading-7 pl-6">
-              <h4 className="font-medium mb-1">USA</h4>
-              <p>
-                1846 E, Innovation Park Dr. STE 100,
-                <br />
-                ORO Valley, AZ 85755.
-              </p>
-            </div>
-          </div>
-
+        <div className="relative z-50 w-11/12 mx-auto md:pt-60 pb-10">
           {/* ✅ Row 2 - footerSections (Full Width 6 Columns) */}
           <div className="columns-1 sm:columns-2 lg:columns-6 gap-8 text-left font-light leading-relaxed">
             {footerSections
@@ -820,7 +725,7 @@ const Footer = () => {
           </div>
 
           {/* ✅ Credit Line */}
-          <div className="text-xs py-3 bg-[#01050A]">
+          <div className="text-xs py-3 bg-black">
             <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-2 text-[#F5F5F5]">
               <p className="hover:text-[#02EC97] transition-colors duration-200">
                 Copyrights © 2025 All in One IT Solutions. All Rights Reserved

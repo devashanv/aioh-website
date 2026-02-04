@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import MarketingGif from "../../assets/img/marketing.gif";
 import TechnologyGif from "../../assets/img/technology.gif";
-import DesignGif from "../../assets/img/design.gif";
+import DesignGif from "../../assets/img/design-new.gif";
 import ExploreIcon from "../../assets/img/icons/project-explore.svg";
 
 const Categories: React.FC = () => {

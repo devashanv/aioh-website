@@ -28,6 +28,10 @@ import PayPerClickService from "./pages/marketing/Pay-per-clickDetails";
 import EmailMarketingService from "./pages/marketing/EmailMarketing";
 import BrandingService from "./pages/marketing/Branding";
 
+
+import FloatingAudioPlayer from "./component/common/FloatingAudioPlayer";
+import BackgroundAudio from "./assets/audio/background-audio.mp3"
+
 function App() {
   return (
     <Router>
@@ -107,6 +111,9 @@ function App() {
           element={<TestAutomationService />}
         />
       </Routes>
+
+      {/* Audio Player */}
+        <FloatingAudioPlayer src={BackgroundAudio} />
     </Router>
   );
 }

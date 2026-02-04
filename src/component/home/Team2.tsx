@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import TeamSample from "../../assets/img/team.png";
+import TeamSample from "../../assets/img/team2.png";
 import ExploreIcon from "../../assets/img/icons/project-explore.svg";
 
 const Team = () => {
@@ -21,16 +21,15 @@ const Team = () => {
             we chart a clear, step-by-step path to get you there - one that fits
             your budget, your timeline, and your business realities.
           </p>
-
           <Link to="/Marketing">
-            <button className="bg-primary w-auto h-auto rounded-full hover:cursor-pointer hover:bg-primary/85 flex justify-center items-center py-2 px-4 mt-10">
+            <button className="bg-primary w-auto h-auto rounded-full hover:cursor-pointer hover:bg-primary/85 flex justify-center items-center py-2 px-4 mt-4">
               Let's Connect
               <img src={ExploreIcon} alt="" className="w-8 h-8" />
             </button>
           </Link>
         </section>
         <section className="w-full lg:w-1/2">
-          <img src={TeamSample} alt="" className="h-full w-full" />
+          <img src={TeamSample} alt="" className="object-cover h-full w-full" />
         </section>
       </section>
     </>

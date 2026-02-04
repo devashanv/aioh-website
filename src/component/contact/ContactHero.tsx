@@ -1,8 +1,8 @@
 import React from "react";
 
-import Image1 from "../../assets/contact/image1.webp";
-import Image2 from "../../assets/contact/image2.webp";
-import Image3 from "../../assets/contact/image3.webp";
+import Image1 from "../../assets/contact/contact1.jpg";
+import Image2 from "../../assets/contact/contact2.jpg";
+import Image3 from "../../assets/contact/contact3.jpg";
 // import Mesh from "../../assets/contact/mesh.png";
 import WhatsappIcon from "../../assets/contact/whatsapp.svg";
 import TelephoneIcon from "../../assets/contact/telephone.svg";
