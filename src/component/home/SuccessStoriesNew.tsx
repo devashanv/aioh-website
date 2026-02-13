@@ -61,7 +61,7 @@ const SuccessStoriesNew = () => {
   }> = [
     {
       title:
-        "Resilient web design drove 240% traffic, boosting local economic growth.",
+        "Resilient web design drove 240% traffic, boosting economic growth.",
       client: "- Sri Dalada Maligawa -",
       description: "",
       challenges: [
